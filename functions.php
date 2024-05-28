@@ -1,75 +1,108 @@
 <?php
+function register_my_menus() {
+  register_nav_menus(array(
+		'header-menu' => 'Header Menu',
+    'header-menu-2' => 'Header Menu 2',
+    'new-header-menu' => 'New header Menu',
+    'social-media' => 'social media icons',
+    'footer-menu' => 'footer menu',
+    'terms-and-conditions' => 'policy and terms & conditions',
 
-function followandrew_theme_support()
-{
-    //Adds dynamic title tag support
-    add_theme_support('title-tag');
-    add_theme_support('custom-logo');
-    add_theme_support('post-thumbnails');
+
+	));
 }
-add_action('after_setup_theme', 'followandrew_theme_support');
+add_action( 'init', 'register_my_menus' );
 
-function followandrew_menus()
-{
-    $locations = array(
-        'primary' => 'Desktop Primary Left Sidebar',
-        'footer' => 'Footer Menu Items'
+function register_my_widgets() {
+  register_sidebar(array(
+    'name' => 'TITLE PARTNERS',
+    'id' => 'title-partners',
+		'description'   => 'Custom Footer Widget',
+    'before_widget' => '<div class="footer-widget">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+  ));
+  register_sidebar(array(
+    'name' => 'HOSPITAL PARTNERS',
+    'id' => 'associate-partners',
+		'description'   => 'Custom Footer Widget',
+    'before_widget' => '<div class="footer-widget">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+  ));
+  register_sidebar(array(
+    'name' => 'DRINKING WATER PARTNERS',
+    'id' => 'streaming-partners',
+		'description'   => 'Custom Footer Widget',
+    'before_widget' => '<div class="footer-widget">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+  ));
+
+  register_sidebar(array(
+    'name' => 'FOOTER LOGO',
+    'id' => 'footer-logo',
+    'description'   => 'Custom Footer Widget',
+    'before_widget' => '<div class="footer-logo-widget">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+  ));
+}
+add_action( 'widgets_init', 'register_my_widgets' );
+
+function register_my_customizations( $wp_customize ) {
+   // setting
+   $wp_customize->add_setting( 'header_color' , array(
+    'default'   => '#000000',
+    'transport' => 'refresh',
+    ));
+    // section
+    $wp_customize->add_section( 'colors' , array(
+      'title'      => __( 'Colors', 'custom_theme' ),
+      'priority'   => 30,
+    ));
+    // control
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+    	 'label'      => __( 'Header Color', 'custom_theme' ),
+  	   'section'    => 'colors',
+  	   'settings'   => 'header_color',
+     ))
     );
+}
+add_action( 'customize_register', 'register_my_customizations' );
 
-    register_nav_menus($locations);
+function apply_my_customizations() {
+  echo '';
+}
+add_action( 'wp_head', 'apply_my_customizations');
+
+function contact_form_login_redirect() {
+  ?>
+  <script>
+      
+  </script>
+
+  <?php
 }
 
-add_action('init', 'followandrew_menus');
+add_action( 'wp_footer', 'contact_form_login_redirect' );
 
-function followandrew_register_styles()
-{
-    $version = wp_get_theme()->get('Version');
 
-    wp_enqueue_style('followandrew-style', get_template_directory_uri() . "/style.css", array('followandrew-bootstrap'), $version, 'all');
-    wp_enqueue_style('followandrew-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '4.4.1', 'all');
-    wp_enqueue_style('followandrew-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '5.13.0', 'all');
+function themename_custom_logo_setup() {
+	$defaults = array(
+		'height'               => 100,
+		'width'                => 400,
+		'flex-height'          => true,
+		'flex-width'           => true,
+		'header-text'          => array( 'site-title', 'site-description' ),
+		'unlink-homepage-logo' => true, 
+	);
+	add_theme_support( 'custom-logo', $defaults );
 }
+add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
 
-add_action('wp_enqueue_scripts', 'followandrew_register_styles');
-
-function followandrew_register_scripts()
-{
-
-    wp_enqueue_script('followandrew-jquery', "https://code.jquery.com/jquery-3.4.1.slim.min.js", array(), '3.4.1', true);
-    wp_enqueue_script('followandrew-popper', "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js", array(), '1.16.0', true);
-    wp_enqueue_script('followandrew-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", array(), '4.4.1', true);
-    wp_enqueue_script('followandrew-mainjs', get_template_directory_uri() . "/assets/js/main.js", array(), '1.0', true);
-
-
-}
-add_action('wp_enqueue_scripts', 'followandrew_register_scripts');
-
-function followandrew_widget_areas()
-{
-    register_sidebar(
-        array(
-            'name' => 'Sidebar Area',
-            'id' => 'sidebar-1',
-            'description' => 'Sidebar Widget Area',
-            'before_title' => '',
-            'after_title' => '',
-            'before_widget' => '<ul class="social-list list-inline py-3 mx-auto">',
-            'after_widget' => '</ul>'
-        )
-    );
-    
-    register_sidebar(
-        array(
-            'name' => 'Footer Area',
-            'id' => 'footer-1',
-            'description' => 'Footer Widget Area',
-            'before_title' => '',
-            'after_title' => '',
-            'before_widget' => '',
-            'after_widget' => ''
-        )
-    );
-}
-
-add_action('widgets_init', 'followandrew_widget_areas');
 ?>

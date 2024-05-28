@@ -1,19 +1,13 @@
 <?php
 /*
- * Template Name: new individual players
+ * Template Name: Players auction
  * Description: Page template with sidebar included.
  */ get_header("header2"); ?>
 
 
 <main>
-    <section class="position-relative">
-        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/fixturesbanner.svg"
-            class="d-block w-100" alt="">
+    <?php include 'components/page-title-header.php';?>
 
-        <div class="page-title">
-            PLAYER AUCTION
-        </div>
-    </section>
     <!-- Banner -->
     <div class="auctionsection text-white">
         <div class="container">
@@ -28,59 +22,64 @@
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                <?php if (have_rows("player_auction")):
+                        while (have_rows("player_auction")):
+                             the_row(); ?>
+             
+             
+
+
+
+
+           
+
+
+
+             <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
                     tabindex="0">
                     <div class="section-title">
-                        2023 Player Auction
+                    <?php the_sub_field("player_auction_year"); ?> Player Auction
                     </div>
-                    <p class="text-center mt-3 mb-5" style="font-family: Rubik;">"Sed ut perspiciatis unde omnis iste
-                        natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                        veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-                        quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
-                        ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                        sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-                        labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-                        exercitationem ullam corporis suscipit laboriosam,</p>
+                    <p class="text-center mt-3 mb-5" style="font-family: Rubik;">  <?php the_sub_field("player_auction_description"); ?></p>
 
                     <div class="row justify-content-between pt-4">
                         <div class="col-md-5 text-start">
                             <div class="section-title text-start">
-                                Top buys from TATA IPL <br> Player Auction 2023
+                            <?php the_sub_field("player_auction_title"); ?>
 
                             </div>
                             <div class="fs-32 playervalue">
-                                MOST EXPENSIVE PLAYER
+                            <?php the_sub_field("player_auction_subtitle"); ?>
                             </div>
                             <div class="d-flex align-items-center auctionplayerdteails">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Ratnagiri-Jets-01.png"
-                                    alt="" class="img-fluid me-5" style="width: 110px;">
+                                <img src="<?php the_sub_field("team_image"); ?>"
+                                    alt="" class="img-fluid me-3 me-md-5 aucttteamimage">
                                 <div class="fs-24" style="font-family: Rubik;">
-                                    <div> Sam Curran</div>
-                                    <div> Rs. 18,50,00,000</div>
+                                    <div>   <?php the_sub_field("team_player_name"); ?></div>
+                                    <div>   <?php the_sub_field("team_player_worth"); ?></div>
                                 </div>
                             </div>
 
                             <div class="aution-details">
                                 <div>
                                     <div class="fs-24" style="font-family: Koulen;">
-                                        80
+                                    <?php the_sub_field("players_sold"); ?>
                                     </div>
                                     <div class="fs-14">
                                         Players sold
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="fs-24" style="font-family: Koulen;">29</div>
+                                    <div class="fs-24" style="font-family: Koulen;"><?php the_sub_field("overseas_players"); ?></div>
                                     <div class="fs-14">Overseas Players</div>
                                 </div>
                                 <div>
-                                    <div class="fs-24" style="font-family: Koulen;">₹1,67,00,00,000</div>
+                                    <div class="fs-24" style="font-family: Koulen;"><?php the_sub_field("total_spent"); ?></div>
                                     <div class="fs-14">Total Spent</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-5 pb-5 pb-md-0">
                             <iframe width="100%" height="400" src="https://www.youtube.com/embed/tgbNymZ7vqY">
                             </iframe>
                         </div>
@@ -88,9 +87,24 @@
 
 
                 </div>
-                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
-                    tabindex="0">...</div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <?php endwhile;  
+                        endif; ?>
+          
             </div>
 
 
@@ -104,24 +118,31 @@
             STATS
         </div>
         <div class="container">
-            <div class="row  w-100">
+            <div class="row mx-auto w-100">
+
+            <?php if (have_rows("stats_team")):
+                        while (have_rows("stats_team")):
+                             the_row(); ?>
+             
                 <div class="col-md-2">
-                    <div class="agv-main w-100" style=" border: 1.499px solid #B40061;
-                    background: linear-gradient(177deg, #D43C8E 2.12%, #8C054E 97.65%);">
+                    <div class="agv-main w-100" style="border: 1.499px solid <?php the_sub_field("team_color_border"); ?>; background: <?php the_sub_field("team_color"); ?>">
                         <div class="agv-team-logo"><img
-                                src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/franchises/1702465555_CSKroundbig.png"
+                                src="<?php the_sub_field("stats_team_image"); ?>"
                                 alt=""></div>
-                        <div class="agv-team-name">Chennai Super Kings</div>
+                        <div class="agv-team-name"><?php the_sub_field("stats_team_text"); ?></div>
                         <div class="avg-bottom">
 
                             <div class="fr-name">Funds Remaining</div>
-                            <div class="fr-fund">₹1,00,00,000</div>
+                            <div class="fr-fund"><?php the_sub_field("funds_remaining"); ?></div>
 
                             <div class="fr-name">Total Players</div>
-                            <div class="fr-fund">25</div>
+                            <div class="fr-fund"><?php the_sub_field("total_players"); ?></div>
                         </div>
                     </div>
                 </div>
+
+                <?php endwhile;  
+                        endif; ?>
             </div>
         </div>
     </div>
@@ -132,75 +153,17 @@
                 PLAYER AUCTION
             </div>
             <div class="gallerystats row">
-                <div class="col-md-3"><a
-                        href="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH6960-scaled-1.jpg"
+            <?php if (have_rows("gallery")):
+                        while (have_rows("gallery")):
+                             the_row(); ?>
+                <div class="col-md-3 mt-4 "><a
+                        href="<?php the_sub_field("gallery_image"); ?>"
                         class="glightbox w-100" data-glightbox="type: image">
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH6960-scaled-1.jpg"
+                        <img src="<?php the_sub_field("gallery_image"); ?>"
                             alt="image" /></a></div>
-                <div class="col-md-3"><a
-                        href="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH7289-scaled-1.jpg"
-                        class="glightbox w-100" data-glightbox="type: image"><img
-                            src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH7289-scaled-1.jpg"
-                            alt="image" /></a></div>
-                <div class="col-md-3"><a
-                        href="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH8581-scaled-1.jpg"
-                        class="glightbox w-100" data-glightbox="type: image"><img
-                            src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH8581-scaled-1.jpg"
-                            alt="image" /></a></div>
-                <div id="multi-link" class="col-md-3">
-                    <a href="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH9203-scaled-1.jpg"
-                        class="glightbox w-100" data-glightbox="type: image">
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH9203-scaled-1.jpg"
-                            alt="image" />
-
-                    </a>
-                </div>
-                <div class="col-md-3 mt-4"><a
-                        href="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH6960-scaled-1.jpg"
-                        class="glightbox w-100" data-glightbox="type: image">
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH6960-scaled-1.jpg"
-                            alt="image" /></a></div>
-                <div class="col-md-3 mt-4"><a
-                        href="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH7289-scaled-1.jpg"
-                        class="glightbox w-100" data-glightbox="type: image"><img
-                            src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH7289-scaled-1.jpg"
-                            alt="image" /></a></div>
-                <div class="col-md-3 mt-4"><a
-                        href="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH8581-scaled-1.jpg"
-                        class="glightbox w-100" data-glightbox="type: image"><img
-                            src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH8581-scaled-1.jpg"
-                            alt="image" /></a></div>
-                <div id="multi-link" class="col-md-3 mt-4">
-                    <a href="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH9203-scaled-1.jpg"
-                        class="glightbox w-100" data-glightbox="type: image">
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH9203-scaled-1.jpg"
-                            alt="image" />
-
-                    </a>
-                </div>
-                <div class="col-md-3 mt-4"><a
-                        href="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH6960-scaled-1.jpg"
-                        class="glightbox w-100" data-glightbox="type: image">
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH6960-scaled-1.jpg"
-                            alt="image" /></a></div>
-                <div class="col-md-3 mt-4"><a
-                        href="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH7289-scaled-1.jpg"
-                        class="glightbox w-100" data-glightbox="type: image"><img
-                            src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH7289-scaled-1.jpg"
-                            alt="image" /></a></div>
-                <div class="col-md-3 mt-4"><a
-                        href="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH8581-scaled-1.jpg"
-                        class="glightbox w-100" data-glightbox="type: image"><img
-                            src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH8581-scaled-1.jpg"
-                            alt="image" /></a></div>
-                <div id="multi-link" class="col-md-3 mt-4">
-                    <a href="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH9203-scaled-1.jpg"
-                        class="glightbox w-100" data-glightbox="type: image">
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/VISH9203-scaled-1.jpg"
-                            alt="image" />
-
-                    </a>
-                </div>
+              
+                            <?php endwhile;  
+                        endif; ?>
             </div>
 
 

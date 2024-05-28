@@ -5,21 +5,21 @@
  */ get_header("header2"); ?>
 
 <main class="bg-white">
-    <section class="position-relative">
-        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/fixturesbanner.svg" class="d-block w-100" alt="">
-
+    <section class="position-relative teamstab-cover">
+        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/fixturesbanner.svg"
+            class="d-block w-100" alt="">
         <div class="teamstab">
             <div class="teamstabstab active">
-                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Puneri-Bappa-Logo-01-1.png" alt="">
-
+                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Puneri-Bappa-Logo-01-1.png"
+                    alt="">
             </div>
             <div class="teamstabstab">
-                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Puneri-Bappa-Logo-01-1.png" alt="">
-
+                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Puneri-Bappa-Logo-01-1.png"
+                    alt="">
             </div>
             <div class="teamstabstab">
-                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Puneri-Bappa-Logo-01-1.png" alt="">
-
+                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Puneri-Bappa-Logo-01-1.png"
+                    alt="">
             </div>
         </div>
     </section>
@@ -91,7 +91,8 @@
                     VICKY OSTWAL
                 </div>
                 <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/cricket-ball.svg" alt="">
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/cricket-ball.svg"
+                        alt="">
                     PRAVIN DESHETY
                 </div>
             </div>

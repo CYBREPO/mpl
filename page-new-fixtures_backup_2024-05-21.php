@@ -12,7 +12,7 @@
             $d = [];
             $curl = curl_init();
             curl_setopt_array($curl, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-match-list/702687?type=&teamId=&order=ASC',
+              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-match-list/60214?type=&teamId=&order=ASC',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -36,7 +36,7 @@
 
             $curl2 = curl_init();
             curl_setopt_array($curl2, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-stat-leaderboard-filter/702687',
+              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-stat-leaderboard-filter/60214',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -187,7 +187,7 @@ $(document).ready(function() {
                 <div class="fixture">
                 <div class="fixture-head">
                 <div class="matchname">MATCH ${index + 1}</div>
-                ${values.match_result == 'Resulted' || 'abandoned'? `<div>${values.match_summary.summary}</div>` : `<div>${values.match_summary.summary}</div>` }
+                ${values.match_result == 'Resulted' ? `<div>${values.match_summary.summary}</div>` : '<div></div>'}
                 </div>
                 <div class="fixtures-body">
                 <div class="d-md-flex">
@@ -205,7 +205,7 @@ $(document).ready(function() {
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="fixture-run fixture-run1">
                             <div>${values.team_a_summary}</div>
-                            <div>${values.team_a_innings?.[0]?.summary?.over ?? ' '}</div>
+                            <div>${values.team_a_innings[0].summary.over}</div>
                         </div>
                         <img src="${values.team_a_logo}" alt="" class="versusteamimage">
                     </div>
@@ -215,7 +215,7 @@ $(document).ready(function() {
                         <img src="${values.team_b_logo}" alt="" class="versusteamimage">
                         <div class="fixture-run fixture-run2">
                             <div>${values.team_b_summary}</div>
-                            <div>${values.team_b_innings?.[0]?.summary?.over ?? ' '}</div>
+                            <div>${values.team_b_innings[0].summary.over}</div>
                         </div>
                     </div>
                 </div>

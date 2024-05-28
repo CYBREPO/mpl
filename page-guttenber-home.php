@@ -210,7 +210,7 @@
                         ORANGE CAP HOLDER
                     </div>
                     <div class="cap-player-name">
-                    <?php echo $batting_leader['data'][0]['name']; ?>
+                    <?php echo $batting_leader['data'][0]['name'] ?>;
                     </div>
 
                     <div class="d-flex justify-content-center capscores">

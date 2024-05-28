@@ -8,7 +8,7 @@
         try {
             $curl = curl_init();
             curl_setopt_array($curl, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-batting-leaderboard/702687',
+              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-batting-leaderboard/60214',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -34,7 +34,7 @@
 
             $curl2 = curl_init();
             curl_setopt_array($curl2, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-bowling-leaderboard/702687',
+              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-bowling-leaderboard/60214',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -58,7 +58,7 @@
 
             $curl3 = curl_init();
             curl_setopt_array($curl3, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-match-list/702687?type=1&teamId=&order=ASC',
+              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-match-list/60214?type=1&teamId=&order=ASC',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -210,7 +210,7 @@
                         ORANGE CAP HOLDER
                     </div>
                     <div class="cap-player-name">
-                    <?php echo $batting_leader['data'][0]['name']; ?>
+                    <?php echo $batting_leader['data'][0]['name'] ?>;
                     </div>
 
                     <div class="d-flex justify-content-center capscores">

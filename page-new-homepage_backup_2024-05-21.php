@@ -4,96 +4,7 @@
  * Description: Page template with sidebar included.
  */ get_header("header2"); ?>
 
-<?php 
-        try {
-            $curl = curl_init();
-            curl_setopt_array($curl, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-batting-leaderboard/702687',
-              CURLOPT_RETURNTRANSFER => true,
-              CURLOPT_ENCODING => '',
-              CURLOPT_MAXREDIRS => 10,
-              CURLOPT_TIMEOUT => 0,
-              CURLOPT_FOLLOWLOCATION => true,
-              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-              CURLOPT_CUSTOMREQUEST => 'GET',
-              CURLOPT_HTTPHEADER => array(
-                'Content-Type: application/json',
-                'api-key: 7d313d7c02c39e21dc4abee42760c8f3',
-                'secret_access_key: o5LgzLbpIb-e60b-11e7-mSJcQWyxHf-3de7cd8c6cf4',
-                'udid: 8817480565574762',
-                'device-type: thirdparty-mpl',
-                'master_key: 45632789202',
-                'Cookie: connect.sid=s%3ApOKpq6TM9Ez-EUAHW9aY8kuGn1HsHm9h.e0Kix5fgKITBPbFe57REWStVOCF8K1%2FfCFsU2AoLgyc'
-              ),
-            ));
-            
-            $response = curl_exec($curl);
-            $batting_leader =  json_decode($response,true);
 
-            curl_close($curl);
-
-            $curl2 = curl_init();
-            curl_setopt_array($curl2, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-bowling-leaderboard/702687',
-              CURLOPT_RETURNTRANSFER => true,
-              CURLOPT_ENCODING => '',
-              CURLOPT_MAXREDIRS => 10,
-              CURLOPT_TIMEOUT => 0,
-              CURLOPT_FOLLOWLOCATION => true,
-              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-              CURLOPT_CUSTOMREQUEST => 'GET',
-              CURLOPT_HTTPHEADER => array(
-                'Content-Type: application/json',
-                'api-key: 7d313d7c02c39e21dc4abee42760c8f3',
-                'secret_access_key: o5LgzLbpIb-e60b-11e7-mSJcQWyxHf-3de7cd8c6cf4',
-                'udid: 8817480565574762',
-                'device-type: thirdparty-mpl',
-                'master_key: 45632789202',
-                'Cookie: connect.sid=s%3ApOKpq6TM9Ez-EUAHW9aY8kuGn1HsHm9h.e0Kix5fgKITBPbFe57REWStVOCF8K1%2FfCFsU2AoLgyc'
-              ),
-            ));
-            
-            $response2 = curl_exec($curl2);
-            $bowling_leader =  json_decode($response2,true);
-
-            $curl3 = curl_init();
-            curl_setopt_array($curl3, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-match-list/702687?type=1&teamId=&order=ASC',
-              CURLOPT_RETURNTRANSFER => true,
-              CURLOPT_ENCODING => '',
-              CURLOPT_MAXREDIRS => 10,
-              CURLOPT_TIMEOUT => 0,
-              CURLOPT_FOLLOWLOCATION => true,
-              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-              CURLOPT_CUSTOMREQUEST => 'GET',
-              CURLOPT_HTTPHEADER => array(
-                'Content-Type: application/json',
-                'api-key: 7d313d7c02c39e21dc4abee42760c8f3',
-                'secret_access_key: o5LgzLbpIb-e60b-11e7-mSJcQWyxHf-3de7cd8c6cf4',
-                'udid: 8817480565574762',
-                'device-type: thirdparty-mpl',
-                'master_key: 45632789202',
-                'Cookie: connect.sid=s%3ApOKpq6TM9Ez-EUAHW9aY8kuGn1HsHm9h.e0Kix5fgKITBPbFe57REWStVOCF8K1%2FfCFsU2AoLgyc'
-              ),
-            ));
-            
-            $response3 = curl_exec($curl3);
-            $live_score =  json_decode($response3,true);
-
-            $up_flag = 0;
-            if($live_score['status'] == true){
-                $up_flag = 1;
-            }
-        }
-          catch(Exception $e) {
-            echo 'Message: ' .$e->getMessage();
-        }
-      
-        // echo "<pre>";
-        // print_r($batting_leader);
-        curl_close($curl2);
-       
-    ?>
 
 
 <main>
@@ -115,7 +26,7 @@
 
     </section>
     <!-- Banner -->
-    <?php if($up_flag == 1){ ?>
+
     <div class="livematch">
         <div class="livematch-container">
             <div class="livematchlabel">
@@ -125,38 +36,39 @@
                 <div class="stadium">
                     <div class="stadiumnamelable" style="color: #606061;">Location</div>
                     <div class="stadiumname">
-                        <?php echo $live_score['data'][0]['ground_name']; ?>
+                        Arun Jaitley Stadium
+                        New Delhi
                     </div>
                 </div>
                 <div class="d-flex align-items-center flex-column flex-md-row ovhjuhjh">
-                    <img src="<?php echo $live_score['data'][0]['team_a_logo']; ?>"
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Puneri-Bappa-Logo-01-1.png"
                         alt="" class="liveteam1">
                     <div class="liveversus">
                         <div>
                             <span>
-                                <?php echo $live_score['data'][0]['team_a_summary']?>
+                                165/3
                             </span>
                             <span>
-                                <?php echo $live_score['data'][0]['team_a_innings'][0]['summary']['over']?>
+                                20 overs
                             </span>
                         </div>
                         <div>
                             <span>
-                            <?php echo $live_score['data'][0]['team_b_summary']?>
+                                yet to bat
                             </span>
                             <span>
-                                <?php echo $live_score['data'][0]['team_b_innings'][0]['summary']['over']?>
+                                20 overs
                             </span>
                         </div>
                     </div>
-                    <img src="<?php echo $live_score['data'][0]['team_b_logo']; ?>"
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Puneri-Bappa-Logo-01-1.png"
                         alt="" class="liveteam2">
                 </div>
             </div>
             <a href="#" class="orange-button">View More</a>
         </div>
     </div>
-    <?php } ?>
+
     <!-- MEN’S TEAMS -->
     <section class="mens-team">
         <div class="container">
@@ -203,19 +115,19 @@
             <div class="col-md-6 p-0 position-relative oragnescapplayer">
                 <div class="cap-container text-center">
                     <div class="cap-image-container">
-                        <img src="<?php echo $batting_leader['data'][0]['profile_photo']; ?>"
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/hexplayer.png"
                             alt="" class="cap-image">
                     </div>
                     <div class="cap-title">
                         ORANGE CAP HOLDER
                     </div>
                     <div class="cap-player-name">
-                    <?php echo $batting_leader['data'][0]['name']; ?>
+                        Rohit Sharma
                     </div>
 
                     <div class="d-flex justify-content-center capscores">
                         <span>
-                            <div class="cap-run"><?php echo $batting_leader['data'][0]['total_runs'] ?></div>
+                            <div class="cap-run">251</div>
                             <div class="cap-label">
                                 Runs
                             </div>
@@ -233,7 +145,7 @@
                             </defs>
                         </svg>
                         <span>
-                            <div class="cap-run"><?php echo $batting_leader['data'][0]['total_match'] ?></div>
+                            <div class="cap-run">8</div>
                             <div class="cap-label">
                                 matches
                             </div>
@@ -251,7 +163,7 @@
                             </defs>
                         </svg>
                         <span>
-                            <div class="cap-run"><?php echo $batting_leader['data'][0]['average'] ?></div>
+                            <div class="cap-run">52.20</div>
                             <div class="cap-label">
                                 Average
                             </div>
@@ -266,21 +178,21 @@
             <div class="col-md-6 p-0 position-relative purplecapplayer">
                 <div class="cap-container text-center">
                     <div class="cap-image-container">
-                        <img src="<?php echo $bowling_leader['data'][0]['profile_photo']; ?>"
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/hexplayer.png"
                             alt="" class="cap-image">
                     </div>
                     <div class="cap-title">
-                        Purple CAP HOLDER
+                        ORANGE CAP HOLDER
                     </div>
                     <div class="cap-player-name">
-                    <?php echo $bowling_leader['data'][0]['name']; ?>
+                        Rohit Sharma
                     </div>
 
                     <div class="d-flex justify-content-center capscores">
                         <span>
-                            <div class="cap-run"><?php echo $bowling_leader['data'][0]['total_wickets']; ?></div>
+                            <div class="cap-run">251</div>
                             <div class="cap-label">
-                                Wickets
+                                Runs
                             </div>
                         </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="2" height="71" viewBox="0 0 2 71" fill="none"
@@ -296,7 +208,7 @@
                             </defs>
                         </svg>
                         <span>
-                            <div class="cap-run"><?php echo $bowling_leader['data'][0]['total_match']; ?></div>
+                            <div class="cap-run">8</div>
                             <div class="cap-label">
                                 matches
                             </div>
@@ -314,7 +226,7 @@
                             </defs>
                         </svg>
                         <span>
-                            <div class="cap-run"><?php echo $bowling_leader['data'][0]['avg']; ?></div>
+                            <div class="cap-run">52.20</div>
                             <div class="cap-label">
                                 Average
                             </div>

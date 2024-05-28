@@ -9,7 +9,7 @@
             $d = [];
             $curl = curl_init();
             curl_setopt_array($curl, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-batting-leaderboard/702687',
+              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-batting-leaderboard/60214',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -36,7 +36,7 @@
             $d = [];
             $curl = curl_init();
             curl_setopt_array($curl, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-bowling-leaderboard/702687',
+              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-bowling-leaderboard/60214',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -62,7 +62,7 @@
           
             $curl2 = curl_init();
             curl_setopt_array($curl2, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-stat-leaderboard-filter/702687',
+              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-stat-leaderboard-filter/60214',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -320,11 +320,11 @@
                 <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
                     tabindex="0">
 
-                    <div class="d-md-flex align-items-center">
-                        <div class="dropdown me-3 my-3 my-md-5">
+                    <div class="d-md-flex align-items-center justify-content-between">
+                        <div class="dropdown my-3 my-md-5">
                             <button class="btn btn-secondary dropdown-toggle bg-white" type="button"
                                 data-bs-toggle="dropdown" aria-expanded="false" id="SeasonDropdown">
-                                <?php echo $filters['data']['season'][1]['key']?>
+                                Season 2024
                             </button>
                             <ul class="dropdown-menu">
                             <?php foreach($filters['data']['season'] as $k) { if($k['value'] != -1){?>
@@ -335,7 +335,7 @@
                                 <li><a class="dropdown-item" href="" data-value="action1">Something else here</a></li> -->
                             </ul>
                         </div>
-                        <div class="dropdown me-3 my-3 my-md-5">
+                        <div class="dropdown my-3 my-md-5">
                             <button class="btn btn-secondary dropdown-toggle bg-white" type="button"
                                 data-bs-toggle="dropdown" aria-expanded="false" id="orangCapDropdown">
                                 orang cap
@@ -356,7 +356,7 @@
                                 <!-- <li><a class="dropdown-item" href="" data-value="action1">Something else here</a></li> -->
                             </ul>
                         </div>
-                        <div class="dropdown me-3 my-3 my-md-5">
+                        <div class="dropdown my-3 my-md-5">
                             <button class="btn btn-secondary dropdown-toggle bg-white" type="button"
                                 data-bs-toggle="dropdown" aria-expanded="false" id="teamsDropdown">
                                 All teams
@@ -371,12 +371,24 @@
                                 <li><a class="dropdown-item" href="" data-value="action1">Something else here</a></li> -->
                             </ul>
                         </div>
+                        <!-- <div class="dropdown my-3 my-md-5">
+                            <button class="btn btn-secondary dropdown-toggle bg-white" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" id="playersDropdown">
+                                ALL PLAYERS
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="" data-value="actionp">Action</a></li>
+                                <li><a class="dropdown-item" href="" data-value="action1">Another action</a></li>
+                                <li><a class="dropdown-item" href="" data-value="action1">Something else here</a></li>
+                            </ul>
+                        </div> -->
                         <form action="">
                             <div class="search">
                                 <input type="text" placeholder="&#xF002; &nbsp; Search by player name"
                                     style="font-family:Arial, FontAwesome" id="playerSearch"/>
                             </div>
                         </form>
+
                     </div>
                     <!-- Batting stats table -->
                     <div class="table-responsive mb-4" id="BattingStatsTable">
@@ -410,7 +422,7 @@
                                                     src="<?php echo $values['profile_photo']; ?>">
                                             </div>
                                             <div class="text-start ">
-                                                <h2 class="ih-pt-cont mb-0 text-black fw-400"><a href="<?php echo '/individual-players?playerid='.$values['player_id'];?>" target="_blank"><?php echo $values['name']; ?><a></h2>
+                                                <h2 class="ih-pt-cont mb-0 text-black fw-400"><?php echo $values['name']; ?></h2>
                                                 <h2 class="ih-pt-cont mb-0 fw-400">RR</h2>
                                             </div>
                                         </div>
@@ -738,7 +750,7 @@ $(document).ready(function() {
             var search = $('#playerSearch').val().trim();
 
             if(season == undefined){
-                season =702687;
+                season =60214;
             }
             
             console.log(season);
@@ -1246,7 +1258,7 @@ $(document).ready(function() {
                                 '<div class="ih-pt-ic">' +
                                     '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
                                     '<div class="text-start">' +
-                                        '<a href="<?php echo '/individual-players?playerid='.$values['player_id'];?>" target="_blank"><h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2></a>' +
+                                        '<h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2>' +
                                         '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
                                     '</div>' +
                                 '</div>' +
@@ -1283,7 +1295,7 @@ $(document).ready(function() {
                             '<div class="ih-pt-ic">' +
                                 '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
                                 '<div class="text-start">' +
-                                    '<a href="<?php echo '/individual-players?playerid='.$values['player_id'];?>" target="_blank"><h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2></a>' +
+                                    '<h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2>' +
                                     '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
                                 '</div>' +
                             '</div>' +
@@ -1356,7 +1368,7 @@ $(document).ready(function() {
                             '<div class="ih-pt-ic">' +
                                 '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
                                 '<div class="text-start">' +
-                                    '<a href="<?php echo '/individual-players?playerid='.$values['player_id'];?>" target="_blank"><h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2></a>' +
+                                    '<h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2>' +
                                     '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
                                 '</div>' +
                             '</div>' +
@@ -1395,7 +1407,7 @@ $(document).ready(function() {
                         '<div class="ih-pt-ic">' +
                             '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
                             '<div class="text-start">' +
-                                '<a href="<?php echo '/individual-players?playerid='.$values['player_id'];?>" target="_blank"><h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2></a>' +
+                                '<h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2>' +
                                 '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
                             '</div>' +
                         '</div>' +
@@ -1486,7 +1498,7 @@ $(document).ready(function() {
                                 '<div class="ih-pt-ic">' +
                                     '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
                                     '<div class="text-start">' +
-                                        '<a href="<?php echo '/individual-players?playerid='.$values['player_id'];?>" target="_blank"><h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2></a>' +
+                                        '<h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2>' +
                                         '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
                                     '</div>' +
                                 '</div>' +
@@ -1526,7 +1538,7 @@ $(document).ready(function() {
                             '<div class="ih-pt-ic">' +
                                 '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
                                 '<div class="text-start">' +
-                                    '<a href="<?php echo '/individual-players?playerid='.$values['player_id'];?>" target="_blank"><h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2></a>' +
+                                    '<h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2>' +
                                     '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
                                 '</div>' +
                             '</div>' +
@@ -1604,7 +1616,7 @@ $(document).ready(function() {
                             '<div class="ih-pt-ic">' +
                                 '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
                                 '<div class="text-start">' +
-                                    '<a href="<?php echo '/individual-players?playerid='.$values['player_id'];?>" target="_blank"><h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2></a>' +
+                                    '<h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2>' +
                                     '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
                                 '</div>' +
                             '</div>' +
@@ -1644,7 +1656,7 @@ $(document).ready(function() {
                         '<div class="ih-pt-ic">' +
                             '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
                             '<div class="text-start">' +
-                                '<a href="<?php echo '/individual-players?playerid='.$values['player_id'];?>" target="_blank"><h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2></a>' +
+                                '<h2 class="ih-pt-cont mb-0 text-black fw-400">' + values.name + '</h2>' +
                                 '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
                             '</div>' +
                         '</div>' +

@@ -1,73 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" style="margin-top:0 !important">
 
 <head>
-    <!-- Meta -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog Site Template">
-    <meta name="author" content="https://youtube.com/FollowAndrew">
-    <link rel="shortcut icon" href="wp-content/themes/followandrew/assets/images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon"
+        href="<?php echo get_bloginfo('template_directory'); ?>/assets/images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-    <!-- FontAwesome CSS-->
-    <!-- Bootstrap CSS-->
-    <!-- Theme CSS -->
-    <?php
-	wp_head();
-	?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Lato:wght@100;300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/newassets/css/styles.css">
+    <?php wp_head(); ?>
+    <title>MPL</title>
 
 </head>
 
 <body>
-
-    <header class="header text-center">
-        <a class="site-title pt-lg-4 mb-0" href="index.html">
-            <?php echo get_bloginfo('name'); ?>
-        </a>
-
-        <nav class="navbar navbar-expand-lg navbar-dark">
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div id="navigation" class="collapse navbar-collapse flex-column">
-                <?php
-				if (function_exists('the_custom_logo')) {
-					$custom_logo_id = get_theme_mod('custom_logo');
-					$logo = wp_get_attachment_image_src($custom_logo_id);
-
-				}
-				?>
-                <img class="mb-3 mx-auto logo" src="<?php echo $logo[0] ?>" alt="logo">
-
-                <?php
-				wp_nav_menu(
-					array(
-						'menu' => 'primary',
-						'container' => '',
-						'theme_location' => 'primary',
-						'items_wrap' => '<ul id="" class="navbar-nav flex-column text-sm-center text-md-left">%3$s</ul>'
-					)
-				);
-				?>
-                <ul class="navbar-nav flex-column text-sm-center text-md-left">
-
-                </ul>
-                <hr>
-
-                <?php
-				dynamic_sidebar('sidebar-1');
-				?>
+    <topheader class="d-none d-md-block">
+        <nav class="navbar p-0 d-flex align-items-center justify-content-between"
+            style="background: linear-gradient(90deg, #18001C 0%, #DD460F 100%);height: 50px;">
+            <div class="container">
+                <div class="d-flex align-items-center">
+                    <a href="https://mpl.thebrandodyssey.com">
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/mcalogo.svg"
+                            class="w-100" alt="mpl.thebrandodyssey.com" style="max-width: 37px;"></a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-2" width="2" height="21" viewBox="0 0 2 21"
+                        fill="none">
+                        <path opacity="0.6" d="M1 0V21" stroke="white" stroke-width="0.5" />
+                    </svg>
+                    <a href="https://mpl.thebrandodyssey.com">
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/WMPLcorrected-013.svg"
+                            class="w-100" alt="mpl.thebrandodyssey.com" style="max-width: 37px;"></a>
+                </div>
+                <div class="menu-header-menu-container">
+                    <ul id="menu-header-menu" class="p-0 m-0 d-flex">
+                        <div aria-current="page" style="font-family: Rubik;" class="text-white">Follow Us</div>
+                        <a href="https://mpl.thebrandodyssey.com/" aria-current="page"> <img
+                                src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/002-facebook.svg"
+                                alt="mpl.thebrandodyssey.com" style="width: 27px;
+                                margin: 0 16px;"></a>
+                        <a href="https://mpl.thebrandodyssey.com/" aria-current="page"> <img
+                                src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/003-instagram.svg"
+                                alt="mpl.thebrandodyssey.com" style="width: 27px;"></a>
+                    </ul>
+                </div>
             </div>
+        </nav>
+    </topheader>
+    <header class="d-none d-md-block">
+        <nav class="navbar p-0 d-flex align-items-center justify-content-between">
+            <div class="container">
+                <a class="navbar-brand" href="https://mpl.thebrandodyssey.com">
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/logowithbg.png"
+                        class="w-100" alt="mpl.thebrandodyssey.com"></a>
 
+                <div class="menu-header-menu-container">
+                    <ul id="menu-header-menu" class="p-0 m-0 menu">
+                        <?php if (has_nav_menu('new-header-menu')) {
+                        wp_nav_menu(array('theme_location' => 'new-header-menu'));
+                    } ?>
+
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <div class="main-wrapper">
-        <header class="page-title theme-bg-light text-center gradient py-5">
-            <h1 class="heading">
-                <?php the_title(); ?>
-            </h1>
-        </header>
