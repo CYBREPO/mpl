@@ -127,7 +127,7 @@ ul {
 
 .dropdown {
   position: relative;
-  z-index: 1;
+  z-index: 9;
 }
 .dropdown .dropdown-toggle {
   padding: 8px 10px;
@@ -169,6 +169,11 @@ ul {
   top: -3px;
 }
 
+.menu-header-menu-container a:hover img {
+  filter: invert(1);
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(336deg);
+}
+
 .topheader .container {
   padding-left: 20px;
   margin-left: 65px;
@@ -186,9 +191,6 @@ ul {
 }
 .navbar .navbar-brand img {
   max-width: 211px;
-  position: absolute;
-  left: 0;
-  top: 0;
 }
 
 .navbar .menu {
@@ -637,7 +639,7 @@ a {
 }
 @media screen and (min-width: 992px) {
   .cap-player-name {
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 20px;
   }
 }
@@ -656,7 +658,7 @@ a {
 }
 @media screen and (min-width: 992px) {
   .cap-run {
-    font-size: 42px;
+    font-size: 38px;
   }
 }
 
@@ -1050,6 +1052,10 @@ h2.ih-pt-cont {
   margin-bottom: 0;
 }
 
+h2.ih-pt-cont a {
+  color: #000000;
+}
+
 .ih-pt-g,
 .ih-pt-r {
   background-color: #008625;
@@ -1193,7 +1199,7 @@ h2.ih-pt-cont {
 }
 @media screen and (min-width: 992px) {
   .stats-banner .playername {
-    font-size: 56px;
+    font-size: 46px;
   }
 }
 
@@ -1227,7 +1233,7 @@ h2.ih-pt-cont {
 .orange-cap-internal .capplayerimage {
   width: 309px;
   margin-left: 220px;
-  margin-right: 150px;
+  margin-right: 200px;
   position: relative;
   top: 25px;
 }
@@ -1235,6 +1241,8 @@ h2.ih-pt-cont {
   width: 309px;
   height: 317.829px;
   transform: translate(-20px, 85px);
+  -webkit-clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
+          clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
 }
 .orange-cap-internal .cap-details-side {
   margin-top: 65px;
@@ -1248,14 +1256,16 @@ h2.ih-pt-cont {
 }
 .orange-cap-internal .cap-player-name {
   color: #FFF;
-  font-size: 32px;
+  font-family: "Koulen";
+  font-size: 28px;
   font-weight: 400;
   /* 125% */
 }
 .orange-cap-internal .captitle {
   color: #FFF;
-  font-size: 56px;
+  font-size: 46px;
   font-weight: 400;
+  font-family: "Koulen";
 }
 
 .purple-cap-internal {
@@ -1267,7 +1277,7 @@ h2.ih-pt-cont {
 }
 .purple-cap-internal .capplayerimage {
   width: 309px;
-  margin-left: 110px;
+  margin-left: 156px;
   margin-right: 243px;
   position: relative;
   top: 25px;
@@ -1276,6 +1286,8 @@ h2.ih-pt-cont {
   width: 309px;
   height: 317.829px;
   transform: translate(40px, 85px);
+  -webkit-clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
+          clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
 }
 .purple-cap-internal .cap-details-side {
   margin-top: 65px;
@@ -1289,14 +1301,16 @@ h2.ih-pt-cont {
 }
 .purple-cap-internal .cap-player-name {
   color: #FFF;
-  font-size: 32px;
+  font-size: 28px;
+  font-family: "Koulen";
   font-weight: 400;
   /* 125% */
 }
 .purple-cap-internal .captitle {
   color: #FFF;
-  font-size: 56px;
+  font-size: 46px;
   font-weight: 400;
+  font-family: "Koulen";
 }
 
 @media screen and (max-width: 992px) {
@@ -1812,6 +1826,10 @@ footer .social-icons {
 footer .social-icons li {
   margin-right: 23px;
 }
+footer .social-icons a:hover img {
+  filter: invert(1);
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(336deg);
+}
 
 footer.main-footer::after {
   content: "";
@@ -1962,4 +1980,16 @@ button.slick-next.slick-arrow {
   transform: rotate(180deg) !important;
   left: 60px !important;
   bottom: -20px !important;
+}
+
+.designbay span {
+  color: #F15A29 !important;
+}
+
+.designbay:hover {
+  color: white !important;
+}
+
+.designbay span:hover {
+  color: white !important;
 }/*# sourceMappingURL=styles.css.map */

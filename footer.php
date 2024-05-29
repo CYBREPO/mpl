@@ -48,6 +48,10 @@
                 <div class="menu-footer-menu-container">
                     <div class="menu-footer-menu-container" id="menu-footer-menu">
                         <ul id="menu-footer-menu" class="menu">
+                            
+                            <li id="menu-item-656"
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a
+                                    href="#">About Us</a></li>
                             <li id="menu-item-656"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a
                                     href="#">Code of Conduct</a></li>
@@ -98,7 +102,8 @@
                 <ul class="d-md-flex px-0 py-3 m-0 justify-content-center justify-content-md-start  w-100">
                     <li><a href="#" class="text-white text-decoration-none">terms & conditions </a>
                     </li>
-                    <li class="my-4 my-md-0 "><a href="#" class="text-white text-decoration-none mx-md-3">Privacy policy</a>
+                    <li class="my-4 my-md-0 "><a href="#" class="text-white text-decoration-none mx-md-3">Privacy
+                            policy</a>
                     </li>
                     <li class="text-white text-decoration-none">Copyright@MPL</li>
                 </ul>
@@ -106,8 +111,8 @@
             <div class="col-md-6 pe-0 ">
                 <ul
                     class="d-md-flex px-0 py-3 m-0 justify-content-center justify-content-md-end w-100 text-end lower-footer">
-                    <li><a href="https://thebrandodyssey.com/" class="text-white text-decoration-none">Designed By
-                            THE BRAND ODYSSEY</a>
+                    <li><a href="https://thebrandodyssey.com/" class="text-white text-decoration-none designbay" >Designed By
+                            <span>THE BRAND ODYSSEY</span></a>
                     </li>
                 </ul>
             </div>

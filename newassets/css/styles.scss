@@ -141,7 +141,7 @@ ul {
 
 .dropdown {
     position: relative;
-    z-index: 1;
+    z-index: 9;
 
     .dropdown-toggle {
         padding: 8px 10px;
@@ -186,6 +186,18 @@ ul {
 
 // navbar
 
+.menu-header-menu-container {
+
+    a:hover {
+        img {
+            filter: invert(1);
+            filter: invert(0.5) sepia(1) saturate(5) hue-rotate(336deg);
+
+        }
+    }
+
+}
+
 .topheader {
     .container {
         padding-left: 20px;
@@ -201,9 +213,6 @@ ul {
 .navbar .navbar-brand {
     img {
         max-width: 211px;
-        position: absolute;
-        left: 0;
-        top: 0;
     }
 
     height: 78px;
@@ -678,7 +687,7 @@ a {
     margin-bottom: 11px;
 
     @media screen and (min-width: 992px) {
-        font-size: 32px;
+        font-size: 28px;
         margin-bottom: 20px;
     }
 
@@ -701,7 +710,7 @@ a {
     font-size: 21px;
 
     @media screen and (min-width: 992px) {
-        font-size: 42px;
+        font-size: 38px;
     }
 }
 
@@ -1143,6 +1152,11 @@ h2.ih-pt-cont {
     margin-bottom: 0
 }
 
+h2.ih-pt-cont a {
+
+    color: #000000;
+}
+
 .ih-pt-g,
 .ih-pt-r {
     background-color: #008625;
@@ -1312,7 +1326,7 @@ h2.ih-pt-cont {
         }
 
         @media screen and (min-width: 992px) {
-            font-size: 56px;
+            font-size: 46px;
         }
 
         font-weight: 400;
@@ -1358,7 +1372,7 @@ h2.ih-pt-cont {
     .capplayerimage {
         width: 309px;
         margin-left: 220px;
-        margin-right: 150px;
+        margin-right: 200px;
         position: relative;
         top: 25px;
 
@@ -1366,6 +1380,7 @@ h2.ih-pt-cont {
             width: 309px;
             height: 317.829px;
             transform: translate(-20px, 85px);
+            clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
         }
     }
 
@@ -1382,8 +1397,8 @@ h2.ih-pt-cont {
 
     .cap-player-name {
         color: #FFF;
-
-        font-size: 32px;
+        font-family: 'Koulen';
+        font-size: 28px;
 
         font-weight: 400;
 
@@ -1392,11 +1407,9 @@ h2.ih-pt-cont {
 
     .captitle {
         color: #FFF;
-
-        font-size: 56px;
-
+        font-size: 46px;
         font-weight: 400;
-
+        font-family: 'Koulen';
     }
 }
 
@@ -1409,7 +1422,7 @@ h2.ih-pt-cont {
 
     .capplayerimage {
         width: 309px;
-        margin-left: 110px;
+        margin-left: 156px;
         margin-right: 243px;
         position: relative;
         top: 25px;
@@ -1418,6 +1431,7 @@ h2.ih-pt-cont {
             width: 309px;
             height: 317.829px;
             transform: translate(40px, 85px);
+            clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
         }
     }
 
@@ -1435,8 +1449,8 @@ h2.ih-pt-cont {
     .cap-player-name {
         color: #FFF;
 
-        font-size: 32px;
-
+        font-size: 28px;
+        font-family: 'Koulen';
         font-weight: 400;
 
         /* 125% */
@@ -1444,11 +1458,9 @@ h2.ih-pt-cont {
 
     .captitle {
         color: #FFF;
-
-        font-size: 56px;
-
+        font-size: 46px;
         font-weight: 400;
-
+        font-family: 'Koulen';
     }
 }
 
@@ -2052,6 +2064,14 @@ footer {
         li {
             margin-right: 23px;
         }
+
+        a:hover {
+            img {
+                filter: invert(1);
+                filter: invert(0.5) sepia(1) saturate(5) hue-rotate(336deg);
+
+            }
+        }
     }
 }
 
@@ -2211,4 +2231,16 @@ button.slick-next.slick-arrow {
     transform: rotate(180deg) !important;
     left: 60px !important;
     bottom: -20px !important;
+}
+
+.designbay span {
+    color: #F15A29 !important;
+}
+
+.designbay:hover {
+    color: white !important;
+}
+
+.designbay span:hover {
+    color: white !important;
 }

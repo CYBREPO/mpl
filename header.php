@@ -48,13 +48,28 @@
                 <div class="menu-header-menu-container">
                     <ul id="menu-header-menu" class="p-0 m-0 d-flex">
                         <div aria-current="page" style="font-family: Rubik;" class="text-white">Follow Us</div>
-                        <a href="https://mpl.thebrandodyssey.com/" aria-current="page"> <img
-                                src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/002-facebook.svg"
-                                alt="mpl.thebrandodyssey.com" style="width: 27px;
-                                margin: 0 16px;"></a>
-                        <a href="https://mpl.thebrandodyssey.com/" aria-current="page"> <img
-                                src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/003-instagram.svg"
-                                alt="mpl.thebrandodyssey.com" style="width: 27px;"></a>
+                        <li class="ms-4">
+                            <a href="https://www.instagram.com/mplt20tournament/?igshid=MzRlODBiNWFlZA=="
+                                target="_blank"><img
+                                    src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Vector.svg"
+                                    alt=""></a>
+                        </li>
+                        <li class="ms-4">
+                            <a href="https://twitter.com/mpltournament?s=21&t=2-7IwCyW7Jf5I-D1j1-OFw"
+                                target="_blank"><img
+                                    src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Vector-1.svg"
+                                    alt=""></a>
+                        </li>
+                        <li class="ms-4">
+                            <a href="https://www.facebook.com/mplt20tournament?mibextid=LQQJ4d" target="_blank"><img
+                                    src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Vector-2.svg"
+                                    alt=""></a>
+                        </li>
+                        <li class="ms-4">
+                            <a href="https://www.youtube.com/channel/UCaUZedaymGsM_mJZMAiQzVA" target="_blank"><img
+                                    src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Vector-3.svg"
+                                    alt=""></a>
+                        </li>
                     </ul>
                 </div>
             </div>
