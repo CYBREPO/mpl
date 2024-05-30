@@ -130,7 +130,7 @@
                             <div class="statstext">Specialization</div>
                         </div>
                         <div>
-                            <div class="statsnumb">04 October 1997</div>
+                            <div class="statsnumb"><?php echo $personal_dat['data']['player_info']['dob'] != '' ? date("d F Y", strtotime($personal_dat['data']['player_info']['dob'] )) : ''; ?></div>
                             <div class="statstext">Date of Birth</div>
                         </div>
                         <div>

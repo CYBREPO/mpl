@@ -191,7 +191,7 @@
                             <div class="statstext">BBI</div>
                         </div>
                         <div>
-                            <div class="statsnumb">0/0</div>
+                            <div class="statsnumb"><?php echo $bowling_leader_board['data'][0]['4_wickets'].'/'. $bowling_leader_board['data'][0]['5_wickets']; ?>0/0</div>
                             <div class="statstext">4Ws/5Ws</div>
                         </div>
                     </div>
@@ -478,8 +478,8 @@
                                     <td><?php echo $values['avg']; ?></td>
                                     <td><?php echo $values['economy']; ?></td>
                                     <td><?php echo $values['SR']; ?></td>
-                                    <td>0</td>
-                                    <td>0</td>
+                                    <td><?php echo $values['4_wickets']; ?></td>
+                                    <td><?php echo $values['5_wickets']; ?></td>
                                 </tr>
                                 <?php } ?>
                             </tbody>
@@ -1592,7 +1592,7 @@ $(document).ready(function() {
                             $('#bowlingStats .statstable div:nth-child(3) .statsnumb').text(values.economy);
                             $('#bowlingStats .statstable div:nth-child(4) .statsnumb').text(values.maidens);
                             $('#bowlingStats .statstable div:nth-child(5) .statsnumb').text(values.best_bowling || '0'); // Assuming best_bowling field for BBI
-                            $('#bowlingStats .statstable div:nth-child(6) .statsnumb').text((values['4w'] || '0') + '/' + (values['5w'] || '0')); // Assuming 4w and 5w fields for 4Ws/5Ws
+                            $('#bowlingStats .statstable div:nth-child(6) .statsnumb').text((values['4_wickets'] || '0') + '/' + (values['5_wickets'] || '0')); // Assuming 4w and 5w fields for 4Ws/5Ws
                         }
                         foundedPlayer = true;
                         }
@@ -1633,7 +1633,7 @@ $(document).ready(function() {
                         $('#bowlingStats .statstable div:nth-child(3) .statsnumb').text(firstBowler.economy);
                         $('#bowlingStats .statstable div:nth-child(4) .statsnumb').text(firstBowler.maidens);
                         $('#bowlingStats .statstable div:nth-child(5) .statsnumb').text(firstBowler.best_bowling || '0'); // Assuming best_bowling field for BBI
-                        $('#bowlingStats .statstable div:nth-child(6) .statsnumb').text((firstBowler['4w'] || '0') + '/' + (firstBowler['5w'] || '0')); // Assuming 4w and 5w fields for 4Ws/5Ws
+                        $('#bowlingStats .statstable div:nth-child(6) .statsnumb').text((firstBowler['4_wickets'] || '0') + '/' + (firstBowler['5_wickets'] || '0')); // Assuming 4w and 5w fields for 4Ws/5Ws
                     }
 
                     $("#bowlingStats").show();
@@ -1658,8 +1658,8 @@ $(document).ready(function() {
                     '<td>' + values.avg + '</td>' +
                     '<td>' + values.economy + '</td>' +
                     '<td>' + values.SR + '</td>' +
-                    '<td>0</td>' +
-                    '<td>0</td>' +
+                    '<td>' + values.4_wickets + '</td>' +
+                    '<td>' + values.5_wickets + '</td>' +
                     '</tr>';
                     $('#pointsdatabowling').append(newRow);
                 }

@@ -79,7 +79,8 @@
             <div class="dropdown py-4 py-md-5">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    Season 2024
+                    <?php echo $filters['data']['season'][1]['key']?>
+                    <!-- Season 2024 -->
                 </button>
                 <ul class="dropdown-menu">
                     <?php foreach($filters['data']['season'] as $k) { if($k['value'] != -1){?>
