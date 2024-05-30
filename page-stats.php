@@ -1658,8 +1658,8 @@ $(document).ready(function() {
                     '<td>' + values.avg + '</td>' +
                     '<td>' + values.economy + '</td>' +
                     '<td>' + values.SR + '</td>' +
-                    '<td>' + values.4_wickets + '</td>' +
-                    '<td>' + values.5_wickets + '</td>' +
+                    '<td>' + values['4_wickets'] + '</td>' +
+                    '<td>' + values['5_wickets'] + '</td>' +
                     '</tr>';
                     $('#pointsdatabowling').append(newRow);
                 }
