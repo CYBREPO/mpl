@@ -9,12 +9,13 @@
     $tournament_id = 1029866;
 
     $batting_leader = getOrange($tournament_id);
-    if($batting_leader['status'] == 'false'){
+   
+    if($batting_leader['status'] == ''){
         $batting_leader = getOrange(702687);
     }
 
     $bowling_leader = getPurple($tournament_id);
-    if($bowling_leader['status'] == 'false'){
+    if($bowling_leader['status'] == ''){
         $bowling_leader = getPurple(702687);
     }
     
