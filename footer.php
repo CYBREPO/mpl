@@ -121,9 +121,9 @@
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
 </script>
@@ -256,6 +256,19 @@ $('#playerSearch').on('keyup', function() {
     }
 
 });
+</script>
+<script>
+$(document).ready(function() {
+    $(".content").slice(0, 9).show();
+    $(".loadmorebutton").on("click", function(e) {
+        e.preventDefault();
+        $(".content:hidden").slice(0, 4).slideDown();
+        if ($(".content:hidden").length == 0) {
+            $("#loadMore").text("No Content").addClass("noContent");
+        }
+    });
+
+})
 </script>
 <!-- Bootstrap Javascript -->
 <?php
