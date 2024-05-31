@@ -5,58 +5,58 @@
  */ get_header("header2"); ?>
 <?php 
         try {
-            $data='';
-            $d = [];
-            $curl = curl_init();
-            curl_setopt_array($curl, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-batting-leaderboard/702687',
-              CURLOPT_RETURNTRANSFER => true,
-              CURLOPT_ENCODING => '',
-              CURLOPT_MAXREDIRS => 10,
-              CURLOPT_TIMEOUT => 0,
-              CURLOPT_FOLLOWLOCATION => true,
-              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-              CURLOPT_CUSTOMREQUEST => 'GET',
-              CURLOPT_HTTPHEADER => array(
-                'Content-Type: application/json',
-                'api-key: 7d313d7c02c39e21dc4abee42760c8f3',
-                'secret_access_key: o5LgzLbpIb-e60b-11e7-mSJcQWyxHf-3de7cd8c6cf4',
-                'udid: 8817480565574762',
-                'device-type: thirdparty-mpl',
-                'master_key: 45632789202',
-                'Cookie: connect.sid=s%3ApOKpq6TM9Ez-EUAHW9aY8kuGn1HsHm9h.e0Kix5fgKITBPbFe57REWStVOCF8K1%2FfCFsU2AoLgyc'
-              ),
-            ));
+            // $data='';
+            // $d = [];
+            // $curl = curl_init();
+            // curl_setopt_array($curl, array(
+            //   CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-batting-leaderboard/702687',
+            //   CURLOPT_RETURNTRANSFER => true,
+            //   CURLOPT_ENCODING => '',
+            //   CURLOPT_MAXREDIRS => 10,
+            //   CURLOPT_TIMEOUT => 0,
+            //   CURLOPT_FOLLOWLOCATION => true,
+            //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            //   CURLOPT_CUSTOMREQUEST => 'GET',
+            //   CURLOPT_HTTPHEADER => array(
+            //     'Content-Type: application/json',
+            //     'api-key: 7d313d7c02c39e21dc4abee42760c8f3',
+            //     'secret_access_key: o5LgzLbpIb-e60b-11e7-mSJcQWyxHf-3de7cd8c6cf4',
+            //     'udid: 8817480565574762',
+            //     'device-type: thirdparty-mpl',
+            //     'master_key: 45632789202',
+            //     'Cookie: connect.sid=s%3ApOKpq6TM9Ez-EUAHW9aY8kuGn1HsHm9h.e0Kix5fgKITBPbFe57REWStVOCF8K1%2FfCFsU2AoLgyc'
+            //   ),
+            // ));
             
-            $response = curl_exec($curl);
-            $batting_leader_board =  json_decode($response,true);
+            // $response = curl_exec($curl);
+            // $batting_leader_board =  json_decode($response,true);
 
 
-            $data='';
-            $d = [];
-            $curl = curl_init();
-            curl_setopt_array($curl, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-bowling-leaderboard/702687',
-              CURLOPT_RETURNTRANSFER => true,
-              CURLOPT_ENCODING => '',
-              CURLOPT_MAXREDIRS => 10,
-              CURLOPT_TIMEOUT => 0,
-              CURLOPT_FOLLOWLOCATION => true,
-              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-              CURLOPT_CUSTOMREQUEST => 'GET',
-              CURLOPT_HTTPHEADER => array(
-                'Content-Type: application/json',
-                'api-key: 7d313d7c02c39e21dc4abee42760c8f3',
-                'secret_access_key: o5LgzLbpIb-e60b-11e7-mSJcQWyxHf-3de7cd8c6cf4',
-                'udid: 8817480565574762',
-                'device-type: thirdparty-mpl',
-                'master_key: 45632789202',
-                'Cookie: connect.sid=s%3ApOKpq6TM9Ez-EUAHW9aY8kuGn1HsHm9h.e0Kix5fgKITBPbFe57REWStVOCF8K1%2FfCFsU2AoLgyc'
-              ),
-            ));
+            // $data='';
+            // $d = [];
+            // $curl = curl_init();
+            // curl_setopt_array($curl, array(
+            //   CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-bowling-leaderboard/702687',
+            //   CURLOPT_RETURNTRANSFER => true,
+            //   CURLOPT_ENCODING => '',
+            //   CURLOPT_MAXREDIRS => 10,
+            //   CURLOPT_TIMEOUT => 0,
+            //   CURLOPT_FOLLOWLOCATION => true,
+            //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            //   CURLOPT_CUSTOMREQUEST => 'GET',
+            //   CURLOPT_HTTPHEADER => array(
+            //     'Content-Type: application/json',
+            //     'api-key: 7d313d7c02c39e21dc4abee42760c8f3',
+            //     'secret_access_key: o5LgzLbpIb-e60b-11e7-mSJcQWyxHf-3de7cd8c6cf4',
+            //     'udid: 8817480565574762',
+            //     'device-type: thirdparty-mpl',
+            //     'master_key: 45632789202',
+            //     'Cookie: connect.sid=s%3ApOKpq6TM9Ez-EUAHW9aY8kuGn1HsHm9h.e0Kix5fgKITBPbFe57REWStVOCF8K1%2FfCFsU2AoLgyc'
+            //   ),
+            // ));
             
-            $response = curl_exec($curl);
-            $bowling_leader_board =  json_decode($response,true);
+            // $response = curl_exec($curl);
+            // $bowling_leader_board =  json_decode($response,true);
 
 
           
@@ -84,7 +84,16 @@
             $response2 = curl_exec($curl2);
             $filters =  json_decode($response2,true);
             
-
+            foreach($filters['data']['season'] as $k){
+                $batting_leader_board = getOrange($k['value']);
+                $bowling_leader_board = getPurple($k['value']);
+                $season = $k['key'];
+                if($batting_leader_board['status'] != '' && $bowling_leader_board['status'] != ''){
+                    $batting_leader_board = getOrange($k['value']);
+                    $bowling_leader_board = getPurple($k['value']);
+                    break;
+                }
+            }
         }
           catch(Exception $e) {
             echo 'Message: ' .$e->getMessage();
@@ -324,7 +333,7 @@
                         <div class="dropdown me-3 my-3 my-md-5">
                             <button class="btn btn-secondary dropdown-toggle bg-white" type="button"
                                 data-bs-toggle="dropdown" aria-expanded="false" id="SeasonDropdown">
-                                <?php echo $filters['data']['season'][1]['key']?>
+                                <?php echo $season;?>
                             </button>
                             <ul class="dropdown-menu">
                             <?php foreach($filters['data']['season'] as $k) { if($k['value'] != -1){?>
@@ -722,9 +731,9 @@ $(document).ready(function() {
         dropdownButton.data('selected-url', selectedUrl);
         fetchData();
 
-        $('#playerSearch').on('input', function() {
-            //fetchData();
-        });
+        // $('#playerSearch').on('input', function() {
+        //     //fetchData();
+        // });
         
     });
 
@@ -735,7 +744,7 @@ $(document).ready(function() {
             var selectedOrangeCap = $('#orangCapDropdown').data('selected-url');
             var teams = $('#teamsDropdown').text().trim();
             var players = $('#playersDropdown').text().trim();
-            var search = $('#playerSearch').val().trim();
+           // var search = $('#playerSearch').val().trim();
 
             if(season == undefined){
                 season =702687;
@@ -1676,3 +1685,83 @@ $(document).ready(function() {
     }
 });
 </script>
+
+<?php 
+
+function getOrange($tournament_id){
+    try {
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-batting-leaderboard/'.$tournament_id,
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => '',
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 0,
+          CURLOPT_FOLLOWLOCATION => true,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => 'GET',
+          CURLOPT_HTTPHEADER => array(
+            'Content-Type: application/json',
+            'api-key: 7d313d7c02c39e21dc4abee42760c8f3',
+            'secret_access_key: o5LgzLbpIb-e60b-11e7-mSJcQWyxHf-3de7cd8c6cf4',
+            'udid: 8817480565574762',
+            'device-type: thirdparty-mpl',
+            'master_key: 45632789202',
+            'Cookie: connect.sid=s%3ApOKpq6TM9Ez-EUAHW9aY8kuGn1HsHm9h.e0Kix5fgKITBPbFe57REWStVOCF8K1%2FfCFsU2AoLgyc'
+          ),
+        ));
+        
+        $response = curl_exec($curl);
+        $batting_leader =  json_decode($response,true);
+
+        curl_close($curl);
+
+        
+
+        // $up_flag = 0;
+        // if($live_score['status'] == true){
+        //     $up_flag = 1;
+        // }
+    }
+      catch(Exception $e) {
+        echo 'Message: ' .$e->getMessage();
+    }
+    return $batting_leader;
+}
+
+function getPurple($tournament_id){
+    try {
+
+        $curl2 = curl_init();
+        curl_setopt_array($curl2, array(
+          CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-bowling-leaderboard/'.$tournament_id,
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => '',
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 0,
+          CURLOPT_FOLLOWLOCATION => true,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => 'GET',
+          CURLOPT_HTTPHEADER => array(
+            'Content-Type: application/json',
+            'api-key: 7d313d7c02c39e21dc4abee42760c8f3',
+            'secret_access_key: o5LgzLbpIb-e60b-11e7-mSJcQWyxHf-3de7cd8c6cf4',
+            'udid: 8817480565574762',
+            'device-type: thirdparty-mpl',
+            'master_key: 45632789202',
+            'Cookie: connect.sid=s%3ApOKpq6TM9Ez-EUAHW9aY8kuGn1HsHm9h.e0Kix5fgKITBPbFe57REWStVOCF8K1%2FfCFsU2AoLgyc'
+          ),
+        ));
+        
+        $response2 = curl_exec($curl2);
+        $bowling_leader =  json_decode($response2,true);
+
+        
+    }
+      catch(Exception $e) {
+        echo 'Message: ' .$e->getMessage();
+    }
+    return $bowling_leader;
+}
+
+?>
