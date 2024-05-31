@@ -78,9 +78,14 @@
     <header class="d-none d-md-block">
         <nav class="navbar p-0 d-flex align-items-center justify-content-between">
             <div class="container">
-                <a class="navbar-brand" href="https://mpl.thebrandodyssey.com">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/logowithbg.png"
-                        class="w-100" alt="mpl.thebrandodyssey.com"></a>
+            <a class="navbar-brand" href="<?php bloginfo('url')?>">
+                    <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
+$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+if ( has_custom_logo() ) {
+	echo '<img src="' . esc_url( $logo[0] ) . '" class="w-100" alt="' . get_bloginfo( 'name' ) . '">';
+} else {
+	echo '<h1>' . get_bloginfo('name') . '</h1>';
+}  ?></a>
 
                 <div class="menu-header-menu-container">
                     <ul id="menu-header-menu" class="p-0 m-0 menu">
