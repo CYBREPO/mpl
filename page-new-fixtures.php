@@ -12,7 +12,7 @@
             $d = [];
             $curl = curl_init();
             curl_setopt_array($curl, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-match-list/702687?type=&teamId=&order=ASC',
+              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-match-list/1029866?type=&teamId=&order=ASC',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -36,7 +36,7 @@
 
             $curl2 = curl_init();
             curl_setopt_array($curl2, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-stat-leaderboard-filter/702687',
+              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-stat-leaderboard-filter/1029866',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -76,7 +76,7 @@
             <div class="dropdown py-3 py-md-5">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    <?php echo $filters['data']['season'][1]['key']?>
+                    <?php echo $filters['data']['season'][0]['key']?>
                     <!-- Season 2024 -->
                 </button>
                 <ul class="dropdown-menu">
