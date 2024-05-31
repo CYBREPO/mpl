@@ -48,7 +48,7 @@
                 <div class="menu-footer-menu-container">
                     <div class="menu-footer-menu-container" id="menu-footer-menu">
                         <ul id="menu-footer-menu" class="menu">
-                            
+
                             <li id="menu-item-656"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a
                                     href="#">About Us</a></li>
@@ -111,7 +111,8 @@
             <div class="col-md-6 pe-0 ">
                 <ul
                     class="d-md-flex px-0 py-3 m-0 justify-content-center justify-content-md-end w-100 text-end lower-footer">
-                    <li><a href="https://thebrandodyssey.com/" class="text-white text-decoration-none designbay" >Designed By
+                    <li><a href="https://thebrandodyssey.com/"
+                            class="text-white text-decoration-none designbay">Designed By
                             <span>THE BRAND ODYSSEY</span></a>
                     </li>
                 </ul>
@@ -226,6 +227,34 @@ $(function() {
             }
         }
     });
+});
+</script>
+<script>
+$('.team').each(function() {
+    $(this).attr('data-search-term', $(this).find('.teamplayername').text().toLowerCase());
+});
+
+$('#playerSearch').on('keyup', function() {
+
+    var searchTerm = $(this).val().toLowerCase();
+    if (searchTerm != '') {
+        $('.team').each(function() {
+
+            if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm
+                .length <
+                1) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+
+        });
+    } else {
+        $(".team").each(function() {
+            $(this).show();
+        });
+    }
+
 });
 </script>
 <!-- Bootstrap Javascript -->
