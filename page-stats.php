@@ -429,7 +429,7 @@
                                                 <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400"><a
                                                         href="<?php echo '/individual-players?playerid='.$values['player_id'];?>"
                                                         target="_blank"><?php echo $values['name']; ?><a></h2>
-                                                <h2 class="ih-pt-cont mb-0 fw-400">RR</h2>
+                                                <h2 class="ih-pt-cont mb-0 fw-400"><?php echo $values['team_name']; ?></h2>
                                             </div>
                                         </div>
                                     </td>
@@ -482,7 +482,7 @@
                                             <div class="text-start ">
                                                 <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">
                                                     <?php echo $values['name']; ?></h2>
-                                                <h2 class="ih-pt-cont mb-0 fw-400">RR</h2>
+                                                <h2 class="ih-pt-cont mb-0 fw-400"><?php echo $values['team_name']; ?></h2>
                                             </div>
                                         </div>
                                     </td>
@@ -532,7 +532,7 @@
                                             <div class="text-start ">
                                                 <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">
                                                     <?php echo $values['name']; ?></h2>
-                                                <h2 class="ih-pt-cont mb-0 fw-400">RR</h2>
+                                                <h2 class="ih-pt-cont mb-0 fw-400"><?php echo $values['team_name']; ?></h2>
                                             </div>
                                         </div>
                                     </td>
@@ -588,7 +588,7 @@
                                             <div class="text-start ">
                                                 <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">
                                                     <?php echo $values['name']; ?></h2>
-                                                <h2 class="ih-pt-cont mb-0 fw-400">RR</h2>
+                                                <h2 class="ih-pt-cont mb-0 fw-400"><?php echo $values['team_name']; ?></h2>
                                             </div>
                                         </div>
                                     </td>
@@ -1292,7 +1292,7 @@ $(document).ready(function() {
                                     '<a href="/individual-players?playerid=' + values.player_id +
                                     '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
                                     values.name + '</h2></a>' +
-                                    '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                                    '<h2 class="ih-pt-cont mb-0 fw-400">'+ values.team_name +'</h2>' +
                                     '</div>' +
                                     '</div>' +
                                     '</td>' +
@@ -1341,7 +1341,7 @@ $(document).ready(function() {
                                 '<a href="/individual-players?playerid=' + values.player_id +
                                 '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
                                 values.name + '</h2></a>' +
-                                '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                                '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name + '</h2>' +
                                 '</div>' +
                                 '</div>' +
                                 '</td>' +
@@ -1425,7 +1425,7 @@ $(document).ready(function() {
                                     '<a href="/individual-players?playerid=' + values.player_id +
                                     '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
                                     values.name + '</h2></a>' +
-                                    '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                                    '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name + '</h2>' +
                                     '</div>' +
                                     '</div>' +
                                     '</td>' +
@@ -1474,7 +1474,7 @@ $(document).ready(function() {
                                 '<a href="/individual-players?playerid=' + values.player_id +
                                 '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
                                 values.name + '</h2></a>' +
-                                '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                                '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name + '</h2>' +
                                 '</div>' +
                                 '</div>' +
                                 '</td>' +
@@ -1580,7 +1580,7 @@ $(document).ready(function() {
                                     '<a href="/individual-players?playerid=' + values.player_id +
                                     '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
                                     values.name + '</h2></a>' +
-                                    '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                                    '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name + '</h2>' +
                                     '</div>' +
                                     '</div>' +
                                     '</td>' +
@@ -1635,7 +1635,7 @@ $(document).ready(function() {
                                 '<a href="/individual-players?playerid=' + values.player_id +
                                 '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
                                 values.name + '</h2></a>' +
-                                '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                                '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name + '</h2>' +
                                 '</div>' +
                                 '</div>' +
                                 '</td>' +
@@ -1727,7 +1727,7 @@ $(document).ready(function() {
                                     '<a href="/individual-players?playerid=' + values.player_id +
                                     '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
                                     values.name + '</h2></a>' +
-                                    '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                                    '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name + '</h2>' +
                                     '</div>' +
                                     '</div>' +
                                     '</td>' +
@@ -1779,7 +1779,7 @@ $(document).ready(function() {
                                 '<a href="/individual-players?playerid=' + values.player_id +
                                 '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
                                 values.name + '</h2></a>' +
-                                '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                                '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name + '</h2>' +
                                 '</div>' +
                                 '</div>' +
                                 '</td>' +
