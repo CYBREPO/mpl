@@ -10,48 +10,30 @@
             class="d-block w-100" alt="">
 
         <ul class="nav nav-tabs teamstab" id="myTab" role="tablist">
+
+            <?php $teamlogos = ["home",
+"profile",
+"contact",
+"EAGLE",
+"CHHATRAPTI",
+"KOLHAPUR"
+] 
+?>
+            <?php
+foreach ($teamlogos as $key => $value) {
+
+
+
+?>
+
             <li class="nav-item" role="presentation">
-                <button class="nav-link teamstabstab active" id="home-tab" data-bs-toggle="tab"
-                    data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
-                    aria-selected="true"> <img
-                        src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Puneri-Bappa-Logo-01-1.png"
+                <button class="nav-link teamstabstab <?php echo $key === 0 ? 'active' : ''; ?>"
+                    id="<?php echo $value ?>-tab" data-bs-toggle="tab" data-bs-target="#<?php echo $value ?>-tab-pane"
+                    type="button" role="tab" aria-controls="<?php echo $value ?>-tab-pane" aria-selected="true"> <img
+                        src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/team<?php echo $key+1 ?>.png"
                         alt=""></button>
             </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link teamstabstab" id="profile-tab" data-bs-toggle="tab"
-                    data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
-                    aria-selected="false"> <img
-                        src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Puneri-Bappa-Logo-01-1.png"
-                        alt=""></button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link teamstabstab" id="contact-tab" data-bs-toggle="tab"
-                    data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
-                    aria-selected="false"> <img
-                        src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Puneri-Bappa-Logo-01-1.png"
-                        alt=""></button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link teamstabstab" id="EAGLE-tab" data-bs-toggle="tab"
-                    data-bs-target="#EAGLE-tab-pane" type="button" role="tab" aria-controls="EAGLE-tab-pane"
-                    aria-selected="false"> <img
-                        src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Puneri-Bappa-Logo-01-1.png"
-                        alt=""></button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link teamstabstab" id="CHHATRAPTI-tab" data-bs-toggle="tab"
-                    data-bs-target="#CHHATRAPTI-tab-pane" type="button" role="tab" aria-controls="CHHATRAPTI-tab-pane"
-                    aria-selected="false"> <img
-                        src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Puneri-Bappa-Logo-01-1.png"
-                        alt=""></button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link teamstabstab" id="KOLHAPUR-tab" data-bs-toggle="tab"
-                    data-bs-target="#KOLHAPUR-tab-pane" type="button" role="tab" aria-controls="KOLHAPUR-tab-pane"
-                    aria-selected="false"> <img
-                        src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Puneri-Bappa-Logo-01-1.png"
-                        alt=""></button>
-            </li>
+            <?php } ?>
         </ul>
 
 
@@ -60,6 +42,8 @@
 
 
     <div class="tab-content" id="myTabContent">
+
+    
         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
             tabindex="0">
             <div class="teamtable">
@@ -88,7 +72,7 @@
                                 TEAM DIRECTOR -
                             </div>
                             <div class="fs-22 mt-1">
-                            PARAG MORE 
+                                PARAG MORE
                             </div>
                         </div>
                         <div class="team-superior">
@@ -115,54 +99,53 @@
                     </div>
 
                     <div class="row playerandrole">
-                        <!-- <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batter.svg" alt="">
-                    VICKY OSTWAL
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/keeper.svg" alt="">
-                    PRAVIN DESHETY
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batball.svg" alt="">
-                    VICKY OSTWAL
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/cricket-ball.svg"
-                        alt="">
-                    PRAVIN DESHETY
-                </div> -->
 
-                        <?php  $SOLAPUR = array(
 
-                            "VICKY OSTWAL",
-                            "PRAVIN DESHETY",
-                            "SATYAJEET BACHHAV",
-                            "ATHARVA KALE",
-                            "OMKAR RAJPUT",
-                            "YASH NAHAR",
-                            "HARSHVARDHAN TINGRE",
-                            "MEHUL PATEL",
-                            "SUNIL YADAV",
-                            "YAASAR SHAIKH",
-                            "YASH BORKAR",
-                            "DEV D NATU",
-                            "PRATHAMESH GAWDE",
-                            "ABHINAV BHATT",
-                            "PRANAY SINGH",
-                            "SWAPNIL FULPAGAR",
-                            "ANSH DHOOT",
-                            "VISHANT MORE",
-                            "PRATIK MHATRE",
-                            "RUSHABH RATHOD",
-                            "SANKET PHARATE");
+                        <?php 
+                        $SOLAPUR = [
+                                    ['player' => "Vyankatesh Kane",'role'=>'batter'],
+                                    ['player' =>"Omkar Rajput",'role' =>"allrounder"],
+                                    ['player' =>"Sunil Yadav ",'role' =>"allrounder"],
+                                    ['player' =>"Harshavardhan Tingre",'role' =>"allrounder"],
+                                    ['player' =>"Naushad Shaikh",'role' =>"allrounder"],
+                                    ['player' =>"Siddhesh Veer",'role' =>"allrounder"],
+                                    ['player' =>"Tanay Sanghvi",'role' =>"allrounder"],
+                                    ['player' =>"Sujit Ubale ",'role' =>"allrounder"],
+                                    ['player' =>"Bhushan Gole ",'role' =>"allrounder"],
+                                    ['player' =>"Vishant More",'role' =>"wkt"],
+                                    ['player' =>"Rushabh Rathod",'role' =>"wkt"],
+                                    ['player' =>"Mehul Patel ",'role' =>"batter"],
+                                    ['player' =>"Devdutt Natu ",'role' =>"batter"],
+                                    ['player' =>"Abhinav Bhatt",'role' =>"batter"],
+                                    ['player' =>"Vaibhav Agam ",'role' =>"wkt"],
+                                    ['player' =>"Vedant Patil ",'role' =>"batter"],
+                                    ['player' =>"Rohan Marwah ",'role' =>"batter"],
+                                    ['player' =>"Yash Nahar ",'role' =>"batter"],
+                                    ['player' =>"Ajay Borude",'role' =>"batter"],
+                                    ['player' =>"Vicky Ostwal ",'role' =>"bowler"],
+                                    ['player' =>"Snehal Kamankar ",'role' =>"bowler"],
+                                    ['player' =>"Ravi Jangid ",'role' =>"bowler"],
+                                    ['player' =>"Savya Gajraj ",'role' =>"bowler"],
+                                    ['player' =>"Nikhil Kadam ",'role' =>"bowler"],
+                                    ['player' =>"Nadeem Shaikh ",'role' =>"bowler"],
+                                    ['player' =>"Jitendra Jadhav ",'role' =>"bowler"],
+                                    ['player' =>"Aman Doshi ",'role' =>"bowler"],
+                                    ['player' =>"Prathamesh Gawade",'role' =>"bowler"],
+                                    ['player' =>"Ayush Kabra ",'role' =>"bowler"],
+                                    ['player' =>"Manoj Ingale ",'role' =>"bowler"],
+                                    ['player' =>"Pratik Mhatre",'role' =>"bowler"],
+                                    ['player' =>"Nimir Joshi",'role' =>"bowler"],
+                                    ['player' =>"Shubham Kadam",'role' =>"bowler"]
+                                ];
                             ?>
 
-                        <?php foreach ($SOLAPUR as $key => $value) {?>
+                        <?php for ($i = 0; $i < count($SOLAPUR); $i++) {
+
+                            ?>
                         <div class="col-md-6">
-                            <!-- <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/cricket-ball.svg"
-                        alt=""> -->
-                            <?php echo $value ?>
+                            <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/<?php echo $SOLAPUR[$i]['role'] ?>.svg"
+                                alt="" class="">
+                            <?php echo $SOLAPUR[$i]['player'] ?>
 
                         </div>
                         <?php }  ?>
@@ -170,111 +153,62 @@
                 </div>
             </div>
         </div>
+
+
+
         <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
                     <div class="team-superiors">
-
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                founder
-                            </div>
-                            <div class="fs-22 mt-1">
-                                KAPIL BAHETI 
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                CO-FOUNDER-
-
-                            </div>
-                            <div class="fs-22 mt-1">
-                                ALISHA BAHETI 
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                TEAM DIRECTOR -
-                            </div>
-                            <div class="fs-22 mt-1">
-                                KAPIL BAHETI 
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                COACH-
-                            </div>
-                            <div class="fs-22 mt-1">
-                                CHAMINDA VAAS
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                ASSISTANT COACH-
-                            </div>
-                            <div class="fs-22 mt-1">
-                                SOMI BHINDER
-                            </div>
-                        </div>
+                 
                     </div>
 
                     <div class="captain-header">
-                        Captain - SANKET PHARATE
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/bat.svg" alt="">
+                        Captain - Azim Kazi
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/allrounder.svg" alt="" style="filter: invert(1);" />
                     </div>
 
                     <div class="row playerandrole">
-                        <!-- <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batter.svg" alt="">
-                    VICKY OSTWAL
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/keeper.svg" alt="">
-                    PRAVIN DESHETY
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batball.svg" alt="">
-                    VICKY OSTWAL
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/cricket-ball.svg"
-                        alt="">
-                    PRAVIN DESHETY
-                </div> -->
+           
 
                         <?php  $RATNAGIRI = array(
 
-                            "AZIM KAZI",
-                            "PRADEEP DADHE",
-                            "VIJAY PAWALE",
-                            "KUNAL THORAT",
-                            "DIVYANG HINGANEKAR",
-                            "SWARAJ WABALE",
-                            "ASHKAN KAZI",
-                            "S. SHAHRUKH KADIR",
-                            "ROHIT PATIL",
-                            "YOGESH CHAVAN",
-                            "PRITHVIRAJ SHILAMKAR",
-                            "TUSHAR SHRIVASTAV",
-                            "KIRAN CHORMALE",
-                            "SAHIL CHURI",
-                            "DHIRAJ PATHANGARE",
-                            "AKILESH GAWALE",
-                            "PREETAM PATIL",
-                            "SAURABH SHEVALKAR",
-                            "KRISH SHAHAPURKAR",
-                            "SAMARTH KADAM",
-                            "NIKIT DHUMAL",
-                            "NIKHIL NAIK",
-                            "RUSHIKESH SONAVNE"
-                            );
-                            ?>
+                                ['player' => "Azim Kazi",'role'=>'allrounder'],
+                                ['player' => "Sangram Bhalekar",'role'=>'allrounder'],
+                                ['player' => "Yash Borkar",'role'=>'allrounder'],
+                                ['player' => "Satyajeet Bachhav",'role'=>'allrounder'],
+                                ['player' => "Sahil Churi",'role'=>'allrounder'],
+                                ['player' => "Dhiraj Phatangare",'role'=>'allrounder'],
+                                ['player' => "Divyang Hinganekar",'role'=>'allrounder'],
+                                ['player' => "Kiran Chormale",'role'=>'allrounder'],
+                                ['player' => "Krish Shahapurkar",'role'=>'allrounder'],
+                                ['player' => "Preetam Patil",'role'=>'allrounder'],
+                                ['player' => "Rohit Patil",'role'=>'allrounder'],
+                                ['player' => "Vaibhav Chowgule",'role'=>'allrounder'],
+                                ['player' => "Vijay Pawale",'role'=>'allrounder'],
+                                ['player' => "Nikhil Naik",'role'=>'wkt'],
+                                ['player' => "Abhishek Pawar",'role'=>'wkt'],
+                                ['player' => "Tushar Shrivastav",'role'=>'bat'],
+                                ['player' => "Akhilesh Gawale",'role'=>'bat'],
+                                ['player' => "Kunal Thorat",'role'=>'bowler'],
+                                ['player' => "Nikit Dhumal",'role'=>'bowler'],
+                                ['player' => "Pradeep Dadhe",'role'=>'bowler'],
+                                ['player' => "Piyush Kamal",'role'=>'bowler'],
+                                ['player' => "Yogesh Chavan",'role'=>'bowler']
 
-                        <?php foreach ($RATNAGIRI as $key => $value) {?>
+                                                            );
+                                                            ?>
+
+                                                        
+                                                        
+                                                        
+                                                        <?php for ($i = 0; $i < count($RATNAGIRI); $i++) {
+                                                        
+                                ?>
                         <div class="col-md-6">
-                            <!-- <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/cricket-ball.svg"
-                        alt=""> -->
-                            <?php echo $value ?>
+                            <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/<?php echo $RATNAGIRI[$i]['role'] ?>.svg"
+                                alt="" class="">
+                            <?php echo $RATNAGIRI[$i]['player'] ?>
 
                         </div>
                         <?php }  ?>
@@ -345,61 +279,47 @@
                     </div>
 
                     <div class="row playerandrole">
-                        <!-- <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batter.svg" alt="">
-                    VICKY OSTWAL
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/keeper.svg" alt="">
-                    PRAVIN DESHETY
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batball.svg" alt="">
-                    VICKY OSTWAL
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/cricket-ball.svg"
-                        alt="">
-                    PRAVIN DESHETY
-                </div> -->
 
-                        <?php  $RATNAGIRI = array(
-                        "RUTURAJ GAIKWAD",
-                        "SAISH DIGE",
-                        "RUSHIKESH SUMBE",
-                        "SACHIN BHOSALE",
-                        "ROHAN DAMLE",
-                        "ABHIMANYU JADHAV",
-                        "PRASHANT KORE",
-                        "YASH KSHIRSAGAR",
-                        "ADVAY SHIDAYE",
-                        "PAWAN SHAH",
-                        "AZHAR ANSARI",
-                        "SHRIPAD NIMBALKAR",
-                        "SHUBHANKAR HARDIKAR",
-                        "HARSH SANGHVI",
-                        "VAIBHAV CHOWGHULE",
-                        "DIGVIJAY PATIL",
-                        "ROSHAN WAGHSARE",
-                        "AJAY BORUDE",
-                        "PIYUSH SALVI",
-                        "AADARSH BOTHARA",
-                        "ADITYA DAWARE",
-                        "BHUSHAN NAVANDE",
-                        "SAURABH DIGHE",
-                        "KUNSH DIXIT",
-                        "SHUBHAM KOTHARI",
-                        "HARSH OSWAL",
-                        "SOHAN JAMALE",
-                        "SURAJ SHINDE"
+
+                        <?php  $puneri = array(
+                     
+                     
+
+                     ['player' => "Rahul Desai",'role' => 'allrounder'],
+['player' => "Rohan Damle",'role' => 'allrounder'],
+['player' => "Aayush Raktade",'role' => 'allrounder'],
+['player' => "Neel Gandhi",'role' => 'allrounder'],
+['player' => "Shubham Taiswal",'role' => 'allrounder'],
+['player' => "Devansh Tandel",'role' => 'allrounder'],
+['player' => "Ruturaj Gaikwad",'batter'],
+['player' => "Abhimanyu Jadhav",'role' => 'batter'],
+['player' => "Pavan Shah",'role' => 'batter'],
+['player' => "Yash Kshirsagar",'role' => 'batter'],
+['player' => "Shripad Nimbalkar",'role' => 'batter'],
+['player' => "Suraj Shinde",'role' => 'wkt'],
+['player' => "Sahil Autade",'	wkt'],
+['player' => "Roshan Waghsare",'role' => 'bowler'],
+['player' => "Ramakrishna Ghosh",'role' => 'bowler'],
+['player' => "Rohan Kharat",'role' => 'bowler'],
+['player' => "Vivek Shelar",'role' => 'bowler'],
+['player' => "Sachin Bhosale",'role' => 'bowler'],
+['player' => "Atif Sayyed",'role' => 'bowler'],
+['player' => "Piyush Salvi",'role' => 'bowler'],
+['player' => "Sohan Jamale",'bowler'],
+
+
+
+
                             );
                             ?>
 
-                        <?php foreach ($RATNAGIRI as $key => $value) {?>
+                        <?php for ($i = 0; $i < count($puneri); $i++) {
+
+?>
                         <div class="col-md-6">
-                            <!-- <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/cricket-ball.svg"
-                        alt=""> -->
-                            <?php echo $value ?>
+                            <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/<?php echo $puneri[$i]['role'] ?>.svg"
+                                alt="" class="">
+                            <?php echo $puneri[$i]['player'] ?>
 
                         </div>
                         <?php }  ?>
@@ -412,105 +332,49 @@
                 <div class="container">
                     <div class="team-superiors">
 
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                founder
-                            </div>
-                            <div class="fs-22 mt-1">
-                                KAPIL BAHETI 
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                CO-FOUNDER-
-
-                            </div>
-                            <div class="fs-22 mt-1">
-                                ALISHA BAHETI 
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                TEAM DIRECTOR -
-                            </div>
-                            <div class="fs-22 mt-1">
-                                KAPIL BAHETI 
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                COACH-
-                            </div>
-                            <div class="fs-22 mt-1">
-                                CHAMINDA VAAS
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                ASSISTANT COACH-
-                            </div>
-                            <div class="fs-22 mt-1">
-                                SOMI BHINDER
-                            </div>
-                        </div>
+                       
                     </div>
 
                     <div class="captain-header">
-                        Captain - SANKET PHARATE
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/bat.svg" alt="">
+                        Captain - Mukesh Choudhary
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/bowler.svg" alt="" style="filter:invert(1)">
                     </div>
 
                     <div class="row playerandrole">
-                        <!-- <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batter.svg" alt="">
-                    VICKY OSTWAL
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/keeper.svg" alt="">
-                    PRAVIN DESHETY
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batball.svg" alt="">
-                    VICKY OSTWAL
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/cricket-ball.svg"
-                        alt="">
-                    PRAVIN DESHETY
-                </div> -->
+                 
 
                         <?php  $EAGLE = array(
-                       "RAHUL TRIPATHI",
-                       "AKSHAY WAIKAR",
-                       "SIDDHESH VEER",
-                       "PRASHANT SOLANKI",
-                       "ASHAY PALKAR",
-                       "SIDDHANT DOSHI",
-                       "DHANRAJ SHINDE",
-                       "SAHIL PARIKH",
-                       "ADITYA RAJHANS",
-                       "VAIBHAV VIBHUTE",
-                       "ARSHIN KULKARNI",
-                       "KAUSHAL TAMBE",
-                       "IZHAAN SAYED",
-                       "HARSHAD KHADIWALE",
-                       "REHAN KHAN",
-                       "ROHIT HADKE",
-                       "RISHAB KARWA",
-                       "MANDAR BHANDARI",
-                       "RAZEK FALLAH",
-                       "SHUBHAM NAGAWADE",
-                       "OMKAR AKHADE",
-                       "SHARVIN KISWE",
-                       "VARUN DESHPANDE"
-                            );
+         ['player' =>"Shubham Kadam",'role' =>"bowler"],
+                      ['player' =>'Arshin Kulkarni','role'=>'allrounder'],
+                      ['player' =>'Athava Kale','role'=>'allrounder'],
+                      ['player' =>'Dhanraj Shinde','role'=>'allrounder'],
+                      ['player' =>'Digvijay Deshmukh','role'=>'allrounder'],
+                      ['player' =>'Hari Sawant','role'=>'allrounder'],
+                      ['player' =>'Niraj Joshi','role'=>'allrounder'],
+                      ['player' =>'Atharva Dharmadhikari ','role'=>'batter'],
+                      ['player' =>'Kaushal Tambe ','role'=>'batter'],
+                      ['player' =>'Ranjit Nikam','role'=>'batter'],
+                      ['player' =>'Rohit Hadke ','role'=>'batter'],
+                      ['player' =>'Sahil Parakh ','role'=>'batter'],
+                      ['player' =>'Siddhant Doshi ','role'=>'batter'],
+                      ['player' =>'Mandar Bhandari ','role'=>'wkt'],
+                      ['player' =>'Sharwin Kisave ','role'=>'wkt'],
+                      ['player' =>'Akshay Waikar ','role'=>'bowler'],
+                      ['player' =>'Hardik Kurangale','role'=>'bowler'],
+                      ['player' =>'Razeq Fallah','role'=>'bowler'],
+                      ['player' =>'Samadhan Pangare','role'=>'bowler'],
+                      ['player' =>'Mukesh Choudhary','role'=>'bowler'],
+                      ['player' =>'Prashant Solanki ','role'=>'bowler '],
+                      ['player' =>'Rehan Khan','role'=>'bowler ']);
                             ?>
 
-                        <?php foreach ($EAGLE as $key => $value) {?>
+                        <?php for ($i = 0; $i < count($EAGLE); $i++) {
+
+?>
                         <div class="col-md-6">
-                            <!-- <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/cricket-ball.svg"
-                        alt=""> -->
-                            <?php echo $value ?>
+                            <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/<?php echo $EAGLE[$i]['role'] ?>.svg"
+                                alt="" class="">
+                            <?php echo $EAGLE[$i]['player'] ?>
 
                         </div>
                         <?php }  ?>
@@ -569,61 +433,50 @@
                     </div>
 
                     <div class="captain-header">
-                        Captain - SANKET PHARATE
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/bat.svg" alt="">
+                        Captain - Rajwardhan Hangargekar
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/allrounder.svg" alt="" style="filter:invert(1)">
                     </div>
 
                     <div class="row playerandrole">
-                        <!-- <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batter.svg" alt="">
-                    VICKY OSTWAL
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/keeper.svg" alt="">
-                    PRAVIN DESHETY
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batball.svg" alt="">
-                    VICKY OSTWAL
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/cricket-ball.svg"
-                        alt="">
-                    PRAVIN DESHETY
-                </div> -->
+                
 
                         <?php  $CHHATRAPTI = array(
-                      "R. HANGARGEKAR",
-                      "MURTUZA TRUNKWALA",
-                      "RAMESHWAR DAUD",
-                      "RANJIT NIKAM",
-                      "AKASH JADHAV",
-                      "ANIKET NALAWADE",
-                      "MOHSIN SAYYAD",
-                      "SWAPNIL CHAVAN",
-                      "JAGDISH ZOPE",
-                      "HARSHAL KATE",
-                      "HITESH VALUNJ",
-                      "ONKAR KHATPE",
-                      "RUSHIKESH NAIR",
-                      "HRISHIKESH DAUND",
-                      "SWARAJ CHAVAN",
-                      "ASHWIN BHAPKAR",
-                      "OM BHOSALE",
-                      "TANESH JAIN",
-                      "SHAMSUJAMA KAZI",
-                      "VARUN GUJAR",
-                      "ANAND THENGE",
-                      "SAURABH NAVALE",
-                      "ABHISHEK PAWAR"
+                    
+                    
+                     ['player' =>'Rajwardhan Hangargekar','role'=>'allrounder'],
+ ['player' =>'Nagesh Rege','role'=>'allrounder'],
+ ['player' =>'Shamshuzama Kazi','role'=>'allrounder'],
+ ['player' =>'Digvijay Jadhav','role'=>'batter'],
+ ['player' =>'Saurabh Singh','role'=>''],
+ ['player' =>'Om Bhosale','role'=>'batter'],
+ ['player' =>'Harshal Kate','role'=>'batter'],
+ ['player' =>'Murtaza Trunkwala','role'=>'batter'],
+ ['player' =>'Omkar Khatpe','role'=>'batter'],
+ ['player' =>'Digvijay Patil','role'=>'batter'],
+ ['player' =>'Anurag Kawade','role'=>'wkt'],
+ ['player' =>'Saurabh Navale','role'=>'wkt'],
+ ['player' =>'Rameshwar Daud','role'=>'bowler'],
+ ['player' =>'Yogesh Chavan','role'=>'bowler'],
+ ['player' =>'Yatin Mangwani','role'=>'bowler'],
+ ['player' =>'Pranay Singh','role'=>'bowler'],
+ ['player' =>'Hitesh Walunj','role'=>'bowler'],
+ ['player' =>'Shubham Kothari','role'=>'bowler'],
+ ['player' =>'Anand Thenge','role'=>'bowler'],
+ ['player' =>'Deepak Dangi','role'=>'bowler'],
+ ['player' =>'Swaraj Chavan','role'=>'bowler']
+
+
+
                             );
                             ?>
 
-                        <?php foreach ($CHHATRAPTI as $key => $value) {?>
+<?php for ($i = 0; $i < count($CHHATRAPTI); $i++) {
+
+?>
                         <div class="col-md-6">
-                            <!-- <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/cricket-ball.svg"
-                        alt=""> -->
-                            <?php echo $value ?>
+                            <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/<?php echo $CHHATRAPTI[$i]['role'] ?>.svg"
+                                alt="" class="">
+                            <?php echo $CHHATRAPTI[$i]['player'] ?>
 
                         </div>
                         <?php }  ?>
@@ -636,7 +489,7 @@
                 <div class="container">
                     <div class="team-superiors">
 
-                    <div class="team-superior">
+                        <div class="team-superior">
                             <div class="fs-18">
                                 HEAD COACH
                             </div>
@@ -651,54 +504,44 @@
                     </div>
 
                     <div class="captain-header">
-                        Captain - SANKET PHARATE
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/bat.svg" alt="">
+                        Captain - Kedar Jadhav
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/allrounder.svg" alt="" style="filter:invert(1)">
                     </div>
 
                     <div class="row playerandrole">
-                        <!-- <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batter.svg" alt="">
-                    VICKY OSTWAL
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/keeper.svg" alt="">
-                    PRAVIN DESHETY
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batball.svg" alt="">
-                    VICKY OSTWAL
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/cricket-ball.svg"
-                        alt="">
-                    PRAVIN DESHETY
-                </div> -->
+                  
 
                         <?php  $KOLHAPUR = array(
-                     "KEDAR JADHAV",
-                     "SIDDHARTH MHATRE",
-                     "NAUSHAD SHAIKH",
-                     "TARANJIT DHILLON",
-                     "KIRTIRAJ WADEKAR",
-                     "NIHAL TUSAMAD",
-                     "MANOJ YADAV",
-                     "RAVI CHAUDHARI",
-                     "VIDYA TIWARI",
-                     "ANKIT BAWANE",
-                     "ATMAN PORE",
-                     "SACHIN DHAS",
-                     "AKSHAY DAREKAR",
-                     "NIKHIL MADAS",
-                     "SHREYASH CHAVAN",
-                     "SAHIL AUTADE"
+                   array('player' => 'Shrikant Mundhe', 'role' => 'allrounder'),
+                   array('player' => 'Kedar Jadhav', 'role' => 'allrounder'),
+                   array('player' => 'Aniket Porwal', 'role' => 'wkt'),
+                   array('player' => 'Kirtiraj Wadekar', 'role' => 'batter'),
+                   array('player' => 'Siddharth Mhatre', 'role' => 'batter'),
+                   array('player' => 'Yogesh Dongare', 'role' => 'batter'),
+                   array('player' => 'Sachin Dhas', 'role' => 'batter'),
+                   array('player' => 'Ankeet Bawane', 'role' => 'batter'),
+                   array('player' => 'Harsh Sanghavi', 'role' => 'batter'),
+                   array('player' => 'Hrishikesh Daund', 'role' => 'batter'),
+                   array('player' => 'Manoj Yadav', 'role' => 'bowler'),
+                   array('player' => 'Harshal Mishra', 'role' => 'bowler'),
+                   array('player' => 'Umar Shah', 'role' => 'bowler'),
+                   array('player' => 'Bhushan Navande', 'role' => 'bowler'),
+                   array('player' => 'Atharva Dakway', 'role' => 'bowler'),
+                   array('player' => 'Yash Khaladkar', 'role' => 'bowler'),
+                   array('player' => 'Shreyas Chavan', 'role' => 'bowler'),
+                   array('player' => 'Taranjitsingh Dhillon', 'role' => 'bowler'),
+                   array('player' => 'Sumit Markali', 'role' => 'bowler'),
+                   array('player' => 'Nihal Tusamad', 'role' => 'bowler')
                             );
                             ?>
 
-                        <?php foreach ($KOLHAPUR as $key => $value) {?>
+<?php for ($i = 0; $i < count($KOLHAPUR); $i++) {
+
+?>
                         <div class="col-md-6">
-                            <!-- <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/cricket-ball.svg"
-                        alt=""> -->
-                            <?php echo $value ?>
+                            <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/<?php echo $KOLHAPUR[$i]['role'] ?>.svg"
+                                alt="" class="">
+                            <?php echo $KOLHAPUR[$i]['player'] ?>
 
                         </div>
                         <?php }  ?>
