@@ -119,7 +119,7 @@
                                             src="<?php echo $value['team_logo']?>">
                                     </div>
 
-                                    <h2 class="ih-pt-cont mb-0 ">RR</h2>
+                                    <h2 class="ih-pt-cont mb-0 "><?php echo $value['Team Name']?></h2>
                                 </div>
                             </td>
                             <td><?php echo $value['Matches']; ?></td>
@@ -228,7 +228,7 @@ $(document).ready(function() {
                         '<td class="ih-t-color">' +
                         '<div class="ih-pt-ic">' +
                         '<div class="ih-pt-img"><img alt="" src="' + value['team_logo'] + '"></div>' +
-                        '<h2 class="ih-pt-cont mb-0">RR</h2>' +
+                        '<h2 class="ih-pt-cont mb-0">'+ value['Team Name'] +'</h2>' +
                         '</div>' +
                         '</td>' +
                         '<td>' + value['Matches'] + '</td>' +
