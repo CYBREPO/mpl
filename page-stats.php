@@ -568,10 +568,8 @@
                             </tbody>
                             <style>
                             .whitespacewrap .ih-td-tab,
-                            .whitespacewrap .ih-td-tab td,
-                            .whitespacewrap .ih-td-tab th {
-                                border: 0 solid #000;
-                                vertical-align: middle;
+                            .whitespacewrap td,
+                            .whitespacewrap th {
                                 white-space: pre-wrap;
                                 font-size: 13px;
 
