@@ -303,7 +303,7 @@
         <div class="container">
 
 
-            <ul class="nav custom-nav-tabs" id="stats" role="tablist">
+            <!-- <ul class="nav custom-nav-tabs" id="stats" role="tablist">
                 <li class="" role="presentation">
                     <button class=" active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
                         type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Players</button>
@@ -324,7 +324,7 @@
                         Table</button>
                 </li>
 
-            </ul>
+            </ul> -->
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
                     tabindex="0">
@@ -347,7 +347,7 @@
                         <div class="dropdown me-3 my-3 my-md-5">
                             <button class="btn btn-secondary dropdown-toggle bg-white" type="button"
                                 data-bs-toggle="dropdown" aria-expanded="false" id="orangCapDropdown">
-                                orang cap
+                                orange cap
                             </button>
                             <ul class="dropdown-menu">
                             
