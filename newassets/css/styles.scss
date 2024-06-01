@@ -37,7 +37,7 @@ body {
 }
 
 .fs-22 {
-    font-size: 22px;
+    font-size: 21px;
 }
 
 @media screen and (min-width: 992px) {
@@ -1790,7 +1790,7 @@ h2.ih-pt-cont a {
 
 .playerandrole {
     margin: auto;
-
+text-transform: uppercase;
     &>div {
         border: 1px solid #E6E8EB;
         background: #FAFBFC;
