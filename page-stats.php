@@ -396,8 +396,8 @@
                                     <th style="text-align: left;">Batters</th>
                                     <th>MAT</th>
                                     <th>INNS</th>
-                                    <th>M4</th>
-                                    <th>M6</th>
+                                    <th>4S</th>
+                                    <th>6S</th>
                                     <th>50</th>
                                     <th>100</th>
                                     <th>RUNS</th>
@@ -500,8 +500,8 @@
                                     <th style="text-align: left;">Batters</th>
                                     <th>Runs</th>
                                     <th>SR</th>
-                                    <th>M4</th>
-                                    <th>M6</th>
+                                    <th>4S</th>
+                                    <th>6S</th>
                                     <th>Againts</th>
                                     <th>Venue</th>
                                     <th>Match Date</th>
