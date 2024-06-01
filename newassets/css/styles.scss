@@ -1759,10 +1759,10 @@ h2.ih-pt-cont a {
             }
 
             color: #491450;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 400;
             border-right: 1px solid black;
-            padding: 5px 30px 12px;
+            padding: 5px 15px 12px;
         }
     }
 
@@ -2090,6 +2090,8 @@ footer {
     .social-icons {
         display: flex;
         align-items: center;
+        position: relative;
+        z-index: 2;
 
         li {
             margin-right: 23px;

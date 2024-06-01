@@ -1556,10 +1556,10 @@ h2.ih-pt-cont a {
 }
 .teamtable .team-superiors .team-superior {
   color: #491450;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   border-right: 1px solid black;
-  padding: 5px 30px 12px;
+  padding: 5px 15px 12px;
 }
 @media screen and (max-width: 992px) {
   .teamtable .team-superiors .team-superior {
@@ -1854,6 +1854,8 @@ footer h6 {
 footer .social-icons {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 footer .social-icons li {
   margin-right: 23px;
