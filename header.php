@@ -36,15 +36,15 @@
             style="background: linear-gradient(90deg, #18001C 0%, #DD460F 100%);height: 50px;">
             <div class="container">
                 <div class="d-flex align-items-center">
-                    <a href="https://mpl.thebrandodyssey.com">
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/mcalogo.svg"
+                    <a href="https://cricketmaharashtra.com/" target="_blank">
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/mcalogo.png"
                             class="w-100" alt="mpl.thebrandodyssey.com" style="max-width: 37px;"></a>
                     <svg xmlns="http://www.w3.org/2000/svg" class="mx-2" width="2" height="21" viewBox="0 0 2 21"
                         fill="none">
                         <path opacity="0.6" d="M1 0V21" stroke="white" stroke-width="0.5" />
                     </svg>
-                    <a href="https://mpl.thebrandodyssey.com">
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/WMPLcorrected-013.svg"
+                    <a href="https://cricketmaharashtra.com/" target="_blank">
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/wmpllogo.png"
                             class="w-100" alt="mpl.thebrandodyssey.com" style="max-width: 37px;"></a>
                 </div>
                 <div class="menu-header-menu-container">

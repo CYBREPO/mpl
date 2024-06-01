@@ -542,7 +542,6 @@ a {
   z-index: 0;
   background-position: right;
   background-size: contain;
-  z-index: 9;
 }
 @media screen and (min-width: 992px) {
   .mens-team::after {
