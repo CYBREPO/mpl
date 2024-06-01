@@ -403,17 +403,15 @@
                                 <tr class="ih-pt-tbl" style="display:revert;">
                                     <th>POs</th>
                                     <th style="text-align: left;">Batters</th>
-                                    <th>M4</th>
-                                    <th>M4 Inns</th>
-                                    <th>M6</th>
-                                    <th>M6 Inns</th>
+                                    <th>MAT</th>
+                                    <th>INNS</th>
+                                    <th>4S</th>
+                                    <th>6S</th>
                                     <th>50</th>
                                     <th>100</th>
-                                    <th>F-50</th>
-                                    <th>F-100</th>
+                                    <th>RUNS</th>
                                     <th>HS</th>
                                     <th>SR</th>
-                                    <th>SR inns</th>
                                     <th>AVG</th>
                                 </tr>
                             </tbody>
@@ -435,16 +433,14 @@
                                             </div>
                                         </div>
                                     </td>
+                                    <td><?php echo $values['total_match']; ?></td>
+                                    <td><?php echo $values['innings']; ?></td>
                                     <td><?php echo $values['4s']; ?></td>
-                                    <td><?php echo $values['4s']; ?></td>
-                                    <td><?php echo $values['6s']; ?></td>
                                     <td><?php echo $values['6s']; ?></td>
                                     <td><?php echo $values['50s']; ?></td>
                                     <td><?php echo $values['100s']; ?></td>
-                                    <td><?php echo $values['50s']; ?></td>
-                                    <td><?php echo $values['100s']; ?></td>
+                                    <td><?php echo $values['total_runs']; ?></td>
                                     <td><?php echo $values['highest_run']; ?></td>
-                                    <td><?php echo $values['strike_rate']; ?></td>
                                     <td><?php echo $values['strike_rate']; ?></td>
                                     <td><?php echo $values['average']; ?></td>
                                 </tr>
@@ -516,8 +512,8 @@
                                     <th style="text-align: left;">Batters</th>
                                     <th>Runs</th>
                                     <th>SR</th>
-                                    <th>M4</th>
-                                    <th>M6</th>
+                                    <th>4S</th>
+                                    <th>6S</th>
                                     <th>Againts</th>
                                     <th>Venue</th>
                                     <th>Match Date</th>
@@ -1348,18 +1344,82 @@ $(document).ready(function() {
                                 '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
                                 values.name + '</h2></a>' +
                                 '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
-                                '</div>' +
-                                '</div>' +
-                                '</td>' +
-                                '<td>' + values['total_runs'] + '</td>' +
-                                '<td>' + values['strike_rate'] + '</td>' +
-                                '<td>' + values['4s'] + '</td>' +
-                                '<td>' + values['6s'] + '</td>' +
-                                '<td>' + values['against_team_name'] + '</td>' +
-                                '<td>' + values['ground_name'] + '</td>' +
-                                '<td>' + formattedDate + '</td>' +
-                                '</tr>';
-                            $('#pointsdatainningsBatting').append(newRow);
+                            '</div>' +
+                        '</div>' +
+                    '</td>' +
+                    '<td>' + values['total_match'] + '</td>' +
+                    '<td>' + values['innings'] + '</td>' +
+                    '<td>' + values['4s'] + '</td>' +
+                    '<td>' + values['6s'] + '</td>' +
+                    '<td>' + values['50s'] + '</td>' +
+                    '<td>' + values['100s'] + '</td>' +
+                    '<td>' + values['highest_run'] + '</td>' +
+                    '<td>' + values['total_runs'] + '</td>' +
+                    '<td>' + values['strike_rate'] + '</td>' +
+                    '<td>' + values['average'] + '</td>' +
+                    '</tr>';
+                    $('#pointsdata').append(newRow);     
+                }
+                            
+            });
+            //stats and table to be shown
+            $("#battingStats").show();
+            $("#BattingStatsTable").show();
+            console.log('API call successful', data);
+            })
+            .catch(error => {
+            // Handle any errors
+            console.error('API call failed', error);
+            });
+        }
+    }
+
+    function getBowlingData(orangCap,selectedOrangeCap,season,teams){
+        if(orangCap == 'MIMDB' || orangCap == 'MIBB' || orangCap == 'MIBBE' || orangCap == 'MIMRC'){
+            fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
+            .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+            })
+            .then(data => {
+                        
+            //stats to be hidden 
+            $("#battingStats").hide();
+            $("#bowlingStats").hide();
+            $("#battingInngStats").hide();
+
+            //table to be hidden
+            $("#BattingStatsTable").hide();
+            $("#BowlingStatsTable").hide();
+            $("#BattingInningStatsTable").hide();
+
+            //ignore
+            $('#pointsdatainningsBowling').empty();
+                        
+                        
+                        
+            
+
+            $("#bowlingInngStats").show();
+            var foundedPlayer = false;
+            $.each(data.data, function(index, values) {
+                if(teams != 'All teams'){
+                    if(teams == values.team_name){
+                        if(!foundedPlayer){
+                            if(data.data.length > 0) {
+                                //var firstBowler = data.data[0];
+                                $('#bowlingInngStats .statsplayer img').attr('src', values.profile_photo);
+                                $('#bowlingInngStats .playername').text(values.name);
+                                $('#bowlingInngStats .statstable div:nth-child(1) .statsnumb').text(values.overs);
+                                $('#bowlingInngStats .statstable div:nth-child(2) .statsnumb').text(values.total_match);
+                                $('#bowlingInngStats .statstable div:nth-child(3) .statsnumb').text(values.runs);
+                                $('#bowlingInngStats .statstable div:nth-child(4) .statsnumb').text(values.total_wickets);
+                                $('#bowlingInngStats .statstable div:nth-child(5) .statsnumb').text(values.dot_ball || '0'); // Assuming best_bowling field for BBI
+                                $('#bowlingInngStats .statstable div:nth-child(6) .statsnumb').text(values.economy); // Assuming 4w and 5w fields for 4Ws/5Ws
+                            }
+                            foundedPlayer = true;
                         }
 
                     });
