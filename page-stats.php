@@ -755,7 +755,7 @@ $(document).ready(function() {
             console.log(selectedOrangeCap);
             console.log(teams);
             console.log(players);
-            console.log(search);
+            // console.log(search);
          
             if(orangCap == 'WICKET' || orangCap == 'MMOVB' || orangCap == 'MODB' || orangCap == 'MIMDB' || orangCap == 'MBAVG' || orangCap == 'MBECO' || orangCap == 'MIBBE' || orangCap == 'MBSR' || orangCap == 'BB' || orangCap == 'MIMRC' || orangCap == 'MIBB'){
                 if(teams == 'undefined' || teams == 'All teams'){
