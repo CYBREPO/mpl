@@ -8,9 +8,22 @@
         <div class="row">
             <div class="col-md-3 ps-0">
                 <div class="footer-logo-widget">
-                    <figure class="wp-block-image size-large"><img decoding="async"
-                            src="https://eav76vtooc4.exactdn.com/wp-content/uploads/2024/04/MPL-FINAL-LOGO-02-1-e1713525502173.png?strip=all&lossy=1&ssl=1&fit=284,237"
-                            alt="" class="wp-image-491" /></figure>
+
+                <figure class="wp-block-image size-large">
+                 
+                        <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
+$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+if ( has_custom_logo() ) {
+	echo '<img src="' . esc_url( $logo[0] ) . '" class="w-100 wp-image-491" alt="' . get_bloginfo( 'name' ) . '">';
+}  ?>
+
+                  
+                
+                    </figure>
+
+
+
+
                 </div>
             </div>
             <div class="col-md-3 ps-md-5">
