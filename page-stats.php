@@ -394,17 +394,15 @@
                                 <tr class="ih-pt-tbl" style="display:revert;">
                                     <th>POs</th>
                                     <th style="text-align: left;">Batters</th>
+                                    <th>MAT</th>
+                                    <th>INNS</th>
                                     <th>M4</th>
-                                    <th>M4 Inns</th>
                                     <th>M6</th>
-                                    <th>M6 Inns</th>
                                     <th>50</th>
                                     <th>100</th>
-                                    <th>F-50</th>
-                                    <th>F-100</th>
+                                    <th>RUNS</th>
                                     <th>HS</th>
                                     <th>SR</th>
-                                    <th>SR inns</th>
                                     <th>AVG</th>
                                 </tr>
                             </tbody>
@@ -424,16 +422,14 @@
                                             </div>
                                         </div>
                                     </td>
+                                    <td><?php echo $values['total_match']; ?></td>
+                                    <td><?php echo $values['innings']; ?></td>
                                     <td><?php echo $values['4s']; ?></td>
-                                    <td><?php echo $values['4s']; ?></td>
-                                    <td><?php echo $values['6s']; ?></td>
                                     <td><?php echo $values['6s']; ?></td>
                                     <td><?php echo $values['50s']; ?></td>
                                     <td><?php echo $values['100s']; ?></td>
-                                    <td><?php echo $values['50s']; ?></td>
-                                    <td><?php echo $values['100s']; ?></td>
+                                    <td><?php echo $values['total_runs']; ?></td>
                                     <td><?php echo $values['highest_run']; ?></td>
-                                    <td><?php echo $values['strike_rate']; ?></td>
                                     <td><?php echo $values['strike_rate']; ?></td>
                                     <td><?php echo $values['average']; ?></td>
                                 </tr>
@@ -1409,16 +1405,14 @@ $(document).ready(function() {
                             '</div>' +
                         '</div>' +
                     '</td>' +
-                    '<td>' + values['4s'] + '</td>' +
+                    '<td>' + values['total_match'] + '</td>' +
+                    '<td>' + values['innings'] + '</td>' +
                     '<td>' + values['4s'] + '</td>' +
                     '<td>' + values['6s'] + '</td>' +
-                    '<td>' + values['6s'] + '</td>' +
-                    '<td>' + values['50s'] + '</td>' +
-                    '<td>' + values['100s'] + '</td>' +
                     '<td>' + values['50s'] + '</td>' +
                     '<td>' + values['100s'] + '</td>' +
                     '<td>' + values['highest_run'] + '</td>' +
-                    '<td>' + values['strike_rate'] + '</td>' +
+                    '<td>' + values['total_runs'] + '</td>' +
                     '<td>' + values['strike_rate'] + '</td>' +
                     '<td>' + values['average'] + '</td>' +
                     '</tr>';
