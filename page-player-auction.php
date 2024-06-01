@@ -6,8 +6,13 @@
 
 
 <main>
-    <?php include 'components/page-title-header.php';?>
 
+    <?php include 'components/page-title-header.php';?>
+<style>
+    .content{
+        display: none;
+    }
+</style>
     <!-- Banner -->
     <div class="auctionsection text-white">
         <div class="container">

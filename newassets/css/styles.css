@@ -7,6 +7,7 @@ body {
 }
 
 .loadmorebutton {
+  cursor: pointer;
   background: linear-gradient(90deg, #491450 0%, #E04413 100%);
   display: flex;
   padding: 9px 22px;

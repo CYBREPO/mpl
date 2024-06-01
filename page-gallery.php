@@ -24,7 +24,7 @@
                 <?php endwhile; endif; ?>
             </div>
        
-            <div class="loadmorebutton mt-5">Show more</div>
+            <div class="loadmorebutton mt-5">SHOW MORE</div>
             
 
             <section class="highlights py-md-5">
