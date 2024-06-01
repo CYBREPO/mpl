@@ -968,7 +968,7 @@ b {
             @media screen and (max-width: 992px) {
                 width: 20.115px;
                 height: 20.115px;
-                margin-right: 24px;
+                margin-left: 24px;
 
             }
 
@@ -999,6 +999,7 @@ b {
 
         @media screen and (max-width: 992px) {
             margin-left: 24px;
+            margin-bottom: 10px;
         }
 
         @media screen and (min-width: 992px) {
@@ -1007,6 +1008,11 @@ b {
     }
 }
 
+.fixturesrow{
+    @media screen and (min-width: 992px) {
+        max-width: 40%;
+    }
+}
 // 888888888
 
 // Stats

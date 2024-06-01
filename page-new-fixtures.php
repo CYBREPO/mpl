@@ -120,7 +120,7 @@
                     </div>
 
 
-                    <div class="d-flex align-items-center ms-auto flex-column flex-md-row justify-content-center">
+                    <div class="d-flex align-items-center ms-auto flex-column flex-md-row justify-content-center fixturesrow">
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="fixture-run fixture-run1">
                                 <div>
@@ -138,7 +138,7 @@
                         <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/versusfixtures.svg"
                             alt="" class="fixtures-versus">
 
-                        <div class="d-flex align-items-center justify-content-between flex-row-reverse">
+                        <div class="d-flex align-items-center justify-content-between ">
                             <img src="<?php echo $values['team_b_logo']; ?>"
                                 alt="" class="versusteamimage">
 
@@ -202,7 +202,7 @@ $(document).ready(function() {
                             ${values.ground_name}
                     </div>
                 </div>
-                <div class="d-flex align-items-center ms-auto flex-column flex-md-row justify-content-center">
+                <div class="d-flex align-items-center ms-auto flex-column flex-md-row justify-content-center fixturesrow">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="fixture-run fixture-run1">
                             <div>${values.team_a_summary}</div>
@@ -212,7 +212,7 @@ $(document).ready(function() {
                     </div>
                     <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/versusfixtures.svg"
                         alt="" class="fixtures-versus">
-                    <div class="d-flex align-items-center justify-content-between flex-row-reverse">
+                    <div class="d-flex align-items-center justify-content-between ">
                         <img src="${values.team_b_logo}" alt="" class="versusteamimage">
                         <div class="fixture-run fixture-run2">
                             <div>${values.team_b_summary}</div>

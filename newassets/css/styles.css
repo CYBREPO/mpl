@@ -899,7 +899,7 @@ b {
   .fixtures .fixture .fixtures-versus {
     width: 20.115px;
     height: 20.115px;
-    margin-right: 24px;
+    margin-left: 24px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -924,11 +924,18 @@ b {
 @media screen and (max-width: 992px) {
   .fixtures .versusteamimage {
     margin-left: 24px;
+    margin-bottom: 10px;
   }
 }
 @media screen and (min-width: 992px) {
   .fixtures .versusteamimage {
     width: 110.818px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .fixturesrow {
+    max-width: 40%;
   }
 }
 
