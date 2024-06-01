@@ -122,7 +122,7 @@
                         hOME | sTATS
                     </div>
                     <div class="playername">
-                    <?php echo $batting_leader_board['data'][0]['name']; ?>
+                        <?php echo $batting_leader_board['data'][0]['name']; ?>
                         <!-- Rohit Sharma -->
                     </div>
 
@@ -149,7 +149,9 @@
                             <div class="statstext">Hs. Score</div>
                         </div>
                         <div>
-                            <div class="statsnumb"><?php echo $batting_leader_board['data'][0]['50s'].'/'.$batting_leader_board['data'][0]['100s']; ?></div>
+                            <div class="statsnumb">
+                                <?php echo $batting_leader_board['data'][0]['50s'].'/'.$batting_leader_board['data'][0]['100s']; ?>
+                            </div>
                             <div class="statstext">50s/100s</div>
                         </div>
                     </div>
@@ -173,13 +175,14 @@
                         hOME | sTATS
                     </div>
                     <div class="playername">
-                    <?php echo $bowling_leader_board['data'][0]['name']; ?>
+                        <?php echo $bowling_leader_board['data'][0]['name']; ?>
                         <!-- Rohit Sharma -->
                     </div>
 
                     <div class="statstable">
                         <div>
-                            <div class="statsnumb"><?php echo $bowling_leader_board['data'][0]['total_wickets']; ?></div>
+                            <div class="statsnumb"><?php echo $bowling_leader_board['data'][0]['total_wickets']; ?>
+                            </div>
                             <div class="statstext">Wickets
                             </div>
                         </div>
@@ -200,7 +203,9 @@
                             <div class="statstext">BBI</div>
                         </div>
                         <div>
-                            <div class="statsnumb"><?php echo $bowling_leader_board['data'][0]['4_wickets'].'/'. $bowling_leader_board['data'][0]['5_wickets']; ?>0/0</div>
+                            <div class="statsnumb">
+                                <?php echo $bowling_leader_board['data'][0]['4_wickets'].'/'. $bowling_leader_board['data'][0]['5_wickets']; ?>0/0
+                            </div>
                             <div class="statstext">4Ws/5Ws</div>
                         </div>
                     </div>
@@ -224,7 +229,7 @@
                         hOME | sTATS
                     </div>
                     <div class="playername">
-                    <?php echo $batting_leader_board['data'][0]['name']; ?>
+                        <?php echo $batting_leader_board['data'][0]['name']; ?>
                         <!-- Rohit Sharma -->
                     </div>
 
@@ -251,7 +256,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="stats-banner stats-banner2" id="bowlingInngStats">
         <div class="stats-details">
             <div class="container">
@@ -267,7 +272,7 @@
                         hOME | sTATS
                     </div>
                     <div class="playername">
-                    <?php echo $bowling_leader_board['data'][0]['name']; ?>
+                        <?php echo $bowling_leader_board['data'][0]['name']; ?>
                         <!-- Rohit Sharma -->
                     </div>
 
@@ -336,9 +341,10 @@
                                 <?php echo $season;?>
                             </button>
                             <ul class="dropdown-menu">
-                            <?php foreach($filters['data']['season'] as $k) { if($k['value'] != -1){?>
-                                <li><a class="dropdown-item" href="" data-value="<?php echo $k['value'];?>"><?php echo $k['key']; ?></a></li>
-                            <?php }} ?>
+                                <?php foreach($filters['data']['season'] as $k) { if($k['value'] != -1){?>
+                                <li><a class="dropdown-item" href=""
+                                        data-value="<?php echo $k['value'];?>"><?php echo $k['key']; ?></a></li>
+                                <?php }} ?>
                                 <!-- <li><a class="dropdown-item" href="" data-value="action1">Action</a></li>
                                 <li><a class="dropdown-item" href="" data-value="action1">Another action</a></li>
                                 <li><a class="dropdown-item" href="" data-value="action1">Something else here</a></li> -->
@@ -350,15 +356,17 @@
                                 orange cap
                             </button>
                             <ul class="dropdown-menu">
-                            
-                            
-                            <?php foreach($filters['data']['batting'] as $k) { if($k['value'] != -1){?>
-                                <li><a class="dropdown-item" href="" data-value="<?php echo $k['value'];?>" data-url="<?php echo $k['url'];?>" ><?php echo $k['key']; ?></a></li>
-                            <?php }} ?>
 
-                            <?php foreach($filters['data']['bowling'] as $k) { if($k['value'] != -1){?>
-                                <li><a class="dropdown-item" href="" data-value="<?php echo $k['value'];?>" data-url="<?php echo $k['url'];?>" ><?php echo $k['key']; ?></a></li>
-                            <?php }} ?>
+
+                                <?php foreach($filters['data']['batting'] as $k) { if($k['value'] != -1){?>
+                                <li><a class="dropdown-item" href="" data-value="<?php echo $k['value'];?>"
+                                        data-url="<?php echo $k['url'];?>"><?php echo $k['key']; ?></a></li>
+                                <?php }} ?>
+
+                                <?php foreach($filters['data']['bowling'] as $k) { if($k['value'] != -1){?>
+                                <li><a class="dropdown-item" href="" data-value="<?php echo $k['value'];?>"
+                                        data-url="<?php echo $k['url'];?>"><?php echo $k['key']; ?></a></li>
+                                <?php }} ?>
 
                                 <!-- <li><a class="dropdown-item" href="" data-value="RUN" data-url="thirdparty/mpl/get-tournament-batting-leaderboard">og cap</a></li>
                                 <li><a class="dropdown-item" href="" data-value="WICKET" data-url="thirdparty/mpl/get-tournament-bowling-leaderboard">pup cap</a></li> -->
@@ -373,7 +381,8 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="" data-value="All teams">All teams</a></li>
                                 <?php foreach($filters['data']['teams'] as $k) { ?>
-                                    <li><a class="dropdown-item" href="" data-value="<?php echo $k['team_id'];?>"><?php echo $k['team_name']; ?></a></li>
+                                <li><a class="dropdown-item" href=""
+                                        data-value="<?php echo $k['team_id'];?>"><?php echo $k['team_name']; ?></a></li>
                                 <?php } ?>
                                 <!-- <li><a class="dropdown-item" href="" data-value="actiont">Action</a></li>
                                 <li><a class="dropdown-item" href="" data-value="action1">Another action</a></li>
@@ -383,7 +392,7 @@
                         <form action="">
                             <div class="search">
                                 <input type="text" placeholder="&#xF002; &nbsp; Search by player name"
-                                    style="font-family:Arial, FontAwesome" id="playerSearch"/>
+                                    style="font-family:Arial, FontAwesome" id="playerSearch" />
                             </div>
                         </form>
                     </div>
@@ -410,16 +419,18 @@
                             </tbody>
                             <tbody id="pointsdata">
                                 <?php foreach($batting_leader_board['data'] as $index => $values){?>
-                                <tr class="team"<?php echo $index; ?> >
+                                <tr class="team" <?php echo $index; ?>>
 
-                                    <td class="table-qualified  "><?php echo $index + 1; ?>  </td>
+                                    <td class="table-qualified  "><?php echo $index + 1; ?> </td>
                                     <td class="ih-t-color">
                                         <div class="ih-pt-ic ">
                                             <div class="ih-pt-img"> <img alt=""
                                                     src="<?php echo $values['profile_photo']; ?>">
                                             </div>
                                             <div class="text-start ">
-                                                <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400"><a href="<?php echo '/individual-players?playerid='.$values['player_id'];?>" target="_blank"><?php echo $values['name']; ?><a></h2>
+                                                <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400"><a
+                                                        href="<?php echo '/individual-players?playerid='.$values['player_id'];?>"
+                                                        target="_blank"><?php echo $values['name']; ?><a></h2>
                                                 <h2 class="ih-pt-cont mb-0 fw-400">RR</h2>
                                             </div>
                                         </div>
@@ -441,7 +452,7 @@
                             </tbody>
                         </table>
                     </div>
-                    
+
                     <!-- Bowling stats table-->
                     <div class="table-responsive mb-4" id="BowlingStatsTable">
                         <table width="100%" class="ih-td-tab">
@@ -464,16 +475,17 @@
                             </tbody>
                             <tbody id="pointsdatabowling">
                                 <?php foreach($bowling_leader_board['data'] as $index => $values){?>
-                                <tr class="team"<?php echo $index; ?> >
+                                <tr class="team" <?php echo $index; ?>>
 
-                                    <td class="table-qualified  "><?php echo $index + 1; ?>  </td>
+                                    <td class="table-qualified  "><?php echo $index + 1; ?> </td>
                                     <td class="ih-t-color">
                                         <div class="ih-pt-ic ">
                                             <div class="ih-pt-img"> <img alt=""
                                                     src="<?php echo $values['profile_photo']; ?>">
                                             </div>
                                             <div class="text-start ">
-                                                <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400"><?php echo $values['name']; ?></h2>
+                                                <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">
+                                                    <?php echo $values['name']; ?></h2>
                                                 <h2 class="ih-pt-cont mb-0 fw-400">RR</h2>
                                             </div>
                                         </div>
@@ -513,16 +525,17 @@
                             </tbody>
                             <tbody id="pointsdatainningsBatting">
                                 <?php foreach($batting_leader_board['data'] as $index => $values){?>
-                                <tr class="team"<?php echo $index; ?> >
+                                <tr class="team" <?php echo $index; ?>>
 
-                                    <td class="table-qualified  "><?php echo $index + 1; ?>  </td>
+                                    <td class="table-qualified  "><?php echo $index + 1; ?> </td>
                                     <td class="ih-t-color">
                                         <div class="ih-pt-ic ">
                                             <div class="ih-pt-img"> <img alt=""
                                                     src="<?php echo $values['profile_photo']; ?>">
                                             </div>
                                             <div class="text-start ">
-                                                <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400"><?php echo $values['name']; ?></h2>
+                                                <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">
+                                                    <?php echo $values['name']; ?></h2>
                                                 <h2 class="ih-pt-cont mb-0 fw-400">RR</h2>
                                             </div>
                                         </div>
@@ -557,18 +570,30 @@
                                     <th>Match Date</th>
                                 </tr>
                             </tbody>
-                            <tbody id="pointsdatainningsBowling">
-                                <?php foreach($bowling_leader_board['data'] as $index => $values){?>
-                                <tr class="team"<?php echo $index; ?> >
+                            <style>
+                            .whitespacewrap .ih-td-tab,
+                            .whitespacewrap .ih-td-tab td,
+                            .whitespacewrap .ih-td-tab th {
+                                border: 0 solid #000;
+                                vertical-align: middle;
+                                white-space: pre-wrap;
+                                font-size: 13px;
 
-                                    <td class="table-qualified  "><?php echo $index + 1; ?>  </td>
+                            }
+                            </style>
+                            <tbody id="pointsdatainningsBowling" class="whitespacewrap">
+                                <?php foreach($bowling_leader_board['data'] as $index => $values){?>
+                                <tr class="team" <?php echo $index; ?>>
+
+                                    <td class="table-qualified  "><?php echo $index + 1; ?> </td>
                                     <td class="ih-t-color">
                                         <div class="ih-pt-ic ">
                                             <div class="ih-pt-img"> <img alt=""
                                                     src="<?php echo $values['profile_photo']; ?>">
                                             </div>
                                             <div class="text-start ">
-                                                <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400"><?php echo $values['name']; ?></h2>
+                                                <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">
+                                                    <?php echo $values['name']; ?></h2>
                                                 <h2 class="ih-pt-cont mb-0 fw-400">RR</h2>
                                             </div>
                                         </div>
@@ -603,8 +628,7 @@
                     style="background-image: url(<?php echo get_bloginfo('template_directory'); ?>/newassets/images/orangecapholdlerimage.png);">
                     <div class="d-flex ">
                         <div class="capplayerimage">
-                            <img src="<?php echo $batting_leader_board['data'][0]['profile_photo']; ?>"
-                                alt="" class="">
+                            <img src="<?php echo $batting_leader_board['data'][0]['profile_photo']; ?>" alt="" class="">
                         </div>
                         <div class="cap-details-side">
                             <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/orangecap.svg"
@@ -613,25 +637,28 @@
                                 ORANGE CAP HOLDER
                             </div>
                             <div class="cap-player-name">
-                            <?php echo $batting_leader_board['data'][0]['name']; ?>
+                                <?php echo $batting_leader_board['data'][0]['name']; ?>
                             </div>
                             <div class="d-flex" style="font-family: Koulen;">
                                 <span class="me-5">
-                                    <div class="cap-run"><?php echo $batting_leader_board['data'][0]['total_runs']; ?></div>
+                                    <div class="cap-run"><?php echo $batting_leader_board['data'][0]['total_runs']; ?>
+                                    </div>
                                     <div class="cap-label">
                                         Runs
                                     </div>
                                 </span>
 
                                 <span class="me-5">
-                                    <div class="cap-run"><?php echo $batting_leader_board['data'][0]['total_match']; ?></div>
+                                    <div class="cap-run"><?php echo $batting_leader_board['data'][0]['total_match']; ?>
+                                    </div>
                                     <div class="cap-label">
                                         matches
                                     </div>
                                 </span>
 
                                 <span>
-                                    <div class="cap-run"><?php echo $batting_leader_board['data'][0]['average']; ?></div>
+                                    <div class="cap-run"><?php echo $batting_leader_board['data'][0]['average']; ?>
+                                    </div>
                                     <div class="cap-label">
                                         Average
                                     </div>
@@ -663,14 +690,16 @@
                             </div>
                             <div class="d-flex" style="font-family: Koulen;">
                                 <span class="me-5">
-                                    <div class="cap-run"><?php echo $bowling_leader_board['data'][0]['total_wickets']; ?></div>
+                                    <div class="cap-run">
+                                        <?php echo $bowling_leader_board['data'][0]['total_wickets']; ?></div>
                                     <div class="cap-label">
                                         Wickets
                                     </div>
                                 </span>
 
                                 <span class="me-5">
-                                    <div class="cap-run"><?php echo $bowling_leader_board['data'][0]['total_match']; ?></div>
+                                    <div class="cap-run"><?php echo $bowling_leader_board['data'][0]['total_match']; ?>
+                                    </div>
                                     <div class="cap-label">
                                         Matches
                                     </div>
@@ -688,8 +717,7 @@
 
 
                         <div class="capplayerimage">
-                            <img src="<?php echo $bowling_leader_board['data'][0]['profile_photo']; ?>"
-                                alt="" class="">
+                            <img src="<?php echo $bowling_leader_board['data'][0]['profile_photo']; ?>" alt="" class="">
                         </div>
                     </div>
                 </div>
@@ -708,7 +736,6 @@
 <?php get_footer("footer2"); ?>
 
 <script>
-
 $(document).ready(function() {
     //Stats to be hidden
     $("#bowlingStats").hide();
@@ -720,9 +747,9 @@ $(document).ready(function() {
     $("#BattingInningStatsTable").hide();
     $("#BowlingInningStatsTable").hide();
 
-    
+
     $('.dropdown-item').on('click', function(e) {
-        e.preventDefault(); 
+        e.preventDefault();
         var selectedValue = $(this).data('value');
         var selectedUrl = $(this).data('url');
         var dropdownButton = $(this).closest('.dropdown').find('.dropdown-toggle');
@@ -734,953 +761,1059 @@ $(document).ready(function() {
         // $('#playerSearch').on('input', function() {
         //     //fetchData();
         // });
-        
+
     });
 
     function fetchData() {
-            // Collect values from all filters
-            var season = $('#SeasonDropdown').data('selected-value');
-            var orangCap = $('#orangCapDropdown').data('selected-value');
-            var selectedOrangeCap = $('#orangCapDropdown').data('selected-url');
-            var teams = $('#teamsDropdown').text().trim();
-            var players = $('#playersDropdown').text().trim();
-           // var search = $('#playerSearch').val().trim();
+        // Collect values from all filters
+        var season = $('#SeasonDropdown').data('selected-value');
+        var orangCap = $('#orangCapDropdown').data('selected-value');
+        var selectedOrangeCap = $('#orangCapDropdown').data('selected-url');
+        var teams = $('#teamsDropdown').text().trim();
+        var players = $('#playersDropdown').text().trim();
+        // var search = $('#playerSearch').val().trim();
 
-            if(season == undefined){
-                season =702687;
+        if (season == undefined) {
+            season = 702687;
+        }
+
+        console.log(season);
+        console.log(orangCap);
+        console.log(selectedOrangeCap);
+        console.log(teams);
+        console.log(players);
+        // console.log(search);
+
+        if (orangCap == 'WICKET' || orangCap == 'MMOVB' || orangCap == 'MODB' || orangCap == 'MIMDB' ||
+            orangCap == 'MBAVG' || orangCap == 'MBECO' || orangCap == 'MIBBE' || orangCap == 'MBSR' ||
+            orangCap == 'BB' || orangCap == 'MIMRC' || orangCap == 'MIBB') {
+            if (teams == 'undefined' || teams == 'All teams') {
+                getBowlingData(orangCap, selectedOrangeCap, season, teams);
+            } else {
+                getBowlingData(orangCap, selectedOrangeCap, season, teams);
             }
-            
-            console.log(season);
-            console.log(orangCap);
-            console.log(selectedOrangeCap);
-            console.log(teams);
-            console.log(players);
-            // console.log(search);
-         
-            if(orangCap == 'WICKET' || orangCap == 'MMOVB' || orangCap == 'MODB' || orangCap == 'MIMDB' || orangCap == 'MBAVG' || orangCap == 'MBECO' || orangCap == 'MIBBE' || orangCap == 'MBSR' || orangCap == 'BB' || orangCap == 'MIMRC' || orangCap == 'MIBB'){
-                if(teams == 'undefined' || teams == 'All teams'){
-                    getBowlingData(orangCap,selectedOrangeCap,season,teams);
-                }else{
-                    getBowlingData(orangCap,selectedOrangeCap,season,teams);
-                }
-                
-                // if(orangCap == 'MIMDB' || orangCap == 'MBAVG' || orangCap == 'MIBBE' || orangCap == 'MBSR'){
+
+            // if(orangCap == 'MIMDB' || orangCap == 'MBAVG' || orangCap == 'MIBBE' || orangCap == 'MBSR'){
+            //     fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
+            //     .then(response => {
+            //         if (!response.ok) {
+            //             throw new Error('Network response was not ok');
+            //         }
+            //         return response.json();
+            //         })
+            //         .then(data => {
+
+            //         //stats to be hidden 
+            //         $("#battingStats").hide();
+            //         $("#bowlingStats").hide();
+            //         $("#battingInngStats").hide();
+
+            //         //table to be hidden
+            //         $("#BattingStatsTable").hide();
+            //         $("#BowlingStatsTable").hide();
+            //         $("#BattingInningStatsTable").hide();
+
+            //         //ignore
+            //         $('#pointsdatainningsBowling').empty();
+
+
+
+            //         if(data.data.length > 0) {
+            //         var firstBowler = data.data[0];
+            //         $('#bowlingInngStats .statsplayer img').attr('src', firstBowler.profile_photo);
+            //         $('#bowlingInngStats .playername').text(firstBowler.name);
+            //         $('#bowlingInngStats .statstable div:nth-child(1) .statsnumb').text(firstBowler.overs);
+            //         $('#bowlingInngStats .statstable div:nth-child(2) .statsnumb').text(firstBowler.total_match);
+            //         $('#bowlingInngStats .statstable div:nth-child(3) .statsnumb').text(firstBowler.runs);
+            //         $('#bowlingInngStats .statstable div:nth-child(4) .statsnumb').text(firstBowler.total_wickets);
+            //         $('#bowlingInngStats .statstable div:nth-child(5) .statsnumb').text(firstBowler.dot_ball || '0'); // Assuming best_bowling field for BBI
+            //         $('#bowlingInngStats .statstable div:nth-child(6) .statsnumb').text(firstBowler.economy); // Assuming 4w and 5w fields for 4Ws/5Ws
+            //         }
+
+            //         $("#bowlingInngStats").show();
+
+            //         $.each(data.data, function(index, values) {
+
+            //         var date = new Date(values['match_date']);
+            //         var options = { day: 'numeric', month: 'long', year: 'numeric' };
+
+            //         var formattedDate = date.toLocaleDateString('en-GB', options);
+            //         var newRow = '<tr class="team">' +
+            //             '<td class="table-qualified">' + (index + 1) + '</td>' +
+            //             '<td class="ih-t-color">' +
+            //                 '<div class="ih-pt-ic">' +
+            //                     '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
+            //                     '<div class="text-start">' +
+            //                         '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2>' +
+            //                         '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+            //                     '</div>' +
+            //                 '</div>' +
+            //             '</td>' +
+            //             '<td>' + values.overs + '</td>' +
+            //             '<td>' + values.runs + '</td>' +
+            //             '<td>' + values.total_wickets + '</td>' +
+            //             '<td>' + values.dot_ball + '</td>' +
+            //             '<td>' + values.balls/values.total_wickets + '</td>' +
+            //             '<td>' + values.against_team_name + '</td>' +
+            //             '<td>' + values.against_team_name + '</td>' +
+            //             '<td>' + formattedDate + '</td>' +
+            //             '</tr>';
+            //             $('#pointsdatainningsBowling').append(newRow);
+            //         });
+
+            //         $("#BowlingInningStatsTable").show();
+            //         console.log('API call successful', data);
+            //         })
+            //         .catch(error => {
+            //             // Handle any errors
+            //             console.error('API call failed', error);
+            //     });
+            // }else{
+
+            //     fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
+            //     .then(response => {
+            //         if (!response.ok) {
+            //             throw new Error('Network response was not ok');
+            //         }
+            //         return response.json();
+            //         })
+            //         .then(data => {
+
+            //         //stats to be hidden
+
+            //         $("#battingStats").hide();
+            //         $("#battingInngStats").hide();
+            //         $("#bowlingInngStats").hide();
+
+            //         // Table to be hidden
+            //         $("#BattingStatsTable").hide();
+            //         $("#BattingInningStatsTable").hide();
+            //         $("#BowlingInningStatsTable").hide();
+
+            //         //ignore
+            //         $('#pointsdatabowling').empty();
+
+            //         if(data.data.length > 0) {
+            //         var firstBowler = data.data[0];
+            //         $('#bowlingStats .statsplayer img').attr('src', firstBowler.profile_photo);
+            //         $('#bowlingStats .playername').text(firstBowler.name);
+            //         $('#bowlingStats .statstable div:nth-child(1) .statsnumb').text(firstBowler.total_wickets);
+            //         $('#bowlingStats .statstable div:nth-child(2) .statsnumb').text(firstBowler.total_match);
+            //         $('#bowlingStats .statstable div:nth-child(3) .statsnumb').text(firstBowler.economy);
+            //         $('#bowlingStats .statstable div:nth-child(4) .statsnumb').text(firstBowler.maidens);
+            //         $('#bowlingStats .statstable div:nth-child(5) .statsnumb').text(firstBowler.best_bowling || '0'); // Assuming best_bowling field for BBI
+            //         $('#bowlingStats .statstable div:nth-child(6) .statsnumb').text((firstBowler['4w'] || '0') + '/' + (firstBowler['5w'] || '0')); // Assuming 4w and 5w fields for 4Ws/5Ws
+            //         }
+
+            //         $("#bowlingStats").show();
+
+            //         $.each(data.data, function(index, values) {
+            //         var newRow = '<tr class="team">' +
+            //             '<td class="table-qualified">' + (index + 1) + '</td>' +
+            //             '<td class="ih-t-color">' +
+            //                 '<div class="ih-pt-ic">' +
+            //                     '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
+            //                     '<div class="text-start">' +
+            //                         '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2>' +
+            //                         '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+            //                     '</div>' +
+            //                 '</div>' +
+            //             '</td>' +
+            //             '<td>' + values.total_match + '</td>' +
+            //             '<td>' + values.innings + '</td>' +
+            //             '<td>' + values.overs + '</td>' +
+            //             '<td>' + values.runs + '</td>' +
+            //             '<td>' + values.total_wickets + '</td>' +
+            //             '<td>0</td>' +
+            //             '<td>' + values.avg + '</td>' +
+            //             '<td>' + values.economy + '</td>' +
+            //             '<td>' + values.SR + '</td>' +
+            //             '<td>0</td>' +
+            //             '<td>0</td>' +
+            //             '</tr>';
+            //             $('#pointsdatabowling').append(newRow);
+            //         });
+
+            //         $("#BowlingStatsTable").show();
+            //         console.log('API call successful', data);
+            //         })
+            //         .catch(error => {
+            //             // Handle any errors
+            //             console.error('API call failed', error);
+            //     });
+            // }
+
+        } else {
+
+            if (teams == 'undefined' || teams == 'All teams') {
+                getBattingData(orangCap, selectedOrangeCap, season, teams);
+                // if(orangCap == 'MISIX' || orangCap == 'MIFOUR' || orangCap == 'MIHSR' || orangCap == 'MIHS'){
+
                 //     fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
                 //     .then(response => {
-                //         if (!response.ok) {
-                //             throw new Error('Network response was not ok');
-                //         }
-                //         return response.json();
-                //         })
-                //         .then(data => {
-                        
-                //         //stats to be hidden 
-                //         $("#battingStats").hide();
-                //         $("#bowlingStats").hide();
-                //         $("#battingInngStats").hide();
+                //     if (!response.ok) {
+                //         throw new Error('Network response was not ok');
+                //     }
+                //     return response.json();
+                //     })
+                //     .then(data => {
+                //     $('#pointsdatainningsBatting').empty();
+                //     //Stats to be hiiden 
+                //     $("#battingStats").hide();
+                //     $("#bowlingStats").hide();
+                //     $("#bowlingInngStats").hide();
 
-                //         //table to be hidden
-                //         $("#BattingStatsTable").hide();
-                //         $("#BowlingStatsTable").hide();
-                //         $("#BattingInningStatsTable").hide();
+                //     //tables to be hidden
+                //     $("#BattingStatsTable").hide();
+                //     $("#BowlingStatsTable").hide();
+                //     $("#BowlingInningStatsTable").hide();
 
-                //         //ignore
-                //         $('#pointsdatainningsBowling').empty();
-                        
-                        
-                        
-                //         if(data.data.length > 0) {
-                //         var firstBowler = data.data[0];
-                //         $('#bowlingInngStats .statsplayer img').attr('src', firstBowler.profile_photo);
-                //         $('#bowlingInngStats .playername').text(firstBowler.name);
-                //         $('#bowlingInngStats .statstable div:nth-child(1) .statsnumb').text(firstBowler.overs);
-                //         $('#bowlingInngStats .statstable div:nth-child(2) .statsnumb').text(firstBowler.total_match);
-                //         $('#bowlingInngStats .statstable div:nth-child(3) .statsnumb').text(firstBowler.runs);
-                //         $('#bowlingInngStats .statstable div:nth-child(4) .statsnumb').text(firstBowler.total_wickets);
-                //         $('#bowlingInngStats .statstable div:nth-child(5) .statsnumb').text(firstBowler.dot_ball || '0'); // Assuming best_bowling field for BBI
-                //         $('#bowlingInngStats .statstable div:nth-child(6) .statsnumb').text(firstBowler.economy); // Assuming 4w and 5w fields for 4Ws/5Ws
-                //         }
 
-                //         $("#bowlingInngStats").show();
-
-                //         $.each(data.data, function(index, values) {
-
+                //     if(data.data.length > 0) {
+                //         var firstPlayer = data.data[0];
+                //         $('#battingInngStats .statsplayer img').attr('src', firstPlayer.profile_photo);
+                //         $('#battingInngStats .playername').text(firstPlayer.name);
+                //         $('#battingInngStats .statstable div:nth-child(1) .statsnumb').text(firstPlayer.total_runs);
+                //         $('#battingInngStats .statstable div:nth-child(2) .statsnumb').text(1);
+                //         $('#battingInngStats .statstable div:nth-child(3) .statsnumb').text(firstPlayer.strike_rate);
+                //         $('#battingInngStats .statstable div:nth-child(4) .statsnumb').text(firstPlayer.highest_run);
+                //     }
+                //     $.each(data.data, function(index, values) {
                 //         var date = new Date(values['match_date']);
                 //         var options = { day: 'numeric', month: 'long', year: 'numeric' };
 
                 //         var formattedDate = date.toLocaleDateString('en-GB', options);
-                //         var newRow = '<tr class="team">' +
-                //             '<td class="table-qualified">' + (index + 1) + '</td>' +
-                //             '<td class="ih-t-color">' +
-                //                 '<div class="ih-pt-ic">' +
-                //                     '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
-                //                     '<div class="text-start">' +
-                //                         '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2>' +
-                //                         '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
-                //                     '</div>' +
-                //                 '</div>' +
-                //             '</td>' +
-                //             '<td>' + values.overs + '</td>' +
-                //             '<td>' + values.runs + '</td>' +
-                //             '<td>' + values.total_wickets + '</td>' +
-                //             '<td>' + values.dot_ball + '</td>' +
-                //             '<td>' + values.balls/values.total_wickets + '</td>' +
-                //             '<td>' + values.against_team_name + '</td>' +
-                //             '<td>' + values.against_team_name + '</td>' +
-                //             '<td>' + formattedDate + '</td>' +
-                //             '</tr>';
-                //             $('#pointsdatainningsBowling').append(newRow);
-                //         });
 
-                //         $("#BowlingInningStatsTable").show();
-                //         console.log('API call successful', data);
-                //         })
-                //         .catch(error => {
-                //             // Handle any errors
-                //             console.error('API call failed', error);
+                //         var newRow = '<tr class="team">' +
+                //         '<td class="table-qualified">' + (index + 1) + '</td>' +
+                //         '<td class="ih-t-color">' +
+                //             '<div class="ih-pt-ic">' +
+                //                 '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
+                //                 '<div class="text-start">' +
+                //                     '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2>' +
+                //                     '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                //                 '</div>' +
+                //             '</div>' +
+                //         '</td>' +
+                //         '<td>' + values['total_runs'] + '</td>' +
+                //         '<td>' + values['strike_rate'] + '</td>' +
+                //         '<td>' + values['4s'] + '</td>' +
+                //         '<td>' + values['6s'] + '</td>' +
+                //         '<td>' + values['against_team_name'] + '</td>' +
+                //         '<td>' + values['against_team_name'] + '</td>' +
+                //         '<td>' + formattedDate + '</td>' +
+                //         '</tr>';
+                //         $('#pointsdatainningsBatting').append(newRow);
+                //     });
+
+                //     $("#battingInngStats").show();
+                //     $("#BattingInningStatsTable").show();
+
+                //     console.log('API call successful', data);
+                //     })
+                //     .catch(error => {
+                //     // Handle any errors
+                //     console.error('API call failed', error);
+                //     });
+                // }else{
+
+                // fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
+                // .then(response => {
+                // if (!response.ok) {
+                //     throw new Error('Network response was not ok');
+                // }
+                // return response.json();
+                // })
+                // .then(data => {
+                // //Stats to be hidden
+                // $("#bowlingStats").hide();
+                // $("#battingInngStats").hide();
+                // $("#BowlingInningStatsTable").hide(); 
+
+                // //table to be hidden
+                // $("#BowlingStatsTable").hide();
+                // $("#BattingInningStatsTable").hide();
+                // $("#bowlingInngStats").hide();
+
+                // $('#pointsdata').empty();
+
+                // if(data.data.length > 0) {
+                //     var firstPlayer = data.data[0];
+                //     $('#battingStats .statsplayer img').attr('src', firstPlayer.profile_photo);
+                //     $('#battingStats .playername').text(firstPlayer.name);
+                //     $('#battingStats .statstable div:nth-child(1) .statsnumb').text(firstPlayer.total_runs);
+                //     $('#battingStats .statstable div:nth-child(2) .statsnumb').text(firstPlayer.total_match);
+                //     $('#battingStats .statstable div:nth-child(3) .statsnumb').text(firstPlayer.average);
+                //     $('#battingStats .statstable div:nth-child(4) .statsnumb').text(firstPlayer.strike_rate);
+                //     $('#battingStats .statstable div:nth-child(5) .statsnumb').text(firstPlayer.highest_run);
+                //     $('#battingStats .statstable div:nth-child(6) .statsnumb').text(firstPlayer['50s'] + '/' + firstPlayer['100s']);
+                // }
+                // $.each(data.data, function(index, values) {
+                //     var newRow = '<tr class="team">' +
+                //     '<td class="table-qualified">' + (index + 1) + '</td>' +
+                //     '<td class="ih-t-color">' +
+                //         '<div class="ih-pt-ic">' +
+                //             '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
+                //             '<div class="text-start">' +
+                //                 '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2>' +
+                //                 '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                //             '</div>' +
+                //         '</div>' +
+                //     '</td>' +
+                //     '<td>' + values['4s'] + '</td>' +
+                //     '<td>' + values['4s'] + '</td>' +
+                //     '<td>' + values['6s'] + '</td>' +
+                //     '<td>' + values['6s'] + '</td>' +
+                //     '<td>' + values['50s'] + '</td>' +
+                //     '<td>' + values['100s'] + '</td>' +
+                //     '<td>' + values['50s'] + '</td>' +
+                //     '<td>' + values['100s'] + '</td>' +
+                //     '<td>' + values['highest_run'] + '</td>' +
+                //     '<td>' + values['strike_rate'] + '</td>' +
+                //     '<td>' + values['strike_rate'] + '</td>' +
+                //     '<td>' + values['average'] + '</td>' +
+                //     '</tr>';
+                //     $('#pointsdata').append(newRow);
+                // });
+                // //stats and table to be shown
+                // $("#battingStats").show();
+                // $("#BattingStatsTable").show();
+                // console.log('API call successful', data);
+                // })
+                // .catch(error => {
+                // // Handle any errors
+                // console.error('API call failed', error);
+                // });
+                // }
+            } else {
+                getBattingData(orangCap, selectedOrangeCap, season, teams);
+                // if(orangCap == 'MISIX' || orangCap == 'MIFOUR' || orangCap == 'MIHSR' || orangCap == 'MIHS'){
+
+                //     fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
+                //     .then(response => {
+                //     if (!response.ok) {
+                //         throw new Error('Network response was not ok');
+                //     }
+                //     return response.json();
+                //     })
+                //     .then(data => {
+                //     $('#pointsdatainningsBatting').empty();
+                //     //Stats to be hiiden 
+                //     $("#battingStats").hide();
+                //     $("#bowlingStats").hide();
+                //     $("#bowlingInngStats").hide();
+
+                //     //tables to be hidden
+                //     $("#BattingStatsTable").hide();
+                //     $("#BowlingStatsTable").hide();
+                //     $("#BowlingInningStatsTable").hide();
+
+
+                //     if(data.data.length > 0) {
+                //         var firstPlayer = data.data[0];
+                //         $('#battingInngStats .statsplayer img').attr('src', firstPlayer.profile_photo);
+                //         $('#battingInngStats .playername').text(firstPlayer.name);
+                //         $('#battingInngStats .statstable div:nth-child(1) .statsnumb').text(firstPlayer.total_runs);
+                //         $('#battingInngStats .statstable div:nth-child(2) .statsnumb').text(1);
+                //         $('#battingInngStats .statstable div:nth-child(3) .statsnumb').text(firstPlayer.strike_rate);
+                //         $('#battingInngStats .statstable div:nth-child(4) .statsnumb').text(firstPlayer.highest_run);
+                //     }
+                //     $.each(data.data, function(index, values) {
+                //         var date = new Date(values['match_date']);
+                //         var options = { day: 'numeric', month: 'long', year: 'numeric' };
+
+                //         var formattedDate = date.toLocaleDateString('en-GB', options);
+
+                //         var newRow = '<tr class="team">' +
+                //         '<td class="table-qualified">' + (index + 1) + '</td>' +
+                //         '<td class="ih-t-color">' +
+                //             '<div class="ih-pt-ic">' +
+                //                 '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
+                //                 '<div class="text-start">' +
+                //                     '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2>' +
+                //                     '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                //                 '</div>' +
+                //             '</div>' +
+                //         '</td>' +
+                //         '<td>' + values['total_runs'] + '</td>' +
+                //         '<td>' + values['strike_rate'] + '</td>' +
+                //         '<td>' + values['4s'] + '</td>' +
+                //         '<td>' + values['6s'] + '</td>' +
+                //         '<td>' + values['against_team_name'] + '</td>' +
+                //         '<td>' + values['against_team_name'] + '</td>' +
+                //         '<td>' + formattedDate + '</td>' +
+                //         '</tr>';
+                //         $('#pointsdatainningsBatting').append(newRow);
+                //     });
+
+                //     $("#battingInngStats").show();
+                //     $("#BattingInningStatsTable").show();
+
+                //     console.log('API call successful', data);
+                //     })
+                //     .catch(error => {
+                //     // Handle any errors
+                //     console.error('API call failed', error);
                 //     });
                 // }else{
 
                 //     fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
                 //     .then(response => {
-                //         if (!response.ok) {
-                //             throw new Error('Network response was not ok');
-                //         }
-                //         return response.json();
-                //         })
-                //         .then(data => {
-                        
-                //         //stats to be hidden
-                        
-                //         $("#battingStats").hide();
-                //         $("#battingInngStats").hide();
-                //         $("#bowlingInngStats").hide();
+                //     if (!response.ok) {
+                //         throw new Error('Network response was not ok');
+                //     }
+                //     return response.json();
+                //     })
+                //     .then(data => {
+                //     //Stats to be hidden
+                //     $("#bowlingStats").hide();
+                //     $("#battingInngStats").hide();
+                //     $("#BowlingInningStatsTable").hide(); 
 
-                //         // Table to be hidden
-                //         $("#BattingStatsTable").hide();
-                //         $("#BattingInningStatsTable").hide();
-                //         $("#BowlingInningStatsTable").hide();
+                //     //table to be hidden
+                //     $("#BowlingStatsTable").hide();
+                //     $("#BattingInningStatsTable").hide();
+                //     $("#bowlingInngStats").hide();
 
-                //         //ignore
-                //         $('#pointsdatabowling').empty();
+                //     $('#pointsdata').empty();
 
-                //         if(data.data.length > 0) {
-                //         var firstBowler = data.data[0];
-                //         $('#bowlingStats .statsplayer img').attr('src', firstBowler.profile_photo);
-                //         $('#bowlingStats .playername').text(firstBowler.name);
-                //         $('#bowlingStats .statstable div:nth-child(1) .statsnumb').text(firstBowler.total_wickets);
-                //         $('#bowlingStats .statstable div:nth-child(2) .statsnumb').text(firstBowler.total_match);
-                //         $('#bowlingStats .statstable div:nth-child(3) .statsnumb').text(firstBowler.economy);
-                //         $('#bowlingStats .statstable div:nth-child(4) .statsnumb').text(firstBowler.maidens);
-                //         $('#bowlingStats .statstable div:nth-child(5) .statsnumb').text(firstBowler.best_bowling || '0'); // Assuming best_bowling field for BBI
-                //         $('#bowlingStats .statstable div:nth-child(6) .statsnumb').text((firstBowler['4w'] || '0') + '/' + (firstBowler['5w'] || '0')); // Assuming 4w and 5w fields for 4Ws/5Ws
-                //         }
-
-                //         $("#bowlingStats").show();
-
-                //         $.each(data.data, function(index, values) {
+                //     if(data.data.length > 0) {
+                //         var firstPlayer = data.data[0];
+                //         $('#battingStats .statsplayer img').attr('src', firstPlayer.profile_photo);
+                //         $('#battingStats .playername').text(firstPlayer.name);
+                //         $('#battingStats .statstable div:nth-child(1) .statsnumb').text(firstPlayer.total_runs);
+                //         $('#battingStats .statstable div:nth-child(2) .statsnumb').text(firstPlayer.total_match);
+                //         $('#battingStats .statstable div:nth-child(3) .statsnumb').text(firstPlayer.average);
+                //         $('#battingStats .statstable div:nth-child(4) .statsnumb').text(firstPlayer.strike_rate);
+                //         $('#battingStats .statstable div:nth-child(5) .statsnumb').text(firstPlayer.highest_run);
+                //         $('#battingStats .statstable div:nth-child(6) .statsnumb').text(firstPlayer['50s'] + '/' + firstPlayer['100s']);
+                //     }
+                //     $.each(data.data, function(index, values) {
                 //         var newRow = '<tr class="team">' +
-                //             '<td class="table-qualified">' + (index + 1) + '</td>' +
-                //             '<td class="ih-t-color">' +
-                //                 '<div class="ih-pt-ic">' +
-                //                     '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
-                //                     '<div class="text-start">' +
-                //                         '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2>' +
-                //                         '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
-                //                     '</div>' +
+                //         '<td class="table-qualified">' + (index + 1) + '</td>' +
+                //         '<td class="ih-t-color">' +
+                //             '<div class="ih-pt-ic">' +
+                //                 '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
+                //                 '<div class="text-start">' +
+                //                     '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2>' +
+                //                     '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
                 //                 '</div>' +
-                //             '</td>' +
-                //             '<td>' + values.total_match + '</td>' +
-                //             '<td>' + values.innings + '</td>' +
-                //             '<td>' + values.overs + '</td>' +
-                //             '<td>' + values.runs + '</td>' +
-                //             '<td>' + values.total_wickets + '</td>' +
-                //             '<td>0</td>' +
-                //             '<td>' + values.avg + '</td>' +
-                //             '<td>' + values.economy + '</td>' +
-                //             '<td>' + values.SR + '</td>' +
-                //             '<td>0</td>' +
-                //             '<td>0</td>' +
-                //             '</tr>';
-                //             $('#pointsdatabowling').append(newRow);
-                //         });
-
-                //         $("#BowlingStatsTable").show();
-                //         console.log('API call successful', data);
-                //         })
-                //         .catch(error => {
-                //             // Handle any errors
-                //             console.error('API call failed', error);
+                //             '</div>' +
+                //         '</td>' +
+                //         '<td>' + values['4s'] + '</td>' +
+                //         '<td>' + values['4s'] + '</td>' +
+                //         '<td>' + values['6s'] + '</td>' +
+                //         '<td>' + values['6s'] + '</td>' +
+                //         '<td>' + values['50s'] + '</td>' +
+                //         '<td>' + values['100s'] + '</td>' +
+                //         '<td>' + values['50s'] + '</td>' +
+                //         '<td>' + values['100s'] + '</td>' +
+                //         '<td>' + values['highest_run'] + '</td>' +
+                //         '<td>' + values['strike_rate'] + '</td>' +
+                //         '<td>' + values['strike_rate'] + '</td>' +
+                //         '<td>' + values['average'] + '</td>' +
+                //         '</tr>';
+                //         $('#pointsdata').append(newRow);
+                //     });
+                //     //stats and table to be shown
+                //     $("#battingStats").show();
+                //     $("#BattingStatsTable").show();
+                //     console.log('API call successful', data);
+                //     })
+                //     .catch(error => {
+                //     // Handle any errors
+                //     console.error('API call failed', error);
                 //     });
                 // }
-                
-            }else{
-
-                if(teams == 'undefined' || teams == 'All teams'){
-                    getBattingData(orangCap,selectedOrangeCap,season,teams);
-                    // if(orangCap == 'MISIX' || orangCap == 'MIFOUR' || orangCap == 'MIHSR' || orangCap == 'MIHS'){
-                    
-                    //     fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
-                    //     .then(response => {
-                    //     if (!response.ok) {
-                    //         throw new Error('Network response was not ok');
-                    //     }
-                    //     return response.json();
-                    //     })
-                    //     .then(data => {
-                    //     $('#pointsdatainningsBatting').empty();
-                    //     //Stats to be hiiden 
-                    //     $("#battingStats").hide();
-                    //     $("#bowlingStats").hide();
-                    //     $("#bowlingInngStats").hide();
-
-                    //     //tables to be hidden
-                    //     $("#BattingStatsTable").hide();
-                    //     $("#BowlingStatsTable").hide();
-                    //     $("#BowlingInningStatsTable").hide();
-
-                        
-                    //     if(data.data.length > 0) {
-                    //         var firstPlayer = data.data[0];
-                    //         $('#battingInngStats .statsplayer img').attr('src', firstPlayer.profile_photo);
-                    //         $('#battingInngStats .playername').text(firstPlayer.name);
-                    //         $('#battingInngStats .statstable div:nth-child(1) .statsnumb').text(firstPlayer.total_runs);
-                    //         $('#battingInngStats .statstable div:nth-child(2) .statsnumb').text(1);
-                    //         $('#battingInngStats .statstable div:nth-child(3) .statsnumb').text(firstPlayer.strike_rate);
-                    //         $('#battingInngStats .statstable div:nth-child(4) .statsnumb').text(firstPlayer.highest_run);
-                    //     }
-                    //     $.each(data.data, function(index, values) {
-                    //         var date = new Date(values['match_date']);
-                    //         var options = { day: 'numeric', month: 'long', year: 'numeric' };
-
-                    //         var formattedDate = date.toLocaleDateString('en-GB', options);
-
-                    //         var newRow = '<tr class="team">' +
-                    //         '<td class="table-qualified">' + (index + 1) + '</td>' +
-                    //         '<td class="ih-t-color">' +
-                    //             '<div class="ih-pt-ic">' +
-                    //                 '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
-                    //                 '<div class="text-start">' +
-                    //                     '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2>' +
-                    //                     '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
-                    //                 '</div>' +
-                    //             '</div>' +
-                    //         '</td>' +
-                    //         '<td>' + values['total_runs'] + '</td>' +
-                    //         '<td>' + values['strike_rate'] + '</td>' +
-                    //         '<td>' + values['4s'] + '</td>' +
-                    //         '<td>' + values['6s'] + '</td>' +
-                    //         '<td>' + values['against_team_name'] + '</td>' +
-                    //         '<td>' + values['against_team_name'] + '</td>' +
-                    //         '<td>' + formattedDate + '</td>' +
-                    //         '</tr>';
-                    //         $('#pointsdatainningsBatting').append(newRow);
-                    //     });
-
-                    //     $("#battingInngStats").show();
-                    //     $("#BattingInningStatsTable").show();
-
-                    //     console.log('API call successful', data);
-                    //     })
-                    //     .catch(error => {
-                    //     // Handle any errors
-                    //     console.error('API call failed', error);
-                    //     });
-                    // }else{
-
-                    // fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
-                    // .then(response => {
-                    // if (!response.ok) {
-                    //     throw new Error('Network response was not ok');
-                    // }
-                    // return response.json();
-                    // })
-                    // .then(data => {
-                    // //Stats to be hidden
-                    // $("#bowlingStats").hide();
-                    // $("#battingInngStats").hide();
-                    // $("#BowlingInningStatsTable").hide(); 
-
-                    // //table to be hidden
-                    // $("#BowlingStatsTable").hide();
-                    // $("#BattingInningStatsTable").hide();
-                    // $("#bowlingInngStats").hide();
-
-                    // $('#pointsdata').empty();
-
-                    // if(data.data.length > 0) {
-                    //     var firstPlayer = data.data[0];
-                    //     $('#battingStats .statsplayer img').attr('src', firstPlayer.profile_photo);
-                    //     $('#battingStats .playername').text(firstPlayer.name);
-                    //     $('#battingStats .statstable div:nth-child(1) .statsnumb').text(firstPlayer.total_runs);
-                    //     $('#battingStats .statstable div:nth-child(2) .statsnumb').text(firstPlayer.total_match);
-                    //     $('#battingStats .statstable div:nth-child(3) .statsnumb').text(firstPlayer.average);
-                    //     $('#battingStats .statstable div:nth-child(4) .statsnumb').text(firstPlayer.strike_rate);
-                    //     $('#battingStats .statstable div:nth-child(5) .statsnumb').text(firstPlayer.highest_run);
-                    //     $('#battingStats .statstable div:nth-child(6) .statsnumb').text(firstPlayer['50s'] + '/' + firstPlayer['100s']);
-                    // }
-                    // $.each(data.data, function(index, values) {
-                    //     var newRow = '<tr class="team">' +
-                    //     '<td class="table-qualified">' + (index + 1) + '</td>' +
-                    //     '<td class="ih-t-color">' +
-                    //         '<div class="ih-pt-ic">' +
-                    //             '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
-                    //             '<div class="text-start">' +
-                    //                 '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2>' +
-                    //                 '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
-                    //             '</div>' +
-                    //         '</div>' +
-                    //     '</td>' +
-                    //     '<td>' + values['4s'] + '</td>' +
-                    //     '<td>' + values['4s'] + '</td>' +
-                    //     '<td>' + values['6s'] + '</td>' +
-                    //     '<td>' + values['6s'] + '</td>' +
-                    //     '<td>' + values['50s'] + '</td>' +
-                    //     '<td>' + values['100s'] + '</td>' +
-                    //     '<td>' + values['50s'] + '</td>' +
-                    //     '<td>' + values['100s'] + '</td>' +
-                    //     '<td>' + values['highest_run'] + '</td>' +
-                    //     '<td>' + values['strike_rate'] + '</td>' +
-                    //     '<td>' + values['strike_rate'] + '</td>' +
-                    //     '<td>' + values['average'] + '</td>' +
-                    //     '</tr>';
-                    //     $('#pointsdata').append(newRow);
-                    // });
-                    // //stats and table to be shown
-                    // $("#battingStats").show();
-                    // $("#BattingStatsTable").show();
-                    // console.log('API call successful', data);
-                    // })
-                    // .catch(error => {
-                    // // Handle any errors
-                    // console.error('API call failed', error);
-                    // });
-                    // }
-                }else{
-                    getBattingData(orangCap,selectedOrangeCap,season,teams);
-                    // if(orangCap == 'MISIX' || orangCap == 'MIFOUR' || orangCap == 'MIHSR' || orangCap == 'MIHS'){
-                        
-                    //     fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
-                    //     .then(response => {
-                    //     if (!response.ok) {
-                    //         throw new Error('Network response was not ok');
-                    //     }
-                    //     return response.json();
-                    //     })
-                    //     .then(data => {
-                    //     $('#pointsdatainningsBatting').empty();
-                    //     //Stats to be hiiden 
-                    //     $("#battingStats").hide();
-                    //     $("#bowlingStats").hide();
-                    //     $("#bowlingInngStats").hide();
-
-                    //     //tables to be hidden
-                    //     $("#BattingStatsTable").hide();
-                    //     $("#BowlingStatsTable").hide();
-                    //     $("#BowlingInningStatsTable").hide();
-
-                        
-                    //     if(data.data.length > 0) {
-                    //         var firstPlayer = data.data[0];
-                    //         $('#battingInngStats .statsplayer img').attr('src', firstPlayer.profile_photo);
-                    //         $('#battingInngStats .playername').text(firstPlayer.name);
-                    //         $('#battingInngStats .statstable div:nth-child(1) .statsnumb').text(firstPlayer.total_runs);
-                    //         $('#battingInngStats .statstable div:nth-child(2) .statsnumb').text(1);
-                    //         $('#battingInngStats .statstable div:nth-child(3) .statsnumb').text(firstPlayer.strike_rate);
-                    //         $('#battingInngStats .statstable div:nth-child(4) .statsnumb').text(firstPlayer.highest_run);
-                    //     }
-                    //     $.each(data.data, function(index, values) {
-                    //         var date = new Date(values['match_date']);
-                    //         var options = { day: 'numeric', month: 'long', year: 'numeric' };
-
-                    //         var formattedDate = date.toLocaleDateString('en-GB', options);
-
-                    //         var newRow = '<tr class="team">' +
-                    //         '<td class="table-qualified">' + (index + 1) + '</td>' +
-                    //         '<td class="ih-t-color">' +
-                    //             '<div class="ih-pt-ic">' +
-                    //                 '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
-                    //                 '<div class="text-start">' +
-                    //                     '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2>' +
-                    //                     '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
-                    //                 '</div>' +
-                    //             '</div>' +
-                    //         '</td>' +
-                    //         '<td>' + values['total_runs'] + '</td>' +
-                    //         '<td>' + values['strike_rate'] + '</td>' +
-                    //         '<td>' + values['4s'] + '</td>' +
-                    //         '<td>' + values['6s'] + '</td>' +
-                    //         '<td>' + values['against_team_name'] + '</td>' +
-                    //         '<td>' + values['against_team_name'] + '</td>' +
-                    //         '<td>' + formattedDate + '</td>' +
-                    //         '</tr>';
-                    //         $('#pointsdatainningsBatting').append(newRow);
-                    //     });
-
-                    //     $("#battingInngStats").show();
-                    //     $("#BattingInningStatsTable").show();
-
-                    //     console.log('API call successful', data);
-                    //     })
-                    //     .catch(error => {
-                    //     // Handle any errors
-                    //     console.error('API call failed', error);
-                    //     });
-                    // }else{
-
-                    //     fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
-                    //     .then(response => {
-                    //     if (!response.ok) {
-                    //         throw new Error('Network response was not ok');
-                    //     }
-                    //     return response.json();
-                    //     })
-                    //     .then(data => {
-                    //     //Stats to be hidden
-                    //     $("#bowlingStats").hide();
-                    //     $("#battingInngStats").hide();
-                    //     $("#BowlingInningStatsTable").hide(); 
-
-                    //     //table to be hidden
-                    //     $("#BowlingStatsTable").hide();
-                    //     $("#BattingInningStatsTable").hide();
-                    //     $("#bowlingInngStats").hide();
-
-                    //     $('#pointsdata').empty();
-
-                    //     if(data.data.length > 0) {
-                    //         var firstPlayer = data.data[0];
-                    //         $('#battingStats .statsplayer img').attr('src', firstPlayer.profile_photo);
-                    //         $('#battingStats .playername').text(firstPlayer.name);
-                    //         $('#battingStats .statstable div:nth-child(1) .statsnumb').text(firstPlayer.total_runs);
-                    //         $('#battingStats .statstable div:nth-child(2) .statsnumb').text(firstPlayer.total_match);
-                    //         $('#battingStats .statstable div:nth-child(3) .statsnumb').text(firstPlayer.average);
-                    //         $('#battingStats .statstable div:nth-child(4) .statsnumb').text(firstPlayer.strike_rate);
-                    //         $('#battingStats .statstable div:nth-child(5) .statsnumb').text(firstPlayer.highest_run);
-                    //         $('#battingStats .statstable div:nth-child(6) .statsnumb').text(firstPlayer['50s'] + '/' + firstPlayer['100s']);
-                    //     }
-                    //     $.each(data.data, function(index, values) {
-                    //         var newRow = '<tr class="team">' +
-                    //         '<td class="table-qualified">' + (index + 1) + '</td>' +
-                    //         '<td class="ih-t-color">' +
-                    //             '<div class="ih-pt-ic">' +
-                    //                 '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
-                    //                 '<div class="text-start">' +
-                    //                     '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2>' +
-                    //                     '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
-                    //                 '</div>' +
-                    //             '</div>' +
-                    //         '</td>' +
-                    //         '<td>' + values['4s'] + '</td>' +
-                    //         '<td>' + values['4s'] + '</td>' +
-                    //         '<td>' + values['6s'] + '</td>' +
-                    //         '<td>' + values['6s'] + '</td>' +
-                    //         '<td>' + values['50s'] + '</td>' +
-                    //         '<td>' + values['100s'] + '</td>' +
-                    //         '<td>' + values['50s'] + '</td>' +
-                    //         '<td>' + values['100s'] + '</td>' +
-                    //         '<td>' + values['highest_run'] + '</td>' +
-                    //         '<td>' + values['strike_rate'] + '</td>' +
-                    //         '<td>' + values['strike_rate'] + '</td>' +
-                    //         '<td>' + values['average'] + '</td>' +
-                    //         '</tr>';
-                    //         $('#pointsdata').append(newRow);
-                    //     });
-                    //     //stats and table to be shown
-                    //     $("#battingStats").show();
-                    //     $("#BattingStatsTable").show();
-                    //     console.log('API call successful', data);
-                    //     })
-                    //     .catch(error => {
-                    //     // Handle any errors
-                    //     console.error('API call failed', error);
-                    //     });
-                    // }
-                }
-                
-
             }
+
+
+        }
 
     }
 
-    function getBattingData(orangCap,selectedOrangeCap,season,teams){
-        if(orangCap == 'MISIX' || orangCap == 'MIFOUR' || orangCap == 'MIHSR' || orangCap == 'MIHS'){
-                        
-            fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
+    function getBattingData(orangCap, selectedOrangeCap, season, teams) {
+        if (orangCap == 'MISIX' || orangCap == 'MIFOUR' || orangCap == 'MIHSR' || orangCap == 'MIHS') {
+
+            fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
+                    '&url=' + selectedOrangeCap + '&value=' + orangCap)
                 .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
                 })
                 .then(data => {
-                $('#pointsdatainningsBatting').empty();
-                //Stats to be hiiden 
-                $("#battingStats").hide();
-                $("#bowlingStats").hide();
-                $("#bowlingInngStats").hide();
+                    $('#pointsdatainningsBatting').empty();
+                    //Stats to be hiiden 
+                    $("#battingStats").hide();
+                    $("#bowlingStats").hide();
+                    $("#bowlingInngStats").hide();
 
-                //tables to be hidden
-                $("#BattingStatsTable").hide();
-                $("#BowlingStatsTable").hide();
-                $("#BowlingInningStatsTable").hide();
+                    //tables to be hidden
+                    $("#BattingStatsTable").hide();
+                    $("#BowlingStatsTable").hide();
+                    $("#BowlingInningStatsTable").hide();
 
 
-                var foundedPlayer = false;
-                $.each(data.data, function(index, values) {
-                    if(teams != 'All teams'){
-                        if(values.team_name == teams){
-                            if(!foundedPlayer){
-                                if(data.data.length > 0) {
-                                    //var firstPlayer = data.data[0];
-                                    $('#battingInngStats .statsplayer img').attr('src', values.profile_photo);
-                                    $('#battingInngStats .playername').text(values.name);
-                                    $('#battingInngStats .statstable div:nth-child(1) .statsnumb').text(values.total_runs);
-                                    $('#battingInngStats .statstable div:nth-child(2) .statsnumb').text(1);
-                                    $('#battingInngStats .statstable div:nth-child(3) .statsnumb').text(values.strike_rate);
-                                    $('#battingInngStats .statstable div:nth-child(4) .statsnumb').text(values.highest_run);
+                    var foundedPlayer = false;
+                    $.each(data.data, function(index, values) {
+                        if (teams != 'All teams') {
+                            if (values.team_name == teams) {
+                                if (!foundedPlayer) {
+                                    if (data.data.length > 0) {
+                                        //var firstPlayer = data.data[0];
+                                        $('#battingInngStats .statsplayer img').attr('src', values
+                                            .profile_photo);
+                                        $('#battingInngStats .playername').text(values.name);
+                                        $('#battingInngStats .statstable div:nth-child(1) .statsnumb')
+                                            .text(values.total_runs);
+                                        $('#battingInngStats .statstable div:nth-child(2) .statsnumb')
+                                            .text(1);
+                                        $('#battingInngStats .statstable div:nth-child(3) .statsnumb')
+                                            .text(values.strike_rate);
+                                        $('#battingInngStats .statstable div:nth-child(4) .statsnumb')
+                                            .text(values.highest_run);
+                                    }
+
+                                    foundedPlayer = true;
                                 }
 
-                                foundedPlayer = true;
+                                var date = new Date(values['match_date']);
+                                var options = {
+                                    day: 'numeric',
+                                    month: 'long',
+                                    year: 'numeric'
+                                };
+
+                                var formattedDate = date.toLocaleDateString('en-GB', options);
+
+                                var newRow = '<tr class="team">' +
+                                    '<td class="table-qualified">' + (index + 1) + '</td>' +
+                                    '<td class="ih-t-color">' +
+                                    '<div class="ih-pt-ic">' +
+                                    '<div class="ih-pt-img"><img alt="" src="' + values
+                                    .profile_photo + '"></div>' +
+                                    '<div class="text-start">' +
+                                    '<a href="/individual-players?playerid=' + values.player_id +
+                                    '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
+                                    values.name + '</h2></a>' +
+                                    '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</td>' +
+                                    '<td>' + values['total_runs'] + '</td>' +
+                                    '<td>' + values['strike_rate'] + '</td>' +
+                                    '<td>' + values['4s'] + '</td>' +
+                                    '<td>' + values['6s'] + '</td>' +
+                                    '<td>' + values['against_team_name'] + '</td>' +
+                                    '<td>' + values['ground_name'] + '</td>' +
+                                    '<td>' + formattedDate + '</td>' +
+                                    '</tr>';
+                                $('#pointsdatainningsBatting').append(newRow);
                             }
-                            
+
+                        } else {
+                            if (data.data.length > 0) {
+                                var firstPlayer = data.data[0];
+                                $('#battingInngStats .statsplayer img').attr('src', firstPlayer
+                                    .profile_photo);
+                                $('#battingInngStats .playername').text(firstPlayer.name);
+                                $('#battingInngStats .statstable div:nth-child(1) .statsnumb').text(
+                                    firstPlayer.total_runs);
+                                $('#battingInngStats .statstable div:nth-child(2) .statsnumb').text(
+                                    1);
+                                $('#battingInngStats .statstable div:nth-child(3) .statsnumb').text(
+                                    firstPlayer.strike_rate);
+                                $('#battingInngStats .statstable div:nth-child(4) .statsnumb').text(
+                                    firstPlayer.highest_run);
+                            }
                             var date = new Date(values['match_date']);
-                            var options = { day: 'numeric', month: 'long', year: 'numeric' };
+                            var options = {
+                                day: 'numeric',
+                                month: 'long',
+                                year: 'numeric'
+                            };
 
                             var formattedDate = date.toLocaleDateString('en-GB', options);
 
                             var newRow = '<tr class="team">' +
-                            '<td class="table-qualified">' + (index + 1) + '</td>' +
-                            '<td class="ih-t-color">' +
+                                '<td class="table-qualified">' + (index + 1) + '</td>' +
+                                '<td class="ih-t-color">' +
                                 '<div class="ih-pt-ic">' +
-                                    '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
-                                    '<div class="text-start">' +
-                                        '<a href="/individual-players?playerid='+values.player_id+'" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2></a>' +
-                                        '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
-                                    '</div>' +
-                                '</div>' +
-                            '</td>' +
-                            '<td>' + values['total_runs'] + '</td>' +
-                            '<td>' + values['strike_rate'] + '</td>' +
-                            '<td>' + values['4s'] + '</td>' +
-                            '<td>' + values['6s'] + '</td>' +
-                            '<td>' + values['against_team_name'] + '</td>' +
-                            '<td>' + values['ground_name'] + '</td>' +
-                            '<td>' + formattedDate + '</td>' +
-                            '</tr>';
-                            $('#pointsdatainningsBatting').append(newRow); 
-                        }
-                        
-                    }else{
-                        if(data.data.length > 0) {
-                            var firstPlayer = data.data[0];
-                            $('#battingInngStats .statsplayer img').attr('src', firstPlayer.profile_photo);
-                            $('#battingInngStats .playername').text(firstPlayer.name);
-                            $('#battingInngStats .statstable div:nth-child(1) .statsnumb').text(firstPlayer.total_runs);
-                            $('#battingInngStats .statstable div:nth-child(2) .statsnumb').text(1);
-                            $('#battingInngStats .statstable div:nth-child(3) .statsnumb').text(firstPlayer.strike_rate);
-                            $('#battingInngStats .statstable div:nth-child(4) .statsnumb').text(firstPlayer.highest_run);
-                        }
-                        var date = new Date(values['match_date']);
-                        var options = { day: 'numeric', month: 'long', year: 'numeric' };
-
-                        var formattedDate = date.toLocaleDateString('en-GB', options);
-
-                        var newRow = '<tr class="team">' +
-                        '<td class="table-qualified">' + (index + 1) + '</td>' +
-                        '<td class="ih-t-color">' +
-                            '<div class="ih-pt-ic">' +
-                                '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
+                                '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo +
+                                '"></div>' +
                                 '<div class="text-start">' +
-                                    '<a href="/individual-players?playerid='+values.player_id+'" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2></a>' +
-                                    '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
-                                '</div>' +
-                            '</div>' +
-                        '</td>' +
-                        '<td>' + values['total_runs'] + '</td>' +
-                        '<td>' + values['strike_rate'] + '</td>' +
-                        '<td>' + values['4s'] + '</td>' +
-                        '<td>' + values['6s'] + '</td>' +
-                        '<td>' + values['against_team_name'] + '</td>' +
-                        '<td>' + values['ground_name'] + '</td>' +
-                        '<td>' + formattedDate + '</td>' +
-                        '</tr>';
-                        $('#pointsdatainningsBatting').append(newRow);  
-                    }
-                            
-                });
-
-                $("#battingInngStats").show();
-                $("#BattingInningStatsTable").show();
-
-                console.log('API call successful', data);
-            })
-            .catch(error => {
-            // Handle any errors
-            console.error('API call failed', error);
-            });
-        }else{
-
-            fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
-            .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-            })
-            .then(data => {
-            //Stats to be hidden
-            $("#bowlingStats").hide();
-            $("#battingInngStats").hide();
-            $("#BowlingInningStatsTable").hide(); 
-
-            //table to be hidden
-            $("#BowlingStatsTable").hide();
-            $("#BattingInningStatsTable").hide();
-            $("#bowlingInngStats").hide();
-
-            $('#pointsdata').empty();
-
-            
-            var foundedPlayer = false;
-            $.each(data.data, function(index, values) {
-                if(teams != 'All teams'){
-                    // console.log("test");
-                    if(values.team_name == teams){
-                        if(!foundedPlayer){
-                            $('#battingStats .statsplayer img').attr('src', values.profile_photo);
-                            $('#battingStats .playername').text(values.name);
-                            $('#battingStats .statstable div:nth-child(1) .statsnumb').text(values.total_runs);
-                            $('#battingStats .statstable div:nth-child(2) .statsnumb').text(values.total_match);
-                            $('#battingStats .statstable div:nth-child(3) .statsnumb').text(values.average);
-                            $('#battingStats .statstable div:nth-child(4) .statsnumb').text(values.strike_rate);
-                            $('#battingStats .statstable div:nth-child(5) .statsnumb').text(values.highest_run);
-                            $('#battingStats .statstable div:nth-child(6) .statsnumb').text(values['50s'] + '/' + values['100s']);
-                            foundedPlayer = true;
-                        }
-                        
-                        var newRow = '<tr class="team">' +
-                        '<td class="table-qualified">' + (index + 1) + '</td>' +
-                        '<td class="ih-t-color">' +
-                            '<div class="ih-pt-ic">' +
-                                '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
-                                '<div class="text-start">' +
-                                    '<a href="/individual-players?playerid='+values.player_id+'" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2></a>' +
-                                    '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
-                                '</div>' +
-                            '</div>' +
-                        '</td>' +
-                        '<td>' + values['4s'] + '</td>' +
-                        '<td>' + values['4s'] + '</td>' +
-                        '<td>' + values['6s'] + '</td>' +
-                        '<td>' + values['6s'] + '</td>' +
-                        '<td>' + values['50s'] + '</td>' +
-                        '<td>' + values['100s'] + '</td>' +
-                        '<td>' + values['50s'] + '</td>' +
-                        '<td>' + values['100s'] + '</td>' +
-                        '<td>' + values['highest_run'] + '</td>' +
-                        '<td>' + values['strike_rate'] + '</td>' +
-                        '<td>' + values['strike_rate'] + '</td>' +
-                        '<td>' + values['average'] + '</td>' +
-                        '</tr>';
-                        $('#pointsdata').append(newRow);  
-                    }
-                     
-                }else{
-                    if(data.data.length > 0) {
-                        var firstPlayer = data.data[0];
-                        $('#battingStats .statsplayer img').attr('src', firstPlayer.profile_photo);
-                        $('#battingStats .playername').text(firstPlayer.name);
-                        $('#battingStats .statstable div:nth-child(1) .statsnumb').text(firstPlayer.total_runs);
-                        $('#battingStats .statstable div:nth-child(2) .statsnumb').text(firstPlayer.total_match);
-                        $('#battingStats .statstable div:nth-child(3) .statsnumb').text(firstPlayer.average);
-                        $('#battingStats .statstable div:nth-child(4) .statsnumb').text(firstPlayer.strike_rate);
-                        $('#battingStats .statstable div:nth-child(5) .statsnumb').text(firstPlayer.highest_run);
-                        $('#battingStats .statstable div:nth-child(6) .statsnumb').text(firstPlayer['50s'] + '/' + firstPlayer['100s']);
-                    }
-                    var newRow = '<tr class="team">' +
-                    '<td class="table-qualified">' + (index + 1) + '</td>' +
-                    '<td class="ih-t-color">' +
-                        '<div class="ih-pt-ic">' +
-                            '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
-                            '<div class="text-start">' +
-                                '<a href="/individual-players?playerid='+values.player_id+'" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2></a>' +
+                                '<a href="/individual-players?playerid=' + values.player_id +
+                                '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
+                                values.name + '</h2></a>' +
                                 '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
-                            '</div>' +
-                        '</div>' +
-                    '</td>' +
-                    '<td>' + values['4s'] + '</td>' +
-                    '<td>' + values['4s'] + '</td>' +
-                    '<td>' + values['6s'] + '</td>' +
-                    '<td>' + values['6s'] + '</td>' +
-                    '<td>' + values['50s'] + '</td>' +
-                    '<td>' + values['100s'] + '</td>' +
-                    '<td>' + values['50s'] + '</td>' +
-                    '<td>' + values['100s'] + '</td>' +
-                    '<td>' + values['highest_run'] + '</td>' +
-                    '<td>' + values['strike_rate'] + '</td>' +
-                    '<td>' + values['strike_rate'] + '</td>' +
-                    '<td>' + values['average'] + '</td>' +
-                    '</tr>';
-                    $('#pointsdata').append(newRow);     
-                }
-                            
-            });
-            //stats and table to be shown
-            $("#battingStats").show();
-            $("#BattingStatsTable").show();
-            console.log('API call successful', data);
-            })
-            .catch(error => {
-            // Handle any errors
-            console.error('API call failed', error);
-            });
-        }
-    }
-
-    function getBowlingData(orangCap,selectedOrangeCap,season,teams){
-        if(orangCap == 'MIMDB' || orangCap == 'MIBB' || orangCap == 'MIBBE' || orangCap == 'MIMRC'){
-            fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
-            .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-            })
-            .then(data => {
-                        
-            //stats to be hidden 
-            $("#battingStats").hide();
-            $("#bowlingStats").hide();
-            $("#battingInngStats").hide();
-
-            //table to be hidden
-            $("#BattingStatsTable").hide();
-            $("#BowlingStatsTable").hide();
-            $("#BattingInningStatsTable").hide();
-
-            //ignore
-            $('#pointsdatainningsBowling').empty();
-                        
-                        
-                        
-            
-
-            $("#bowlingInngStats").show();
-            var foundedPlayer = false;
-            $.each(data.data, function(index, values) {
-                if(teams != 'All teams'){
-                    if(teams == values.team_name){
-                        if(!foundedPlayer){
-                            if(data.data.length > 0) {
-                                //var firstBowler = data.data[0];
-                                $('#bowlingInngStats .statsplayer img').attr('src', values.profile_photo);
-                                $('#bowlingInngStats .playername').text(values.name);
-                                $('#bowlingInngStats .statstable div:nth-child(1) .statsnumb').text(values.overs);
-                                $('#bowlingInngStats .statstable div:nth-child(2) .statsnumb').text(values.total_match);
-                                $('#bowlingInngStats .statstable div:nth-child(3) .statsnumb').text(values.runs);
-                                $('#bowlingInngStats .statstable div:nth-child(4) .statsnumb').text(values.total_wickets);
-                                $('#bowlingInngStats .statstable div:nth-child(5) .statsnumb').text(values.dot_ball || '0'); // Assuming best_bowling field for BBI
-                                $('#bowlingInngStats .statstable div:nth-child(6) .statsnumb').text(values.economy); // Assuming 4w and 5w fields for 4Ws/5Ws
-                            }
-                            foundedPlayer = true;
+                                '</div>' +
+                                '</div>' +
+                                '</td>' +
+                                '<td>' + values['total_runs'] + '</td>' +
+                                '<td>' + values['strike_rate'] + '</td>' +
+                                '<td>' + values['4s'] + '</td>' +
+                                '<td>' + values['6s'] + '</td>' +
+                                '<td>' + values['against_team_name'] + '</td>' +
+                                '<td>' + values['ground_name'] + '</td>' +
+                                '<td>' + formattedDate + '</td>' +
+                                '</tr>';
+                            $('#pointsdatainningsBatting').append(newRow);
                         }
-                        var date = new Date(values['match_date']);
-                        var options = { day: 'numeric', month: 'long', year: 'numeric' };
 
-                        var formattedDate = date.toLocaleDateString('en-GB', options);
-                        var newRow = '<tr class="team">' +
-                            '<td class="table-qualified">' + (index + 1) + '</td>' +
-                            '<td class="ih-t-color">' +
-                                '<div class="ih-pt-ic">' +
-                                    '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
-                                    '<div class="text-start">' +
-                                        '<a href="/individual-players?playerid='+values.player_id+'" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2></a>' +
-                                        '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
-                                    '</div>' +
-                                '</div>' +
-                            '</td>' +
-                            '<td>' + values.overs + '</td>' +
-                            '<td>' + values.runs + '</td>' +
-                            '<td>' + values.total_wickets + '</td>' +
-                            '<td>' + values.dot_ball + '</td>' +
-                            '<td>' + values.balls/values.total_wickets + '</td>' +
-                            '<td>' + values.against_team_name + '</td>' +
-                            '<td>' + values.ground_name + '</td>' +
-                            '<td>' + formattedDate + '</td>' +
-                            '</tr>';
-                            $('#pointsdatainningsBowling').append(newRow);
-                    }
-                    
-                }else{
-                    if(data.data.length > 0) {
-                        var firstBowler = data.data[0];
-                        $('#bowlingInngStats .statsplayer img').attr('src', firstBowler.profile_photo);
-                        $('#bowlingInngStats .playername').text(firstBowler.name);
-                        $('#bowlingInngStats .statstable div:nth-child(1) .statsnumb').text(firstBowler.overs);
-                        $('#bowlingInngStats .statstable div:nth-child(2) .statsnumb').text(firstBowler.total_match);
-                        $('#bowlingInngStats .statstable div:nth-child(3) .statsnumb').text(firstBowler.runs);
-                        $('#bowlingInngStats .statstable div:nth-child(4) .statsnumb').text(firstBowler.total_wickets);
-                        $('#bowlingInngStats .statstable div:nth-child(5) .statsnumb').text(firstBowler.dot_ball || '0'); // Assuming best_bowling field for BBI
-                        $('#bowlingInngStats .statstable div:nth-child(6) .statsnumb').text(firstBowler.economy); // Assuming 4w and 5w fields for 4Ws/5Ws
-                    }
+                    });
 
-                    var date = new Date(values['match_date']);
-                    var options = { day: 'numeric', month: 'long', year: 'numeric' };
+                    $("#battingInngStats").show();
+                    $("#BattingInningStatsTable").show();
 
-                    var formattedDate = date.toLocaleDateString('en-GB', options);
-                    var newRow = '<tr class="team">' +
-                        '<td class="table-qualified">' + (index + 1) + '</td>' +
-                        '<td class="ih-t-color">' +
-                            '<div class="ih-pt-ic">' +
-                                '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
-                                '<div class="text-start">' +
-                                    '<a href="/individual-players?playerid='+values.player_id+'" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2></a>' +
-                                    '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
-                                '</div>' +
-                            '</div>' +
-                        '</td>' +
-                        '<td>' + values.overs + '</td>' +
-                        '<td>' + values.runs + '</td>' +
-                        '<td>' + values.total_wickets + '</td>' +
-                        '<td>' + values.dot_ball + '</td>' +
-                        '<td>' + values.balls/values.total_wickets + '</td>' +
-                        '<td>' + values.against_team_name + '</td>' +
-                        '<td>' + values.ground_name + '</td>' +
-                        '<td>' + formattedDate + '</td>' +
-                        '</tr>';
-                        $('#pointsdatainningsBowling').append(newRow);
-                }
-                
-            });
-
-                $("#BowlingInningStatsTable").show();
                     console.log('API call successful', data);
                 })
                 .catch(error => {
                     // Handle any errors
                     console.error('API call failed', error);
                 });
-        }else{
+        } else {
 
-            fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
+            fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
+                    '&url=' + selectedOrangeCap + '&value=' + orangCap)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
                 })
                 .then(data => {
-                        
-            //stats to be hidden
-                        
-            $("#battingStats").hide();
-            $("#battingInngStats").hide();
-            $("#bowlingInngStats").hide();
+                    //Stats to be hidden
+                    $("#bowlingStats").hide();
+                    $("#battingInngStats").hide();
+                    $("#BowlingInningStatsTable").hide();
 
-            // Table to be hidden
-            $("#BattingStatsTable").hide();
-            $("#BattingInningStatsTable").hide();
-            $("#BowlingInningStatsTable").hide();
+                    //table to be hidden
+                    $("#BowlingStatsTable").hide();
+                    $("#BattingInningStatsTable").hide();
+                    $("#bowlingInngStats").hide();
 
-            //ignore
-            $('#pointsdatabowling').empty();
+                    $('#pointsdata').empty();
 
-            
-            var foundedPlayer = false;
-            $.each(data.data, function(index, values) {
-                if(teams != 'All teams'){
-                    if(teams == values.team_name){
-                        if(!foundedPlayer){
-                        if(data.data.length > 0) {
-                            //var firstBowler = data.data[0];
-                            $('#bowlingStats .statsplayer img').attr('src', values.profile_photo);
-                            $('#bowlingStats .playername').text(values.name);
-                            $('#bowlingStats .statstable div:nth-child(1) .statsnumb').text(values.total_wickets);
-                            $('#bowlingStats .statstable div:nth-child(2) .statsnumb').text(values.total_match);
-                            $('#bowlingStats .statstable div:nth-child(3) .statsnumb').text(values.economy);
-                            $('#bowlingStats .statstable div:nth-child(4) .statsnumb').text(values.maidens);
-                            $('#bowlingStats .statstable div:nth-child(5) .statsnumb').text(values.best_bowling || '0'); // Assuming best_bowling field for BBI
-                            $('#bowlingStats .statstable div:nth-child(6) .statsnumb').text((values['4_wickets'] || '0') + '/' + (values['5_wickets'] || '0')); // Assuming 4w and 5w fields for 4Ws/5Ws
-                        }
-                        foundedPlayer = true;
-                        }
-                    
 
-                        var newRow = '<tr class="team">' +
-                        '<td class="table-qualified">' + (index + 1) + '</td>' +
-                        '<td class="ih-t-color">' +
-                            '<div class="ih-pt-ic">' +
-                                '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
-                                '<div class="text-start">' +
-                                    '<a href="/individual-players?playerid='+values.player_id+'" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2></a>' +
+                    var foundedPlayer = false;
+                    $.each(data.data, function(index, values) {
+                        if (teams != 'All teams') {
+                            // console.log("test");
+                            if (values.team_name == teams) {
+                                if (!foundedPlayer) {
+                                    $('#battingStats .statsplayer img').attr('src', values
+                                        .profile_photo);
+                                    $('#battingStats .playername').text(values.name);
+                                    $('#battingStats .statstable div:nth-child(1) .statsnumb').text(
+                                        values.total_runs);
+                                    $('#battingStats .statstable div:nth-child(2) .statsnumb').text(
+                                        values.total_match);
+                                    $('#battingStats .statstable div:nth-child(3) .statsnumb').text(
+                                        values.average);
+                                    $('#battingStats .statstable div:nth-child(4) .statsnumb').text(
+                                        values.strike_rate);
+                                    $('#battingStats .statstable div:nth-child(5) .statsnumb').text(
+                                        values.highest_run);
+                                    $('#battingStats .statstable div:nth-child(6) .statsnumb').text(
+                                        values['50s'] + '/' + values['100s']);
+                                    foundedPlayer = true;
+                                }
+
+                                var newRow = '<tr class="team">' +
+                                    '<td class="table-qualified">' + (index + 1) + '</td>' +
+                                    '<td class="ih-t-color">' +
+                                    '<div class="ih-pt-ic">' +
+                                    '<div class="ih-pt-img"><img alt="" src="' + values
+                                    .profile_photo + '"></div>' +
+                                    '<div class="text-start">' +
+                                    '<a href="/individual-players?playerid=' + values.player_id +
+                                    '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
+                                    values.name + '</h2></a>' +
                                     '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
-                                '</div>' +
-                            '</div>' +
-                        '</td>' +
-                        '<td>' + values.total_match + '</td>' +
-                        '<td>' + values.innings + '</td>' +
-                        '<td>' + values.overs + '</td>' +
-                        '<td>' + values.runs + '</td>' +
-                        '<td>' + values.total_wickets + '</td>' +
-                        '<td>0</td>' +
-                        '<td>' + values.avg + '</td>' +
-                        '<td>' + values.economy + '</td>' +
-                        '<td>' + values.SR + '</td>' +
-                        '<td>0</td>' +
-                        '<td>0</td>' +
-                        '</tr>';
-                        $('#pointsdatabowling').append(newRow);
-                    }
-                }else{
-                    if(data.data.length > 0) {
-                        var firstBowler = data.data[0];
-                        $('#bowlingStats .statsplayer img').attr('src', firstBowler.profile_photo);
-                        $('#bowlingStats .playername').text(firstBowler.name);
-                        $('#bowlingStats .statstable div:nth-child(1) .statsnumb').text(firstBowler.total_wickets);
-                        $('#bowlingStats .statstable div:nth-child(2) .statsnumb').text(firstBowler.total_match);
-                        $('#bowlingStats .statstable div:nth-child(3) .statsnumb').text(firstBowler.economy);
-                        $('#bowlingStats .statstable div:nth-child(4) .statsnumb').text(firstBowler.maidens);
-                        $('#bowlingStats .statstable div:nth-child(5) .statsnumb').text(firstBowler.best_bowling || '0'); // Assuming best_bowling field for BBI
-                        $('#bowlingStats .statstable div:nth-child(6) .statsnumb').text((firstBowler['4_wickets'] || '0') + '/' + (firstBowler['5_wickets'] || '0')); // Assuming 4w and 5w fields for 4Ws/5Ws
-                    }
+                                    '</div>' +
+                                    '</div>' +
+                                    '</td>' +
+                                    '<td>' + values['4s'] + '</td>' +
+                                    '<td>' + values['4s'] + '</td>' +
+                                    '<td>' + values['6s'] + '</td>' +
+                                    '<td>' + values['6s'] + '</td>' +
+                                    '<td>' + values['50s'] + '</td>' +
+                                    '<td>' + values['100s'] + '</td>' +
+                                    '<td>' + values['50s'] + '</td>' +
+                                    '<td>' + values['100s'] + '</td>' +
+                                    '<td>' + values['highest_run'] + '</td>' +
+                                    '<td>' + values['strike_rate'] + '</td>' +
+                                    '<td>' + values['strike_rate'] + '</td>' +
+                                    '<td>' + values['average'] + '</td>' +
+                                    '</tr>';
+                                $('#pointsdata').append(newRow);
+                            }
 
-                    $("#bowlingStats").show();
-
-                    var newRow = '<tr class="team">' +
-                    '<td class="table-qualified">' + (index + 1) + '</td>' +
-                    '<td class="ih-t-color">' +
-                        '<div class="ih-pt-ic">' +
-                            '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo + '"></div>' +
-                            '<div class="text-start">' +
-                                '<a href="/individual-players?playerid='+values.player_id+'" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' + values.name + '</h2></a>' +
+                        } else {
+                            if (data.data.length > 0) {
+                                var firstPlayer = data.data[0];
+                                $('#battingStats .statsplayer img').attr('src', firstPlayer
+                                    .profile_photo);
+                                $('#battingStats .playername').text(firstPlayer.name);
+                                $('#battingStats .statstable div:nth-child(1) .statsnumb').text(
+                                    firstPlayer.total_runs);
+                                $('#battingStats .statstable div:nth-child(2) .statsnumb').text(
+                                    firstPlayer.total_match);
+                                $('#battingStats .statstable div:nth-child(3) .statsnumb').text(
+                                    firstPlayer.average);
+                                $('#battingStats .statstable div:nth-child(4) .statsnumb').text(
+                                    firstPlayer.strike_rate);
+                                $('#battingStats .statstable div:nth-child(5) .statsnumb').text(
+                                    firstPlayer.highest_run);
+                                $('#battingStats .statstable div:nth-child(6) .statsnumb').text(
+                                    firstPlayer['50s'] + '/' + firstPlayer['100s']);
+                            }
+                            var newRow = '<tr class="team">' +
+                                '<td class="table-qualified">' + (index + 1) + '</td>' +
+                                '<td class="ih-t-color">' +
+                                '<div class="ih-pt-ic">' +
+                                '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo +
+                                '"></div>' +
+                                '<div class="text-start">' +
+                                '<a href="/individual-players?playerid=' + values.player_id +
+                                '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
+                                values.name + '</h2></a>' +
                                 '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
-                            '</div>' +
-                        '</div>' +
-                    '</td>' +
-                    '<td>' + values.total_match + '</td>' +
-                    '<td>' + values.innings + '</td>' +
-                    '<td>' + values.overs + '</td>' +
-                    '<td>' + values.runs + '</td>' +
-                    '<td>' + values.total_wickets + '</td>' +
-                    '<td>0</td>' +
-                    '<td>' + values.avg + '</td>' +
-                    '<td>' + values.economy + '</td>' +
-                    '<td>' + values.SR + '</td>' +
-                    '<td>' + values['4_wickets'] + '</td>' +
-                    '<td>' + values['5_wickets'] + '</td>' +
-                    '</tr>';
-                    $('#pointsdatabowling').append(newRow);
-                }
-            });
+                                '</div>' +
+                                '</div>' +
+                                '</td>' +
+                                '<td>' + values['4s'] + '</td>' +
+                                '<td>' + values['4s'] + '</td>' +
+                                '<td>' + values['6s'] + '</td>' +
+                                '<td>' + values['6s'] + '</td>' +
+                                '<td>' + values['50s'] + '</td>' +
+                                '<td>' + values['100s'] + '</td>' +
+                                '<td>' + values['50s'] + '</td>' +
+                                '<td>' + values['100s'] + '</td>' +
+                                '<td>' + values['highest_run'] + '</td>' +
+                                '<td>' + values['strike_rate'] + '</td>' +
+                                '<td>' + values['strike_rate'] + '</td>' +
+                                '<td>' + values['average'] + '</td>' +
+                                '</tr>';
+                            $('#pointsdata').append(newRow);
+                        }
 
-            $("#BowlingStatsTable").show();
-            console.log('API call successful', data);
-            })
-            .catch(error => {
-                // Handle any errors
-                 console.error('API call failed', error);
-            });
+                    });
+                    //stats and table to be shown
+                    $("#battingStats").show();
+                    $("#BattingStatsTable").show();
+                    console.log('API call successful', data);
+                })
+                .catch(error => {
+                    // Handle any errors
+                    console.error('API call failed', error);
+                });
+        }
+    }
+
+    function getBowlingData(orangCap, selectedOrangeCap, season, teams) {
+        if (orangCap == 'MIMDB' || orangCap == 'MIBB' || orangCap == 'MIBBE' || orangCap == 'MIMRC') {
+            fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
+                    '&url=' + selectedOrangeCap + '&value=' + orangCap)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+
+                    //stats to be hidden 
+                    $("#battingStats").hide();
+                    $("#bowlingStats").hide();
+                    $("#battingInngStats").hide();
+
+                    //table to be hidden
+                    $("#BattingStatsTable").hide();
+                    $("#BowlingStatsTable").hide();
+                    $("#BattingInningStatsTable").hide();
+
+                    //ignore
+                    $('#pointsdatainningsBowling').empty();
+
+
+
+
+
+                    $("#bowlingInngStats").show();
+                    var foundedPlayer = false;
+                    $.each(data.data, function(index, values) {
+                        if (teams != 'All teams') {
+                            if (teams == values.team_name) {
+                                if (!foundedPlayer) {
+                                    if (data.data.length > 0) {
+                                        //var firstBowler = data.data[0];
+                                        $('#bowlingInngStats .statsplayer img').attr('src', values
+                                            .profile_photo);
+                                        $('#bowlingInngStats .playername').text(values.name);
+                                        $('#bowlingInngStats .statstable div:nth-child(1) .statsnumb')
+                                            .text(values.overs);
+                                        $('#bowlingInngStats .statstable div:nth-child(2) .statsnumb')
+                                            .text(values.total_match);
+                                        $('#bowlingInngStats .statstable div:nth-child(3) .statsnumb')
+                                            .text(values.runs);
+                                        $('#bowlingInngStats .statstable div:nth-child(4) .statsnumb')
+                                            .text(values.total_wickets);
+                                        $('#bowlingInngStats .statstable div:nth-child(5) .statsnumb')
+                                            .text(values.dot_ball ||
+                                            '0'); // Assuming best_bowling field for BBI
+                                        $('#bowlingInngStats .statstable div:nth-child(6) .statsnumb')
+                                            .text(values
+                                            .economy); // Assuming 4w and 5w fields for 4Ws/5Ws
+                                    }
+                                    foundedPlayer = true;
+                                }
+                                var date = new Date(values['match_date']);
+                                var options = {
+                                    day: 'numeric',
+                                    month: 'long',
+                                    year: 'numeric'
+                                };
+
+                                var formattedDate = date.toLocaleDateString('en-GB', options);
+                                var newRow = '<tr class="team">' +
+                                    '<td class="table-qualified">' + (index + 1) + '</td>' +
+                                    '<td class="ih-t-color">' +
+                                    '<div class="ih-pt-ic">' +
+                                    '<div class="ih-pt-img"><img alt="" src="' + values
+                                    .profile_photo + '"></div>' +
+                                    '<div class="text-start">' +
+                                    '<a href="/individual-players?playerid=' + values.player_id +
+                                    '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
+                                    values.name + '</h2></a>' +
+                                    '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</td>' +
+                                    '<td>' + values.overs + '</td>' +
+                                    '<td>' + values.runs + '</td>' +
+                                    '<td>' + values.total_wickets + '</td>' +
+                                    '<td>' + values.dot_ball + '</td>' +
+                                    '<td>' + values.balls / values.total_wickets + '</td>' +
+                                    '<td>' + values.against_team_name + '</td>' +
+                                    '<td>' + values.ground_name + '</td>' +
+                                    '<td>' + formattedDate + '</td>' +
+                                    '</tr>';
+                                $('#pointsdatainningsBowling').append(newRow);
+                            }
+
+                        } else {
+                            if (data.data.length > 0) {
+                                var firstBowler = data.data[0];
+                                $('#bowlingInngStats .statsplayer img').attr('src', firstBowler
+                                    .profile_photo);
+                                $('#bowlingInngStats .playername').text(firstBowler.name);
+                                $('#bowlingInngStats .statstable div:nth-child(1) .statsnumb').text(
+                                    firstBowler.overs);
+                                $('#bowlingInngStats .statstable div:nth-child(2) .statsnumb').text(
+                                    firstBowler.total_match);
+                                $('#bowlingInngStats .statstable div:nth-child(3) .statsnumb').text(
+                                    firstBowler.runs);
+                                $('#bowlingInngStats .statstable div:nth-child(4) .statsnumb').text(
+                                    firstBowler.total_wickets);
+                                $('#bowlingInngStats .statstable div:nth-child(5) .statsnumb').text(
+                                    firstBowler.dot_ball || '0'
+                                    ); // Assuming best_bowling field for BBI
+                                $('#bowlingInngStats .statstable div:nth-child(6) .statsnumb').text(
+                                    firstBowler.economy); // Assuming 4w and 5w fields for 4Ws/5Ws
+                            }
+
+                            var date = new Date(values['match_date']);
+                            var options = {
+                                day: 'numeric',
+                                month: 'long',
+                                year: 'numeric'
+                            };
+
+                            var formattedDate = date.toLocaleDateString('en-GB', options);
+                            var newRow = '<tr class="team">' +
+                                '<td class="table-qualified">' + (index + 1) + '</td>' +
+                                '<td class="ih-t-color">' +
+                                '<div class="ih-pt-ic">' +
+                                '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo +
+                                '"></div>' +
+                                '<div class="text-start">' +
+                                '<a href="/individual-players?playerid=' + values.player_id +
+                                '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
+                                values.name + '</h2></a>' +
+                                '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                                '</div>' +
+                                '</div>' +
+                                '</td>' +
+                                '<td>' + values.overs + '</td>' +
+                                '<td>' + values.runs + '</td>' +
+                                '<td>' + values.total_wickets + '</td>' +
+                                '<td>' + values.dot_ball + '</td>' +
+                                '<td>' + values.balls / values.total_wickets + '</td>' +
+                                '<td>' + values.against_team_name + '</td>' +
+                                '<td>' + values.ground_name + '</td>' +
+                                '<td>' + formattedDate + '</td>' +
+                                '</tr>';
+                            $('#pointsdatainningsBowling').append(newRow);
+                        }
+
+                    });
+
+                    $("#BowlingInningStatsTable").show();
+                    console.log('API call successful', data);
+                })
+                .catch(error => {
+                    // Handle any errors
+                    console.error('API call failed', error);
+                });
+        } else {
+
+            fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
+                    '&url=' + selectedOrangeCap + '&value=' + orangCap)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+
+                    //stats to be hidden
+
+                    $("#battingStats").hide();
+                    $("#battingInngStats").hide();
+                    $("#bowlingInngStats").hide();
+
+                    // Table to be hidden
+                    $("#BattingStatsTable").hide();
+                    $("#BattingInningStatsTable").hide();
+                    $("#BowlingInningStatsTable").hide();
+
+                    //ignore
+                    $('#pointsdatabowling').empty();
+
+
+                    var foundedPlayer = false;
+                    $.each(data.data, function(index, values) {
+                        if (teams != 'All teams') {
+                            if (teams == values.team_name) {
+                                if (!foundedPlayer) {
+                                    if (data.data.length > 0) {
+                                        //var firstBowler = data.data[0];
+                                        $('#bowlingStats .statsplayer img').attr('src', values
+                                            .profile_photo);
+                                        $('#bowlingStats .playername').text(values.name);
+                                        $('#bowlingStats .statstable div:nth-child(1) .statsnumb')
+                                            .text(values.total_wickets);
+                                        $('#bowlingStats .statstable div:nth-child(2) .statsnumb')
+                                            .text(values.total_match);
+                                        $('#bowlingStats .statstable div:nth-child(3) .statsnumb')
+                                            .text(values.economy);
+                                        $('#bowlingStats .statstable div:nth-child(4) .statsnumb')
+                                            .text(values.maidens);
+                                        $('#bowlingStats .statstable div:nth-child(5) .statsnumb')
+                                            .text(values.best_bowling ||
+                                            '0'); // Assuming best_bowling field for BBI
+                                        $('#bowlingStats .statstable div:nth-child(6) .statsnumb')
+                                            .text((values['4_wickets'] || '0') + '/' + (values[
+                                                '5_wickets'] ||
+                                            '0')); // Assuming 4w and 5w fields for 4Ws/5Ws
+                                    }
+                                    foundedPlayer = true;
+                                }
+
+
+                                var newRow = '<tr class="team">' +
+                                    '<td class="table-qualified">' + (index + 1) + '</td>' +
+                                    '<td class="ih-t-color">' +
+                                    '<div class="ih-pt-ic">' +
+                                    '<div class="ih-pt-img"><img alt="" src="' + values
+                                    .profile_photo + '"></div>' +
+                                    '<div class="text-start">' +
+                                    '<a href="/individual-players?playerid=' + values.player_id +
+                                    '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
+                                    values.name + '</h2></a>' +
+                                    '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</td>' +
+                                    '<td>' + values.total_match + '</td>' +
+                                    '<td>' + values.innings + '</td>' +
+                                    '<td>' + values.overs + '</td>' +
+                                    '<td>' + values.runs + '</td>' +
+                                    '<td>' + values.total_wickets + '</td>' +
+                                    '<td>0</td>' +
+                                    '<td>' + values.avg + '</td>' +
+                                    '<td>' + values.economy + '</td>' +
+                                    '<td>' + values.SR + '</td>' +
+                                    '<td>0</td>' +
+                                    '<td>0</td>' +
+                                    '</tr>';
+                                $('#pointsdatabowling').append(newRow);
+                            }
+                        } else {
+                            if (data.data.length > 0) {
+                                var firstBowler = data.data[0];
+                                $('#bowlingStats .statsplayer img').attr('src', firstBowler
+                                    .profile_photo);
+                                $('#bowlingStats .playername').text(firstBowler.name);
+                                $('#bowlingStats .statstable div:nth-child(1) .statsnumb').text(
+                                    firstBowler.total_wickets);
+                                $('#bowlingStats .statstable div:nth-child(2) .statsnumb').text(
+                                    firstBowler.total_match);
+                                $('#bowlingStats .statstable div:nth-child(3) .statsnumb').text(
+                                    firstBowler.economy);
+                                $('#bowlingStats .statstable div:nth-child(4) .statsnumb').text(
+                                    firstBowler.maidens);
+                                $('#bowlingStats .statstable div:nth-child(5) .statsnumb').text(
+                                    firstBowler.best_bowling || '0'
+                                    ); // Assuming best_bowling field for BBI
+                                $('#bowlingStats .statstable div:nth-child(6) .statsnumb').text((
+                                    firstBowler['4_wickets'] || '0') + '/' + (firstBowler[
+                                    '5_wickets'] || '0')); // Assuming 4w and 5w fields for 4Ws/5Ws
+                            }
+
+                            $("#bowlingStats").show();
+
+                            var newRow = '<tr class="team">' +
+                                '<td class="table-qualified">' + (index + 1) + '</td>' +
+                                '<td class="ih-t-color">' +
+                                '<div class="ih-pt-ic">' +
+                                '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo +
+                                '"></div>' +
+                                '<div class="text-start">' +
+                                '<a href="/individual-players?playerid=' + values.player_id +
+                                '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
+                                values.name + '</h2></a>' +
+                                '<h2 class="ih-pt-cont mb-0 fw-400">RR</h2>' +
+                                '</div>' +
+                                '</div>' +
+                                '</td>' +
+                                '<td>' + values.total_match + '</td>' +
+                                '<td>' + values.innings + '</td>' +
+                                '<td>' + values.overs + '</td>' +
+                                '<td>' + values.runs + '</td>' +
+                                '<td>' + values.total_wickets + '</td>' +
+                                '<td>0</td>' +
+                                '<td>' + values.avg + '</td>' +
+                                '<td>' + values.economy + '</td>' +
+                                '<td>' + values.SR + '</td>' +
+                                '<td>' + values['4_wickets'] + '</td>' +
+                                '<td>' + values['5_wickets'] + '</td>' +
+                                '</tr>';
+                            $('#pointsdatabowling').append(newRow);
+                        }
+                    });
+
+                    $("#BowlingStatsTable").show();
+                    console.log('API call successful', data);
+                })
+                .catch(error => {
+                    // Handle any errors
+                    console.error('API call failed', error);
+                });
         }
     }
 });
