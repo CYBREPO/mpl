@@ -161,7 +161,7 @@
             <?php if (have_rows("gallery")):
                         while (have_rows("gallery")):
                              the_row(); ?>
-                <div class="col-md-3 mt-4 "><a
+                <div class="col-md-3 mt-4 content"><a
                         href="<?php the_sub_field("gallery_image"); ?>"
                         class="glightbox w-100" data-glightbox="type: image">
                         <img src="<?php the_sub_field("gallery_image"); ?>"
