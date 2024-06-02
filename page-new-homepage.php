@@ -64,7 +64,7 @@
                     <div class="bannerplayers">
                         <img src="<?php the_field('players_banner_image') ?>" class="img-fluid" alt="">
                     </div>
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/Group-197-1-1-1-1.png"
+                    <img src="<?php the_field('map'); ?>"
                         class="map d-block animate__animated animate__bounceInUp animate__delay-1s" alt="">
                 </div>
             </div>
