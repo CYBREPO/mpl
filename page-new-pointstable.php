@@ -77,7 +77,8 @@
     <div class="points-table pb-5 page-pattern">
         <div class="container">
             <select id="seasonSelect" class="form-select" aria-label="Default select example">
-                <?php foreach($filters['data']['season'] as $k) { if($k['value'] != -1){?>
+                <option selected><?php echo $filters['data']['season'][1]['key']; ?></option>
+                <?php foreach($filters['data']['season'] as $k) { if($k['value'] != -1 && $k['key'] != $filters['data']['season'][1]['key']){?>
                     <option value="<?php echo $k['value'];?>"><?php echo $k['key'];?></option>
                 <?php }} ?>
             </select>
