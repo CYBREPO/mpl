@@ -365,6 +365,10 @@ a {
     }
 
     .stadium {
+        @media screen and (max-width: 992px) {
+            transform: translateY(-85px);
+        }
+
         @media screen and (min-width: 992px) {
             transform: translateX(-90px);
         }
