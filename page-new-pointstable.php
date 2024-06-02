@@ -76,21 +76,12 @@
     <!-- Banner -->
     <div class="points-table pb-5 page-pattern">
         <div class="container">
-            <div class="dropdown py-4 py-md-5">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <?php echo $filters['data']['season'][1]['key']?>
-                    <!-- Season 2024 -->
-                </button>
-                <ul class="dropdown-menu">
-                    <?php foreach($filters['data']['season'] as $k) { if($k['value'] != -1){?>
-                        <li><a class="dropdown-item" href="" data-action="<?php echo $k['value'];?>"><?php echo $k['key']; ?></a></li>
-                    <?php }} ?>
-                    <!-- <li><a class="dropdown-item" href="" data-action="action1">Action</a></li>
-                    <li><a class="dropdown-item" href="" data-action="action2">Another action</a></li>
-                    <li><a class="dropdown-item" href="" data-action="action3">Something else here</a></li> -->
-                </ul>
-            </div>
+            <select id="seasonSelect" class="form-select" aria-label="Default select example">
+                <?php foreach($filters['data']['season'] as $k) { if($k['value'] != -1){?>
+                    <option value="<?php echo $k['value'];?>"><?php echo $k['key'];?></option>
+                <?php }} ?>
+            </select>
+            
             <div class="table-responsive mb-4">
                 <table width="100%" class="ih-td-tab">
                     <tbody>
@@ -205,10 +196,10 @@
 
 $(document).ready(function() {
      
-    $('.dropdown-item').on('click', function(e) {
+    $('#seasonSelect').on('change', function(e) {
         e.preventDefault(); 
         
-        var action = $(this).data('action'); 
+        var action = $(this).val();  
         
         fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getPointsTable?tournamentId='+action)
         .then(response => {
