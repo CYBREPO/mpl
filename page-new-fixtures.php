@@ -74,23 +74,10 @@
     <div class="fixtures page-pattern">
         <div class="container">
             <select id="seasonSelect" class="form-select" aria-label="Default select example">
-                <option selected><?php echo $filters['data']['season'][0]['key']?></option>
                 <?php foreach($filters['data']['season'] as $k) { if($k['value'] != -1){?>
                     <option value="<?php echo $k['value'];?>"><?php echo $k['key'];?></option>
                 <?php }} ?>
             </select>
-            <div class="dropdown py-3 py-md-5">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <?php echo $filters['data']['season'][0]['key']?>
-              
-                </button>
-                <ul class="dropdown-menu">
-                <?php foreach($filters['data']['season'] as $k) { if($k['value'] != -1){?>
-                        <li><a class="dropdown-item" href="" data-action="<?php echo $k['value'];?>"><?php echo $k['key']; ?></a></li>
-                    <?php }} ?>
-                </ul>
-            </div>
             <div id="fixtures-container">
                 <?php foreach($tournament_list['data'] as $index => $values){ ?>
                 <div class="fixture">
