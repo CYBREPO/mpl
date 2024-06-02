@@ -929,7 +929,7 @@ $(document).ready(function() {
             // }
 
         } else {
-
+            
             if (teams == 'undefined' || teams == 'All teams') {
                 getBattingData(orangCap, selectedOrangeCap, season, teams);
                 // if(orangCap == 'MISIX' || orangCap == 'MIFOUR' || orangCap == 'MIHSR' || orangCap == 'MIHS'){
@@ -1218,6 +1218,8 @@ $(document).ready(function() {
     }
 
     function getBattingData(orangCap, selectedOrangeCap, season, teams) {
+        getOrangeCap(season);
+        //getPurpleCap(season);
         if (orangCap == 'MISIX' || orangCap == 'MIFOUR' || orangCap == 'MIHSR' || orangCap == 'MIHS') {
 
             fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
@@ -1493,6 +1495,8 @@ $(document).ready(function() {
     }
 
     function getBowlingData(orangCap, selectedOrangeCap, season, teams) {
+        getOrangeCap(season);
+        //getPurpleCap(season);
         if (orangCap == 'MIMDB' || orangCap == 'MIBB' || orangCap == 'MIBBE' || orangCap == 'MIMRC') {
             fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
                     '&url=' + selectedOrangeCap + '&value=' + orangCap)
@@ -1790,6 +1794,33 @@ $(document).ready(function() {
                     console.error('API call failed', error);
                 });
         }
+    }
+
+    function getOrangeCap(season){
+        fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
+            '&url=thirdparty/mpl/get-tournament-batting-leaderboard&value=RUN')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                var data = data.data[0];
+                $('.profile-photo').attr('src', data.profile_photo);
+                $('.cap-player-name').text(data.name);
+                $('.total-runs').text(data.total_runs);
+                $('.total-matches').text(data.total_match);
+                $('.average').text(data.average);
+                // $.each(data.data, function(index, values) {
+                   
+                // });
+                console.log('API call successful', data);
+            })
+            .catch(error => {
+                // Handle any errors
+                console.error('API call failed', error);
+            });
     }
 });
 </script>
