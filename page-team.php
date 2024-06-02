@@ -188,8 +188,8 @@ foreach ($teamlogos as $key => $value) {
                                 ['player' => "Vijay Pawale",'role'=>'allrounder'],
                                 ['player' => "Nikhil Naik",'role'=>'wkt'],
                                 ['player' => "Abhishek Pawar",'role'=>'wkt'],
-                                ['player' => "Tushar Shrivastav",'role'=>'bat'],
-                                ['player' => "Akhilesh Gawale",'role'=>'bat'],
+                                ['player' => "Tushar Shrivastav",'role'=>'batter'],
+                                ['player' => "Akhilesh Gawale",'role'=>'batter'],
                                 ['player' => "Kunal Thorat",'role'=>'bowler'],
                                 ['player' => "Nikit Dhumal",'role'=>'bowler'],
                                 ['player' => "Pradeep Dadhe",'role'=>'bowler'],
@@ -276,7 +276,7 @@ foreach ($teamlogos as $key => $value) {
                     <div class="captain-header">
                         Captain - Ruturaj Gaikwad
 
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/bat.svg" alt="">
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batter.svg" alt="">
                     </div>
 
                     <div class="row playerandrole">
@@ -298,7 +298,7 @@ foreach ($teamlogos as $key => $value) {
 ['player' => "Yash Kshirsagar",'role' => 'batter'],
 ['player' => "Shripad Nimbalkar",'role' => 'batter'],
 ['player' => "Suraj Shinde",'role' => 'wkt'],
-['player' => "Sahil Autade",'	wkt'],
+['player' => "Sahil Autade",'wkt'],
 ['player' => "Roshan Waghsare",'role' => 'bowler'],
 ['player' => "Ramakrishna Ghosh",'role' => 'bowler'],
 ['player' => "Rohan Kharat",'role' => 'bowler'],
