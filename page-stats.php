@@ -613,7 +613,7 @@
                     style="background-image: url(<?php echo get_bloginfo('template_directory'); ?>/newassets/images/orangecapholdlerimage.png);">
                     <div class="d-flex ">
                         <div class="capplayerimage">
-                            <img src="<?php echo $batting_leader_board['data'][0]['profile_photo']; ?>" alt="" class="">
+                            <img src="<?php echo $batting_leader_board['data'][0]['profile_photo']; ?>" alt="" class="" id="photo_orange">
                         </div>
                         <div class="cap-details-side">
                             <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/orangecap.svg"
@@ -621,12 +621,12 @@
                             <div class="captitle">
                                 ORANGE CAP HOLDER
                             </div>
-                            <div class="cap-player-name">
+                            <div class="cap-player-name" id="o_player_name">
                                 <?php echo $batting_leader_board['data'][0]['name']; ?>
                             </div>
                             <div class="d-flex" style="font-family: Koulen;">
                                 <span class="me-5">
-                                    <div class="cap-run"><?php echo $batting_leader_board['data'][0]['total_runs']; ?>
+                                    <div class="cap-run" id="o_to_run"><?php echo $batting_leader_board['data'][0]['total_runs']; ?>
                                     </div>
                                     <div class="cap-label">
                                         Runs
@@ -634,7 +634,7 @@
                                 </span>
 
                                 <span class="me-5">
-                                    <div class="cap-run"><?php echo $batting_leader_board['data'][0]['total_match']; ?>
+                                    <div class="cap-run" id="o_to_match"><?php echo $batting_leader_board['data'][0]['total_match']; ?>
                                     </div>
                                     <div class="cap-label">
                                         matches
@@ -642,7 +642,7 @@
                                 </span>
 
                                 <span>
-                                    <div class="cap-run"><?php echo $batting_leader_board['data'][0]['average']; ?>
+                                    <div class="cap-run" id="o_to_avg"><?php echo $batting_leader_board['data'][0]['average']; ?>
                                     </div>
                                     <div class="cap-label">
                                         Average
@@ -670,12 +670,12 @@
                             <div class="captitle">
                                 PURPLE CAP HOLDER
                             </div>
-                            <div class="cap-player-name">
+                            <div class="cap-player-name" id="p_player">
                                 <?php echo $bowling_leader_board['data'][0]['name'] ?>
                             </div>
                             <div class="d-flex" style="font-family: Koulen;">
                                 <span class="me-5">
-                                    <div class="cap-run">
+                                    <div class="cap-run" id="p_wickets">
                                         <?php echo $bowling_leader_board['data'][0]['total_wickets']; ?></div>
                                     <div class="cap-label">
                                         Wickets
@@ -683,7 +683,7 @@
                                 </span>
 
                                 <span class="me-5">
-                                    <div class="cap-run"><?php echo $bowling_leader_board['data'][0]['total_match']; ?>
+                                    <div class="cap-run" id="p_match"><?php echo $bowling_leader_board['data'][0]['total_match']; ?>
                                     </div>
                                     <div class="cap-label">
                                         Matches
@@ -691,7 +691,7 @@
                                 </span>
 
                                 <span>
-                                    <div class="cap-run"><?php echo $bowling_leader_board['data'][0]['avg']; ?></div>
+                                    <div class="cap-run" id="p_avg"><?php echo $bowling_leader_board['data'][0]['avg']; ?></div>
                                     <div class="cap-label">
                                         Average
                                     </div>
@@ -702,7 +702,7 @@
 
 
                         <div class="capplayerimage">
-                            <img src="<?php echo $bowling_leader_board['data'][0]['profile_photo']; ?>" alt="" class="">
+                            <img src="<?php echo $bowling_leader_board['data'][0]['profile_photo']; ?>" alt="" class="" id="photo_purple">
                         </div>
                     </div>
                 </div>
@@ -1219,7 +1219,7 @@ $(document).ready(function() {
 
     function getBattingData(orangCap, selectedOrangeCap, season, teams) {
         getOrangeCap(season);
-        //getPurpleCap(season);
+        getPurpleCap(season);
         if (orangCap == 'MISIX' || orangCap == 'MIFOUR' || orangCap == 'MIHSR' || orangCap == 'MIHS') {
 
             fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
@@ -1496,7 +1496,7 @@ $(document).ready(function() {
 
     function getBowlingData(orangCap, selectedOrangeCap, season, teams) {
         getOrangeCap(season);
-        //getPurpleCap(season);
+        getPurpleCap(season);
         if (orangCap == 'MIMDB' || orangCap == 'MIBB' || orangCap == 'MIBBE' || orangCap == 'MIMRC') {
             fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
                     '&url=' + selectedOrangeCap + '&value=' + orangCap)
@@ -1807,15 +1807,42 @@ $(document).ready(function() {
             })
             .then(data => {
                 var data = data.data[0];
-                $('.profile-photo').attr('src', data.profile_photo);
-                $('.cap-player-name').text(data.name);
-                $('.total-runs').text(data.total_runs);
-                $('.total-matches').text(data.total_match);
-                $('.average').text(data.average);
+                $('#photo_orange').attr('src', data.profile_photo);
+                $('#o_player_name').text(data.name);
+                $('#o_to_run').text(data.total_runs);
+                $('#o_to_match').text(data.total_match);
+                $('#o_to_avg').text(data.average);
                 // $.each(data.data, function(index, values) {
                    
                 // });
                 console.log('API call successful orange cap', data);
+            })
+            .catch(error => {
+                // Handle any errors
+                console.error('API call failed', error);
+            });
+    }
+
+    function getPurpleCap(season){
+        fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
+            '&url=thirdparty/mpl/get-tournament-bowling-leaderboard&value=WICKET')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                var data = data.data[0];
+                $('#photo_purple').attr('src', data.profile_photo);
+                $('#p_player').text(data.name);
+                $('#p_wickets').text(data.total_wickets);
+                $('#p_match').text(data.total_match);
+                $('#p_avg').text(data.avg);
+                // $.each(data.data, function(index, values) {
+                   
+                // });
+                console.log('API call successful purple cap', data);
             })
             .catch(error => {
                 // Handle any errors
