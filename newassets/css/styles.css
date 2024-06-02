@@ -313,7 +313,7 @@ a {
   .livematch .orange-button {
     position: absolute;
     /* bottom: 0; */
-    top: 173px;
+    bottom: 30px;
     left: 15px;
     font-size: 14px;
   }
@@ -341,9 +341,8 @@ a {
 }
 .livematch .liveteam1,
 .livematch .liveteam2 {
-  width: 76px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: 60px;
+  margin: 30px 0;
 }
 @media screen and (min-width: 992px) {
   .livematch .liveteam1,
