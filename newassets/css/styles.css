@@ -151,6 +151,22 @@ ul {
   }
 }
 
+select.form-select {
+  width: 15%;
+  margin: 20px 0;
+  position: relative;
+  z-index: 1;
+  border-radius: 4px;
+  border: 1px solid #ABABAB;
+  color: #260531;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 0;
+  min-width: 159px;
+  text-align: left;
+  font-family: "Koulen";
+}
+
 .dropdown-toggle.bg-white:hover {
   color: black;
   background-color: #dedede !important;
