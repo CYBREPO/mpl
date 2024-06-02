@@ -45,7 +45,7 @@
                     </svg>
                     <a href="https://cricketmaharashtra.com/" target="_blank">
                         <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/wmpllogo.png"
-                            class="w-100" alt="mpl.thebrandodyssey.com" style="max-width: 37px;"></a>
+                            class="w-100" alt="mpl.thebrandodyssey.com" style="max-width: 50px;"></a>
                 </div>
                 <div class="menu-header-menu-container">
                     <ul id="menu-header-menu" class="p-0 m-0 d-flex">
