@@ -166,7 +166,7 @@ ul {
     }
 }
 
-select.form-select{
+select.form-select {
     width: 15%;
     margin: 20px 0;
     position: relative;
@@ -180,6 +180,8 @@ select.form-select{
     min-width: 159px;
     text-align: left;
     font-family: "Koulen";
+    position: relative;
+    z-index: 10;
 
 }
 
@@ -862,9 +864,7 @@ b {
 }
 
 .teamstab-cover {
-    height: 198px;
-
-
+    height: 170px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1714,21 +1714,6 @@ h2.ih-pt-cont a {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .teamstab {
     display: flex;
     justify-content: center;
@@ -1740,8 +1725,14 @@ h2.ih-pt-cont a {
     width: 100%;
 
     .teamstabstab {
-        width: 111.477px;
-        height: 111.477px;
+        width: 60px;
+        height: 60px;
+
+        @media screen and (min-width: 992px) {
+            width: 111.477px;
+            height: 111.477px;
+        }
+
         flex-shrink: 0;
         background-color: #FAFBFC;
         margin: 0 15px;
@@ -1757,7 +1748,11 @@ h2.ih-pt-cont a {
         }
 
         &.active {
-            border: 6px solid #DB4610;
+            border: 3px solid #DB4610;
+
+            @media screen and (min-width: 992px) {
+                border: 6px solid #DB4610;
+            }
         }
     }
 }
@@ -1803,15 +1798,14 @@ h2.ih-pt-cont a {
     .captain-header {
         background: linear-gradient(90deg, #260531 0%, #65202E 31.27%, #F15A29 100%);
         color: #FFF;
-
-        font-size: 24px;
+        font-size: 17px;
+        padding: 7px;
         font-weight: 400;
-        padding: 21px;
         text-align: center;
         margin-top: 28px;
-
         @media screen and (min-width: 992px) {
-            // margin-top: 58px;
+            font-size: 24px;
+            padding: 21px;
         }
 
         img {
