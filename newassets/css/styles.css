@@ -619,6 +619,8 @@ a {
 .cap-image-container img {
   width: 160.417px;
   height: 142.708px;
+  -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+          clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 @media screen and (min-width: 992px) {
   .cap-image-container img {
@@ -626,8 +628,6 @@ a {
     height: 274px;
     -o-object-fit: cover;
        object-fit: cover;
-    -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     -o-object-position: top;
        object-position: top;
   }

@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Lato:wght@100;300;400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/newassets/css/styles.css">
     <?php wp_head(); ?>
@@ -31,7 +31,7 @@
 </head>
 
 <body>
-    <topheader class="d-none d-md-block">
+    <topheader class="">
         <nav class="navbar p-0 d-flex align-items-center justify-content-between"
             style="background: linear-gradient(90deg, #18001C 0%, #DD460F 100%);height: 50px;">
             <div class="container">
@@ -77,26 +77,36 @@
             </div>
         </nav>
     </topheader>
-    <header class="d-none d-md-block">
-        <nav class="navbar p-0 d-flex align-items-center justify-content-between">
+
+    <header>
+        <nav class="navbar navbar-expand-lg p-0 bg-body-tertiary">
             <div class="container">
             <a class="navbar-brand" href="<?php bloginfo('url')?>">
-                    <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
+                        <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 if ( has_custom_logo() ) {
 	echo '<img src="' . esc_url( $logo[0] ) . '" class="w-100" alt="' . get_bloginfo( 'name' ) . '">';
 } else {
 	echo '<h1>' . get_bloginfo('name') . '</h1>';
 }  ?></a>
+                <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse p-0 align-items-center justify-content-end" id="navbarSupportedContent">
+           
 
-                <div class="menu-header-menu-container">
-                    <ul id="menu-header-menu" class="p-0 m-0 menu">
-                        <?php if (has_nav_menu('new-header-menu')) {
+                    <div class="menu-header-menu-container">
+                        <ul id="menu-header-menu" class="p-0 m-0 menu">
+                            <?php if (has_nav_menu('new-header-menu')) {
                         wp_nav_menu(array('theme_location' => 'new-header-menu'));
                     } ?>
 
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
+      
     </header>
