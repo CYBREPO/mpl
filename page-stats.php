@@ -1275,7 +1275,7 @@ $(document).ready(function() {
 
                                 var formattedDate = date.toLocaleDateString('en-GB', options);
 
-                                var newRow = '<tr class="team">' +
+                                var newRow = '<tr class="team '+index+'" data-search-term='+ values.name +'>' +
                                     '<td class="table-qualified">' + (index + 1) + '</td>' +
                                     '<td class="ih-t-color">' +
                                     '<div class="ih-pt-ic">' +
@@ -1323,7 +1323,7 @@ $(document).ready(function() {
 
                             var formattedDate = date.toLocaleDateString('en-GB', options);
 
-                            var newRow = '<tr class="team">' +
+                            var newRow = '<tr class="team '+ index +'" data-search-term='+ values.name +'>' +
                                 '<td class="table-qualified">' + (index + 1) + '</td>' +
                                 '<td class="ih-t-color">' +
                                 '<div class="ih-pt-ic">' +
@@ -1417,7 +1417,7 @@ $(document).ready(function() {
                                     foundedPlayer = true;
                                 }
 
-                                var newRow = '<tr class="team">' +
+                                var newRow = '<tr class="team '+ index +'" data-search-term='+ values.name +'>' +
                                     '<td class="table-qualified">' + (index + 1) + '</td>' +
                                     '<td class="ih-t-color">' +
                                     '<div class="ih-pt-ic">' +
@@ -1465,7 +1465,7 @@ $(document).ready(function() {
                                 $('#battingStats .statstable div:nth-child(6) .statsnumb').text(
                                     firstPlayer['50s'] + '/' + firstPlayer['100s']);
                             }
-                            var newRow = '<tr class="team">' +
+                            var newRow = '<tr class="team '+index+'" data-search-term='+ values.name +'>' +
                                 '<td class="table-qualified">' + (index + 1) + '</td>' +
                                 '<td class="ih-t-color">' +
                                 '<div class="ih-pt-ic">' +
@@ -1589,7 +1589,7 @@ $(document).ready(function() {
                                 };
 
                                 var formattedDate = date.toLocaleDateString('en-GB', options);
-                                var newRow = '<tr class="team">' +
+                                var newRow = '<tr class="team '+index+' data-search-term='+ values.name +'">' +
                                     '<td class="table-qualified">' + (index + 1) + '</td>' +
                                     '<td class="ih-t-color">' +
                                     '<div class="ih-pt-ic">' +
@@ -1643,7 +1643,7 @@ $(document).ready(function() {
                             };
 
                             var formattedDate = date.toLocaleDateString('en-GB', options);
-                            var newRow = '<tr class="team">' +
+                            var newRow = '<tr class="team '+index+'" data-search-term='+values.name+'>' +
                                 '<td class="table-qualified">' + (index + 1) + '</td>' +
                                 '<td class="ih-t-color">' +
                                 '<div class="ih-pt-ic">' +
@@ -1751,7 +1751,7 @@ $(document).ready(function() {
                                 }
 
 
-                                var newRow = '<tr class="team">' +
+                                var newRow = '<tr class="team '+index+'" data-search-term='+values.name+'>' +
                                     '<td class="table-qualified">' + (index + 1) + '</td>' +
                                     '<td class="ih-t-color">' +
                                     '<div class="ih-pt-ic">' +
@@ -1802,7 +1802,7 @@ $(document).ready(function() {
 
                             $("#bowlingStats").show();
 
-                            var newRow = '<tr class="team">' +
+                            var newRow = '<tr class="team '+index+'" data-search-term='+values.name+'>' +
                                 '<td class="table-qualified">' + (index + 1) + '</td>' +
                                 '<td class="ih-t-color">' +
                                 '<div class="ih-pt-ic">' +
