@@ -73,6 +73,12 @@
     <!-- Banner -->
     <div class="fixtures page-pattern">
         <div class="container">
+            <select id="seasonSelect" class="form-select" aria-label="Default select example">
+                <option selected><?php echo $filters['data']['season'][0]['key']?></option>
+                <?php foreach($filters['data']['season'] as $k) { if($k['value'] != -1){?>
+                    <option value="<?php echo $k['value'];?>"><?php echo $k['key'];?></option>
+                <?php }} ?>
+            </select>
             <div class="dropdown py-3 py-md-5">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
@@ -163,10 +169,10 @@
 
 $(document).ready(function() {
      
-    $('.dropdown-item').on('click', function(e) {
+    $('#seasonSelect').on('change', function(e) {
         e.preventDefault(); 
         
-        var action = $(this).data('action'); 
+        var action = $(this).val(); 
         
         fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getFixtures?tournamentId='+action)
         .then(response => {
