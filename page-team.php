@@ -292,13 +292,13 @@ foreach ($teamlogos as $key => $value) {
 ['player' => "Neel Gandhi",'role' => 'allrounder'],
 ['player' => "Shubham Taiswal",'role' => 'allrounder'],
 ['player' => "Devansh Tandel",'role' => 'allrounder'],
-['player' => "Ruturaj Gaikwad",'batter'],
+['player' => "Ruturaj Gaikwad",'role' => 'batter'],
 ['player' => "Abhimanyu Jadhav",'role' => 'batter'],
 ['player' => "Pavan Shah",'role' => 'batter'],
 ['player' => "Yash Kshirsagar",'role' => 'batter'],
 ['player' => "Shripad Nimbalkar",'role' => 'batter'],
 ['player' => "Suraj Shinde",'role' => 'wkt'],
-['player' => "Sahil Autade",'wkt'],
+['player' => "Sahil Autade",'role' =>'wkt'],
 ['player' => "Roshan Waghsare",'role' => 'bowler'],
 ['player' => "Ramakrishna Ghosh",'role' => 'bowler'],
 ['player' => "Rohan Kharat",'role' => 'bowler'],
@@ -306,7 +306,7 @@ foreach ($teamlogos as $key => $value) {
 ['player' => "Sachin Bhosale",'role' => 'bowler'],
 ['player' => "Atif Sayyed",'role' => 'bowler'],
 ['player' => "Piyush Salvi",'role' => 'bowler'],
-['player' => "Sohan Jamale",'bowler'],
+['player' => "Sohan Jamale",'role' => 'bowler'],
 
 
 
@@ -365,8 +365,8 @@ foreach ($teamlogos as $key => $value) {
                       ['player' =>'Razeq Fallah','role'=>'bowler'],
                       ['player' =>'Samadhan Pangare','role'=>'bowler'],
                       ['player' =>'Mukesh Choudhary','role'=>'bowler'],
-                      ['player' =>'Prashant Solanki ','role'=>'bowler '],
-                      ['player' =>'Rehan Khan','role'=>'bowler ']);
+                      ['player' =>'Prashant Solanki ','role'=>'bowler'],
+                      ['player' =>'Rehan Khan','role'=>'bowler']);
                             ?>
 
                         <?php for ($i = 0; $i < count($EAGLE); $i++) {
@@ -448,7 +448,7 @@ foreach ($teamlogos as $key => $value) {
  ['player' =>'Nagesh Rege','role'=>'allrounder'],
  ['player' =>'Shamshuzama Kazi','role'=>'allrounder'],
  ['player' =>'Digvijay Jadhav','role'=>'batter'],
- ['player' =>'Saurabh Singh','role'=>''],
+ ['player' =>'Saurabh Singh','role'=>'batter'],
  ['player' =>'Om Bhosale','role'=>'batter'],
  ['player' =>'Harshal Kate','role'=>'batter'],
  ['player' =>'Murtaza Trunkwala','role'=>'batter'],
