@@ -111,7 +111,7 @@
                     <img src="<?php echo $live_score['data'][0]['team_b_logo']; ?>" alt="" class="liveteam2">
                 </div>
             </div>
-            <a href="#" class="orange-button">Live Stream</a>
+            <a href="https://www.jiocinema.com/sports" target="_blank" class="orange-button">Live Stream</a>
         </div>
     </div>
     <?php } ?>
