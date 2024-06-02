@@ -117,14 +117,55 @@
         </div>
     </div>
     <?php } ?>
-    <?php
+    <!-- <?php
                 if(have_posts()){
                     while(have_posts()){
                         the_post();
                         get_template_part('template-parts/content', 'page');
                     }
                 }
-            ?>
+            ?> -->
+
+                <!-- MEN’S TEAMS -->
+    <section class="mens-team">
+        <div class="container">
+            <div class="section-title mb-md-5" data-aos="fade-up" data-aos-duration="1500">
+                MEN’S TEAMS
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1500">
+                <div class="d-flex align-items-center justify-content-around flex-sm-wrap">
+
+                    <?php if (have_rows("team_images")):
+                        while (have_rows("team_images")):
+                             the_row(); ?>
+                    <div class="teams-image">
+                        <img src=" <?php the_sub_field("team_image"); ?>" alt="" class="img-fluid">
+                    </div>
+                    <?php endwhile;  
+                        endif; ?>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END MEN’S TEAMS -->
+
+    <section class="highlights py-md-5">
+        <div class="container">
+            <div class="section-title mb-md-4" data-aos="fade-up" data-aos-duration="1500">
+                Highlights
+            </div>
+            <div class="owl-carousel higlights mt-4 mt-md-5" data-aos="fade-up" data-aos-duration="1500">
+                <?php if (have_rows("highlights")):while (have_rows("highlights")):the_row(); ?>
+                <div class="video-background">
+                    <?php the_sub_field("higlights_video_url"); ?>
+                </div>
+                <?php endwhile; endif; ?>
+            </div>
+        </div>
+    </section>
 
     <section class="section-5 players-section d-block">
         <div class="row mx-auto p-0 w-100">
