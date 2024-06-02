@@ -450,7 +450,7 @@
                                     <th>MAT</th>
                                     <th>INNS</th>
                                     <th>OV</th>
-                                    <th>Runs</th>
+                                    <th>RUNS</th>
                                     <th>WKTS</th>
                                     <th>BBI</th>
                                     <th>AVG</th>
@@ -501,13 +501,13 @@
                                 <tr class="ih-pt-tbl" style="display:revert;">
                                     <th>POs</th>
                                     <th style="text-align: left;">BATTERS</th>
-                                    <th>Runs</th>
+                                    <th>RUNS</th>
                                     <th>SR</th>
                                     <th>4S</th>
                                     <th>6S</th>
-                                    <th>Againts</th>
-                                    <th>Venue</th>
-                                    <th>Match Date</th>
+                                    <th>AGAINTS</th>
+                                    <th>VENUE</th>
+                                    <th>MATCH DATE</th>
                                 </tr>
                             </tbody>
                             <tbody id="pointsdatainningsBatting">
@@ -552,9 +552,9 @@
                                     <th>WKTS</th>
                                     <th>DOTS</th>
                                     <th>SR</th>
-                                    <th>Againts</th>
-                                    <th>Venue</th>
-                                    <th>Match Date</th>
+                                    <th>AGAINTS</th>
+                                    <th>VENUE</th>
+                                    <th>MATCH DATE</th>
                                 </tr>
                             </tbody>
                             <style>
