@@ -1348,7 +1348,18 @@ $(document).ready(function() {
                         }
 
                     });
-
+                    if(data.status == false){
+                        var firstPlayer = data.data[0];
+                        $('#battingInngStats .statsplayer img').attr('src','');
+                        $('#battingInngStats .playername').text('');
+                        $('#battingInngStats .statstable div:nth-child(1) .statsnumb').text('');
+                        $('#battingInngStats .statstable div:nth-child(2) .statsnumb').text(
+                            '');
+                        $('#battingInngStats .statstable div:nth-child(3) .statsnumb').text(
+                            '');
+                        $('#battingInngStats .statstable div:nth-child(4) .statsnumb').text(
+                                    '');
+                    }
                     $("#battingInngStats").show();
                     $("#BattingInningStatsTable").show();
 
@@ -1482,6 +1493,23 @@ $(document).ready(function() {
                         }
 
                     });
+
+                    if(data.status == false){
+                        $('#battingStats .statsplayer img').attr('src', 
+                                        '');
+                        $('#battingStats .playername').text('');
+                        $('#battingStats .statstable div:nth-child(1) .statsnumb').text(
+                            '');
+                        $('#battingStats .statstable div:nth-child(2) .statsnumb').text(
+                            '');
+                        $('#battingStats .statstable div:nth-child(3) .statsnumb').text(
+                            '');
+                        $('#battingStats .statstable div:nth-child(4) .statsnumb').text(
+                            '');
+                        $('#battingStats .statstable div:nth-child(5) .statsnumb').text(
+                            '');
+                        $('#battingStats .statstable div:nth-child(6) .statsnumb').text('');
+                    }
                     //stats and table to be shown
                     $("#battingStats").show();
                     $("#BattingStatsTable").show();
@@ -1642,6 +1670,23 @@ $(document).ready(function() {
 
                     });
 
+                    if(data.status == 'false'){
+                        $('#bowlingInngStats .statsplayer img').attr('src', '');
+                        $('#bowlingInngStats .playername').text('');
+                        $('#bowlingInngStats .statstable div:nth-child(1) .statsnumb').text(
+                            '');
+                        $('#bowlingInngStats .statstable div:nth-child(2) .statsnumb').text(
+                                    '');
+                        $('#bowlingInngStats .statstable div:nth-child(3) .statsnumb').text(
+                            '');
+                        $('#bowlingInngStats .statstable div:nth-child(4) .statsnumb').text(
+                            '');
+                        $('#bowlingInngStats .statstable div:nth-child(5) .statsnumb').text(
+                            ''
+                            ); // Assuming best_bowling field for BBI
+                        $('#bowlingInngStats .statstable div:nth-child(6) .statsnumb').text(
+                                    ''); // Assuming 4w and 5w fields for 4Ws/5Ws
+                    }
                     $("#BowlingInningStatsTable").show();
                     console.log('API call successful', data);
                 })
