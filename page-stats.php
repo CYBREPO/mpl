@@ -395,7 +395,7 @@
                             <tbody>
                                 <tr class="ih-pt-tbl" style="display:revert;">
                                     <th>POs</th>
-                                    <th style="text-align: left;">Batters</th>
+                                    <th style="text-align: left;">BATTERS</th>
                                     <th>MAT</th>
                                     <th>INNS</th>
                                     <th>4S</th>
@@ -446,14 +446,14 @@
                             <tbody>
                                 <tr class="ih-pt-tbl" style="display:revert;">
                                     <th>POs</th>
-                                    <th style="text-align: left;">Bowlers</th>
+                                    <th style="text-align: left;">BOWLERS</th>
                                     <th>MAT</th>
                                     <th>INNS</th>
                                     <th>OV</th>
                                     <th>Runs</th>
-                                    <th>wkts</th>
+                                    <th>WKTS</th>
                                     <th>BBI</th>
-                                    <th>Avg</th>
+                                    <th>AVG</th>
                                     <th>ECON</th>
                                     <th>SR</th>
                                     <th>4W</th>
@@ -500,7 +500,7 @@
                             <tbody>
                                 <tr class="ih-pt-tbl" style="display:revert;">
                                     <th>POs</th>
-                                    <th style="text-align: left;">Batters</th>
+                                    <th style="text-align: left;">BATTERS</th>
                                     <th>Runs</th>
                                     <th>SR</th>
                                     <th>4S</th>
@@ -546,11 +546,11 @@
                             <tbody>
                                 <tr class="ih-pt-tbl" style="display:revert;">
                                     <th>POs</th>
-                                    <th style="text-align: left;">Bowler</th>
+                                    <th style="text-align: left;">BOWLER</th>
                                     <th>Ov</th>
-                                    <th>runs</th>
+                                    <th>RUNS</th>
                                     <th>WKTS</th>
-                                    <th>Dots</th>
+                                    <th>DOTS</th>
                                     <th>SR</th>
                                     <th>Againts</th>
                                     <th>Venue</th>
