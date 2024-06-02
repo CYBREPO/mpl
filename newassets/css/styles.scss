@@ -1798,15 +1798,14 @@ h2.ih-pt-cont a {
     .captain-header {
         background: linear-gradient(90deg, #260531 0%, #65202E 31.27%, #F15A29 100%);
         color: #FFF;
-
-        font-size: 24px;
+        font-size: 17px;
+        padding: 7px;
         font-weight: 400;
-        padding: 21px;
         text-align: center;
         margin-top: 28px;
-
         @media screen and (min-width: 992px) {
-            // margin-top: 58px;
+            font-size: 24px;
+            padding: 21px;
         }
 
         img {
