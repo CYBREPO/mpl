@@ -507,7 +507,7 @@ a {
     position: relative;
 
     @media screen and (min-width: 992px) {
-        min-height: 407px;
+        min-height: 300px;
     }
 
     @media screen and (max-width: 992px) {
@@ -527,7 +527,7 @@ a {
     }
 
     @media (max-width: 781px) {
-        .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+        .teams-image {
             flex-basis: 20% !important;
         }
     }

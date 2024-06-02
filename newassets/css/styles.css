@@ -462,7 +462,7 @@ a {
 }
 @media screen and (min-width: 992px) {
   .mens-team {
-    min-height: 407px;
+    min-height: 300px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -480,7 +480,7 @@ a {
   }
 }
 @media (max-width: 781px) {
-  .mens-teams-logo .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+  .mens-teams-logo .teams-image {
     flex-basis: 20% !important;
   }
 }
