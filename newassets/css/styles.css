@@ -479,6 +479,11 @@ a {
     z-index: 2;
   }
 }
+@media (max-width: 781px) {
+  .mens-teams-logo .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+    flex-basis: 20% !important;
+  }
+}
 
 .mens-team .teams-image img {
   cursor: pointer;
