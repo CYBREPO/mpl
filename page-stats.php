@@ -358,7 +358,7 @@
                             <ul class="dropdown-menu">
 
 
-                                <?php foreach($filters['data']['batting'] as $k) { if($k['value'] != -1 && ($k['key'] != 'Angel One Super Sixes of the Season' || $k['key'] != 'RuPay On-The-Go 4s of the Season' || $k['key'] != 'Punch.ev Electric Striker of the Season')){?>
+                                <?php foreach($filters['data']['batting'] as $k) { if($k['value'] != -1 && $k['key'] != 'Angel One Super Sixes of the Season' && $k['key'] != 'RuPay On-The-Go 4s of the Season' && $k['key'] != 'Punch.ev Electric Striker of the Season'){?>
                                 <li><a class="dropdown-item" href="" data-value="<?php echo $k['value'];?>"
                                         data-url="<?php echo $k['url'];?>"><?php echo $k['key']; ?></a></li>
                                 <?php }} ?>
