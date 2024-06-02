@@ -94,8 +94,8 @@ foreach ($teamlogos as $key => $value) {
                     </div>
 
                     <div class="captain-header">
-                        Captain - SANKET PHARATE
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/bat.svg" alt="">
+                        Captain - Vishant More
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/wkt.svg" alt="" style="filter: invert(1);">
                     </div>
 
                     <div class="row playerandrole">
@@ -274,7 +274,8 @@ foreach ($teamlogos as $key => $value) {
                     </div>
 
                     <div class="captain-header">
-                        Captain - SANKET PHARATE
+                        Captain - Ruturaj Gaikwad
+
                         <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/bat.svg" alt="">
                     </div>
 
@@ -336,7 +337,7 @@ foreach ($teamlogos as $key => $value) {
                     </div>
 
                     <div class="captain-header">
-                        Captain - Mukesh Choudhary
+                        Captain - Prashant Solanki
                         <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/bowler.svg" alt="" style="filter:invert(1)">
                     </div>
 
@@ -433,8 +434,8 @@ foreach ($teamlogos as $key => $value) {
                     </div>
 
                     <div class="captain-header">
-                        Captain - Rajwardhan Hangargekar
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/allrounder.svg" alt="" style="filter:invert(1)">
+                        Captain - Murtaza Trunkwala
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batter.svg" alt="" style="filter:invert(1)">
                     </div>
 
                     <div class="row playerandrole">
