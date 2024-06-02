@@ -547,7 +547,7 @@
                                 <tr class="ih-pt-tbl" style="display:revert;">
                                     <th>POs</th>
                                     <th style="text-align: left;">BOWLER</th>
-                                    <th>Ov</th>
+                                    <th>OV</th>
                                     <th>RUNS</th>
                                     <th>WKTS</th>
                                     <th>DOTS</th>
