@@ -1328,9 +1328,8 @@ $(document).ready(function() {
                                 '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo +
                                 '"></div>' +
                                 '<div class="text-start">' +
-                                '<a href="/individual-players?playerid=' + values.player_id +
-                                '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
-                                values.name + '</h2></a>' +
+                                '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
+                                values.name + '</h2>' +
                                 '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name + '</h2>' +
                                 '</div>' +
                                 '</div>' +
@@ -1460,9 +1459,8 @@ $(document).ready(function() {
                                 '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo +
                                 '"></div>' +
                                 '<div class="text-start">' +
-                                '<a href="/individual-players?playerid=' + values.player_id +
-                                '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
-                                values.name + '</h2></a>' +
+                                '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
+                                values.name + '</h2>' +
                                 '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name + '</h2>' +
                                 '</div>' +
                                 '</div>' +
@@ -1620,9 +1618,8 @@ $(document).ready(function() {
                                 '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo +
                                 '"></div>' +
                                 '<div class="text-start">' +
-                                '<a href="/individual-players?playerid=' + values.player_id +
-                                '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
-                                values.name + '</h2></a>' +
+                                '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
+                                values.name + '</h2>' +
                                 '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name + '</h2>' +
                                 '</div>' +
                                 '</div>' +
@@ -1763,9 +1760,8 @@ $(document).ready(function() {
                                 '<div class="ih-pt-img"><img alt="" src="' + values.profile_photo +
                                 '"></div>' +
                                 '<div class="text-start">' +
-                                '<a href="/individual-players?playerid=' + values.player_id +
-                                '" target="_blank"><h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
-                                values.name + '</h2></a>' +
+                                '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
+                                values.name + '</h2>' +
                                 '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name + '</h2>' +
                                 '</div>' +
                                 '</div>' +
