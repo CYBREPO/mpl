@@ -89,8 +89,7 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-center flex-column flex-md-row ovhjuhjh">
-                    <img src="<?php echo $live_score['data'][0]['team_a_logo']; ?>"
-                        alt="" class="liveteam1">
+                    <img src="<?php echo $live_score['data'][0]['team_a_logo']; ?>" alt="" class="liveteam1">
                     <div class="liveversus">
                         <div>
                             <span>
@@ -102,21 +101,61 @@
                         </div>
                         <div>
                             <span>
-                            <?php echo $live_score['data'][0]['team_b_summary']?>
+                                <?php echo $live_score['data'][0]['team_b_summary']?>
                             </span>
                             <span>
                                 <?php echo $live_score['data'][0]['team_b_innings'][0]['summary']['over']?>
                             </span>
                         </div>
                     </div>
-                    <img src="<?php echo $live_score['data'][0]['team_b_logo']; ?>"
-                        alt="" class="liveteam2">
+                    <img src="<?php echo $live_score['data'][0]['team_b_logo']; ?>" alt="" class="liveteam2">
                 </div>
             </div>
             <a href="#" class="orange-button">Live Stream</a>
         </div>
     </div>
     <?php } ?>
+
+    <!-- MEN’S TEAMS -->
+    <section class="mens-team">
+        <div class="container">
+            <div class="section-title mb-md-5" data-aos="fade-up" data-aos-duration="1500">
+                MEN’S TEAMS
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1500">
+                <div class="d-flex align-items-center justify-content-around flex-sm-wrap">
+
+                    <?php if (have_rows("team_images")):
+                        while (have_rows("team_images")):
+                             the_row(); ?>
+                    <div class="teams-image">
+                        <img src=" <?php the_sub_field("team_image"); ?>" alt="" class="img-fluid">
+                    </div>
+                    <?php endwhile;  
+                        endif; ?>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END MEN’S TEAMS -->
+
+    <!-- <section class="highlights py-md-5">
+        <div class="container">
+            <div class="section-title mb-md-4" data-aos="fade-up" data-aos-duration="1500">
+                Highlights
+            </div>
+            <div class="owl-carousel higlights mt-4 mt-md-5" data-aos="fade-up" data-aos-duration="1500">
+                <?php if (have_rows("highlights")):while (have_rows("highlights")):the_row(); ?>
+                <div class="video-background">
+                    <?php the_sub_field("higlights_video_url"); ?>
+                </div>
+                <?php endwhile; endif; ?>
+            </div>
+        </div>
+    </section> -->
     <?php
                 if(have_posts()){
                     while(have_posts()){
@@ -125,20 +164,18 @@
                     }
                 }
             ?>
-
     <section class="section-5 players-section d-block">
         <div class="row mx-auto p-0 w-100">
             <div class="col-md-6 p-0 position-relative oragnescapplayer">
                 <div class="cap-container text-center">
                     <div class="cap-image-container">
-                        <img src="<?php echo $batting_leader['data'][0]['profile_photo']; ?>"
-                            alt="" class="cap-image">
+                        <img src="<?php echo $batting_leader['data'][0]['profile_photo']; ?>" alt="" class="cap-image">
                     </div>
                     <div class="cap-title">
                         ORANGE CAP HOLDER
                     </div>
                     <div class="cap-player-name">
-                    <?php echo $batting_leader['data'][0]['name']; ?>
+                        <?php echo $batting_leader['data'][0]['name']; ?>
                     </div>
 
                     <div class="d-flex justify-content-center capscores">
@@ -194,14 +231,13 @@
             <div class="col-md-6 p-0 position-relative purplecapplayer">
                 <div class="cap-container text-center">
                     <div class="cap-image-container">
-                        <img src="<?php echo $bowling_leader['data'][0]['profile_photo']; ?>"
-                            alt="" class="cap-image">
+                        <img src="<?php echo $bowling_leader['data'][0]['profile_photo']; ?>" alt="" class="cap-image">
                     </div>
                     <div class="cap-title">
                         Purple CAP HOLDER
                     </div>
                     <div class="cap-player-name">
-                    <?php echo $bowling_leader['data'][0]['name']; ?>
+                        <?php echo $bowling_leader['data'][0]['name']; ?>
                     </div>
 
                     <div class="d-flex justify-content-center capscores">
