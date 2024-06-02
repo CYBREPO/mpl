@@ -1748,7 +1748,11 @@ h2.ih-pt-cont a {
         }
 
         &.active {
-            border: 6px solid #DB4610;
+            border: 3px solid #DB4610;
+
+            @media screen and (min-width: 992px) {
+                border: 6px solid #DB4610;
+            }
         }
     }
 }

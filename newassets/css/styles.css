@@ -1571,7 +1571,12 @@ h2.ih-pt-cont a {
   width: 90%;
 }
 .teamstab .teamstabstab.active {
-  border: 6px solid #DB4610;
+  border: 3px solid #DB4610;
+}
+@media screen and (min-width: 992px) {
+  .teamstab .teamstabstab.active {
+    border: 6px solid #DB4610;
+  }
 }
 
 .teamtable .team-superiors {
