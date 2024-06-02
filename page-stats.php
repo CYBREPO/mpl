@@ -1815,7 +1815,7 @@ $(document).ready(function() {
                 // $.each(data.data, function(index, values) {
                    
                 // });
-                console.log('API call successful', data);
+                console.log('API call successful orange cap', data);
             })
             .catch(error => {
                 // Handle any errors
