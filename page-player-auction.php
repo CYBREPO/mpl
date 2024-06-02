@@ -129,7 +129,7 @@
                         while (have_rows("stats_team")):
                              the_row(); ?>
              
-                <div class="col-md-2">
+                <div class="col-6 col-md-2">
                     <div class="agv-main w-100" style="border: 1.499px solid <?php the_sub_field("team_color_border"); ?>; background: <?php the_sub_field("team_color"); ?>">
                         <div class="agv-team-logo"><img
                                 src="<?php the_sub_field("stats_team_image"); ?>"
@@ -161,7 +161,7 @@
             <?php if (have_rows("gallery")):
                         while (have_rows("gallery")):
                              the_row(); ?>
-                <div class="col-md-3 mt-4 content2"><a
+                <div class="col-6 col-md-3 mt-4 content2"><a
                         href="<?php the_sub_field("gallery_image"); ?>"
                         class="glightbox w-100" data-glightbox="type: image">
                         <img src="<?php the_sub_field("gallery_image"); ?>"

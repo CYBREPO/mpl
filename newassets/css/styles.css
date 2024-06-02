@@ -885,6 +885,7 @@ b {
 }
 .fixtures .fixture .fixture-run {
   color: #606061;
+  white-space: nowrap;
   font-weight: 400;
 }
 @media screen and (max-width: 992px) {
@@ -916,11 +917,13 @@ b {
 @media screen and (min-width: 992px) {
   .fixtures .fixture .fixture-run1 {
     margin-right: 85px;
+    text-align: right;
+    margin-right: 20px;
   }
 }
 @media screen and (min-width: 992px) {
   .fixtures .fixture .fixture-run2 {
-    margin-right: 85px;
+    margin-left: 20px;
   }
 }
 .fixtures .versusteamimage {
@@ -940,7 +943,7 @@ b {
 
 @media screen and (min-width: 992px) {
   .fixturesrow {
-    max-width: 40%;
+    max-width: 50%;
   }
 }
 
@@ -1737,11 +1740,21 @@ h2.ih-pt-cont a {
 }
 .auction-stats .agv-main {
   color: #491450;
-  height: 262px;
-  padding: 21px 21px 0;
+  min-height: 262px;
+  padding: 10px;
   text-align: center;
   position: relative;
   z-index: 1;
+}
+@media screen and (max-width: 992px) {
+  .auction-stats .agv-main {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .auction-stats .agv-main {
+    padding: 21px 21px 0;
+  }
 }
 .auction-stats .agv-team-logo {
   width: 77.434px;

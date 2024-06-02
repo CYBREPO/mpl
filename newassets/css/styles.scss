@@ -525,6 +525,7 @@ a {
         position: relative;
         z-index: 2;
     }
+
     @media (max-width: 781px) {
         .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
             flex-basis: 20% !important;
@@ -600,7 +601,7 @@ a {
     z-index: 0;
     background-position: right;
     background-size: contain;
- 
+
 }
 
 // higlights
@@ -665,11 +666,12 @@ a {
         width: 160.417px;
         height: 142.708px;
         clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
         @media screen and (min-width: 992px) {
             width: 308px;
             height: 274px;
             object-fit: cover;
-          
+
             object-position: top;
         }
     }
@@ -958,6 +960,7 @@ b {
                 font-size: 11px;
             }
 
+            white-space: nowrap;
             font-weight: 400;
         }
 
@@ -989,13 +992,15 @@ b {
 
             @media screen and (min-width: 992px) {
                 margin-right: 85px;
+                text-align: right;
+                margin-right: 20px;
             }
         }
 
         .fixture-run2 {
 
             @media screen and (min-width: 992px) {
-                margin-right: 85px;
+                margin-left: 20px;
             }
         }
     }
@@ -1014,11 +1019,12 @@ b {
     }
 }
 
-.fixturesrow{
+.fixturesrow {
     @media screen and (min-width: 992px) {
-        max-width: 40%;
+        max-width: 50%;
     }
 }
+
 // 888888888
 
 // Stats
@@ -1724,6 +1730,7 @@ h2.ih-pt-cont a {
         display: flex;
         align-items: center;
         justify-content: center;
+
         img {
             width: 90%;
         }
@@ -1796,7 +1803,8 @@ h2.ih-pt-cont a {
 
 .playerandrole {
     margin: auto;
-text-transform: uppercase;
+    text-transform: uppercase;
+
     &>div {
         border: 1px solid #E6E8EB;
         background: #FAFBFC;
@@ -1944,8 +1952,17 @@ text-transform: uppercase;
     .agv-main {
         color: #491450;
 
-        height: 262px;
-        padding: 21px 21px 0;
+        min-height: 262px;
+        padding: 10px;
+
+        @media screen and (max-width: 992px) {
+            margin-top: 20px;
+        }
+
+        @media screen and (min-width: 992px) {
+            padding: 21px 21px 0;
+        }
+
         text-align: center;
         position: relative;
         z-index: 1;

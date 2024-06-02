@@ -367,10 +367,6 @@
                                 <li><a class="dropdown-item" href="" data-value="<?php echo $k['value'];?>"
                                         data-url="<?php echo $k['url'];?>"><?php echo $k['key']; ?></a></li>
                                 <?php }} ?>
-
-                                <!-- <li><a class="dropdown-item" href="" data-value="RUN" data-url="thirdparty/mpl/get-tournament-batting-leaderboard">og cap</a></li>
-                                <li><a class="dropdown-item" href="" data-value="WICKET" data-url="thirdparty/mpl/get-tournament-bowling-leaderboard">pup cap</a></li> -->
-                                <!-- <li><a class="dropdown-item" href="" data-value="action1">Something else here</a></li> -->
                             </ul>
                         </div>
                         <div class="dropdown me-3 my-3 my-md-5">
@@ -384,9 +380,6 @@
                                 <li><a class="dropdown-item" href=""
                                         data-value="<?php echo $k['team_id'];?>"><?php echo $k['team_name']; ?></a></li>
                                 <?php } ?>
-                                <!-- <li><a class="dropdown-item" href="" data-value="actiont">Action</a></li>
-                                <li><a class="dropdown-item" href="" data-value="action1">Another action</a></li>
-                                <li><a class="dropdown-item" href="" data-value="action1">Something else here</a></li> -->
                             </ul>
                         </div>
                         <form action="">
