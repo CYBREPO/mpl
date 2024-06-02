@@ -254,7 +254,7 @@
     </section>
 </main>
 
-<section class="sponsors d-block">
+<section class="sponsors d-none">
     <div class="container">
         <div class="d-flex justify-content-center">
             <div class="section-title mb-md-5" data-aos="fade-up" data-aos-duration="1500">

@@ -48,7 +48,7 @@ foreach ($teamlogos as $key => $value) {
             tabindex="0">
             <div class="teamtable">
                 <div class="container">
-                    <div class="team-superiors">
+                    <!-- <div class="team-superiors">
 
                         <div class="team-superior">
                             <div class="fs-18">
@@ -91,7 +91,7 @@ foreach ($teamlogos as $key => $value) {
                                 SOMI BHINDER
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="captain-header">
                         Captain - Vishant More
@@ -159,9 +159,9 @@ foreach ($teamlogos as $key => $value) {
         <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
-                    <div class="team-superiors">
+                    <!-- <div class="team-superiors">
                  
-                    </div>
+                    </div> -->
 
                     <div class="captain-header">
                         Captain - Azim Kazi
@@ -219,7 +219,7 @@ foreach ($teamlogos as $key => $value) {
         <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
-                    <div class="team-superiors">
+                    <!-- <div class="team-superiors">
 
                         <div class="team-superior">
                             <div class="fs-18">
@@ -271,7 +271,7 @@ foreach ($teamlogos as $key => $value) {
                             <div class="fs-22 mt-1"> AJIT CHAVAN</div>
                         </div>
 
-                    </div>
+                    </div> -->
 
                     <div class="captain-header">
                         Captain - Ruturaj Gaikwad
@@ -331,10 +331,10 @@ foreach ($teamlogos as $key => $value) {
         <div class="tab-pane fade" id="EAGLE-tab-pane" role="tabpanel" aria-labelledby="EAGLE-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
-                    <div class="team-superiors">
+                    <!-- <div class="team-superiors">
 
                        
-                    </div>
+                    </div> -->
 
                     <div class="captain-header">
                         Captain - Prashant Solanki
@@ -387,7 +387,7 @@ foreach ($teamlogos as $key => $value) {
             tabindex="0">
             <div class="teamtable">
                 <div class="container">
-                    <div class="team-superiors">
+                    <!-- <div class="team-superiors">
                         <div class="team-superior">
                             <div class="fs-18">
                                 HEAD COACH
@@ -431,7 +431,7 @@ foreach ($teamlogos as $key => $value) {
                             <div class="fs-22 mt-1"> ABHISHEKH SAVRIKAR </div>
                         </div>
 
-                    </div>
+                    </div> -->
 
                     <div class="captain-header">
                         Captain - Murtaza Trunkwala
@@ -488,7 +488,7 @@ foreach ($teamlogos as $key => $value) {
         <div class="tab-pane fade" id="KOLHAPUR-tab-pane" role="tabpanel" aria-labelledby="KOLHAPUR-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
-                    <div class="team-superiors">
+                    <!-- <div class="team-superiors">
 
                         <div class="team-superior">
                             <div class="fs-18">
@@ -502,7 +502,7 @@ foreach ($teamlogos as $key => $value) {
                             </div>
                             <div class="fs-22 mt-1"> DHARIWAL BALAN </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="captain-header">
                         Captain - Kedar Jadhav

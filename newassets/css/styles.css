@@ -1546,9 +1546,6 @@ h2.ih-pt-cont a {
   border: 6px solid #DB4610;
 }
 
-.teamtable {
-  padding: 58px 0;
-}
 .teamtable .team-superiors {
   display: flex;
 }
@@ -1589,11 +1586,6 @@ h2.ih-pt-cont a {
   padding: 21px;
   text-align: center;
   margin-top: 28px;
-}
-@media screen and (min-width: 992px) {
-  .teamtable .captain-header {
-    margin-top: 58px;
-  }
 }
 .teamtable .captain-header img {
   margin-left: 10px;

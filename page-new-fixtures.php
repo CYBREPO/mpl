@@ -77,15 +77,12 @@
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <?php echo $filters['data']['season'][0]['key']?>
-                    <!-- Season 2024 -->
+              
                 </button>
                 <ul class="dropdown-menu">
                 <?php foreach($filters['data']['season'] as $k) { if($k['value'] != -1){?>
                         <li><a class="dropdown-item" href="" data-action="<?php echo $k['value'];?>"><?php echo $k['key']; ?></a></li>
                     <?php }} ?>
-                    <!-- <li><a class="dropdown-item" href="#" data-action="action1">Action</a></li>
-                    <li><a class="dropdown-item" href="#" data-action="action2">Another action</a></li>
-                    <li><a class="dropdown-item" href="#" data-action="action3">Something else here</a></li> -->
                 </ul>
             </div>
             <div id="fixtures-container">
@@ -111,7 +108,7 @@
                         <div class="fixtures-schedule">
                             <div class="fixtures-schedule-date">
                                 <!-- THU, 15TH JUNE <b>19:30</b> -->
-                                <?php echo date("D, jS F H:i", strtotime($values['match_date_time']));?>
+                                <?php echo date("D, jS F", strtotime($values['match_date_time']));?>
                             </div>
                             <!-- TODO bind the location-->
                             <?php echo $values['ground_name']; ?>
@@ -253,10 +250,10 @@ $(document).ready(function() {
         const day = date.getUTCDate();
         const dayWithSuffix = day + getOrdinalSuffix(day);
 
-        const hours = date.getUTCHours().toString().padStart(2, '0');
-        const minutes = date.getUTCMinutes().toString().padStart(2, '0');
+        // const hours = date.getUTCHours().toString().padStart(2, '0');
+        // const minutes = date.getUTCMinutes().toString().padStart(2, '0');
 
-        const formattedDate = `${weekdays[date.getUTCDay()]}, ${dayWithSuffix} ${months[date.getUTCMonth()]} ${hours}:${minutes}`;
+        const formattedDate = `${weekdays[date.getUTCDay()]}, ${dayWithSuffix} ${months[date.getUTCMonth()]} `;
         return formattedDate;
     }
 });
