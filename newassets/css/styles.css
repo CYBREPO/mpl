@@ -59,7 +59,7 @@ ul {
 }
 
 .orange-button {
-  border-radius: 10px;
+  border-radius: 5px;
   background: #E04413;
   padding: 6px 26px;
   color: #FFF;
@@ -417,6 +417,7 @@ a {
   }
 }
 .livematch .liveversus {
+  font-family: "Koulen";
   height: 46px;
   display: flex;
   background-image: url(../images/versus.svg);
@@ -469,6 +470,11 @@ a {
 .livematch .liveversus div:last-child span:last-child {
   position: relative;
   top: 8px;
+}
+
+.yettobat {
+  position: relative;
+  left: 6px;
 }
 
 @media screen and (max-width: 992px) {

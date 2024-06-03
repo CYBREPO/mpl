@@ -69,7 +69,7 @@ ul {
 // }
 
 .orange-button {
-    border-radius: 10px;
+    border-radius: 5px;
     background: #E04413;
     padding: 6px 26px;
     color: #FFF;
@@ -465,6 +465,7 @@ a {
             width: 188px;
             background-position: center;
         }
+        font-family: "Koulen";
 
         height: 46px;
         display: flex;
@@ -516,7 +517,10 @@ a {
         }
     }
 }
-
+.yettobat {
+    position: relative;
+    left: 6px;
+}
 
 // mens team
 @media screen and (max-width: 992px) {

@@ -99,8 +99,8 @@
                                 <?php echo $live_score['data'][0]['team_a_innings'][0]['summary']['over']?>
                             </span>
                         </div>
-                        <div>
-                            <span>
+                        <div class="<?php echo $live_score['data'][0]['team_b_summary'] == "Yet to bat"? 'yettobat' : ''; ?>">
+                            <span >
                                 <?php echo $live_score['data'][0]['team_b_summary']?>
                             </span>
                             <span>
