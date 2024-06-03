@@ -14,7 +14,7 @@
             $d = [];
             $curl = curl_init();
             curl_setopt_array($curl, array(
-              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-point-table/702687',
+              CURLOPT_URL => 'https://cricheroes.in/api/v1/thirdparty/mpl/get-tournament-point-table/1029866',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -77,8 +77,8 @@
     <div class="points-table pb-5 page-pattern">
         <div class="container">
             <select id="seasonSelect" class="form-select" aria-label="Default select example">
-                <option selected  value="<?php echo $filters['data']['season'][1]['value']; ?>"><?php echo $filters['data']['season'][1]['key']; ?></option>
-                <?php foreach($filters['data']['season'] as $k) { if($k['value'] != -1 && $k['key'] != $filters['data']['season'][1]['key']){?>
+                <option selected  value="<?php echo $filters['data']['season'][0]['value']; ?>"><?php echo $filters['data']['season'][0]['key']; ?></option>
+                <?php foreach($filters['data']['season'] as $k) { if($k['value'] != -1 && $k['key'] != $filters['data']['season'][0]['key']){?>
                     <option value="<?php echo $k['value'];?>"><?php echo $k['key'];?></option>
                 <?php }} ?>
             </select>
