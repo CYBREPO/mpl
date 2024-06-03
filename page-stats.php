@@ -759,7 +759,7 @@ $(document).ready(function() {
         // var search = $('#playerSearch').val().trim();
 
         if (season == undefined) {
-            season = 702687;
+            season = 1029866;
         }
 
         console.log(season);
