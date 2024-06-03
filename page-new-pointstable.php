@@ -202,7 +202,7 @@ $(document).ready(function() {
         
         var action = $(this).val();  
         
-        fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getPointsTable?tournamentId='+action)
+        fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getPointsTable?tournamentId='+action)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');

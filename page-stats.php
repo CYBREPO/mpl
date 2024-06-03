@@ -779,7 +779,7 @@ $(document).ready(function() {
             }
 
             // if(orangCap == 'MIMDB' || orangCap == 'MBAVG' || orangCap == 'MIBBE' || orangCap == 'MBSR'){
-            //     fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
+            //     fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
             //     .then(response => {
             //         if (!response.ok) {
             //             throw new Error('Network response was not ok');
@@ -855,7 +855,7 @@ $(document).ready(function() {
             //     });
             // }else{
 
-            //     fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
+            //     fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
             //     .then(response => {
             //         if (!response.ok) {
             //             throw new Error('Network response was not ok');
@@ -934,7 +934,7 @@ $(document).ready(function() {
                 getBattingData(orangCap, selectedOrangeCap, season, teams);
                 // if(orangCap == 'MISIX' || orangCap == 'MIFOUR' || orangCap == 'MIHSR' || orangCap == 'MIHS'){
 
-                //     fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
+                //     fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
                 //     .then(response => {
                 //     if (!response.ok) {
                 //         throw new Error('Network response was not ok');
@@ -1002,7 +1002,7 @@ $(document).ready(function() {
                 //     });
                 // }else{
 
-                // fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
+                // fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
                 // .then(response => {
                 // if (!response.ok) {
                 //     throw new Error('Network response was not ok');
@@ -1074,7 +1074,7 @@ $(document).ready(function() {
                 getBattingData(orangCap, selectedOrangeCap, season, teams);
                 // if(orangCap == 'MISIX' || orangCap == 'MIFOUR' || orangCap == 'MIHSR' || orangCap == 'MIHS'){
 
-                //     fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
+                //     fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
                 //     .then(response => {
                 //     if (!response.ok) {
                 //         throw new Error('Network response was not ok');
@@ -1142,7 +1142,7 @@ $(document).ready(function() {
                 //     });
                 // }else{
 
-                //     fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
+                //     fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId='+season+'&url='+selectedOrangeCap+'&value='+orangCap)
                 //     .then(response => {
                 //     if (!response.ok) {
                 //         throw new Error('Network response was not ok');
@@ -1222,7 +1222,7 @@ $(document).ready(function() {
         getPurpleCap(season);
         if (orangCap == 'MISIX' || orangCap == 'MIFOUR' || orangCap == 'MIHSR' || orangCap == 'MIHS') {
 
-            fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
+            fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
                     '&url=' + selectedOrangeCap + '&value=' + orangCap)
                 .then(response => {
                     if (!response.ok) {
@@ -1371,7 +1371,7 @@ $(document).ready(function() {
                 });
         } else {
 
-            fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
+            fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
                     '&url=' + selectedOrangeCap + '&value=' + orangCap)
                 .then(response => {
                     if (!response.ok) {
@@ -1526,7 +1526,7 @@ $(document).ready(function() {
         getOrangeCap(season);
         getPurpleCap(season);
         if (orangCap == 'MIMDB' || orangCap == 'MIBB' || orangCap == 'MIBBE' || orangCap == 'MIMRC') {
-            fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
+            fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
                     '&url=' + selectedOrangeCap + '&value=' + orangCap)
                 .then(response => {
                     if (!response.ok) {
@@ -1696,7 +1696,7 @@ $(document).ready(function() {
                 });
         } else {
 
-            fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
+            fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
                     '&url=' + selectedOrangeCap + '&value=' + orangCap)
                 .then(response => {
                     if (!response.ok) {
@@ -1842,7 +1842,7 @@ $(document).ready(function() {
     }
 
     function getOrangeCap(season){
-        fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
+        fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
             '&url=thirdparty/mpl/get-tournament-batting-leaderboard&value=RUN')
             .then(response => {
                 if (!response.ok) {
@@ -1869,7 +1869,7 @@ $(document).ready(function() {
     }
 
     function getPurpleCap(season){
-        fetch('https://staging.mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
+        fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
             '&url=thirdparty/mpl/get-tournament-bowling-leaderboard&value=WICKET')
             .then(response => {
                 if (!response.ok) {
