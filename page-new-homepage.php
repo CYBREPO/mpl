@@ -70,7 +70,7 @@
             </div>
         </div>
 
-        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/newbg.png" alt=""
+        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/newbg.webp" alt=""
             class="d-none d-md-block w-100 main-bg">
 
     </section>

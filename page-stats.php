@@ -642,7 +642,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mobile-caps d-md-none" style="background: linear-gradient(-90deg, #260531 0%, #E04413 100%);">
+            <div class="mobile-caps d-md-none" style="background: linear-gradient(-90deg, #260531 0%, #E04413 100%);margin-top:-20px;">
                 <div class="mobile-orange-cap-holder">
                     <img src="<?php echo $batting_leader_board['data'][0]['profile_photo']; ?>" alt="" class="w-100"
                         id="photo_orange" style="clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
@@ -692,7 +692,7 @@
             </div>
             <div class="orange-cap-holder d-none d-md-block">
                 <div class="orange-cap-internal"
-                    style="background-image: url(<?php echo get_bloginfo('template_directory'); ?>/newassets/images/orangecapholdlerimage.png);">
+                    style="background-image: url(<?php echo get_bloginfo('template_directory'); ?>/newassets/images/orangecapholdlerimage.webp);">
                     <div class="d-flex ">
                         <div class="capplayerimage">
                             <img src="<?php echo $batting_leader_board['data'][0]['profile_photo']; ?>" alt="" class=""
@@ -747,7 +747,7 @@
 
             <div class="purple-cap-holder d-none d-md-block">
                 <div class="purple-cap-internal"
-                    style="background-image: url(<?php echo get_bloginfo('template_directory'); ?>/newassets/images/purplecapholdlerimage.png);">
+                    style="background-image: url(<?php echo get_bloginfo('template_directory'); ?>/newassets/images/purplecapholdlerimage.webp);">
                     <div class="d-flex justify-content-end">
 
                         <div class="cap-details-side">

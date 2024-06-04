@@ -274,7 +274,7 @@ a {
 }
 @media screen and (max-width: 992px) {
   .banner {
-    background-image: url(../images/smallbannerimage.png);
+    background-image: url(../images/smallbannerimage.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding-top: 100px;
@@ -803,7 +803,7 @@ b {
 }
 @media screen and (min-width: 992px) {
   .page-title-header {
-    background: url(../images/pageheaderbanner.png) no-repeat left;
+    background: url(../images/pageheaderbanner.webp) no-repeat left;
     background-size: 100% 100%;
   }
 }
@@ -828,13 +828,13 @@ b {
 }
 @media screen and (max-width: 992px) {
   .teamstab-cover {
-    background: url(../images/smallpageheaderbanner.png) no-repeat left;
+    background: url(../images/smallpageheaderbanner.webp) no-repeat left;
     background-size: 100% 100%;
   }
 }
 @media screen and (min-width: 992px) {
   .teamstab-cover {
-    background: url(../images/pageheaderbanner.png) no-repeat left;
+    background: url(../images/pageheaderbanner.webp) no-repeat left;
     background-size: 100% 100%;
   }
 }
@@ -1165,7 +1165,7 @@ h2.ih-pt-cont a {
 }
 @media screen and (max-width: 992px) {
   .stats-banner {
-    background-image: url(../images/smallbannerimage.png);
+    background-image: url(../images/smallbannerimage.webp);
   }
 }
 @media screen and (min-width: 992px) {
@@ -2136,4 +2136,10 @@ button.slick-next.slick-arrow {
   width: 70%;
   margin: 20px auto;
   padding-bottom: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .flex-sm-row-reverse {
+    flex-direction: row-reverse;
+  }
 }/*# sourceMappingURL=styles.css.map */

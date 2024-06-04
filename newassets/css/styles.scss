@@ -316,7 +316,7 @@ a {
     overflow: hidden;
 
     @media screen and (max-width: 992px) {
-        background-image: url(../images/smallbannerimage.png);
+        background-image: url(../images/smallbannerimage.webp);
         background-repeat: no-repeat;
         background-size: 100% 100%;
         padding-top: 100px;
@@ -869,7 +869,7 @@ b {
 
     @media screen and (min-width: 992px) {
 
-        background: url(../images/pageheaderbanner.png) no-repeat left;
+        background: url(../images/pageheaderbanner.webp) no-repeat left;
         background-size: 100% 100%;
     }
 
@@ -897,13 +897,13 @@ b {
     justify-content: center;
 
     @media screen and (max-width: 992px) {
-        background: url(../images/smallpageheaderbanner.png) no-repeat left;
+        background: url(../images/smallpageheaderbanner.webp) no-repeat left;
         background-size: 100% 100%;
     }
 
     @media screen and (min-width: 992px) {
 
-        background: url(../images/pageheaderbanner.png) no-repeat left;
+        background: url(../images/pageheaderbanner.webp) no-repeat left;
         background-size: 100% 100%;
     }
 }
@@ -1287,7 +1287,7 @@ h2.ih-pt-cont a {
 
 
     @media screen and (max-width: 992px) {
-        background-image: url(../images/smallbannerimage.png);
+        background-image: url(../images/smallbannerimage.webp);
     }
 
     @media screen and (min-width: 992px) {
@@ -2381,5 +2381,11 @@ button.slick-next.slick-arrow {
         width: 70%;
         margin: 20px auto;
         padding-bottom: 30px;
+    }
+}
+
+.flex-sm-row-reverse{
+    @media screen and (max-width: 992px) {
+        flex-direction: row-reverse;
     }
 }

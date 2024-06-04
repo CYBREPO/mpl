@@ -128,7 +128,7 @@
                         <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/versusfixtures.svg"
                             alt="" class="fixtures-versus">
 
-                        <div class="d-flex align-items-center justify-content-between ">
+                        <div class="d-flex align-items-center justify-content-between flex-sm-row-reverse">
                             <img src="<?php echo $values['team_b_logo']; ?>"
                                 alt="" class="versusteamimage">
 
@@ -202,7 +202,7 @@ $(document).ready(function() {
                     </div>
                     <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/versusfixtures.svg"
                         alt="" class="fixtures-versus">
-                    <div class="d-flex align-items-center justify-content-between ">
+                    <div class="d-flex align-items-center justify-content-between flex-sm-row-reverse">
                         <img src="${values.team_b_logo}" alt="" class="versusteamimage">
                         <div class="fixture-run fixture-run2">
                             <div>${values.team_b_summary}</div>

@@ -6,8 +6,7 @@
 
 <main class="bg-white">
     <section class="position-relative teamstab-cover">
-        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/fixturesbanner.svg"
-            class="d-block w-100" alt="">
+       
 
         <ul class="nav nav-tabs teamstab" id="myTab" role="tablist">
 
@@ -274,7 +273,7 @@ foreach ($teamlogos as $key => $value) {
                     <div class="captain-header">
                         Captain - Ruturaj Gaikwad
 
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batter.svg" alt="">
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batter.svg" alt="" style="filter: invert(1);">
                     </div>
 
                     <div class="row playerandrole">
