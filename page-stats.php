@@ -303,39 +303,23 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
     <!-- Banner -->
     <div class="fixtures">
-        <div class="container">
+        <div class="container p-0">
 
-
-            <!-- <ul class="nav custom-nav-tabs" id="stats" role="tablist">
-                <li class="" role="presentation">
-                    <button class=" active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
-                        type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Players</button>
-                </li>
-                <li class="" role="presentation">
-                    <button class="" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
-                        type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
-                        Seasons & Teams</button>
-                </li>
-                <li class="" role="presentation">
-                    <button class="" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
-                        type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
-                        Records</button>
-                </li>
-                <li class="" role="presentation">
-                    <button class="" id="Table-tab" data-bs-toggle="tab" data-bs-target="#Table-tab-pane" type="button"
-                        role="tab" aria-controls="Table-tab-pane" aria-selected="false">
-                        Table</button>
-                </li>
-
-            </ul> -->
-            <div class="tab-content" id="myTabContent">
+            <div class="tab-content px-2" id="myTabContent">
                 <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
                     tabindex="0">
 
                     <div class="d-md-flex align-items-center">
-                        <div class="dropdown me-3 my-3 my-md-5">
+                        <div class="dropdown me-md-3 my-3 my-md-5">
                             <button class="btn btn-secondary dropdown-toggle bg-white" type="button"
                                 data-bs-toggle="dropdown" aria-expanded="false" id="SeasonDropdown">
                                 <?php echo $season;?>
@@ -345,12 +329,9 @@
                                 <li><a class="dropdown-item" href=""
                                         data-value="<?php echo $k['value'];?>"><?php echo $k['key']; ?></a></li>
                                 <?php }} ?>
-                                <!-- <li><a class="dropdown-item" href="" data-value="action1">Action</a></li>
-                                <li><a class="dropdown-item" href="" data-value="action1">Another action</a></li>
-                                <li><a class="dropdown-item" href="" data-value="action1">Something else here</a></li> -->
                             </ul>
                         </div>
-                        <div class="dropdown me-3 my-3 my-md-5">
+                        <div class="dropdown me-md-3 my-3 my-md-5">
                             <button class="btn btn-secondary dropdown-toggle bg-white" type="button"
                                 data-bs-toggle="dropdown" aria-expanded="false" id="orangCapDropdown">
                                 orange cap
@@ -369,7 +350,7 @@
                                 <?php }} ?>
                             </ul>
                         </div>
-                        <div class="dropdown me-3 my-3 my-md-5">
+                        <div class="dropdown me-md-3 my-3 my-md-5">
                             <button class="btn btn-secondary dropdown-toggle bg-white" type="button"
                                 data-bs-toggle="dropdown" aria-expanded="false" id="teamsDropdown">
                                 All teams
@@ -382,7 +363,7 @@
                                 <?php } ?>
                             </ul>
                         </div>
-                        <form action="">
+                        <form action="" class="my-3 my-md-0">
                             <div class="search">
                                 <input type="text" placeholder="&#xF002; &nbsp; Search by player name"
                                     style="font-family:Arial, FontAwesome" id="playerSearch" />
@@ -419,8 +400,10 @@
                                                     src="<?php echo $values['profile_photo']; ?>">
                                             </div>
                                             <div class="text-start ">
-                                                <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400"><?php echo $values['name']; ?></h2>
-                                                <h2 class="ih-pt-cont mb-0 fw-400"><?php echo $values['team_name']; ?></h2>
+                                                <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">
+                                                    <?php echo $values['name']; ?></h2>
+                                                <h2 class="ih-pt-cont mb-0 fw-400"><?php echo $values['team_name']; ?>
+                                                </h2>
                                             </div>
                                         </div>
                                     </td>
@@ -473,7 +456,8 @@
                                             <div class="text-start ">
                                                 <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">
                                                     <?php echo $values['name']; ?></h2>
-                                                <h2 class="ih-pt-cont mb-0 fw-400"><?php echo $values['team_name']; ?></h2>
+                                                <h2 class="ih-pt-cont mb-0 fw-400"><?php echo $values['team_name']; ?>
+                                                </h2>
                                             </div>
                                         </div>
                                     </td>
@@ -523,7 +507,8 @@
                                             <div class="text-start ">
                                                 <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">
                                                     <?php echo $values['name']; ?></h2>
-                                                <h2 class="ih-pt-cont mb-0 fw-400"><?php echo $values['team_name']; ?></h2>
+                                                <h2 class="ih-pt-cont mb-0 fw-400"><?php echo $values['team_name']; ?>
+                                                </h2>
                                             </div>
                                         </div>
                                     </td>
@@ -579,7 +564,8 @@
                                             <div class="text-start ">
                                                 <h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">
                                                     <?php echo $values['name']; ?></h2>
-                                                <h2 class="ih-pt-cont mb-0 fw-400"><?php echo $values['team_name']; ?></h2>
+                                                <h2 class="ih-pt-cont mb-0 fw-400"><?php echo $values['team_name']; ?>
+                                                </h2>
                                             </div>
                                         </div>
                                     </td>
@@ -606,14 +592,111 @@
                     ...</div>
             </div>
 
+            <div class="mobile-caps d-md-none" style="background: linear-gradient(90deg, #260531 0%, #E04413 100%);">
+                <div class="mobile-orange-cap-holder">
+                    <img src="<?php echo $batting_leader_board['data'][0]['profile_photo']; ?>" alt="" class="w-100"
+                        id="photo_orange" style="clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
+    width: 168.028px !important;
+    height: 172.829px;
+    object-fit: cover;
+    margin: auto;
+    display: block;">
+                    <div class="cap-details-side text-white">
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/orangecap.svg"
+                            alt="" class="orangecap" style="    width: 95px;
+    height: 72px;">
+                        <div class="captitle text-white" style>
+                            ORANGE CAP HOLDER
+                        </div>
+                        <div class="cap-player-name" id="o_player_name">
+                            <?php echo $batting_leader_board['data'][0]['name']; ?>
+                        </div>
+                        <div class="d-flex" style="font-family: Koulen;">
+                            <span class="me-5">
+                                <div class="cap-run" id="o_to_run">
+                                    <?php echo $batting_leader_board['data'][0]['total_runs']; ?>
+                                </div>
+                                <div class="cap-label">
+                                    Runs
+                                </div>
+                            </span>
 
+                            <span class="me-5">
+                                <div class="cap-run" id="o_to_match">
+                                    <?php echo $batting_leader_board['data'][0]['total_match']; ?>
+                                </div>
+                                <div class="cap-label">
+                                    matches
+                                </div>
+                            </span>
 
-            <div class="orange-cap-holder">
+                            <span>
+                                <div class="cap-run" id="o_to_avg">
+                                    <?php echo $batting_leader_board['data'][0]['average']; ?>
+                                </div>
+                                <div class="cap-label">
+                                    Average
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-caps d-md-none" style="background: linear-gradient(-90deg, #260531 0%, #E04413 100%);">
+                <div class="mobile-orange-cap-holder">
+                    <img src="<?php echo $batting_leader_board['data'][0]['profile_photo']; ?>" alt="" class="w-100"
+                        id="photo_orange" style="clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
+    width: 168.028px !important;
+    height: 172.829px;
+    object-fit: cover;
+    margin: auto;
+    display: block;">
+                    <div class="cap-details-side">
+                            <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/purplecap.svg"
+                                alt="" class="orangecap" style="    width: 95px;
+    height: 72px;">
+                            <div class="captitle">
+                                PURPLE CAP HOLDER
+                            </div>
+                            <div class="cap-player-name" id="p_player">
+                                <?php echo $bowling_leader_board['data'][0]['name'] ?>
+                            </div>
+                            <div class="d-flex" style="font-family: Koulen;">
+                                <span class="me-5">
+                                    <div class="cap-run" id="p_wickets">
+                                        <?php echo $bowling_leader_board['data'][0]['total_wickets']; ?></div>
+                                    <div class="cap-label">
+                                        Wickets
+                                    </div>
+                                </span>
+
+                                <span class="me-5">
+                                    <div class="cap-run" id="p_match">
+                                        <?php echo $bowling_leader_board['data'][0]['total_match']; ?>
+                                    </div>
+                                    <div class="cap-label">
+                                        Matches
+                                    </div>
+                                </span>
+
+                                <span>
+                                    <div class="cap-run" id="p_avg">
+                                        <?php echo $bowling_leader_board['data'][0]['avg']; ?></div>
+                                    <div class="cap-label">
+                                        Average
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="orange-cap-holder d-none d-md-block">
                 <div class="orange-cap-internal"
                     style="background-image: url(<?php echo get_bloginfo('template_directory'); ?>/newassets/images/orangecapholdlerimage.png);">
                     <div class="d-flex ">
                         <div class="capplayerimage">
-                            <img src="<?php echo $batting_leader_board['data'][0]['profile_photo']; ?>" alt="" class="" id="photo_orange">
+                            <img src="<?php echo $batting_leader_board['data'][0]['profile_photo']; ?>" alt="" class=""
+                                id="photo_orange">
                         </div>
                         <div class="cap-details-side">
                             <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/orangecap.svg"
@@ -626,7 +709,8 @@
                             </div>
                             <div class="d-flex" style="font-family: Koulen;">
                                 <span class="me-5">
-                                    <div class="cap-run" id="o_to_run"><?php echo $batting_leader_board['data'][0]['total_runs']; ?>
+                                    <div class="cap-run" id="o_to_run">
+                                        <?php echo $batting_leader_board['data'][0]['total_runs']; ?>
                                     </div>
                                     <div class="cap-label">
                                         Runs
@@ -634,7 +718,8 @@
                                 </span>
 
                                 <span class="me-5">
-                                    <div class="cap-run" id="o_to_match"><?php echo $batting_leader_board['data'][0]['total_match']; ?>
+                                    <div class="cap-run" id="o_to_match">
+                                        <?php echo $batting_leader_board['data'][0]['total_match']; ?>
                                     </div>
                                     <div class="cap-label">
                                         matches
@@ -642,7 +727,8 @@
                                 </span>
 
                                 <span>
-                                    <div class="cap-run" id="o_to_avg"><?php echo $batting_leader_board['data'][0]['average']; ?>
+                                    <div class="cap-run" id="o_to_avg">
+                                        <?php echo $batting_leader_board['data'][0]['average']; ?>
                                     </div>
                                     <div class="cap-label">
                                         Average
@@ -659,7 +745,7 @@
 
 
 
-            <div class="purple-cap-holder">
+            <div class="purple-cap-holder d-none d-md-block">
                 <div class="purple-cap-internal"
                     style="background-image: url(<?php echo get_bloginfo('template_directory'); ?>/newassets/images/purplecapholdlerimage.png);">
                     <div class="d-flex justify-content-end">
@@ -683,7 +769,8 @@
                                 </span>
 
                                 <span class="me-5">
-                                    <div class="cap-run" id="p_match"><?php echo $bowling_leader_board['data'][0]['total_match']; ?>
+                                    <div class="cap-run" id="p_match">
+                                        <?php echo $bowling_leader_board['data'][0]['total_match']; ?>
                                     </div>
                                     <div class="cap-label">
                                         Matches
@@ -691,7 +778,8 @@
                                 </span>
 
                                 <span>
-                                    <div class="cap-run" id="p_avg"><?php echo $bowling_leader_board['data'][0]['avg']; ?></div>
+                                    <div class="cap-run" id="p_avg">
+                                        <?php echo $bowling_leader_board['data'][0]['avg']; ?></div>
                                     <div class="cap-label">
                                         Average
                                     </div>
@@ -702,7 +790,8 @@
 
 
                         <div class="capplayerimage">
-                            <img src="<?php echo $bowling_leader_board['data'][0]['profile_photo']; ?>" alt="" class="" id="photo_purple">
+                            <img src="<?php echo $bowling_leader_board['data'][0]['profile_photo']; ?>" alt="" class=""
+                                id="photo_purple">
                         </div>
                     </div>
                 </div>
@@ -715,6 +804,11 @@
 
         </div>
     </div>
+
+
+
+
+
 </main>
 
 
@@ -929,7 +1023,7 @@ $(document).ready(function() {
             // }
 
         } else {
-            
+
             if (teams == 'undefined' || teams == 'All teams') {
                 getBattingData(orangCap, selectedOrangeCap, season, teams);
                 // if(orangCap == 'MISIX' || orangCap == 'MIFOUR' || orangCap == 'MIHSR' || orangCap == 'MIHS'){
@@ -1275,7 +1369,8 @@ $(document).ready(function() {
 
                                 var formattedDate = date.toLocaleDateString('en-GB', options);
 
-                                var newRow = '<tr class="team '+index+'" data-search-term="'+ values.name +'">' +
+                                var newRow = '<tr class="team ' + index + '" data-search-term="' +
+                                    values.name + '">' +
                                     '<td class="table-qualified">' + (index + 1) + '</td>' +
                                     '<td class="ih-t-color">' +
                                     '<div class="ih-pt-ic">' +
@@ -1284,7 +1379,8 @@ $(document).ready(function() {
                                     '<div class="text-start">' +
                                     '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
                                     values.name + '</h2>' +
-                                    '<h2 class="ih-pt-cont mb-0 fw-400">'+ values.team_name +'</h2>' +
+                                    '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name +
+                                    '</h2>' +
                                     '</div>' +
                                     '</div>' +
                                     '</td>' +
@@ -1323,7 +1419,8 @@ $(document).ready(function() {
 
                             var formattedDate = date.toLocaleDateString('en-GB', options);
 
-                            var newRow = '<tr class="team '+ index +'" data-search-term="'+ values.name +'">' +
+                            var newRow = '<tr class="team ' + index + '" data-search-term="' +
+                                values.name + '">' +
                                 '<td class="table-qualified">' + (index + 1) + '</td>' +
                                 '<td class="ih-t-color">' +
                                 '<div class="ih-pt-ic">' +
@@ -1348,9 +1445,9 @@ $(document).ready(function() {
                         }
 
                     });
-                    if(data.status == false){
+                    if (data.status == false) {
                         var firstPlayer = data.data[0];
-                        $('#battingInngStats .statsplayer img').attr('src','');
+                        $('#battingInngStats .statsplayer img').attr('src', '');
                         $('#battingInngStats .playername').text('');
                         $('#battingInngStats .statstable div:nth-child(1) .statsnumb').text('');
                         $('#battingInngStats .statstable div:nth-child(2) .statsnumb').text(
@@ -1358,7 +1455,7 @@ $(document).ready(function() {
                         $('#battingInngStats .statstable div:nth-child(3) .statsnumb').text(
                             '');
                         $('#battingInngStats .statstable div:nth-child(4) .statsnumb').text(
-                                    '');
+                            '');
                     }
                     $("#battingInngStats").show();
                     $("#BattingInningStatsTable").show();
@@ -1417,7 +1514,8 @@ $(document).ready(function() {
                                     foundedPlayer = true;
                                 }
 
-                                var newRow = '<tr class="team '+ index +'" data-search-term="'+ values.name +'">' +
+                                var newRow = '<tr class="team ' + index + '" data-search-term="' +
+                                    values.name + '">' +
                                     '<td class="table-qualified">' + (index + 1) + '</td>' +
                                     '<td class="ih-t-color">' +
                                     '<div class="ih-pt-ic">' +
@@ -1426,7 +1524,8 @@ $(document).ready(function() {
                                     '<div class="text-start">' +
                                     '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
                                     values.name + '</h2>' +
-                                    '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name + '</h2>' +
+                                    '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name +
+                                    '</h2>' +
                                     '</div>' +
                                     '</div>' +
                                     '</td>' +
@@ -1465,7 +1564,8 @@ $(document).ready(function() {
                                 $('#battingStats .statstable div:nth-child(6) .statsnumb').text(
                                     firstPlayer['50s'] + '/' + firstPlayer['100s']);
                             }
-                            var newRow = '<tr class="team '+index+'" data-search-term="'+ values.name +'">' +
+                            var newRow = '<tr class="team ' + index + '" data-search-term="' +
+                                values.name + '">' +
                                 '<td class="table-qualified">' + (index + 1) + '</td>' +
                                 '<td class="ih-t-color">' +
                                 '<div class="ih-pt-ic">' +
@@ -1494,9 +1594,9 @@ $(document).ready(function() {
 
                     });
 
-                    if(data.status == false){
-                        $('#battingStats .statsplayer img').attr('src', 
-                                        '');
+                    if (data.status == false) {
+                        $('#battingStats .statsplayer img').attr('src',
+                            '');
                         $('#battingStats .playername').text('');
                         $('#battingStats .statstable div:nth-child(1) .statsnumb').text(
                             '');
@@ -1574,10 +1674,10 @@ $(document).ready(function() {
                                             .text(values.total_wickets);
                                         $('#bowlingInngStats .statstable div:nth-child(5) .statsnumb')
                                             .text(values.dot_ball ||
-                                            '0'); // Assuming best_bowling field for BBI
+                                                '0'); // Assuming best_bowling field for BBI
                                         $('#bowlingInngStats .statstable div:nth-child(6) .statsnumb')
                                             .text(values
-                                            .economy); // Assuming 4w and 5w fields for 4Ws/5Ws
+                                                .economy); // Assuming 4w and 5w fields for 4Ws/5Ws
                                     }
                                     foundedPlayer = true;
                                 }
@@ -1589,7 +1689,8 @@ $(document).ready(function() {
                                 };
 
                                 var formattedDate = date.toLocaleDateString('en-GB', options);
-                                var newRow = '<tr class="team '+index+' data-search-term="'+ values.name +'">' +
+                                var newRow = '<tr class="team ' + index + ' data-search-term="' +
+                                    values.name + '">' +
                                     '<td class="table-qualified">' + (index + 1) + '</td>' +
                                     '<td class="ih-t-color">' +
                                     '<div class="ih-pt-ic">' +
@@ -1598,7 +1699,8 @@ $(document).ready(function() {
                                     '<div class="text-start">' +
                                     '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
                                     values.name + '</h2>' +
-                                    '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name + '</h2>' +
+                                    '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name +
+                                    '</h2>' +
                                     '</div>' +
                                     '</div>' +
                                     '</td>' +
@@ -1630,7 +1732,7 @@ $(document).ready(function() {
                                     firstBowler.total_wickets);
                                 $('#bowlingInngStats .statstable div:nth-child(5) .statsnumb').text(
                                     firstBowler.dot_ball || '0'
-                                    ); // Assuming best_bowling field for BBI
+                                ); // Assuming best_bowling field for BBI
                                 $('#bowlingInngStats .statstable div:nth-child(6) .statsnumb').text(
                                     firstBowler.economy); // Assuming 4w and 5w fields for 4Ws/5Ws
                             }
@@ -1643,7 +1745,8 @@ $(document).ready(function() {
                             };
 
                             var formattedDate = date.toLocaleDateString('en-GB', options);
-                            var newRow = '<tr class="team '+index+'" data-search-term="'+values.name+'">' +
+                            var newRow = '<tr class="team ' + index + '" data-search-term="' +
+                                values.name + '">' +
                                 '<td class="table-qualified">' + (index + 1) + '</td>' +
                                 '<td class="ih-t-color">' +
                                 '<div class="ih-pt-ic">' +
@@ -1670,22 +1773,22 @@ $(document).ready(function() {
 
                     });
 
-                    if(data.status == 'false'){
+                    if (data.status == 'false') {
                         $('#bowlingInngStats .statsplayer img').attr('src', '');
                         $('#bowlingInngStats .playername').text('');
                         $('#bowlingInngStats .statstable div:nth-child(1) .statsnumb').text(
                             '');
                         $('#bowlingInngStats .statstable div:nth-child(2) .statsnumb').text(
-                                    '');
+                            '');
                         $('#bowlingInngStats .statstable div:nth-child(3) .statsnumb').text(
                             '');
                         $('#bowlingInngStats .statstable div:nth-child(4) .statsnumb').text(
                             '');
                         $('#bowlingInngStats .statstable div:nth-child(5) .statsnumb').text(
                             ''
-                            ); // Assuming best_bowling field for BBI
+                        ); // Assuming best_bowling field for BBI
                         $('#bowlingInngStats .statstable div:nth-child(6) .statsnumb').text(
-                                    ''); // Assuming 4w and 5w fields for 4Ws/5Ws
+                            ''); // Assuming 4w and 5w fields for 4Ws/5Ws
                     }
                     $("#BowlingInningStatsTable").show();
                     console.log('API call successful', data);
@@ -1741,17 +1844,18 @@ $(document).ready(function() {
                                             .text(values.maidens);
                                         $('#bowlingStats .statstable div:nth-child(5) .statsnumb')
                                             .text(values.best_bowling ||
-                                            '0'); // Assuming best_bowling field for BBI
+                                                '0'); // Assuming best_bowling field for BBI
                                         $('#bowlingStats .statstable div:nth-child(6) .statsnumb')
                                             .text((values['4_wickets'] || '0') + '/' + (values[
-                                                '5_wickets'] ||
-                                            '0')); // Assuming 4w and 5w fields for 4Ws/5Ws
+                                                    '5_wickets'] ||
+                                                '0')); // Assuming 4w and 5w fields for 4Ws/5Ws
                                     }
                                     foundedPlayer = true;
                                 }
 
 
-                                var newRow = '<tr class="team '+index+'" data-search-term="'+values.name+'">' +
+                                var newRow = '<tr class="team ' + index + '" data-search-term="' +
+                                    values.name + '">' +
                                     '<td class="table-qualified">' + (index + 1) + '</td>' +
                                     '<td class="ih-t-color">' +
                                     '<div class="ih-pt-ic">' +
@@ -1760,7 +1864,8 @@ $(document).ready(function() {
                                     '<div class="text-start">' +
                                     '<h2 class="ih-pt-cont teamplayername mb-0 text-black fw-400">' +
                                     values.name + '</h2>' +
-                                    '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name + '</h2>' +
+                                    '<h2 class="ih-pt-cont mb-0 fw-400">' + values.team_name +
+                                    '</h2>' +
                                     '</div>' +
                                     '</div>' +
                                     '</td>' +
@@ -1794,7 +1899,7 @@ $(document).ready(function() {
                                     firstBowler.maidens);
                                 $('#bowlingStats .statstable div:nth-child(5) .statsnumb').text(
                                     firstBowler.best_bowling || '0'
-                                    ); // Assuming best_bowling field for BBI
+                                ); // Assuming best_bowling field for BBI
                                 $('#bowlingStats .statstable div:nth-child(6) .statsnumb').text((
                                     firstBowler['4_wickets'] || '0') + '/' + (firstBowler[
                                     '5_wickets'] || '0')); // Assuming 4w and 5w fields for 4Ws/5Ws
@@ -1802,7 +1907,8 @@ $(document).ready(function() {
 
                             $("#bowlingStats").show();
 
-                            var newRow = '<tr class="team '+index+'" data-search-term="'+values.name+'">' +
+                            var newRow = '<tr class="team ' + index + '" data-search-term="' +
+                                values.name + '">' +
                                 '<td class="table-qualified">' + (index + 1) + '</td>' +
                                 '<td class="ih-t-color">' +
                                 '<div class="ih-pt-ic">' +
@@ -1841,9 +1947,9 @@ $(document).ready(function() {
         }
     }
 
-    function getOrangeCap(season){
+    function getOrangeCap(season) {
         fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
-            '&url=thirdparty/mpl/get-tournament-batting-leaderboard&value=RUN')
+                '&url=thirdparty/mpl/get-tournament-batting-leaderboard&value=RUN')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -1858,7 +1964,7 @@ $(document).ready(function() {
                 $('#o_to_match').text(data.total_match);
                 $('#o_to_avg').text(data.average);
                 // $.each(data.data, function(index, values) {
-                   
+
                 // });
                 console.log('API call successful orange cap', data);
             })
@@ -1868,9 +1974,9 @@ $(document).ready(function() {
             });
     }
 
-    function getPurpleCap(season){
+    function getPurpleCap(season) {
         fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getstats?tournamentId=' + season +
-            '&url=thirdparty/mpl/get-tournament-bowling-leaderboard&value=WICKET')
+                '&url=thirdparty/mpl/get-tournament-bowling-leaderboard&value=WICKET')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -1885,7 +1991,7 @@ $(document).ready(function() {
                 $('#p_match').text(data.total_match);
                 $('#p_avg').text(data.avg);
                 // $.each(data.data, function(index, values) {
-                   
+
                 // });
                 console.log('API call successful purple cap', data);
             })

@@ -50,7 +50,7 @@ if ( has_custom_logo() ) {
                                 Chhatrapti Sambhaji Kings </a></li>
                         <li id="menu-item-656"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="#">
-                                Solapur Royals</a></li>
+                            Raigad Royals</a></li>
                     </ul>
                 </div>
             </div>
@@ -111,7 +111,7 @@ if ( has_custom_logo() ) {
 <footer class="copyright-footer pt-0">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 ps-0">
+            <div class="col-6 ps-0">
                 <ul class="d-md-flex px-0 py-3 m-0 justify-content-center justify-content-md-start  w-100">
                     <li><a href="#" class="text-white text-decoration-none">terms & conditions </a>
                     </li>
@@ -121,7 +121,7 @@ if ( has_custom_logo() ) {
                     <li class="text-white text-decoration-none">Copyright@MPL</li>
                 </ul>
             </div>
-            <div class="col-md-6 pe-0 ">
+            <div class="col-6 pe-0 ">
                 <ul
                     class="d-md-flex px-0 py-3 m-0 justify-content-center justify-content-md-end w-100 text-end lower-footer">
                     <li><a href="https://thebrandodyssey.com/"

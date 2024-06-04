@@ -246,6 +246,20 @@ select.form-select {
   .navbar-toggler-icon {
     filter: invert(1);
   }
+  .menu-new-menu-container {
+    width: 100%;
+  }
+  .menu-new-menu-container ul {
+    width: 100%;
+  }
+  .menu-new-menu-container ul li {
+    width: 100%;
+  }
+  .menu-new-menu-container ul li a {
+    width: 98%;
+    display: block;
+    text-align: right;
+  }
 }
 .current_page_item a {
   color: #F15A29 !important;
@@ -331,7 +345,7 @@ a {
   .livematch .orange-button {
     position: absolute;
     /* bottom: 0; */
-    bottom: 55px;
+    bottom: 140px;
     left: 15px;
     font-size: 14px;
   }
@@ -983,6 +997,7 @@ form .search input {
   align-items: center;
   gap: 14px;
   height: 45px;
+  width: 100%;
 }
 
 .ih-pt-img img {
@@ -1186,11 +1201,13 @@ h2.ih-pt-cont a {
     margin-left: 90px;
   }
 }
+.stats-banner .statsplayer {
+  -webkit-clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
+          clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
+}
 @media screen and (min-width: 992px) {
   .stats-banner .statsplayer {
     width: 200.306px;
-    -webkit-clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
-            clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
     position: relative;
     bottom: 25px;
     left: 34px;
@@ -1226,7 +1243,6 @@ h2.ih-pt-cont a {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  border-right: 0;
 }
 @media screen and (min-width: 992px) {
   .stats-banner .statstable > div {
@@ -1504,6 +1520,8 @@ h2.ih-pt-cont a {
   justify-content: center;
   padding-top: 47px !important;
   padding-bottom: 25px !important;
+  position: relative;
+  z-index: 9;
 }
 .auction-nav-tabs button {
   display: inline-flex;
@@ -1647,6 +1665,7 @@ h2.ih-pt-cont a {
   background: #FAFBFC;
   padding: 10px 20px;
   font-family: Rubik;
+  display: flex;
   font-weight: 400;
 }
 @media screen and (min-width: 992px) {
@@ -1906,6 +1925,7 @@ footer h6 {
 @media screen and (max-width: 992px) {
   footer h6 {
     margin-top: 40px;
+    text-align: center;
   }
 }
 footer .social-icons {
@@ -1920,6 +1940,19 @@ footer .social-icons li {
 footer .social-icons a:hover img {
   filter: invert(1);
   filter: invert(0.5) sepia(1) saturate(5) hue-rotate(336deg);
+}
+@media screen and (max-width: 992px) {
+  footer .social-icons {
+    justify-content: center;
+  }
+  footer .social-icons li:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  footer .menu-footer-menu-container {
+    text-align: center;
+  }
 }
 
 footer.main-footer::after {
@@ -2083,4 +2116,24 @@ button.slick-next.slick-arrow {
 
 .designbay span:hover {
   color: #F15A29 !important;
+}
+
+.mobile-caps {
+  padding-top: 50px;
+}
+.mobile-caps .captitle {
+  font-family: Koulen;
+  font-size: 32px;
+  color: white !important;
+}
+.mobile-caps .cap-player-name {
+  color: #FFF;
+  margin-bottom: 11px;
+  font-family: Koulen;
+  font-size: 18px;
+}
+.mobile-caps .cap-details-side {
+  width: 70%;
+  margin: 20px auto;
+  padding-bottom: 30px;
 }/*# sourceMappingURL=styles.css.map */

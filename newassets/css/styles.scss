@@ -279,6 +279,27 @@ select.form-select {
     .navbar-toggler-icon {
         filter: invert(1);
     }
+
+
+
+    .menu-new-menu-container {
+        width: 100%;
+
+        ul {
+            width: 100%;
+
+            li {
+                width: 100%;
+
+                a {
+                    width: 98%;
+                    display: block;
+                    text-align: right;
+                }
+            }
+        }
+
+    }
 }
 
 .current_page_item a {
@@ -371,7 +392,7 @@ a {
         .orange-button {
             position: absolute;
             /* bottom: 0; */
-            bottom: 55px;
+            bottom: 140px;
             left: 15px;
             font-size: 14px;
         }
@@ -465,6 +486,7 @@ a {
             width: 188px;
             background-position: center;
         }
+
         font-family: "Koulen";
 
         height: 46px;
@@ -517,6 +539,7 @@ a {
         }
     }
 }
+
 .yettobat {
     position: relative;
     left: 6px;
@@ -1062,6 +1085,7 @@ form .search {
         align-items: center;
         gap: 14px;
         height: 45px;
+        width: 100%;
     }
 }
 
@@ -1307,9 +1331,10 @@ h2.ih-pt-cont a {
     }
 
     .statsplayer {
+        clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
         @media screen and (min-width: 992px) {
             width: 200.306px;
-            clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
+          
             position: relative;
             bottom: 25px;
             left: 34px;
@@ -1351,7 +1376,6 @@ h2.ih-pt-cont a {
             align-items: center;
             flex-direction: column;
             justify-content: center;
-            border-right: 0;
         }
 
         >div:last-child {
@@ -1674,6 +1698,8 @@ h2.ih-pt-cont a {
     justify-content: center;
     padding-top: 47px !important;
     padding-bottom: 25px !important;
+    position: relative;
+    z-index: 9;
 
     button {
         display: inline-flex;
@@ -1807,6 +1833,7 @@ h2.ih-pt-cont a {
         font-weight: 400;
         text-align: center;
         margin-top: 28px;
+
         @media screen and (min-width: 992px) {
             font-size: 24px;
             padding: 21px;
@@ -1829,6 +1856,7 @@ h2.ih-pt-cont a {
         background: #FAFBFC;
         padding: 10px 20px;
         font-family: Rubik;
+        display: flex;
 
         @media screen and (min-width: 992px) {
             font-size: 24px;
@@ -2124,6 +2152,7 @@ footer {
 
         @media screen and (max-width: 992px) {
             margin-top: 40px;
+            text-align: center;
         }
 
         /* 166.667% */
@@ -2145,6 +2174,21 @@ footer {
                 filter: invert(0.5) sepia(1) saturate(5) hue-rotate(336deg);
 
             }
+        }
+
+        @media screen and (max-width: 992px) {
+            justify-content: center;
+
+            li:last-child {
+                margin-right: 0;
+            }
+        }
+
+    }
+
+    .menu-footer-menu-container {
+        @media screen and (max-width: 992px) {
+            text-align: center;
         }
     }
 }
@@ -2317,4 +2361,25 @@ button.slick-next.slick-arrow {
 
 .designbay span:hover {
     color: #F15A29 !important;
+}
+
+.mobile-caps {
+    padding-top: 50px;
+  .captitle {
+        font-family: Koulen;
+        font-size: 32px;
+        color: white !important;
+    }
+    .cap-player-name {
+        color: #FFF;
+        margin-bottom: 11px;
+        font-family: Koulen;
+        font-size: 18px;
+    }
+
+    .cap-details-side {
+        width: 70%;
+        margin: 20px auto;
+        padding-bottom: 30px;
+    }
 }
