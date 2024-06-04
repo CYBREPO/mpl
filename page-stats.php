@@ -311,7 +311,7 @@
 
 
     <!-- Banner -->
-    <div class="fixtures">
+    <div class="fixtures pb-0 pb-md-3">
         <div class="container p-0">
 
             <div class="tab-content px-2" id="myTabContent">

@@ -112,7 +112,6 @@ foreach ($teamlogos as $key => $value) {
                                     ['player' =>"Tanay Sanghvi",'role' =>"allrounder"],
                                     ['player' =>"Sujit Ubale ",'role' =>"allrounder"],
                                     ['player' =>"Bhushan Gole ",'role' =>"allrounder"],
-                                    ['player' =>"Vishant More",'role' =>"wkt"],
                                     ['player' =>"Rushabh Rathod",'role' =>"wkt"],
                                     ['player' =>"Mehul Patel ",'role' =>"batter"],
                                     ['player' =>"Devdutt Natu ",'role' =>"batter"],
@@ -173,7 +172,6 @@ foreach ($teamlogos as $key => $value) {
 
                         <?php  $RATNAGIRI = array(
 
-                                ['player' => "Azim Kazi",'role'=>'allrounder'],
                                 ['player' => "Sangram Bhalekar",'role'=>'allrounder'],
                                 ['player' => "Yash Borkar",'role'=>'allrounder'],
                                 ['player' => "Satyajeet Bachhav",'role'=>'allrounder'],
@@ -292,7 +290,6 @@ foreach ($teamlogos as $key => $value) {
 ['player' => "Neel Gandhi",'role' => 'allrounder'],
 ['player' => "Shubham Taiswal",'role' => 'allrounder'],
 ['player' => "Devansh Tandel",'role' => 'allrounder'],
-['player' => "Ruturaj Gaikwad",'role' => 'batter'],
 ['player' => "Abhimanyu Jadhav",'role' => 'batter'],
 ['player' => "Pavan Shah",'role' => 'batter'],
 ['player' => "Yash Kshirsagar",'role' => 'batter'],
@@ -365,7 +362,6 @@ foreach ($teamlogos as $key => $value) {
                       ['player' =>'Razeq Fallah','role'=>'bowler'],
                       ['player' =>'Samadhan Pangare','role'=>'bowler'],
                       ['player' =>'Mukesh Choudhary','role'=>'bowler'],
-                      ['player' =>'Prashant Solanki ','role'=>'bowler'],
                       ['player' =>'Rehan Khan','role'=>'bowler']);
                             ?>
 
@@ -451,7 +447,6 @@ foreach ($teamlogos as $key => $value) {
  ['player' =>'Saurabh Singh','role'=>'batter'],
  ['player' =>'Om Bhosale','role'=>'batter'],
  ['player' =>'Harshal Kate','role'=>'batter'],
- ['player' =>'Murtaza Trunkwala','role'=>'batter'],
  ['player' =>'Omkar Khatpe','role'=>'batter'],
  ['player' =>'Digvijay Patil','role'=>'batter'],
  ['player' =>'Anurag Kawade','role'=>'wkt'],
@@ -505,7 +500,7 @@ foreach ($teamlogos as $key => $value) {
                     </div> -->
 
                     <div class="captain-header">
-                        Captain - Kedar Jadhav
+                        Captain - Rahul Tripathi
                         <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/allrounder.svg" alt="" style="filter:invert(1)">
                     </div>
 
