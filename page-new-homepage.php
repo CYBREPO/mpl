@@ -290,22 +290,41 @@
     </section>
 </main>
 
-<section class="sponsors d-none">
+<section class="sponsors">
     <div class="container">
         <div class="d-flex justify-content-center">
             <div class="section-title mb-md-5" data-aos="fade-up" data-aos-duration="1500">
                 SPONSORS
             </div>
         </div>
-        <div class="row">
-            <?php for ($i=1; $i < 4; $i++) { ?>
-            <div class="col-md-4">
-                <img src="<?php the_field('sponsor_'.$i.'_image') ?>" alt="">
-                <div class="wp-block-media-text__content">
-                    <p><?php the_field('sponsor_'.$i.'_title') ?></p>
+        <div class="d-flex justify-content-center mb-4 mt-5 mt-md-3" data-aos="fade-up" data-aos-duration="1500">
+            <div class="d-inline-block">
+                <div class="d-flex flex-column-reverse text-white text-center">
+                    <?php dynamic_sidebar( 'title-partners' ); ?>
                 </div>
             </div>
-            <?php } ?>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-md-6 d-flex justify-content-center justify-content-md-start mb-4 mb-md-0" data-aos="fade-up"
+                data-aos-duration="1500">
+                <div class="d-inline-block">
+
+                    <div class="d-flex flex-column-reverse text-white text-center">
+                        <?php dynamic_sidebar( 'associate-partners' ); ?>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center justify-content-md-end" data-aos="fade-up"
+                data-aos-duration="1500">
+                <div class="d-inline-block">
+
+                    <div class="d-flex flex-column-reverse text-white text-center">
+                        <?php dynamic_sidebar( 'streaming-partners' ); ?>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
     </div>
