@@ -835,10 +835,12 @@ $(document).ready(function() {
         e.preventDefault();
         var selectedValue = $(this).data('value');
         var selectedUrl = $(this).data('url');
+        var selectedteam = $(this).data('team');
         var dropdownButton = $(this).closest('.dropdown').find('.dropdown-toggle');
         dropdownButton.text($(this).text());
         dropdownButton.data('selected-value', selectedValue);
         dropdownButton.data('selected-url', selectedUrl);
+        dropdownButton.data('selected-team', selectedteam);
         fetchData();
 
         // $('#playerSearch').on('input', function() {
