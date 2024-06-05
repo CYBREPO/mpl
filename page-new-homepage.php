@@ -111,7 +111,7 @@
                     <img src="<?php echo $live_score['data'][0]['team_b_logo']; ?>" alt="" class="liveteam2">
                 </div>
             </div>
-            <a href="https://www.jiocinema.com/sports/maharashtra-premier-league-t20/3979425" target="_blank" class="orange-button">Live Stream</a>
+            <a href="https://www.jiocinema.com/sports/maharashtra-premier-league-t20/3979425" target="_blank" class="orange-button">Watch Live</a>
         </div>
     </div>
     <?php } ?>
