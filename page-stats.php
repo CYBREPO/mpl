@@ -360,10 +360,10 @@
                                 All teams
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="" data-value="All teams">All teams</a></li>
+                                <li><a class="dropdown-item" href="" data-team="All teams">All teams</a></li>
                                 <?php foreach($filters['data']['teams'] as $k) { ?>
                                 <li><a class="dropdown-item" href=""
-                                        data-value="<?php echo $k['team_id'];?>"><?php echo $k['team_name']; ?></a></li>
+                                        data-team="<?php echo $k['team_id'];?>"><?php echo $k['team_name']; ?></a></li>
                                 <?php } ?>
                             </ul>
                         </div>
@@ -852,7 +852,7 @@ $(document).ready(function() {
         var season = $('#SeasonDropdown').data('selected-value');
         var orangCap = $('#orangCapDropdown').data('selected-value');
         var selectedOrangeCap = $('#orangCapDropdown').data('selected-url');
-        var teams = $('#teamsDropdown').text().trim();
+        var teams = $('#teamsDropdown').data('selected-team');
         var players = $('#playersDropdown').text().trim();
         // var search = $('#playerSearch').val().trim();
 
@@ -1344,7 +1344,7 @@ $(document).ready(function() {
                     var foundedPlayer = false;
                     $.each(data.data, function(index, values) {
                         if (teams != 'All teams') {
-                            if (values.team_name == teams) {
+                            if (teams == values.team_id) {
                                 if (!foundedPlayer) {
                                     if (data.data.length > 0) {
                                         //var firstPlayer = data.data[0];
@@ -1498,7 +1498,7 @@ $(document).ready(function() {
                     $.each(data.data, function(index, values) {
                         if (teams != 'All teams') {
                             // console.log("test");
-                            if (values.team_name == teams) {
+                            if (teams == values.team_id) {
                                 if (!foundedPlayer) {
                                     $('#battingStats .statsplayer img').attr('src', values
                                         .profile_photo);
@@ -1661,7 +1661,7 @@ $(document).ready(function() {
                     var foundedPlayer = false;
                     $.each(data.data, function(index, values) {
                         if (teams != 'All teams') {
-                            if (teams == values.team_name) {
+                            if (teams == values.team_id) {
                                 if (!foundedPlayer) {
                                     if (data.data.length > 0) {
                                         //var firstBowler = data.data[0];
@@ -1831,7 +1831,7 @@ $(document).ready(function() {
                     var foundedPlayer = false;
                     $.each(data.data, function(index, values) {
                         if (teams != 'All teams') {
-                            if (teams == values.team_name) {
+                            if (teams == values.team_id) {
                                 if (!foundedPlayer) {
                                     if (data.data.length > 0) {
                                         //var firstBowler = data.data[0];
