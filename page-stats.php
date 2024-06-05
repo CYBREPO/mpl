@@ -3,7 +3,11 @@
  * Template Name: Stats
  * Description: Page template with sidebar included.
  */ get_header("header2"); ?>
+
+ 
 <?php 
+ini_set('display_errors', 1);
+
         try {
             // $data='';
             // $d = [];
