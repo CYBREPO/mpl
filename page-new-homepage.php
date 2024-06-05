@@ -299,7 +299,7 @@
         </div>
         <div class="row">
             <?php for ($i=1; $i < 5; $i++) { ?>
-            <div class="col-6 col-md-3">
+            <div class="col-md-3">
                 <img src="<?php the_field('sponsor_'.$i.'_image') ?>" alt="">
                 <div class="wp-block-media-text__content">
                     <p><?php the_field('sponsor_'.$i.'_title') ?></p>
