@@ -298,7 +298,7 @@
             </div>
         </div>
         <div class="row">
-            <?php for ($i=1; $i < 4; $i++) { ?>
+            <?php for ($i=1; $i < 5; $i++) { ?>
             <div class="col-md-4">
                 <img src="<?php the_field('sponsor_'.$i.'_image') ?>" alt="">
                 <div class="wp-block-media-text__content">
