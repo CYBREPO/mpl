@@ -34,22 +34,22 @@ if ( has_custom_logo() ) {
                     <ul id="menu-footer-menu" class="menu">
 
                         <li id="menu-item-656"
-                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="#">
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="<?php bloginfo('url')?>/team">
                                 4S Puneri Bappa</a></li>
                         <li id="menu-item-656"
-                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="#">
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="<?php bloginfo('url')?>/team">
                                 PBG Kolhapur Tuskers</a></li>
                         <li id="menu-item-656"
-                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="#">
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="<?php bloginfo('url')?>/team">
                                 Ratnagiri Jets</a></li>
                         <li id="menu-item-656"
-                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="#">
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="<?php bloginfo('url')?>/team">
                                 Eagle Nashik Titans</a></li>
                         <li id="menu-item-656"
-                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="#">
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="<?php bloginfo('url')?>/team">
                                 Chhatrapti Sambhaji Kings </a></li>
                         <li id="menu-item-656"
-                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="#">
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="<?php bloginfo('url')?>/team">
                             Raigad Royals</a></li>
                     </ul>
                 </div>
