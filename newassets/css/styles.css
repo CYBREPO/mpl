@@ -736,9 +736,15 @@ a {
 
 .sponsors {
   position: relative;
-  padding-top: 124px;
-  padding-bottom: 177px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: white;
+}
+@media screen and (min-width: 992px) {
+  .sponsors {
+    padding-top: 124px;
+    padding-bottom: 177px;
+  }
 }
 
 .sponsors::before {

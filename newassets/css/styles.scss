@@ -797,8 +797,14 @@ a {
 
 .sponsors {
     position: relative;
-    padding-top: 124px;
-    padding-bottom: 177px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media screen and (min-width: 992px) {
+        padding-top: 124px;
+        padding-bottom: 177px;
+    }
+
     background-color: white;
 }
 
@@ -836,7 +842,7 @@ a {
     max-width: 200px;
     height: 160px;
     object-fit: contain;
-    
+
 }
 
 .wp-block-media-text__content {
@@ -1335,9 +1341,10 @@ h2.ih-pt-cont a {
 
     .statsplayer {
         clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
+
         @media screen and (min-width: 992px) {
             width: 200.306px;
-          
+
             position: relative;
             bottom: 25px;
             left: 34px;
@@ -2368,11 +2375,13 @@ button.slick-next.slick-arrow {
 
 .mobile-caps {
     padding-top: 50px;
-  .captitle {
+
+    .captitle {
         font-family: Koulen;
         font-size: 32px;
         color: white !important;
     }
+
     .cap-player-name {
         color: #FFF;
         margin-bottom: 11px;
@@ -2387,7 +2396,7 @@ button.slick-next.slick-arrow {
     }
 }
 
-.flex-sm-row-reverse{
+.flex-sm-row-reverse {
     @media screen and (max-width: 992px) {
         flex-direction: row-reverse;
     }
