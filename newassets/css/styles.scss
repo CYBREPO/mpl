@@ -842,6 +842,8 @@ a {
     max-width: 200px;
     height: 160px;
     object-fit: contain;
+    position: relative;
+    z-index: 9;
 
 }
 

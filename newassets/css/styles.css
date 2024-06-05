@@ -782,6 +782,8 @@ a {
   height: 160px;
   -o-object-fit: contain;
      object-fit: contain;
+  position: relative;
+  z-index: 9;
 }
 
 .wp-block-media-text__content {
