@@ -3,8 +3,14 @@
  * Template Name: Stats
  * Description: Page template with sidebar included.
  */ get_header("header2"); ?>
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);    
+?>
  
 <?php 
+
+
         try {
             // $data='';
             // $d = [];
