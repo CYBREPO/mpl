@@ -283,14 +283,13 @@ a {
 
 @media screen and (min-width: 992px) {
   .bannerplayers img {
-    width: 530px;
-    height: 529px;
     position: absolute;
     bottom: -66px;
-    height: 529px;
     -o-object-fit: contain;
-    object-fit: contain;
+       object-fit: contain;
     left: 10%;
+    width: 100%;
+    max-width: 528px;
   }
 }
 
@@ -784,6 +783,14 @@ a {
      object-fit: contain;
   position: relative;
   z-index: 9;
+}
+
+@media screen and (max-width: 992px) {
+  .sponsors .section-title {
+    font-size: 50px;
+    font-weight: 400;
+    font-family: "Koulen";
+  }
 }
 
 .wp-block-media-text__content {
@@ -1313,6 +1320,8 @@ h2.ih-pt-cont a {
 }
 .gallerystats img {
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .orange-cap-internal {
@@ -1879,7 +1888,7 @@ h2.ih-pt-cont a {
   z-index: 0;
   background-position: right;
   background-size: contain;
-  z-index: 9;
+  z-index: 1;
 }
 @media screen and (min-width: 992px) {
   .stats-gallery::after {

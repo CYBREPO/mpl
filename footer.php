@@ -125,7 +125,7 @@ if ( has_custom_logo() ) {
                 <ul
                     class="d-md-flex px-0 py-3 m-0 justify-content-center justify-content-md-end w-100 text-end lower-footer">
                     <li><a href="https://thebrandodyssey.com/"
-                            class="text-white text-decoration-none designbay">Designed By
+                            class="text-white text-decoration-none designbay">Website By
                             <span>THE BRAND ODYSSEY</span></a>
                     </li>
                 </ul>
