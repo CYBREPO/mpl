@@ -1011,11 +1011,16 @@ form .search input {
   border: 1px solid #ABABAB;
   background: #FFF;
   display: inline-flex;
-  padding: 8px 141px 8px 20px;
+  padding: 8px 20px;
   align-items: center;
   gap: 14px;
   height: 45px;
   width: 100%;
+}
+@media screen and (min-width: 992px) {
+  form .search input {
+    width: 300px;
+  }
 }
 
 .ih-pt-img img {
