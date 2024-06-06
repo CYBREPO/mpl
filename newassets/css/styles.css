@@ -1318,12 +1318,6 @@ h2.ih-pt-cont a {
     text-align: center;
   }
 }
-.gallerystats img {
-  width: 100%;
-  position: relative;
-  z-index: 2;
-}
-
 .orange-cap-internal {
   background-size: 100%;
   background-position: center;
