@@ -173,7 +173,7 @@ $(document).ready(function() {
 
             // Iterate through the new data and build the fixtures
             $.each(data.data, function(index, values) {
-                var formattedDate = formatDateTime(values.match_date_time);
+                var formattedDate = formatDateTime(values.match_date_time,'Asia/Kolkata');
                 var fixtureHTML = `
                 <div class="fixture">
                 <div class="fixture-head">
@@ -224,12 +224,52 @@ $(document).ready(function() {
     });
 
 
-    function formatDateTime(dateString) {
+    // function formatDateTime(dateString) {
+    //     const date = new Date(dateString);
+
+    //     const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    //     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    //     function getOrdinalSuffix(day) {
+    //         if (day > 3 && day < 21) return 'th';
+    //         switch (day % 10) {
+    //             case 1: return 'st';
+    //             case 2: return 'nd';
+    //             case 3: return 'rd';
+    //             default: return 'th';
+    //         }
+    //     }
+
+    //     const day = date.getUTCDate();
+    //     const dayWithSuffix = day + getOrdinalSuffix(day);
+
+    //     // const hours = date.getUTCHours().toString().padStart(2, '0');
+    //     // const minutes = date.getUTCMinutes().toString().padStart(2, '0');
+
+    //     const formattedDate = `${weekdays[date.getUTCDay()]}, ${dayWithSuffix} ${months[date.getUTCMonth()]} `;
+    //     return formattedDate;
+    // }
+
+    function formatDateTime(dateString, clientTimezone) {
+        // Parse the input date string in GMT
         const date = new Date(dateString);
 
-        const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        // Get the local time in the client's timezone
+        const options = { 
+            weekday: 'short', 
+            day: 'numeric', 
+            month: 'long', 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            timeZone: clientTimezone,
+            hour12: false  // Use 24-hour format
+        };
 
+        // Format the date according to the client's timezone
+        const formatter = new Intl.DateTimeFormat('en-US', options);
+        const parts = formatter.formatToParts(date);
+
+        // Function to get the ordinal suffix
         function getOrdinalSuffix(day) {
             if (day > 3 && day < 21) return 'th';
             switch (day % 10) {
@@ -240,13 +280,32 @@ $(document).ready(function() {
             }
         }
 
-        const day = date.getUTCDate();
+        // Extract the parts
+        let day, weekday, month, hour, minute;
+        parts.forEach(part => {
+        switch (part.type) {
+            case 'day':
+                day = part.value;
+                break;
+            case 'weekday':
+                weekday = part.value;
+                break;
+            case 'month':
+                month = part.value;
+                break;
+            case 'hour':
+                hour = part.value;
+                break;
+            case 'minute':
+                minute = part.value;
+                break;
+        }
+        });
+
         const dayWithSuffix = day + getOrdinalSuffix(day);
 
-        // const hours = date.getUTCHours().toString().padStart(2, '0');
-        // const minutes = date.getUTCMinutes().toString().padStart(2, '0');
-
-        const formattedDate = `${weekdays[date.getUTCDay()]}, ${dayWithSuffix} ${months[date.getUTCMonth()]} `;
+        // Construct the formatted date string
+        const formattedDate = `${weekday}, ${dayWithSuffix} ${month} ${hour}:${minute}`;
         return formattedDate;
     }
 });
