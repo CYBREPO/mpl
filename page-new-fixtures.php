@@ -101,7 +101,7 @@
                         <div class="fixtures-schedule">
                             <div class="fixtures-schedule-date">
                                 <!-- THU, 15TH JUNE <b>19:30</b> -->
-                                <?php echo date("D, jS F", strtotime($values['match_date_time']));?>
+                                <?php echo date("D, jS F", strtotime(convertGmtToClientTimezone($values['match_date_time'],'Asia/Kolkata')));?>
                             </div>
                             <!-- TODO bind the location-->
                             <?php echo $values['ground_name']; ?>
@@ -251,3 +251,18 @@ $(document).ready(function() {
     }
 });
 </script>
+<?php 
+function convertGmtToClientTimezone($gmtTimeStr, $clientTimezoneStr) {
+    // Create a DateTime object from the GMT time string
+    $dateTime = new DateTime($gmtTimeStr, new DateTimeZone('GMT'));
+    
+    // Create a DateTimeZone object for the client's timezone
+    $clientTimezone = new DateTimeZone($clientTimezoneStr);
+    
+    // Convert the DateTime object to the client's timezone
+    $dateTime->setTimezone($clientTimezone);
+    
+    // Return the formatted date and time string
+    return $dateTime->format('Y-m-d H:i:s');
+}
+?>
