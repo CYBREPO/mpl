@@ -273,10 +273,10 @@ $('#playerSearch').on('keyup', function() {
 <script>
 $(document).ready(function() {
     $(".content").slice(0, 9).show();
-    $(".content2").slice(0, 100).show();
+    $(".content2").slice(0, 12).show();
     $(".loadmorebutton").on("click", function(e) {
         e.preventDefault();
-        $(".content:hidden").slice(0, 4).slideDown();
+        $(".content:hidden").slice(0, 10).slideDown();
         $(".content2:hidden").slice(0, 4).slideDown();
         if ($(".content:hidden").length == 0) {
             $(".loadmorebutton").addClass("d-none");
