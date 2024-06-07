@@ -101,7 +101,7 @@
                         <div class="fixtures-schedule">
                             <div class="fixtures-schedule-date">
                                 <!-- THU, 15TH JUNE <b>19:30</b> -->
-                                <?php echo date("D, jS F H:i", strtotime(convertGmtToClientTimezone($values['match_date_time'],'Asia/Kolkata')));?>
+                                <?php echo date("D, jS F ", strtotime(convertGmtToClientTimezone($values['match_date_time'],'Asia/Kolkata')));?>
                             </div>
                             <!-- TODO bind the location-->
                             <?php echo $values['ground_name']; ?>
@@ -305,7 +305,7 @@ $(document).ready(function() {
         const dayWithSuffix = day + getOrdinalSuffix(day);
 
         // Construct the formatted date string
-        const formattedDate = `${weekday}, ${dayWithSuffix} ${month} ${hour}:${minute}`;
+        const formattedDate = `${weekday}, ${dayWithSuffix} ${month} `;
         return formattedDate;
     }
 });
