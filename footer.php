@@ -48,7 +48,7 @@ foreach ($teamlogos as $key => $value) {
 ?>
                         <li id="menu-item-656"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a
-                                href="<?php bloginfo('url')?>/team?value=<?php echo $key ?>"><?php echo $value ?></a></li>
+                                href="<?php bloginfo('url')?>/team?id=<?php echo $key ?>"><?php echo $value ?></a></li>
               
                                 <?php } ?>
                     </ul>
@@ -292,7 +292,7 @@ $(document).ready(function() {
 <script>
 $(function() {
     var urlParams = new URLSearchParams(window.location.search);
-    var id = urlParams.get('value');
+    var id = urlParams.get('id');
     var selector = `#taab${id}-tab`;
     $(selector).tab('show');
 
