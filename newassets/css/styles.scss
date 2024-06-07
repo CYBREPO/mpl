@@ -310,6 +310,12 @@ a {
     text-decoration: none;
 }
 
+@media screen and (min-width: 992px) {
+    .navbar .menu li a {
+        font-size: 18px;
+    }
+}
+
 // banner
 
 .banner {
@@ -1103,9 +1109,10 @@ form .search {
         gap: 14px;
         height: 45px;
         width: 100%;
-       @media screen and (min-width: 992px) {
-        width: 300px;
-       }
+
+        @media screen and (min-width: 992px) {
+            width: 300px;
+        }
     }
 }
 
