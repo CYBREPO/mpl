@@ -273,7 +273,7 @@ $('#playerSearch').on('keyup', function() {
 <script>
 $(document).ready(function() {
     $(".content").slice(0, 9).show();
-    $(".content2").slice(0, 12).show();
+    $(".content2").slice(0, 100).show();
     $(".loadmorebutton").on("click", function(e) {
         e.preventDefault();
         $(".content:hidden").slice(0, 4).slideDown();
