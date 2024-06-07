@@ -1476,6 +1476,9 @@ h2.ih-pt-cont a {
         width: 100%;
         position: relative;
         z-index: 2;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 }
 
