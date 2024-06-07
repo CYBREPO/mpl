@@ -862,6 +862,10 @@ $(document).ready(function() {
             season = 1029866;
         }
 
+        if (teams == undefined) {
+            teams = "All teams";
+        }
+
         console.log(season);
         console.log(orangCap);
         console.log(selectedOrangeCap);
@@ -1535,16 +1539,14 @@ $(document).ready(function() {
                                     '</div>' +
                                     '</div>' +
                                     '</td>' +
-                                    '<td>' + values['4s'] + '</td>' +
+                                    '<td>' + values['total_match'] + '</td>' +
+                                    '<td>' + values['innings'] + '</td>' +
                                     '<td>' + values['4s'] + '</td>' +
                                     '<td>' + values['6s'] + '</td>' +
-                                    '<td>' + values['6s'] + '</td>' +
-                                    '<td>' + values['50s'] + '</td>' +
-                                    '<td>' + values['100s'] + '</td>' +
                                     '<td>' + values['50s'] + '</td>' +
                                     '<td>' + values['100s'] + '</td>' +
                                     '<td>' + values['highest_run'] + '</td>' +
-                                    '<td>' + values['strike_rate'] + '</td>' +
+                                    '<td>' + values['total_runs'] + '</td>' +
                                     '<td>' + values['strike_rate'] + '</td>' +
                                     '<td>' + values['average'] + '</td>' +
                                     '</tr>';

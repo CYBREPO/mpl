@@ -6,9 +6,11 @@
 
 
 <main class="bg-light">
+
     <?php include 'components/page-title-header.php';?>
 
     <?php 
+    ini_set('display_errors', 1);
         try {
             $data='';
             $d = [];
