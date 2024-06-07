@@ -1639,6 +1639,9 @@ h2.ih-pt-cont a {
     border: 6px solid #DB4610;
   }
 }
+.teamstab .teamstabstab:focus-visible {
+  outline: 0 !important;
+}
 
 .teamtable .team-superiors {
   display: flex;
