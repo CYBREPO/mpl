@@ -4,7 +4,7 @@
  * Description: Page template with sidebar included.
  */ get_header("header2"); ?>
 
-<?php echo $_GET['id'] ?>
+<!--  echo $_GET['id'] -->
 
 <main class="bg-white">
     <section class="position-relative teamstab-cover">
