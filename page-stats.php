@@ -648,7 +648,7 @@
             </div>
             <div class="mobile-caps d-md-none" style="background: linear-gradient(-90deg, #260531 0%, #E04413 100%);margin-top:-20px;">
                 <div class="mobile-orange-cap-holder">
-                    <img src="<?php echo $batting_leader_board['data'][0]['profile_photo']; ?>" alt="" class="w-100"
+                    <img src="<?php echo $bowling_leader_board['data'][0]['profile_photo']; ?>" alt="" class="w-100"
                         id="photo_orange" style="clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
     width: 168.028px !important;
     height: 172.829px;

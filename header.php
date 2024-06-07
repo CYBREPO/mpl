@@ -81,8 +81,8 @@
     <header>
         <nav class="navbar navbar-expand-lg p-0 bg-body-tertiary">
             <div class="container">
-            <a class="navbar-brand" href="<?php bloginfo('url')?>">
-                        <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
+                <a class="navbar-brand" href="<?php bloginfo('url')?>">
+                    <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 if ( has_custom_logo() ) {
 	echo '<img src="' . esc_url( $logo[0] ) . '" class="w-100" alt="' . get_bloginfo( 'name' ) . '">';
@@ -94,8 +94,9 @@ if ( has_custom_logo() ) {
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse p-0 align-items-center justify-content-end" id="navbarSupportedContent">
-           
+                <div class="collapse navbar-collapse p-0 align-items-center justify-content-end"
+                    id="navbarSupportedContent">
+
 
                     <div class="menu-header-menu-container">
                         <ul id="menu-header-menu" class="p-0 pb-4 pb-md-0 m-0 menu">
@@ -108,5 +109,5 @@ if ( has_custom_logo() ) {
                 </div>
             </div>
         </nav>
-      
+
     </header>
