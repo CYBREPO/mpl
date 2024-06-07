@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/newassets/css/styles.min.css">
+    <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/newassets/css/styles.css">
     <?php wp_head(); ?>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -106,14 +106,11 @@ if ( has_custom_logo() ) {
                 </button>
                 <div class="collapse navbar-collapse p-0 align-items-center justify-content-end"
                     id="navbarSupportedContent">
-
-
                     <div class="menu-header-menu-container">
                         <ul id="menu-header-menu" class="p-0 pb-4 pb-md-0 m-0 menu">
                             <?php if (has_nav_menu('new-header-menu')) {
                         wp_nav_menu(array('theme_location' => 'new-header-menu'));
                     } ?>
-
                         </ul>
                     </div>
                 </div>

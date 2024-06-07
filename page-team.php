@@ -4,21 +4,21 @@
  * Description: Page template with sidebar included.
  */ get_header("header2"); ?>
 
+<?php echo $_GET['id'] ?>
+
 <main class="bg-white">
     <section class="position-relative teamstab-cover">
        
 
         <ul class="nav nav-tabs teamstab" id="myTab" role="tablist">
 
-            <?php $teamlogos = ["home",
-"profile",
-"contact",
-"EAGLE",
-"CHHATRAPTI",
-"KOLHAPUR"
-] 
-?>
-            <?php
+            <?php $teamlogos = ["solapur",
+"ratnagiri",
+"puneri",
+"eagle",
+"chatrapati",
+"kolhapur"
+];
 foreach ($teamlogos as $key => $value) {
 
 
@@ -27,8 +27,8 @@ foreach ($teamlogos as $key => $value) {
 
             <li class="nav-item" role="presentation">
                 <button class="nav-link teamstabstab <?php echo $key === 0 ? 'active' : ''; ?>"
-                    id="<?php echo $value ?>-tab" data-bs-toggle="tab" data-bs-target="#<?php echo $value ?>-tab-pane"
-                    type="button" role="tab" aria-controls="<?php echo $value ?>-tab-pane" aria-selected="true"> <img
+                    id="taab<?php echo $key ?>-tab" data-bs-toggle="tab" data-bs-target="#taab<?php echo $key ?>-tab-pane"
+                    type="button" role="tab" aria-controls="taab<?php echo $key ?>-tab-pane" aria-selected="true"> <img
                         src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/team<?php echo $key+1 ?>.png"
                         alt=""></button>
             </li>
@@ -43,55 +43,11 @@ foreach ($teamlogos as $key => $value) {
     <div class="tab-content" id="myTabContent">
 
     
-        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+        <div class="tab-pane fade show active" id="taab0-tab-pane" role="tabpanel" aria-labelledby="taab0-tab"
             tabindex="0">
             <div class="teamtable">
                 <div class="container">
-                    <!-- <div class="team-superiors">
-
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                founder
-                            </div>
-                            <div class="fs-22 mt-1">
-                                KAPIL BAHETI 
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                CO-FOUNDER-
-
-                            </div>
-                            <div class="fs-22 mt-1">
-                                ALISHA BAHETI 
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                TEAM DIRECTOR -
-                            </div>
-                            <div class="fs-22 mt-1">
-                                PARAG MORE
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                COACH-
-                            </div>
-                            <div class="fs-22 mt-1">
-                                CHAMINDA VAAS
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                ASSISTANT COACH-
-                            </div>
-                            <div class="fs-22 mt-1">
-                                SOMI BHINDER
-                            </div>
-                        </div>
-                    </div> -->
-
+                   
                     <div class="captain-header">
                         Captain - Vishant More
                         <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/wkt.svg" alt="" style="filter: invert(1);">
@@ -154,7 +110,7 @@ foreach ($teamlogos as $key => $value) {
 
 
 
-        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        <div class="tab-pane fade" id="taab1-tab-pane" role="tabpanel" aria-labelledby="taab1-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
                     <!-- <div class="team-superiors">
@@ -213,62 +169,10 @@ foreach ($teamlogos as $key => $value) {
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+        <div class="tab-pane fade" id="taab2-tab-pane" role="tabpanel" aria-labelledby="taab2-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
-                    <!-- <div class="team-superiors">
-
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                COACH-
-                            </div>
-                            <div class="fs-22 mt-1">
-                                ATUL GAIKWAD
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                COACH-
-
-                            </div>
-                            <div class="fs-22 mt-1">
-                                AVINASH AWARE
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                COACH-
-                            </div>
-                            <div class="fs-22 mt-1">
-                                SHRIKANT MUNDHE
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                COACH-
-                            </div>
-                            <div class="fs-22 mt-1">
-                                SANTOSH JEDHE
-                            </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">FITNESS COACH</div>
-                            <div class="fs-22 mt-1"> MAHINDRA GHOKHALE</div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">TEAM MANAGER</div>
-                            <div class="fs-22 mt-1"> VIKRAM DESHMUKH</div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">ASSISTANT</div>
-                            <div class="fs-22 mt-1"> ASHWIN PARATE</div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">ASSISTANT</div>
-                            <div class="fs-22 mt-1"> AJIT CHAVAN</div>
-                        </div>
-
-                    </div> -->
+                  
 
                     <div class="captain-header">
                         Captain - Ruturaj Gaikwad
@@ -324,7 +228,7 @@ foreach ($teamlogos as $key => $value) {
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="EAGLE-tab-pane" role="tabpanel" aria-labelledby="EAGLE-tab" tabindex="0">
+        <div class="tab-pane fade" id="taab3-tab-pane" role="tabpanel" aria-labelledby="taab3-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
                     <!-- <div class="team-superiors">
@@ -378,56 +282,10 @@ foreach ($teamlogos as $key => $value) {
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="CHHATRAPTI-tab-pane" role="tabpanel" aria-labelledby="CHHATRAPTI-tab"
+        <div class="tab-pane fade" id="taab4-tab-pane" role="tabpanel" aria-labelledby="taab4-tab"
             tabindex="0">
             <div class="teamtable">
                 <div class="container">
-                    <!-- <div class="team-superiors">
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                HEAD COACH
-                            </div>
-                            <div class="fs-22 mt-1"> PRADEEP INGLE </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                CO-OWNER
-                            </div>
-                            <div class="fs-22 mt-1"> DHARIWAL BALAN </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                CO-OWNER
-                            </div>
-                            <div class="fs-22 mt-1"> NITIN DESHMUKH </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                CO-OWNER
-                            </div>
-                            <div class="fs-22 mt-1"> RAJ GHANVAT </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                CO-OWNER
-                            </div>
-                            <div class="fs-22 mt-1"> VIJAY MUNDHE </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                CO-OWNER
-                            </div>
-                            <div class="fs-22 mt-1"> DHANNJAY MUNDER </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                TEAM COO
-                            </div>
-                            <div class="fs-22 mt-1"> ABHISHEKH SAVRIKAR </div>
-                        </div>
-
-                    </div> -->
-
                     <div class="captain-header">
                         Captain - Murtaza Trunkwala
                         <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batter.svg" alt="" style="filter:invert(1)">
@@ -479,24 +337,10 @@ foreach ($teamlogos as $key => $value) {
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="KOLHAPUR-tab-pane" role="tabpanel" aria-labelledby="KOLHAPUR-tab" tabindex="0">
+        <div class="tab-pane fade" id="taab5-tab-pane" role="tabpanel" aria-labelledby="taab5-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
-                    <!-- <div class="team-superiors">
 
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                HEAD COACH
-                            </div>
-                            <div class="fs-22 mt-1"> PRADEEP INGLE </div>
-                        </div>
-                        <div class="team-superior">
-                            <div class="fs-18">
-                                CO-OWNER
-                            </div>
-                            <div class="fs-22 mt-1"> DHARIWAL BALAN </div>
-                        </div>
-                    </div> -->
 
                     <div class="captain-header">
                         Captain - Rahul Tripathi

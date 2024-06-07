@@ -1818,6 +1818,9 @@ h2.ih-pt-cont a {
                 border: 6px solid #DB4610;
             }
         }
+        &:focus-visible{
+            outline: 0;
+        }
     }
 }
 

@@ -9,16 +9,16 @@
             <div class="col-md-3 ps-0">
                 <div class="footer-logo-widget">
 
-                <figure class="wp-block-image size-large">
-                 
+                    <figure class="wp-block-image size-large">
+
                         <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 if ( has_custom_logo() ) {
 	echo '<img src="' . esc_url( $logo[0] ) . '" class="w-100 wp-image-491" alt="' . get_bloginfo( 'name' ) . '">';
 }  ?>
 
-                  
-                
+
+
                     </figure>
 
 
@@ -32,25 +32,25 @@ if ( has_custom_logo() ) {
                 </h6>
                 <div class="menu-footer-menu-container">
                     <ul id="menu-footer-menu" class="menu">
+                    <?php $teamlogos = [
+"4S Puneri Bappa",
+"PBG Kolhapur Tuskers",
+"Ratnagiri Jets",
+"Eagle Nashik Titans",
+"Chhatrapti Sambhaji Kings ",
+"Raigad Royals"
 
+                    ];
+foreach ($teamlogos as $key => $value) {
+
+
+
+?>
                         <li id="menu-item-656"
-                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="<?php bloginfo('url')?>/team">
-                                4S Puneri Bappa</a></li>
-                        <li id="menu-item-656"
-                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="<?php bloginfo('url')?>/team">
-                                PBG Kolhapur Tuskers</a></li>
-                        <li id="menu-item-656"
-                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="<?php bloginfo('url')?>/team">
-                                Ratnagiri Jets</a></li>
-                        <li id="menu-item-656"
-                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="<?php bloginfo('url')?>/team">
-                                Eagle Nashik Titans</a></li>
-                        <li id="menu-item-656"
-                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="<?php bloginfo('url')?>/team">
-                                Chhatrapti Sambhaji Kings </a></li>
-                        <li id="menu-item-656"
-                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a href="<?php bloginfo('url')?>/team">
-                            Raigad Royals</a></li>
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a
+                                href="<?php bloginfo('url')?>/team?value=<?php echo $key ?>"><?php echo $value ?></a></li>
+              
+                                <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -124,8 +124,8 @@ if ( has_custom_logo() ) {
             <div class="col-6 pe-0 ">
                 <ul
                     class="d-md-flex px-0 py-3 m-0 justify-content-center justify-content-md-end w-100 text-end lower-footer">
-                    <li><a href="https://thebrandodyssey.com/"
-                            class="text-white text-decoration-none designbay">Website By
+                    <li><a href="https://thebrandodyssey.com/" class="text-white text-decoration-none designbay">Website
+                            By
                             <span>THE BRAND ODYSSEY</span></a>
                     </li>
                 </ul>
@@ -288,6 +288,19 @@ $(document).ready(function() {
 
 })
 </script>
+
+<script>
+$(function() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var id = urlParams.get('value');
+    var selector = `#taab${id}-tab`;
+    $(selector).tab('show');
+
+    console.log(selector);
+
+});
+</script>
+
 <!-- Bootstrap Javascript -->
 <?php
 wp_footer();
