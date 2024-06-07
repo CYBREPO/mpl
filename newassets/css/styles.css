@@ -1199,7 +1199,7 @@ h2.ih-pt-cont a {
 @media screen and (min-width: 992px) {
   .stats-banner {
     height: 390px;
-    background-image: url(../images/statsoranges.png);
+    background-image: url(../images/statsoranges.webp);
   }
 }
 .stats-banner .stats-details {
