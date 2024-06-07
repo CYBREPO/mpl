@@ -21,15 +21,15 @@
 ];
 foreach ($teamlogos as $key => $value) {
 
-
+    $key++
 
 ?>
 
             <li class="nav-item" role="presentation">
-                <button class="nav-link teamstabstab <?php echo $key === 0 ? 'active' : ''; ?>"
+                <button class="nav-link teamstabstab <?php echo $key === 1 ? 'active' : ''; ?>"
                     id="taab<?php echo $key ?>-tab" data-bs-toggle="tab" data-bs-target="#taab<?php echo $key ?>-tab-pane"
                     type="button" role="tab" aria-controls="taab<?php echo $key ?>-tab-pane" aria-selected="true"> <img
-                        src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/team<?php echo $key+1 ?>.png"
+                        src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/team<?php echo $key ?>.png"
                         alt=""></button>
             </li>
             <?php } ?>
@@ -43,7 +43,7 @@ foreach ($teamlogos as $key => $value) {
     <div class="tab-content" id="myTabContent">
 
     
-        <div class="tab-pane fade show active" id="taab0-tab-pane" role="tabpanel" aria-labelledby="taab0-tab"
+        <div class="tab-pane fade show active" id="taab1-tab-pane" role="tabpanel" aria-labelledby="taab1-tab"
             tabindex="0">
             <div class="teamtable">
                 <div class="container">
@@ -110,7 +110,7 @@ foreach ($teamlogos as $key => $value) {
 
 
 
-        <div class="tab-pane fade" id="taab1-tab-pane" role="tabpanel" aria-labelledby="taab1-tab" tabindex="0">
+        <div class="tab-pane fade" id="taab2-tab-pane" role="tabpanel" aria-labelledby="taab2-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
                     <!-- <div class="team-superiors">
@@ -169,7 +169,7 @@ foreach ($teamlogos as $key => $value) {
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="taab2-tab-pane" role="tabpanel" aria-labelledby="taab2-tab" tabindex="0">
+        <div class="tab-pane fade" id="taab3-tab-pane" role="tabpanel" aria-labelledby="taab3-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
                   
@@ -228,7 +228,7 @@ foreach ($teamlogos as $key => $value) {
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="taab3-tab-pane" role="tabpanel" aria-labelledby="taab3-tab" tabindex="0">
+        <div class="tab-pane fade" id="taab4-tab-pane" role="tabpanel" aria-labelledby="taab4-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
                     <!-- <div class="team-superiors">
@@ -282,7 +282,7 @@ foreach ($teamlogos as $key => $value) {
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="taab4-tab-pane" role="tabpanel" aria-labelledby="taab4-tab"
+        <div class="tab-pane fade" id="taab5-tab-pane" role="tabpanel" aria-labelledby="taab5-tab"
             tabindex="0">
             <div class="teamtable">
                 <div class="container">
@@ -337,7 +337,7 @@ foreach ($teamlogos as $key => $value) {
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="taab5-tab-pane" role="tabpanel" aria-labelledby="taab5-tab" tabindex="0">
+        <div class="tab-pane fade" id="taab6-tab-pane" role="tabpanel" aria-labelledby="taab6-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
 

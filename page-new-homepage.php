@@ -99,8 +99,9 @@
                                 <?php echo $live_score['data'][0]['team_a_innings'][0]['summary']['over']?>
                             </span>
                         </div>
-                        <div class="<?php echo $live_score['data'][0]['team_b_summary'] == "Yet to bat"? 'yettobat' : ''; ?>">
-                            <span >
+                        <div
+                            class="<?php echo $live_score['data'][0]['team_b_summary'] == "Yet to bat"? 'yettobat' : ''; ?>">
+                            <span>
                                 <?php echo $live_score['data'][0]['team_b_summary']?>
                             </span>
                             <span>
@@ -111,25 +112,26 @@
                     <img src="<?php echo $live_score['data'][0]['team_b_logo']; ?>" alt="" class="liveteam2">
                 </div>
             </div>
-            <a href="https://www.jiocinema.com/sports" target="_blank" class="orange-button text-uppercase">Watch Live</a>
+            <a href="https://www.jiocinema.com/sports" target="_blank"
+                class="orange-button text-uppercase">Watch Live</a>
         </div>
     </div>
     <?php } ?>
 
     <!-- MEN’S TEAMS -->
     <section class="mens-team">
-        <div class="container">
+        <div class="container" style="    position: relative;
+    z-index: 1;">
             <div class="section-title mb-md-5" data-aos="fade-up" data-aos-duration="1500">
                 MEN’S TEAMS
             </div>
             <div data-aos="fade-up" data-aos-duration="1500">
                 <div class="d-flex align-items-center justify-content-around flex-sm-wrap">
 
-                    <?php if (have_rows("team_images")):
-                        while (have_rows("team_images")):
-                             the_row(); ?>
+                    <?php $key=0;  if (have_rows("team_images")):while (have_rows("team_images")): the_row(); $key++;?>
                     <div class="teams-image">
-                        <img src=" <?php the_sub_field("team_image"); ?>" alt="" class="img-fluid">
+                        <a href="<?php bloginfo('url')?>/team?id=<?php echo $key ?>"><img
+                                src=" <?php the_sub_field("team_image"); ?>" alt="" class="img-fluid"></a>
                     </div>
                     <?php endwhile;  
                         endif; ?>

@@ -44,7 +44,7 @@ if ( has_custom_logo() ) {
 foreach ($teamlogos as $key => $value) {
 
 
-
+    $key++
 ?>
                         <li id="menu-item-656"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a
