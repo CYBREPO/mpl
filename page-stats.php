@@ -599,7 +599,7 @@
             <div class="mobile-caps d-md-none" style="background: linear-gradient(90deg, #260531 0%, #E04413 100%);">
                 <div class="mobile-orange-cap-holder">
                     <img src="<?php echo $batting_leader_board['data'][0]['profile_photo']; ?>" alt="" class="w-100"
-                        id="photo_orange" style="clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
+                        id="photo_orange_m" style="clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
     width: 168.028px !important;
     height: 172.829px;
     object-fit: cover;
@@ -612,12 +612,12 @@
                         <div class="captitle text-white" style>
                             ORANGE CAP HOLDER
                         </div>
-                        <div class="cap-player-name" id="o_player_name">
+                        <div class="cap-player-name" id="o_player_name_m">
                             <?php echo $batting_leader_board['data'][0]['name']; ?>
                         </div>
                         <div class="d-flex" style="font-family: Koulen;">
                             <span class="me-5">
-                                <div class="cap-run" id="o_to_run">
+                                <div class="cap-run" id="o_to_run_m">
                                     <?php echo $batting_leader_board['data'][0]['total_runs']; ?>
                                 </div>
                                 <div class="cap-label">
@@ -626,7 +626,7 @@
                             </span>
 
                             <span class="me-5">
-                                <div class="cap-run" id="o_to_match">
+                                <div class="cap-run" id="o_to_match_m">
                                     <?php echo $batting_leader_board['data'][0]['total_match']; ?>
                                 </div>
                                 <div class="cap-label">
@@ -635,7 +635,7 @@
                             </span>
 
                             <span>
-                                <div class="cap-run" id="o_to_avg">
+                                <div class="cap-run" id="o_to_avg_m">
                                     <?php echo $batting_leader_board['data'][0]['average']; ?>
                                 </div>
                                 <div class="cap-label">
@@ -649,7 +649,7 @@
             <div class="mobile-caps d-md-none" style="background: linear-gradient(-90deg, #260531 0%, #E04413 100%);margin-top:-20px;">
                 <div class="mobile-orange-cap-holder">
                     <img src="<?php echo $bowling_leader_board['data'][0]['profile_photo']; ?>" alt="" class="w-100"
-                        id="photo_orange" style="clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
+                        id="photo_purple_m" style="clip-path: polygon(24% 0%, 74% 0%, 100% 22%, 100% 75%, 75% 100%, 30% 108%, 0% 79%, 0% 23%);
     width: 168.028px !important;
     height: 172.829px;
     object-fit: cover;
@@ -662,12 +662,12 @@
                             <div class="captitle">
                                 PURPLE CAP HOLDER
                             </div>
-                            <div class="cap-player-name" id="p_player">
+                            <div class="cap-player-name" id="p_player_m">
                                 <?php echo $bowling_leader_board['data'][0]['name'] ?>
                             </div>
                             <div class="d-flex" style="font-family: Koulen;">
                                 <span class="me-5">
-                                    <div class="cap-run" id="p_wickets">
+                                    <div class="cap-run" id="p_wickets_m">
                                         <?php echo $bowling_leader_board['data'][0]['total_wickets']; ?></div>
                                     <div class="cap-label">
                                         Wickets
@@ -675,7 +675,7 @@
                                 </span>
 
                                 <span class="me-5">
-                                    <div class="cap-run" id="p_match">
+                                    <div class="cap-run" id="p_match_m">
                                         <?php echo $bowling_leader_board['data'][0]['total_match']; ?>
                                     </div>
                                     <div class="cap-label">
@@ -684,7 +684,7 @@
                                 </span>
 
                                 <span>
-                                    <div class="cap-run" id="p_avg">
+                                    <div class="cap-run" id="p_avg_m">
                                         <?php echo $bowling_leader_board['data'][0]['avg']; ?></div>
                                     <div class="cap-label">
                                         Average
@@ -1971,6 +1971,12 @@ $(document).ready(function() {
                 $('#o_to_run').text(data.total_runs);
                 $('#o_to_match').text(data.total_match);
                 $('#o_to_avg').text(data.average);
+
+                $('#photo_orange_m').attr('src', data.profile_photo);
+                $('#o_player_name_m').text(data.name);
+                $('#o_to_run_m').text(data.total_runs);
+                $('#o_to_match_m').text(data.total_match);
+                $('#o_to_avg_m').text(data.average);
                 // $.each(data.data, function(index, values) {
 
                 // });
@@ -1998,6 +2004,12 @@ $(document).ready(function() {
                 $('#p_wickets').text(data.total_wickets);
                 $('#p_match').text(data.total_match);
                 $('#p_avg').text(data.avg);
+
+                $('#photo_purple_m').attr('src', data.profile_photo);
+                $('#p_player_m').text(data.name);
+                $('#p_wickets_m').text(data.total_wickets);
+                $('#p_match_m').text(data.total_match);
+                $('#p_avg_m').text(data.avg);
                 // $.each(data.data, function(index, values) {
 
                 // });
