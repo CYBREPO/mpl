@@ -297,58 +297,6 @@
                             <td><?php echo $values['5_wickets'];?></td>
                         </tr>
                         <?php } ?>
-                        <!-- <tr class="team0 ">
-                            <td>Career</td>
-                            <td>105</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr class="team0 ">
-                            <td>Career</td>
-                            <td>105</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr class="team0 ">
-                            <td>Career</td>
-                            <td>105</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr class="team0 ">
-                            <td>Career</td>
-                            <td>105</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr> -->
                     </tbody>
                 </table>
             </div>
