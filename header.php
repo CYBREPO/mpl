@@ -13,7 +13,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-    <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/newassets/css/styles.css">
+    <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/newassets/css/style.css">
     <?php wp_head(); ?>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
