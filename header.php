@@ -26,11 +26,21 @@
 
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/newassets/css/styles.min.css">
     <?php wp_head(); ?>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PH5Q6XN6');
+</script>
+
     <title>MPL</title>
 
 </head>
 
 <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PH5Q6XN6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
     <topheader class="">
         <nav class="navbar p-0 d-flex align-items-center justify-content-between"
             style="background: linear-gradient(90deg, #18001C 0%, #DD460F 100%);height: 50px;">
