@@ -100,8 +100,13 @@
 
                         <div class="fixtures-schedule">
                             <div class="fixtures-schedule-date">
-                                <!-- THU, 15TH JUNE <b>19:30</b> -->
-                                <?php echo date("D, jS F ", strtotime(convertGmtToClientTimezone($values['match_date_time'],'Asia/Kolkata')));?>
+                               <?php 
+                                    if($values['status'] == 'upcoming'){ 
+                                        echo date("D, jS F H:i", strtotime(convertGmtToClientTimezone($values['match_date_time'],'Asia/Kolkata')));
+                                    }else{
+                                        echo date("D, jS F ", strtotime(convertGmtToClientTimezone($values['match_date_time'],'Asia/Kolkata')));
+                                    }
+                                ?>
                             </div>
                             <!-- TODO bind the location-->
                             <?php echo $values['ground_name']; ?>
@@ -173,7 +178,7 @@ $(document).ready(function() {
 
             // Iterate through the new data and build the fixtures
             $.each(data.data, function(index, values) {
-                var formattedDate = formatDateTime(values.match_date_time,'Asia/Kolkata');
+                var formattedDate = formatDateTime(values.match_date_time,'Asia/Kolkata',values.status);
                 var fixtureHTML = `
                 <div class="fixture">
                 <div class="fixture-head">
@@ -250,7 +255,7 @@ $(document).ready(function() {
     //     return formattedDate;
     // }
 
-    function formatDateTime(dateString, clientTimezone) {
+    function formatDateTime(dateString, clientTimezone, status) {
         // Parse the input date string in GMT
         const date = new Date(dateString);
 
@@ -305,7 +310,13 @@ $(document).ready(function() {
         const dayWithSuffix = day + getOrdinalSuffix(day);
 
         // Construct the formatted date string
-        const formattedDate = `${weekday}, ${dayWithSuffix} ${month} `;
+        var formattedDate = '';
+        if(status == 'upcoming'){
+            formattedDate = `${weekday}, ${dayWithSuffix} ${month} ${hour}:${minute} `;
+        }else{
+            formattedDate = `${weekday}, ${dayWithSuffix} ${month} `;
+        }
+        
         return formattedDate;
     }
 });
