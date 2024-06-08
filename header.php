@@ -92,7 +92,7 @@
         <nav class="navbar navbar-expand-lg py-1 bg-body-tertiary">
             <div class="container">
                 <a class="navbar-brand" href="<?php bloginfo('url')?>">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/mpl/newassets/images/mplnewlogo.png" class="w-100"
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/mplnewlogo.png" class="w-100"
                         alt="Maharashtra Premier League"></a>
 
 
