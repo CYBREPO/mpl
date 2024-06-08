@@ -262,12 +262,6 @@ $('#playerSearch').on('keyup', function() {
 </script>
 <script>
 $(document).ready(function() {
-
-
-var numbchild =  $(".gallerystats").children().length;
-console.log(numbchild);
-
-
     $(".content").slice(0, 9).show();
     $(".content2").slice(0, 12).show();
     $(".loadmorebutton").on("click", function(e) {
@@ -296,9 +290,9 @@ $(function() {
 
 });
 </script>
-<!-- <?php
-// wp_footer();
-?> -->
+<?php
+wp_footer();
+?>
 
 </body>
 
