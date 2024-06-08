@@ -2173,4 +2173,110 @@ button.slick-next.slick-arrow {
   .flex-sm-row-reverse {
     flex-direction: row-reverse;
   }
+}
+
+.aboutbanner1 {
+  background-image: url(https://mpl.thebrandodyssey.com/wp-content/themes/mpl-website-master/assets/images/aboutbanner.png);
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.aboutus-banner-content {
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .w-md-75 {
+    width: 75%;
+  }
+}
+.aboutus-banner-content p {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 992px) {
+  .aboutus-banner-content p {
+    font-size: 20px;
+  }
+}
+.aboutus-banner-content .mpl-logo {
+  height: 181px;
+  margin: auto;
+}
+
+.aboutbanner2 {
+  background-image: url(https://mpl.thebrandodyssey.com/wp-content/themes/mpl-website-master/assets/images/Group-191.png);
+  min-height: 100vh;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  padding: 100px 0;
+}
+
+.aboutus-banner-content {
+  text-align: center;
+}
+
+.aboutus-banner-content .mpl-logo {
+  height: 181px;
+  margin: auto;
+}
+
+.contbgleft {
+  background-image: url(https://mpl.thebrandodyssey.com/wp-content/themes/mpl-website-master/assets/images/contbgleft.png);
+  min-height: 530px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contbgleft img {
+  max-width: 243px;
+}
+
+.formside {
+  background-image: url(https://mpl.thebrandodyssey.com/wp-content/themes/mpl-website-master/assets/images/purple-honeymesh-pattern.png);
+}
+.formside .section-title {
+  color: #000000;
+  letter-spacing: 2px;
+  font-size: 30px;
+  color: white;
+}
+
+.wpcf7-form input,
+.wpcf7-form textarea {
+  background: #1C1317;
+  border: 3px solid #F15A29;
+  border-radius: 10px;
+  color: white;
+  padding-left: 20px;
+}
+.wpcf7-form textarea {
+  width: 100%;
+  height: 100px;
+}
+.wpcf7-form label {
+  font-family: "Koulen";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29px;
+  color: #FFFFFF;
+  width: 100%;
+  max-width: 486px;
+}
+
+input.wpcf7-form-control.has-spinner.wpcf7-submit {
+  background: #F15A29;
+  border-radius: 10px;
+  color: white;
+  padding: 0 30px;
 }/*# sourceMappingURL=newstyle.css.map */
