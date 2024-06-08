@@ -234,13 +234,13 @@ select.form-select {
     img {
         width: 100%;
     }
-
-    height: 78px;
+   
     margin: 0;
-    padding: 5px 8px 5px 0;
-    max-width: 89px;
+    max-width: 260px;
     display: flex;
     align-items: center;
+
+    height: 100%;
 }
 
 .navbar .menu {
@@ -2388,17 +2388,13 @@ button.slick-next.slick-arrow {
     bottom: -20px !important;
 }
 
-.designbay span {
-    color: white !important;
-}
+
 
 .designbay:hover {
-    color: white !important;
-}
-
-.designbay span:hover {
     color: #F15A29 !important;
 }
+
+
 
 .mobile-caps {
     padding-top: 50px;

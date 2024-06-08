@@ -78,7 +78,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </topheader>
 
     <header>
-        <nav class="navbar navbar-expand-lg p-0 bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg py-1 bg-body-tertiary">
             <div class="container">
                 <a class="navbar-brand" href="<?php bloginfo('url')?>">
                     <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
