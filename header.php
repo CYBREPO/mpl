@@ -11,24 +11,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Lato:wght@100;300;400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/newassets/css/newstyle.css">
     <?php wp_head(); ?>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PH5Q6XN6');
-</script>
+    <script>
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PH5Q6XN6');
+    </script>
 
     <title>MPL</title>
 
 </head>
 
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PH5Q6XN6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PH5Q6XN6" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
 
     <topheader class="">
         <nav class="navbar p-0 d-flex align-items-center justify-content-between"
@@ -81,13 +92,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <nav class="navbar navbar-expand-lg py-1 bg-body-tertiary">
             <div class="container">
                 <a class="navbar-brand" href="<?php bloginfo('url')?>">
-                    <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
-$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-if ( has_custom_logo() ) {
-	echo '<img src="' . esc_url( $logo[0] ) . '" class="w-100" alt="' . get_bloginfo( 'name' ) . '">';
-} else {
-	echo '<h1>' . get_bloginfo('name') . '</h1>';
-}  ?></a>
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/mplnewlogo.png" class="w-100"
+                        alt="Maharashtra Premier League"></a>
+
+
                 <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
