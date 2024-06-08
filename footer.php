@@ -33,13 +33,12 @@ if ( has_custom_logo() ) {
                 <div class="menu-footer-menu-container">
                     <ul id="menu-footer-menu" class="menu">
                     <?php $teamlogos = [
+                        "Raigad Royals",
+                        "Ratnagiri Jets",
 "4S Puneri Bappa",
-"PBG Kolhapur Tuskers",
-"Ratnagiri Jets",
 "Eagle Nashik Titans",
 "Chhatrapti Sambhaji Kings ",
-"Raigad Royals"
-
+"PBG Kolhapur Tuskers"
                     ];
 foreach ($teamlogos as $key => $value) {
 
