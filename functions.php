@@ -80,16 +80,16 @@ function apply_my_customizations() {
 }
 add_action( 'wp_head', 'apply_my_customizations');
 
-function contact_form_login_redirect() {
-  ?>
-  <script>
+// function contact_form_login_redirect() {
+//   ?>
+//   <script>
       
-  </script>
+//   </script>
 
-  <?php
-}
+//   <?php
+// }
 
-add_action( 'wp_footer', 'contact_form_login_redirect' );
+// add_action( 'wp_footer', 'contact_form_login_redirect' );
 
 
 function themename_custom_logo_setup() {
