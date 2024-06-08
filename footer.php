@@ -63,7 +63,7 @@ foreach ($teamlogos as $key => $value) {
 
                             <li id="menu-item-656"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a
-                                    href="#">About Us</a></li>
+                                    href="/about-us">About Us</a></li>
                             <li id="menu-item-656"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a
                                     href="#">Code of Conduct</a></li>
@@ -72,7 +72,7 @@ foreach ($teamlogos as $key => $value) {
                                     href="#">Rules and Regulations</a></li>
                             <li id="menu-item-667"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-667"><a
-                                    href="https://mpl.thebrandodyssey.com/index.php/contact-us/">Contact Us</a></li>
+                                    href="/contact-us">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
