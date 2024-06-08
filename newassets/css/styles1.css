@@ -2242,7 +2242,10 @@ button.slick-next.slick-arrow {
 }
 
 .formside {
-  background-image: url(https://mpl.thebrandodyssey.com/wp-content/themes/mpl-website-master/assets/images/purple-honeymesh-pattern.png);
+  background-image: url(../images/Group-2322.webp);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 .formside .section-title {
   color: #000000;
