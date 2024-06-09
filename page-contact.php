@@ -35,7 +35,7 @@ if ( has_custom_logo() ) {
 
                 <div class="section-title">GET IN TOUCH</div>
 
-                <div class="wpcf7 no-js" id="wpcf7-f683-o1" lang="en-US" dir="ltr">
+                <!-- <div class="wpcf7 no-js" id="wpcf7-f683-o1" lang="en-US" dir="ltr">
                     <div class="screen-reader-response">
                         <p role="status" aria-live="polite" aria-atomic="true"></p>
                         <ul></ul>
@@ -77,9 +77,11 @@ if ( has_custom_logo() ) {
                         </p>
                         <div class="wpcf7-response-output" aria-hidden="true"></div>
                     </form>
-                </div>
+                </div> -->
 
-
+                <?php 
+              echo do_shortcode( '[contact-form-7  id="220" title="Contact form 1"]' ); 
+                ?>k
             </div>
 
 

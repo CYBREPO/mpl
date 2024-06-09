@@ -32,7 +32,7 @@ if ( has_custom_logo() ) {
                 </h6>
                 <div class="menu-footer-menu-container">
                     <ul id="menu-footer-menu" class="menu">
-                    <?php $teamlogos = [
+                        <?php $teamlogos = [
                         "Raigad Royals",
                         "Ratnagiri Jets",
 "4S Puneri Bappa",
@@ -48,8 +48,8 @@ foreach ($teamlogos as $key => $value) {
                         <li id="menu-item-656"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a
                                 href="<?php bloginfo('url')?>/team?id=<?php echo $key ?>"><?php echo $value ?></a></li>
-              
-                                <?php } ?>
+
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -64,15 +64,16 @@ foreach ($teamlogos as $key => $value) {
                             <li id="menu-item-656"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a
                                     href="/about-us">About Us</a></li>
+                            <li id="menu-item-667"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-667"><a
+                                    href="/contact-us">Contact Us</a></li>
                             <li id="menu-item-656"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-656"><a
                                     href="#">Code of Conduct</a></li>
                             <li id="menu-item-657"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-657"><a
                                     href="#">Rules and Regulations</a></li>
-                            <li id="menu-item-667"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-667"><a
-                                    href="/contact-us">Contact Us</a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -123,7 +124,8 @@ foreach ($teamlogos as $key => $value) {
             <div class="col-6 pe-0 ">
                 <ul
                     class="d-md-flex px-0 py-3 m-0 justify-content-center justify-content-md-end w-100 text-end lower-footer">
-                    <li>Website by <a href="https://thebrandodyssey.com/" class="text-white text-decoration-none designbay">THE BRAND ODYSSEY</a>
+                    <li>Website by <a href="https://thebrandodyssey.com/"
+                            class="text-white text-decoration-none designbay">THE BRAND ODYSSEY</a>
                     </li>
                 </ul>
             </div>
@@ -269,10 +271,10 @@ $(document).ready(function() {
         $(".content:hidden").slice(0, 9).slideDown();
         $(".content2:hidden").slice(0, 4).slideDown();
         if ($(".content:hidden").length == 0) {
-         
+
         }
         if ($(".content2:hidden").length == 0) {
-          
+
         }
     });
 

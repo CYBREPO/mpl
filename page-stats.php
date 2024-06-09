@@ -441,7 +441,7 @@
                                     <th>SR</th>
                                     <th>4S</th>
                                     <th>6S</th>
-                                    <th>AGAINTS</th>
+                                    <th>AGAINST</th>
                                     <th>VENUE</th>
                                     <th>MATCH DATE</th>
                                 </tr>
