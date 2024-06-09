@@ -2467,6 +2467,7 @@ button.slick-next.slick-arrow {
     height: 181px;
     margin: auto;
 }
+
 .aboutbanner2 {
     background-image: url(https://mpl.thebrandodyssey.com/wp-content/themes/mpl-website-master/assets/images/Group-191.png);
     min-height: 100vh;
@@ -2479,9 +2480,11 @@ button.slick-next.slick-arrow {
     display: flex;
     padding: 100px 0;
 }
+
 .aboutus-banner-content {
     text-align: center;
 }
+
 .aboutus-banner-content .mpl-logo {
     height: 181px;
     margin: auto;
@@ -2519,7 +2522,7 @@ button.slick-next.slick-arrow {
 .wpcf7-form {
 
     input,
-    textarea {
+    textarea,select {
         background: #1C1317;
         border: 3px solid #F15A29;
         border-radius: 10px;
@@ -2542,6 +2545,13 @@ button.slick-next.slick-arrow {
         width: 100%;
         max-width: 486px;
     }
+}
+
+.wpcf7 form .wpcf7-response-output {
+    margin: 2em 0.5em 1em;
+    padding: 0.2em 1em;
+    border: 2px solid #00a0d2;
+    COLOR: WHITE;
 }
 
 input.wpcf7-form-control.has-spinner.wpcf7-submit {

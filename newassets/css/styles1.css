@@ -2255,7 +2255,7 @@ button.slick-next.slick-arrow {
 }
 
 .wpcf7-form input,
-.wpcf7-form textarea {
+.wpcf7-form textarea, .wpcf7-form select {
   background: #1C1317;
   border: 3px solid #F15A29;
   border-radius: 10px;
@@ -2275,6 +2275,13 @@ button.slick-next.slick-arrow {
   color: #FFFFFF;
   width: 100%;
   max-width: 486px;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  margin: 2em 0.5em 1em;
+  padding: 0.2em 1em;
+  border: 2px solid #00a0d2;
+  COLOR: WHITE;
 }
 
 input.wpcf7-form-control.has-spinner.wpcf7-submit {
