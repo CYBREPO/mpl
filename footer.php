@@ -123,7 +123,7 @@ foreach ($teamlogos as $key => $value) {
             <div class="col-6 pe-0 ">
                 <ul
                     class="d-md-flex px-0 py-3 m-0 justify-content-center justify-content-md-end w-100 text-end lower-footer">
-                    <li>Website By <a href="https://thebrandodyssey.com/" class="text-white text-decoration-none designbay">THE BRAND ODYSSEY</a>
+                    <li>Website by <a href="https://thebrandodyssey.com/" class="text-white text-decoration-none designbay">THE BRAND ODYSSEY</a>
                     </li>
                 </ul>
             </div>
