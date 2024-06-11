@@ -1833,9 +1833,11 @@ h2.ih-pt-cont a {
 
         @media screen and (min-width: 992px) {
             justify-content: center;
+            margin-top: 30px;
         }
 
         @media screen and (max-width: 992px) {
+            margin-top: 20px;
             flex-wrap: wrap;
             justify-content: space-between;
         }
@@ -1860,6 +1862,11 @@ h2.ih-pt-cont a {
             font-weight: 400;
             border-right: 1px solid black;
             padding: 5px 15px 12px;
+
+            &:last-child {
+                border-right: 0;
+
+            }
         }
     }
 
@@ -2522,7 +2529,8 @@ button.slick-next.slick-arrow {
 .wpcf7-form {
 
     input,
-    textarea,select {
+    textarea,
+    select {
         background: #1C1317;
         border: 3px solid #F15A29;
         border-radius: 10px;
