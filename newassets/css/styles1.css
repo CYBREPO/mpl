@@ -2255,7 +2255,8 @@ button.slick-next.slick-arrow {
 }
 
 .wpcf7-form input,
-.wpcf7-form textarea, .wpcf7-form select {
+.wpcf7-form textarea,
+.wpcf7-form select {
   background: #1C1317;
   border: 3px solid #F15A29;
   border-radius: 10px;
