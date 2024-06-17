@@ -60,10 +60,11 @@ foreach ($teamlogos as $key => $value) {
 
                         <?php 
                         $SOLAPUR = [
-                                    ['player' => "Vyankatesh Kane",'role'=>'batter'],
+                                  
                                     ['player'=>'VISHANT MORE','role'=>'wkt'],
                                     ['player'=>'RUSHABH RATHOD','role'=>'wkt'],
                                     ['player'=>'VAIBHAV AGAM','role'=>'wkt'],
+                                    ['player' => "Vyankatesh Kane",'role'=>'batter'],
                                     ['player'=>'YASH NAHAR','role'=>'batter'],
                                     ['player'=>'MEHUL PATEL','role'=>'batter'],
                                     ['player'=>'ROHAN MARWAH','role'=>'batter'],
@@ -318,8 +319,8 @@ foreach ($teamlogos as $key => $value) {
  ['player' =>'OM BHOSALE','role'=>'batter'],
  ['player' =>'HARSHAL KATE','role'=>'batter'],
  ['player' =>'ONKAR KHATPE','role'=>'batter'],
- ['player' =>'DIGVIJAY JADHAV','role'=>' batter'],
- ['player' =>'DIGVIJAY PATIL','role'=>' batter'],
+ ['player' =>'DIGVIJAY JADHAV','role'=>'batter'],
+ ['player' =>'DIGVIJAY PATIL','role'=>'batter'],
  ['player' =>'RAJVARDHAN HANGERGEKAR','role'=>'allrounder'],
  ['player' =>'SHAMSHUZAMA KAZI','role'=>'allrounder'],
  ['player' =>'RAMESHWAR DAUD','role'=>'bowler'],
@@ -329,7 +330,7 @@ foreach ($teamlogos as $key => $value) {
  ['player' =>'YOGESH CHAVAN','role'=>'bowler'],
  ['player' =>'YATIN MANGAWANI','role'=>'bowler'],
  ['player' =>'PRANAY SINGH','role'=>'bowler'],
- ['player' =>'SHUBHAM KOTHARI','role'=>' bowler'],
+ ['player' =>'SHUBHAM KOTHARI','role'=>'bowler'],
  ['player' =>'DEEPAK DANGI','role'=>'bowler'],
 
                             );
@@ -356,7 +357,7 @@ foreach ($teamlogos as $key => $value) {
 
                     <div class="captain-header">
                         Captain - Rahul Tripathi
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/allrounder.svg"
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batter.svg"
                             alt="" style="filter:invert(1)">
                     </div>
 
