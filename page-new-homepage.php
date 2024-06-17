@@ -92,19 +92,19 @@
                     <img src="<?php echo $live_score['data'][0]['team_a_logo']; ?>" alt="" class="liveteam1">
                     <div class="liveversus">
                         <div>
-                            <span>
+                            <span id="team_a_summ">
                                 <?php echo $live_score['data'][0]['team_a_summary']?>
                             </span>
-                            <span>
+                            <span id="team_a_ov">
                                 <?php echo $live_score['data'][0]['team_a_innings'][0]['summary']['over']?>
                             </span>
                         </div>
                         <div
                             class="<?php echo $live_score['data'][0]['team_b_summary'] == "Yet to bat"? 'yettobat' : ''; ?>">
-                            <span>
+                            <span id="team_b_summ">
                                 <?php echo $live_score['data'][0]['team_b_summary']?>
                             </span>
-                            <span>
+                            <span id="team_b_ov">
                                 <?php echo $live_score['data'][0]['team_b_innings'][0]['summary']['over']?>
                             </span>
                         </div>
@@ -395,3 +395,40 @@ function getPurple($tournament_id){
 }
 
 ?>
+
+<script>
+
+$(document).ready(function() {
+    if(<?php echo $up_flag;?> == 1){
+        setInterval( getData, 30000);
+    }
+    
+    function getData(){
+        fetch('https://mplt20.in/wp-json/custom-api/v1/mpl/getLiveScore')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Handle the response from the API
+            //console.log(data.data.data);
+            if(data.data.status == true){
+                $('#team_a_summ').text(data.data.data[0].team_a_summary);
+                $('#team_a_ov').text(data.data.data[0].team_a_innings[0].summary.over);
+
+                $('#team_b_summ').text(data.data.data[0].team_b_summary);
+                $('#team_b_ov').text(data.data.data[0].team_b_innings[0].summary.over);
+            }
+            console.log('API call successful', data);
+        })
+        .catch(error => {
+            // Handle any errors
+            console.error('API call failed', error);
+        });
+    }
+        
+        
+});
+</script>
