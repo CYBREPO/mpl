@@ -48,6 +48,41 @@ foreach ($teamlogos as $key => $value) {
             tabindex="0">
             <div class="teamtable">
                 <div class="container">
+                    <div class="captain-header">
+                        Team owners
+
+                    </div>
+                    <div class="circles-container">
+                        <div>
+                            <div class="circle">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">Punit Balan</div>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <?php 
+                        $raigadownere = [
+                                    ['player'=>'Team Director','role'=>'Parag More'],
+                                ['player'=>'Head Coach','role'=>'Chaminda Vaas'],
+                                ['player'=>'Assistant Coach','role'=>'Shirish Kamthe'],
+                                ['player'=>'Batting Coach','role'=>'Shailesh Bhonsle'],
+                                ['player'=>'Bowling Coach','role'=>'Salil Agharkar'],
+                                ['player'=>'Bowling Coach','role'=>'Anupam Sanklecha'],
+                                ['player'=>'Fielding Coach','role'=>'Chetan Padiyar'],
+                                                                    
+                                                                ];
+                                                            ?>
+                        <?php for ($i = 0; $i < count($raigadownere); $i++) {
+                                
+                                ?>
+
+                        <div class="text-block"><span class="role"><?php echo $raigadownere[$i]['player'] ?></span>
+                            <div class="name"><?php echo $raigadownere[$i]['role'] ?></div>
+                        </div>
+                        <?php }  ?>
+                    </div>
 
                     <div class="captain-header">
                         Captain - Vishant More
@@ -109,9 +144,38 @@ foreach ($teamlogos as $key => $value) {
         <div class="tab-pane fade" id="taab2-tab-pane" role="tabpanel" aria-labelledby="taab2-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
-                    <!-- <div class="team-superiors">
-                 
-                    </div> -->
+                    <div class="captain-header">
+                        Team owners
+
+                    </div>
+                    <div class="circles-container">
+                        <div>
+                            <div class="circle">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">Punit Balan</div>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <?php 
+                        $ratnaower = [
+                                    ['player'=>'CEO','role'=>'Praful Chandawarkar'],
+                                    ['player'=>'COO','role'=>'Sharan Singh'],
+                                    ['player'=>'Head Coach','role'=>'Ranjit Pande'],
+                                    ['player'=>'Team Manager ','role'=>'Farhad Patel'],
+                                                                    
+                                                                ];
+                                                            ?>
+                        <?php for ($i = 0; $i < count($ratnaower); $i++) {
+                                
+                                ?>
+
+                        <div class="text-block"><span class="role"><?php echo $ratnaower[$i]['player'] ?></span>
+                            <div class="name"><?php echo $ratnaower[$i]['role'] ?></div>
+                        </div>
+                        <?php }  ?>
+                    </div>
 
                     <div class="captain-header">
                         Captain - Azim Kazi
@@ -170,7 +234,38 @@ foreach ($teamlogos as $key => $value) {
         <div class="tab-pane fade" id="taab3-tab-pane" role="tabpanel" aria-labelledby="taab3-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
+                    <div class="captain-header">
+                        Team owners
 
+                    </div>
+                    <div class="circles-container">
+                        <div>
+                            <div class="circle">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">Punit Balan</div>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <?php 
+                        $puneriowner = [
+                                   ['player'=>'Team Manager','role'=>'VIKRAM DESHMUKH'],
+                                   ['player'=>'Head Coach','role'=>'ATUL GAIKWAD'],
+                                   ['player'=>'Team Mentor','role'=>'PRAVIN TAMBE'],
+                                   ['player'=>'S&C Coach','role'=>'AJIT CHAVAN'],
+                                   ['player'=>'Team Physio','role'=>'RUGVED BAPAT                        '],
+                                                                ];
+                                                            ?>
+                        <?php for ($i = 0; $i < count($puneriowner); $i++) {
+                                
+                                ?>
+
+                        <div class="text-block"><span class="role"><?php echo $puneriowner[$i]['player'] ?></span>
+                            <div class="name"><?php echo $puneriowner[$i]['role'] ?></div>
+                        </div>
+                        <?php }  ?>
+                    </div>
 
                     <div class="captain-header">
                         Captain - Ruturaj Gaikwad
@@ -225,10 +320,40 @@ foreach ($teamlogos as $key => $value) {
         <div class="tab-pane fade" id="taab4-tab-pane" role="tabpanel" aria-labelledby="taab4-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
-                    <!-- <div class="team-superiors">
+                    <div class="captain-header">
+                        Team owners
 
-                       
-                    </div> -->
+                    </div>
+                    <div class="circles-container">
+                        <div>
+                            <div class="circle">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">Punit Balan</div>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <?php 
+                        $eagleowner = [
+
+                                  ['player'=>'CEO & Team Manager','role'=>'Raj Kamal'],
+                                  ['player'=>'Head Coach ','role'=>'Samad Fallah'],
+                                  ['player'=>'Batting Coach ','role'=>'Amit Patil '],
+                                  ['player'=>'Mentor','role'=>'Kiran Adav'],
+                                  ['player'=>'Bowling Coach ','role'=>'Suyas Burkul '],
+
+                                                                ];
+                                                            ?>
+                        <?php for ($i = 0; $i < count($eagleowner); $i++) {
+                                
+                                ?>
+
+                        <div class="text-block"><span class="role"><?php echo $eagleowner[$i]['player'] ?></span>
+                            <div class="name"><?php echo $eagleowner[$i]['role'] ?></div>
+                        </div>
+                        <?php }  ?>
+                    </div>
 
                     <div class="captain-header">
                         Captain - Prashant Solanki
@@ -354,11 +479,45 @@ foreach ($teamlogos as $key => $value) {
             <div class="teamtable">
                 <div class="container">
 
+                <div class="captain-header">
+                        Team owners
 
+                    </div>
+                    <div class="circles-container">
+                        <div>
+                            <div class="circle">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">Punit Balan</div>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <?php 
+                        $kolhaowner = [
+
+                            
+
+                                  ['player'=>'Team Manager','role'=>'Anand Oza'],
+['player'=>'CEO Sports Division','role'=>'Anjum Tanwar'],
+['player'=>'Chief Sports Officer','role'=>'Aminder Cogi'],
+['player'=>'Head Coach','role'=>'Akshay Darekar'],
+['player'=>'Assistant Coach','role'=>'Amit Kushte'],
+                                                                ];
+                                                            ?>
+                        <?php for ($i = 0; $i < count($kolhaowner); $i++) {
+                                
+                                ?>
+
+                        <div class="text-block"><span class="role"><?php echo $kolhaowner[$i]['player'] ?></span>
+                            <div class="name"><?php echo $kolhaowner[$i]['role'] ?></div>
+                        </div>
+                        <?php }  ?>
+                    </div>
                     <div class="captain-header">
                         Captain - Rahul Tripathi
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batter.svg"
-                            alt="" style="filter:invert(1)">
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batter.svg" alt=""
+                            style="filter:invert(1)">
                     </div>
 
                     <div class="row playerandrole">
