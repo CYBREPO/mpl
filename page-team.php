@@ -55,11 +55,20 @@ foreach ($teamlogos as $key => $value) {
                     <div class="circles-container">
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                <img  src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
                                     alt="">
                             </div>
-                            <div class="circle-content">Punit Balan</div>
+                            <div class="circle-content">Kapil Baheti</div>
                         </div>
+                        <div>
+                            <div class="circle">
+                                <img  src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">ALISHA BAHETI</div>
+                        </div>
+                        
+
                     </div>
                     <div class="text-container">
                         <?php 
@@ -151,10 +160,17 @@ foreach ($teamlogos as $key => $value) {
                     <div class="circles-container">
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/ratnagiri/RAJAN.webp"
                                     alt="">
                             </div>
-                            <div class="circle-content">Punit Balan</div>
+                            <div class="circle-content">RAJAN NAVANI</div>
+                        </div>
+                        <div>
+                            <div class="circle">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/ratnagiri/RAKESH.webp"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">RAKESH NAVANI</div>
                         </div>
                     </div>
                     <div class="text-container">
@@ -241,11 +257,37 @@ foreach ($teamlogos as $key => $value) {
                     <div class="circles-container">
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/puneri/VISHALCHORDIA.jpg"
                                     alt="">
                             </div>
-                            <div class="circle-content">Punit Balan</div>
+                            <div class="circle-content">VISHAL CHORDIA</div>
                         </div>
+                        <div>
+                            <div class="circle">
+                                <img style="    object-fit: contain;
+    object-position: top right;" src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/puneri/AshishDesai.png"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">ASHISH DESAI</div>
+                        </div><div>
+                            <div class="circle">
+                                <img style="    object-fit: contain;
+    object-position: center;" src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/puneri/SatyenPatel.png"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">SATYEN PATEL</div>
+                        </div><div>
+                            <div class="circle">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/puneri/SUNILMITTAL.jpg"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">SUNIL MITTAL</div>
+                        </div>
+
+                        
+
+
+
                     </div>
                     <div class="text-container">
                         <?php 
@@ -330,8 +372,44 @@ foreach ($teamlogos as $key => $value) {
                                 <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
                                     alt="">
                             </div>
-                            <div class="circle-content">Punit Balan</div>
+                            <div class="circle-content">VICKY RUPCHANDANI</div>
                         </div>
+
+                        <div>
+                            <div class="circle">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">MANISH RUPCHANDANI</div>
+                        </div>
+
+                        <div>
+                            <div class="circle">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">HITESH SOLANKI</div>
+                        </div>
+                        <div>
+                            <div class="circle">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">KISHORE KHUBCHANDANI</div>
+                        </div>
+
+                        <div>
+                            <div class="circle">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">RAM KHUBCHANDANI</div>
+                        </div>
+                        
+
+
+
+
                     </div>
                     <div class="text-container">
                         <?php 
@@ -423,12 +501,46 @@ foreach ($teamlogos as $key => $value) {
         <div class="tab-pane fade" id="taab5-tab-pane" role="tabpanel" aria-labelledby="taab5-tab" tabindex="0">
             <div class="teamtable">
                 <div class="container">
+                <div class="captain-header">
+                        Team owners
+
+                    </div>
+                    <div class="circles-container">
+                        <div>
+                            <div class="circle">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">RAAJ GHANWAT</div>
+                        </div>
+
+                        <div>
+                            <div class="circle">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">VIJAY MUNDE</div>
+                        </div>
+
+                        <div>
+                            <div class="circle">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">NITIN DESHMUKH</div>
+                        </div>
+                        
+
+
+
+                    </div>
                     <div class="captain-header">
                         Captain - Murtaza Trunkwala
                         <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/batter.svg" alt=""
                             style="filter:invert(1)">
                     </div>
-
+                    
+           
                     <div class="row playerandrole">
 
 
@@ -489,7 +601,14 @@ foreach ($teamlogos as $key => $value) {
                                 <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
                                     alt="">
                             </div>
-                            <div class="circle-content">Punit Balan</div>
+                            <div class="circle-content">PUNIT BALAN</div>
+                        </div>
+                        <div>
+                            <div class="circle">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                    alt="">
+                            </div>
+                            <div class="circle-content">JANHVI DHARIWAL BALAN</div>
                         </div>
                     </div>
                     <div class="text-container">
