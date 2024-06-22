@@ -62,7 +62,7 @@ foreach ($teamlogos as $key => $value) {
                         </div>
                         <div>
                             <div class="circle">
-                                <img  src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/Alisha Baheti.jpg"
+                                <img style="object-position: top;" src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/Alisha Baheti.jpg"
                                     alt="">
                             </div>
                             <div class="circle-content">ALISHA BAHETI</div>
@@ -257,7 +257,7 @@ foreach ($teamlogos as $key => $value) {
                     <div class="circles-container">
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/puneri/VISHALCHORDIA.jpg"
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/puneri/Vishal Chordia.jpg"
                                     alt="">
                             </div>
                             <div class="circle-content">VISHAL CHORDIA</div>
@@ -265,20 +265,20 @@ foreach ($teamlogos as $key => $value) {
                         <div>
                             <div class="circle">
                                 <img style="    object-fit: contain;
-    object-position: top right;" src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/puneri/AshishDesai.png"
+    object-position: top right;" src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/puneri/Ashish Desai .png"
                                     alt="">
                             </div>
                             <div class="circle-content">ASHISH DESAI</div>
                         </div><div>
                             <div class="circle">
                                 <img style="    object-fit: contain;
-    object-position: center;" src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/puneri/SatyenPatel.png"
+    object-position: center;" src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/puneri/Satyen Patel.png"
                                     alt="">
                             </div>
                             <div class="circle-content">SATYEN PATEL</div>
                         </div><div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/puneri/Sunil Mittal.jpeg"
+                                <img style="    object-position: top;" src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/puneri/Sunil Mittal.jpeg"
                                     alt="">
                             </div>
                             <div class="circle-content">SUNIL MITTAL</div>
@@ -385,7 +385,7 @@ foreach ($teamlogos as $key => $value) {
 
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/EAGLE/Hitesh Solanki.jpg"
+                                <img style="    object-position: top;" src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/EAGLE/Hitesh Solanki.jpg"
                                     alt="">
                             </div>
                             <div class="circle-content">HITESH SOLANKI</div>
@@ -524,7 +524,7 @@ foreach ($teamlogos as $key => $value) {
 
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/CSK/Nitin Deshmukh 1.jpeg"
+                                <img style="object-position: top;" src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/CSK/Nitin Deshmukh 1.jpeg"
                                     alt="">
                             </div>
                             <div class="circle-content">NITIN DESHMUKH</div>
@@ -605,7 +605,7 @@ foreach ($teamlogos as $key => $value) {
                         </div>
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/PBG/Janhvi Dhariwal Balan.jpg"
+                                <img style="object-position:top;" src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/PBG/Janhvi Dhariwal Balan.jpg"
                                     alt="">
                             </div>
                             <div class="circle-content">JANHVI DHARIWAL BALAN</div>
