@@ -62,7 +62,7 @@ foreach ($teamlogos as $key => $value) {
                         </div>
                         <div>
                             <div class="circle">
-                                <img  src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                <img  src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/Alisha Baheti.jpg"
                                     alt="">
                             </div>
                             <div class="circle-content">ALISHA BAHETI</div>
@@ -278,7 +278,7 @@ foreach ($teamlogos as $key => $value) {
                             <div class="circle-content">SATYEN PATEL</div>
                         </div><div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/puneri/SUNILMITTAL.jpg"
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/puneri/Sunil Mittal.jpeg"
                                     alt="">
                             </div>
                             <div class="circle-content">SUNIL MITTAL</div>
@@ -369,7 +369,7 @@ foreach ($teamlogos as $key => $value) {
                     <div class="circles-container">
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/EAGLE/Vicky Rupchandani.png"
                                     alt="">
                             </div>
                             <div class="circle-content">VICKY RUPCHANDANI</div>
@@ -377,7 +377,7 @@ foreach ($teamlogos as $key => $value) {
 
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/EAGLE/Vicky Rupchandani.png"
                                     alt="">
                             </div>
                             <div class="circle-content">MANISH RUPCHANDANI</div>
@@ -385,14 +385,14 @@ foreach ($teamlogos as $key => $value) {
 
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/EAGLE/Hitesh Solanki.jpg"
                                     alt="">
                             </div>
                             <div class="circle-content">HITESH SOLANKI</div>
                         </div>
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/EAGLE/Kishore Khubchandani.png"
                                     alt="">
                             </div>
                             <div class="circle-content">KISHORE KHUBCHANDANI</div>
@@ -400,7 +400,7 @@ foreach ($teamlogos as $key => $value) {
 
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/EAGLE/Ram Khubchandani.png"
                                     alt="">
                             </div>
                             <div class="circle-content">RAM KHUBCHANDANI</div>
@@ -508,7 +508,7 @@ foreach ($teamlogos as $key => $value) {
                     <div class="circles-container">
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/CSK/Raaj Ghanwat.png"
                                     alt="">
                             </div>
                             <div class="circle-content">RAAJ GHANWAT</div>
@@ -516,7 +516,7 @@ foreach ($teamlogos as $key => $value) {
 
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/CSK/Vijay Munde.jpg"
                                     alt="">
                             </div>
                             <div class="circle-content">VIJAY MUNDE</div>
@@ -524,7 +524,7 @@ foreach ($teamlogos as $key => $value) {
 
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/CSK/Nitin Deshmukh 1.jpeg"
                                     alt="">
                             </div>
                             <div class="circle-content">NITIN DESHMUKH</div>
@@ -598,14 +598,14 @@ foreach ($teamlogos as $key => $value) {
                     <div class="circles-container">
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/PBG/Punit Balan.jpg"
                                     alt="">
                             </div>
                             <div class="circle-content">PUNIT BALAN</div>
                         </div>
                         <div>
                             <div class="circle">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/raigad/WhatsApp Image 2024-04-18 at 17.24.25_68bc5599.jpg"
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/newassets/images/PBG/Janhvi Dhariwal Balan.jpg"
                                     alt="">
                             </div>
                             <div class="circle-content">JANHVI DHARIWAL BALAN</div>
