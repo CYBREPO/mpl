@@ -2535,11 +2535,27 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+
+    @media screen and (max-width: 992px) {
+        flex-wrap: wrap;
+    }
+
+    &>div {
+        @media screen and (max-width: 992px) {
+            max-width: 40%;
+        }
+    }
 }
 
 .circle {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
+
+    @media screen and (min-width: 992px) {
+        width: 200px;
+        height: 200px;
+    }
+
     background-color: #A93C30;
     border-radius: 50%;
     display: flex;
@@ -2562,7 +2578,10 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit {
     font-weight: bold;
     text-align: center;
     color: #491450;
-    font-size: 28px;
+
+    @media screen and (min-width: 992px) {
+        font-size: 28px;
+    }
 }
 
 .text-container {
@@ -2636,6 +2655,10 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit {
 .role {
     color: #41124A;
 
+    @media screen and (max-width: 992px) {
+        text-decoration: underline;
+    }
+
     @media screen and (min-width: 992px) {
         font-size: 20px;
     }
@@ -2643,6 +2666,10 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit {
 
 .name {
     margin-top: 5px;
+
+    @media screen and (max-width: 992px) {
+        text-align: center;
+    }
 
     @media screen and (min-width: 992px) {
         font-size: 24px;

@@ -2265,10 +2265,20 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit {
   justify-content: center;
   margin-top: 50px;
 }
+@media screen and (max-width: 992px) {
+  .circles-container {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 992px) {
+  .circles-container > div {
+    max-width: 40%;
+  }
+}
 
 .circle {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   background-color: #A93C30;
   border-radius: 50%;
   display: flex;
@@ -2276,6 +2286,12 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit {
   align-items: center;
   margin: 0 10px 20px;
   border: 4px solid #c8482b;
+}
+@media screen and (min-width: 992px) {
+  .circle {
+    width: 200px;
+    height: 200px;
+  }
 }
 .circle img {
   width: 100%;
@@ -2291,7 +2307,11 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit {
   font-weight: bold;
   text-align: center;
   color: #491450;
-  font-size: 28px;
+}
+@media screen and (min-width: 992px) {
+  .circle-content {
+    font-size: 28px;
+  }
 }
 
 .text-container {
@@ -2362,6 +2382,11 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit {
 .role {
   color: #41124A;
 }
+@media screen and (max-width: 992px) {
+  .role {
+    text-decoration: underline;
+  }
+}
 @media screen and (min-width: 992px) {
   .role {
     font-size: 20px;
@@ -2370,6 +2395,11 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit {
 
 .name {
   margin-top: 5px;
+}
+@media screen and (max-width: 992px) {
+  .name {
+    text-align: center;
+  }
 }
 @media screen and (min-width: 992px) {
   .name {
